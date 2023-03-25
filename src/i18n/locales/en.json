@@ -1,0 +1,37 @@
+{
+    "page": {
+        "home": {
+            "testimonials": {
+                "title": "testimonials",
+                "subtitle": "Known and loved by the GOATs",
+                "data": [
+                    {
+                        "author": "Pragun Dua",
+                        "author_handle": "@pragdua",
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel tincidunt lacinia, nisl nisl aliquam lorem, nec ultricies nisl nisl sit amet lorem. Sed euismod, nisl vel tincidunt lacinia, nisl nisl aliquam lorem, nec ultricies nisl nisl sit amet lorem."
+                    },
+                    {
+                        "author": "John Doe",
+                        "author_handle": "@johndoe",
+                        "text": "absoultely the best people in the game, no competetion the best people in the game, no competetion the best people in the game, nothe game, nothe game, nothe game, nothe game, no"
+                    },
+                    {
+                        "author": "John Doe",
+                        "author_handle": "@johndoe",
+                        "text": "absoultely the best people in the game, no competetion the best people in the game, no competetion the best people in the game, nothe game, nothe game, nothe game, nothe game, no"
+                    },
+                    {
+                        "author": "John Doe",
+                        "author_handle": "@johndoe",
+                        "text": "absoultely the best people in the game, no competetion the best people in the game, no competetion the best people in the game, nothe game, nothe game, nothe game, nothe game, no"
+                    },
+                    {
+                        "author": "Pragun Dua",
+                        "author_handle": "@pragdua",
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel tincidunt lacinia, nisl nisl aliquam lorem, nec ultricies nisl nisl sit amet lorem. Sed euismod, nisl vel tincidunt lacinia, nisl nisl aliquam lorem, nec ultricies nisl nisl sit amet lorem."
+                    }
+                ]
+            }
+        }
+    }
+}

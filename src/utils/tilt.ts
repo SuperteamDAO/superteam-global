@@ -49,14 +49,22 @@ export const tilt = (node: NodeType) => {
                     rotateYUncapped < -settings.max ? -settings.max :
                     (rotateYUncapped > settings.max ? settings.max : rotateYUncapped);
 
-                node.style.transform = 
-                    `perspective(${settings.perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(${settings.scale}, ${settings.scale}, ${settings.scale})`;
+                node.style.setProperty("--mouseX", `${mouseX}px`);
+                node.style.setProperty("--mouseY", `${mouseY}px`);
+                node.style.setProperty("--perspective", `${settings.perspective}px`);
+                node.style.setProperty("--rotateX", `${rotateX}deg`);
+                node.style.setProperty("--rotateY", `${rotateY}deg`);
+                node.style.setProperty("--scale", `${settings.scale}`);
             }
         })
     }
     
     const handleMouseLeave = () => {
-        node.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)";
+        node.style.setProperty("--perspective", `1000px`);
+        node.style.setProperty("--rotateX", `0deg`);
+        node.style.setProperty("--rotateY", `0deg`);
+        node.style.setProperty("--scale", `1`);
+        
         active.set(false);
         setTransition();
     };
