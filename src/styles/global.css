@@ -19,3 +19,7 @@ html, body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.scrollbar-track {
+  background-color: transparent;
+}

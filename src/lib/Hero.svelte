@@ -1,11 +1,13 @@
 <script>
 	import AnimatedLogo from "./common/AnimatedLogo.svelte";
 	import PrimaryButton from "./common/PrimaryButton.svelte";
+    import { time } from "../utils/gsap";
+    
 
 </script>
 <section class="col-span-5 h-[calc(100vh-40px-32px)] flex flex-col justify-center items-center">
     <AnimatedLogo />
-    <h1 class="text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center">
+    <h1 class="heading text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center">
         <span>
             your portal to the
         </span>
