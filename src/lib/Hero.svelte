@@ -32,7 +32,7 @@
 </script>
 <section class="hero col-span-5 h-[calc(100vh-40px-32px)] flex flex-col justify-center items-center">
     <AnimatedLogo />
-    <h1 class="heading w-[430px] flex flex-col text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center">
+    <h1 class="heading w-[280px] md:w-[430px] flex flex-col text-[32px] md:text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center">
         <span class="line">
             <span>
                 your portal to the
@@ -45,7 +45,7 @@
             </span>
         </span>
     </h1>
-    <p class="sub-heading text-white font-primary text-[20px] leading-[1.35] tracking-[-4%] text-center mt-8">
+    <p class="sub-heading text-white font-primary text-[16px] md:text-[20px] leading-[1.35] tracking-[-4%] text-center mt-8">
         superteam is the forefront community for web3, 
         <br>
         powered by solana.
