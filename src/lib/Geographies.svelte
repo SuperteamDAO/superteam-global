@@ -3,14 +3,20 @@
 	import NavButton from './common/NavButton.svelte';
 	import { CaretLeft, CaretRight } from 'phosphor-svelte';
 
+	/**
+	 * @type {HTMLElement}
+	 */
 	let carousel;
+	let currentPosition = 0;
 
 	function scrollLeft() {
-		carousel.scrollBy(-carousel.clientWidth, 0);
+		currentPosition -= carousel.clientWidth / 2;
+		carousel.scrollTo({ left: currentPosition, behavior: 'smooth' });
 	}
 
 	function scrollRight() {
-		carousel.scrollBy(carousel.clientWidth, 0);
+		currentPosition += carousel.clientWidth / 2;
+		carousel.scrollTo({ left: currentPosition, behavior: 'smooth' });
 	}
 </script>
 
@@ -21,8 +27,8 @@
 		><CaretRight size={20} /></NavButton
 	>
 </div>
-<div class="country-cards-container col-span-5 mt-12 overflow-x-scroll">
-	<section bind:this={carousel} class="country-cards flex gap-8">
+<div bind:this={carousel} class="country-cards-container col-span-5 mt-12 overflow-x-scroll">
+	<section class="country-cards flex gap-8">
 		<CountryCard />
 		<CountryCard />
 		<CountryCard />
@@ -40,6 +46,7 @@
 	.country-cards-container {
 		width: 100%;
 		overflow-x: scroll;
+		overflow-y: auto;
 		scrollbar-width: none; /* Firefox */
 		-ms-overflow-style: none; /* Internet Explorer and Edge */
 	}
