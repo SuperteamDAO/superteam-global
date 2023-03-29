@@ -8,7 +8,8 @@
 
 
 <Hero />
-<Geographies />
+<!-- <Geographies />
+ -->
   <!-- <CountryCard>
     <div class="shine"></div>
     <div class="glare"></div>
