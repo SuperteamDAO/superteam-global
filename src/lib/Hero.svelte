@@ -39,13 +39,12 @@
 <section class="hero col-span-5 h-[calc(100vh-40px-32px)] flex flex-col justify-center items-center">
     <AnimatedLogo />
     <h1 class="heading w-[280px] md:w-[430px] flex flex-col text-[32px] md:text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center">
-        <span class="line">
+        <span class="line block">
             <span>
                 your portal to the
             </span>
         </span>
-        <br>
-        <span class="line">
+        <span class="line block">
             <span>
                 world of solana
             </span>
