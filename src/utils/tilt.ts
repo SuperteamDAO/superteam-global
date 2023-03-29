@@ -1,4 +1,6 @@
+import { gsap } from "gsap";
 import { writable } from "svelte/store";
+import { adjust, clamp, round } from "./math";
 
 const settings = {
     max: 25,
@@ -14,6 +16,8 @@ interface NodeType extends HTMLDivElement {
 
 export const tilt = (node: NodeType) => {
     const active = writable(false);
+    let request: any = null;
+    const mouse = { x: 0, y: 0 };
     
     const setTransition = () => {
         clearTimeout(node?.transitionTimeoutId);
@@ -29,50 +33,66 @@ export const tilt = (node: NodeType) => {
         setTransition();
     };
 
-    const handleMouseMove = (e: MouseEvent) => {
+    const update = () => {
+        console.log("update")
         active.subscribe((value) => {
             if (value) {
                 const cardWidth = node.offsetWidth;
                 const cardHeight = node.offsetHeight;
-                const centerX = node.offsetLeft + cardWidth / 2;
-                const centerY = node.offsetTop + cardHeight / 2;
-                const mouseFromLeft = (e.clientX - centerX) / node.offsetWidth + 0.5;
-                const mouseFromTop = (e.clientY - centerY) / node.offsetHeight + 0.5;
-                const mouseX = mouseFromLeft * 100;
-                const mouseY = mouseFromTop * 100;
 
-                const rotateXUncapped = (settings.max * mouseY / (cardHeight  / 2));
-                const rotateYUncapped = (-1 * settings.max * mouseX / (cardWidth / 2));
+                const absolute = {
+                    x: mouse.x - node.offsetLeft,
+                    y: mouse.y - node.offsetTop,
+                };
 
-                const rotateX = rotateXUncapped < -settings.max ? -settings.max : (rotateXUncapped > settings.max ? settings.max : rotateXUncapped);
-                const rotateY = rotateYUncapped < -settings.max ? -settings.max : (rotateYUncapped > settings.max ? settings.max : rotateYUncapped);
+                const percent = {
+                    x: clamp(round(100 / cardWidth) * absolute.x),
+                    y: clamp(round(100 / cardHeight) * absolute.y),
+                }
 
-                node.style.setProperty("--mouseX", `${mouseX}%`);
-                node.style.setProperty("--mouseY", `${mouseY}%`);
-                node.style.setProperty("--perspective", `${settings.perspective}px`);
-                node.style.setProperty("--rotateX", `${rotateX}deg`);
-                node.style.setProperty("--rotateY", `${rotateY}deg`);
-                node.style.setProperty("--scale", `${settings.scale}`);
-                node.style.setProperty("--mouse-from-left", `${mouseFromLeft}`);
-                node.style.setProperty("--mouse-from-top", `${mouseFromTop}`);
-                node.style.setProperty("--mouse-from-center", `${Math.sqrt(mouseFromLeft * mouseFromLeft + mouseFromTop * mouseFromTop)}%`);
-                node.style.setProperty("--opacity", "1")
+                const center = {
+                    x: percent.x - 50,
+                    y: percent.y - 50,
+                }
+
+                node.style.setProperty("--backgroundX",  `${adjust(percent.x, 0, 100, 37, 63)}px`);
+                node.style.setProperty("--backgroundY",  `${adjust(percent.y, 0, 100, 33, 67)}px`);
+                node.style.setProperty("--rotateX", `${round(-(center.x / 3.5))}deg`)
+                node.style.setProperty("--rotateY", `${round(center.y / 2)}deg`)
+                node.style.setProperty("--mouseX", `${round(percent.x)}%`);
+                node.style.setProperty("--mouseY", `${round(percent.y)}%`);
+                node.style.setProperty("--mouse-from-left", `${percent.x / 100}`);
+                node.style.setProperty("--mouse-from-top", `${percent.y / 100}`);
+                node.style.setProperty("--mouse-from-center", `${clamp(
+                    Math.sqrt(
+                        Math.pow(percent.x - 50, 2) + Math.pow(percent.y - 50, 2)
+                    ) / 50, 0, 1)}`);
+                node.style.setProperty("--opacity", `1`);
             }
         })
     }
+    const handleMouseMove = (e: MouseEvent) => {
+        if (e instanceof MouseEvent) {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        }
+        cancelAnimationFrame(request);
+		request = requestAnimationFrame(update);	
+    }
+
     
     const handleMouseLeave = () => {
-        node.style.setProperty("--opacity", "0");
-        node.style.setProperty("--mouse-from-left", `0.5`);
-        node.style.setProperty("--mouse-from-top", `0.5`);
-        node.style.setProperty("--mouse-from-center", `0`); // XXX: this is not correct
+        node.style.setProperty("--backgroundX",  `50%`);
+        node.style.setProperty("--backgroundY",  `50%`);
+        node.style.setProperty("--rotateX", `0deg`)
+        node.style.setProperty("--rotateY", `0deg`)
         node.style.setProperty("--mouseX", `50%`);
         node.style.setProperty("--mouseY", `50%`);
-        node.style.setProperty("--perspective", `1000px`);
-        node.style.setProperty("--rotateX", `0deg`);
-        node.style.setProperty("--rotateY", `0deg`);
-        node.style.setProperty("--scale", `1`);
-        
+        node.style.setProperty("--mouse-from-left", `0.5`);
+        node.style.setProperty("--mouse-from-top", `0.5`);
+        node.style.setProperty("--mouse-from-center", `0`);
+        node.style.setProperty("--opacity", `0`);
+
         active.set(false);
         setTransition();
     };

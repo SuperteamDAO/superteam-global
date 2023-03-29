@@ -1,5 +1,6 @@
 <script>
 	import CountryCard from "$lib/CountryCard.svelte";
+	import Geographies from "$lib/Geographies.svelte";
 	import Hero from "$lib/Hero.svelte";
 	import Testimonials from "$lib/Testimonials.svelte";
 
@@ -7,11 +8,7 @@
 
 
 <Hero />
-<Hero />
-<Hero />
-<Hero />
-<Hero />
-<Hero />
+<Geographies />
   <!-- <CountryCard>
     <div class="shine"></div>
     <div class="glare"></div>

@@ -8,7 +8,6 @@
 	import Scrollbar from 'smooth-scrollbar';
 	
 	import { onMount } from 'svelte';
-  import { readable } from "svelte/store";
 	import Header from "$lib/common/Header.svelte";
 
 
@@ -48,6 +47,6 @@
 
 <style>
   :global(.scrollbar-track) {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 </style>
