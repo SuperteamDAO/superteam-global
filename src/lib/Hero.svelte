@@ -1,11 +1,12 @@
 <script>
 	import AnimatedLogo from "./common/AnimatedLogo.svelte";
 	import PrimaryButton from "./common/PrimaryButton.svelte";
-    import { time } from "../utils/gsap";
-	import { onMount } from "svelte";
+    import { gsap } from "gsap";
+    import { onMount } from "svelte";
 
     onMount(() => {
-        time.fromTo(".heading .line span", {
+        const timeline = gsap.timeline();
+        timeline.fromTo(".heading .line span", {
             y: 100,
             opacity: 0,
             stagger: {
@@ -18,14 +19,19 @@
             ease: "power4.out"
         })
 
-        time.fromTo(".sub-heading", {
-            y: 0,
-            opacity: 0,
-        }, {
-            opacity: 1,
-            duration: 0.5,
-            ease: "power4.out",
-        }, "-=1")
+        timeline.fromTo(
+            ".sub-heading", 
+            { y: 0, opacity: 0 }, 
+            {
+                opacity: 1,
+                duration: 1,
+                ease: "power4.out",
+            }, "-=1")
+        
+        timeline.fromTo(
+            ".know-more-button",
+            { opacity: 0 },
+            { opacity: 1, duration: 1, ease: "power4.out" }, "-=1")
     })
     
 
@@ -50,7 +56,7 @@
         <br>
         powered by solana.
     </p>
-    <PrimaryButton class="mt-8">
+    <PrimaryButton class="know-more-button mt-8">
         Know more
     </PrimaryButton>
 </section>
