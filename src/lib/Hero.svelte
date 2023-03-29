@@ -59,21 +59,13 @@
     .heading {
         width: 430px;
     }
-
-    br {
-        height: 0px;
-    }
     .heading .line {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 48px;
-        display: block;
+        @apply block relative overflow-hidden w-full h-12;
+    }
+    br {
+        content: "";
     }
     .heading .line span {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
+        @apply absolute w-full top-0 left-0;
     }
 </style>
