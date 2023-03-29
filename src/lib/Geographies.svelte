@@ -20,39 +20,26 @@
 	}
 </script>
 
-<div class="carousel-container col-span-5 flex items-center justify-between text-white">
-	<NavButton direction="left" class="left" on:click={scrollLeft}><CaretLeft size={20} /></NavButton>
-	<h2 class="chapters text-center">chapters</h2>
-	<NavButton direction="right" class="right" on:click={scrollRight}
-		><CaretRight size={20} /></NavButton
-	>
-</div>
-<div bind:this={carousel} class="country-cards-container col-span-5 mt-12 overflow-x-scroll">
-	<section class="country-cards flex gap-8">
-		<CountryCard />
-		<CountryCard />
-		<CountryCard />
-		<CountryCard />
-		<CountryCard />
-		<CountryCard />
-		<CountryCard />
-	</section>
-</div>
+<section class="w-full flex flex-col col-span-5">
+	<div class="carousel-container flex items-center justify-between text-white">
+		<NavButton direction="left" class="left" on:click={scrollLeft}><CaretLeft size={20} /></NavButton>
+		<h2 class="chapters text-center">chapters</h2>
+		<NavButton direction="right" class="right" on:click={scrollRight}><CaretRight size={20} /></NavButton>
+	</div>
+	<div bind:this={carousel} class="country-cards-container py-12 w-full col-span-5 overflow-x-scroll overflow-y-visible scrollbar-hidden">
+		<div class="country-cards w-full flex gap-8">
+			<CountryCard />
+			<CountryCard />
+			<CountryCard />
+			<CountryCard />
+			<CountryCard />
+			<CountryCard />
+			<CountryCard />
+		</div>
+	</div>
+</section>
 
 <style lang="postcss">
-	.carousel-container {
-		width: 100%;
-	}
-	.country-cards-container {
-		width: 100%;
-		overflow-x: scroll;
-		overflow-y: auto;
-		scrollbar-width: none; /* Firefox */
-		-ms-overflow-style: none; /* Internet Explorer and Edge */
-	}
-	.country-cards-container::-webkit-scrollbar {
-		display: none; /* Chrome, Safari, and Opera */
-	}
 	.chapters {
 		font-family: inherit;
 		font-style: normal;

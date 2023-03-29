@@ -1,5 +1,5 @@
 <script lang="ts">
-    export const direction = "left";
+    export const direction: "right" | "left"  = "left";
 </script>
 
 <button 

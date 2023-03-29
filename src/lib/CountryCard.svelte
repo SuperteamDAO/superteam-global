@@ -144,7 +144,7 @@
         --mouse-from-left: var(--mouse-from-center);
         --scale: 1;
 
-        @apply w-fit h-fit rounded-xl relative;
+        @apply w-fit h-fit rounded-xl relative z-10;
     }
     
     .card_rotator {
@@ -154,7 +154,7 @@
     }
 
     .card-content {
-        @apply w-[300px] h-[400px] flex flex-row items-center justify-center rounded-lg overflow-hidden;
+        @apply w-[300px] h-[400px] flex flex-row items-center justify-center rounded-lg;
         background-image: url('../assets/cards/india.png');
     }
 
