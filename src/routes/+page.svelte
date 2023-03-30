@@ -17,7 +17,8 @@
 
 <Production />
 
-<!-- <SuperteamIrl /> -->
+<SuperteamIrl />
+
 <!-- <LoveRespect /> -->
 
 <!-- <CountryCard>

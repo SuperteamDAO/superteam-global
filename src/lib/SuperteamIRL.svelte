@@ -10,9 +10,9 @@
 			Superteam IRL
 		</p>
 	</div>
-	<div class="col-span-5 flex justify-center gap-10 mt-4">
+	<div class="col-span-5 grid grid-cols-1 md:flex md:justify-center gap-10 mt-11 md:mt-4">
 		<img src={buildstations} alt="" />
-		<img src={supermeets} alt="" class="mt-14" />
+		<img src={supermeets} alt="" class="md:mt-14" />
 		<img src={uniprogram} alt="" />
 	</div>
 </div>
