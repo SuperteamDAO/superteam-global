@@ -3,6 +3,7 @@
 	import Geographies from '$lib/Geographies.svelte';
 	import Hero from '$lib/Hero.svelte';
 	import Partners from '$lib/Partners.svelte';
+	import Production from '$lib/Production.svelte';
 	import Testimonials from '$lib/Testimonials.svelte';
 </script>
 
@@ -10,6 +11,7 @@
 <Geographies />
 <!-- <div class="pb-[200px]"></div> -->
 <Partners />
+<Production />
 
 <!-- <CountryCard>
     <div class="shine"></div>
