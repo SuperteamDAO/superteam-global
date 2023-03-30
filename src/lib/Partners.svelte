@@ -28,7 +28,6 @@
 	}
 	.partners-container {
 		margin-top: 108px;
-		margin-bottom: 71px;
 	}
 	.wormhole {
 		height: 32px;
@@ -39,17 +38,17 @@
 		width: 94px;
 	}
 	.foundation {
-		width: 209.04px;
-		height: 17.45px;
+		width: 209px;
+		height: 18px;
 		justify-content: center;
 	}
 	.backpack {
-		width: 120.24px;
-		height: 23.27px;
+		width: 120px;
+		height: 23px;
 	}
 	.ftx {
-		width: 94.25px;
-		height: 23.27px;
+		width: 94px;
+		height: 23px;
 	}
 	.logos-container {
 		justify-content: center;
