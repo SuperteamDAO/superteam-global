@@ -9,14 +9,14 @@
 	import Testimonials from '$lib/Testimonials.svelte';
 </script>
 
-<!-- <Hero /> -->
+<Hero />
 <Geographies />
 
 <!-- <div class="pb-[200px]"></div> -->
-<!-- <Partners />
+<Partners />
 <Production />
 <SuperteamIrl />
-<LoveRespect /> -->
+<LoveRespect />
 
 <!-- <CountryCard>
     <div class="shine"></div>
