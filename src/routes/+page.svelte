@@ -17,8 +17,8 @@
 
 <Production />
 
-<SuperteamIrl />
-<LoveRespect />
+<!-- <SuperteamIrl /> -->
+<!-- <LoveRespect /> -->
 
 <!-- <CountryCard>
     <div class="shine"></div>
