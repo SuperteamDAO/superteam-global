@@ -15,9 +15,9 @@
 <!-- <div class="pb-[200px]"></div> -->
 <Partners />
 
-<Production />
+<!-- <Production /> -->
 
-<SuperteamIrl />
+<!-- <SuperteamIrl /> -->
 
 <!-- <LoveRespect /> -->
 

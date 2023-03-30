@@ -2,25 +2,22 @@
 	import CountryCard from './CountryCard.svelte';
 	import NavButton from './common/NavButton.svelte';
 	import { CaretLeft, CaretRight } from 'phosphor-svelte';
-
 	/**
 	 * @type {HTMLElement}
 	 */
 	let carousel;
 	let currentPosition = 0;
-
 	function scrollLeft() {
 		currentPosition -= carousel.clientWidth / 2;
 		carousel.scrollTo({ left: currentPosition, behavior: 'smooth' });
 	}
-
 	function scrollRight() {
 		currentPosition += carousel.clientWidth / 2;
 		carousel.scrollTo({ left: currentPosition, behavior: 'smooth' });
 	}
 </script>
 
-<div class="carousel-main w-full flex flex-col col-span-5 md:-mx-[112px]">
+<div class="carousel-main w-full flex flex-col col-span-5">
 	<div
 		class="carousel-container flex items-center justify-between text-white mr-[71px] ml-[71px] mb-4"
 	>
@@ -60,21 +57,12 @@
 
 <style lang="postcss">
 	.carousel-main {
-		width: calc(100vw - 10px);
-	}
-
-	@media (max-width: 767px) {
-		.carousel-main {
-			width: calc(100vw - 10px);
-			margin-left: -40px;
-		}
-	}
-
-	@media (max-width: 639px) {
-		.carousel-main {
-			width: calc(100vw - 10px);
-			margin-left: -40px;
-		}
+		position: relative;
+		left: 50%;
+		right: 50%;
+		transform: translateX(-50%);
+		width: 100vw;
+		overflow-x: visible;
 	}
 
 	.chapters {
@@ -84,7 +72,6 @@
 		font-size: 24px;
 		line-height: 26px;
 		text-align: center;
-
 		color: #ffffff;
 	}
 </style>
