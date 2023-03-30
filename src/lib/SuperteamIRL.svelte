@@ -9,8 +9,7 @@
 	<div class="text-center">
 		<p class="font-semibold text-3xl leading-none text-white tracking-tighter">Superteam IRL</p>
 	</div>
-	<div class="col-span-5 lg:grid lg:grid-cols-5 gap-10 mt-11 lg:mt-4">
-		<!-- <img src={buildstations} alt="" /> -->
+	<div class="col-span-5 lg:grid lg:grid-cols-5 gap-[24px] mt-11 lg:mt-4">
 		<div />
 		<IllustrationCard imageUrl={buildstations} text="BuildStations" />
 		<div class="md:mt-14">
@@ -22,7 +21,4 @@
 </div>
 
 <style>
-	.irl {
-		letter-spacing: -0.04em;
-	}
 </style>
