@@ -4,6 +4,7 @@
 	import Hero from '$lib/Hero.svelte';
 	import Partners from '$lib/Partners.svelte';
 	import Production from '$lib/Production.svelte';
+	import SuperteamIrl from '$lib/SuperteamIRL.svelte';
 	import Testimonials from '$lib/Testimonials.svelte';
 </script>
 
@@ -12,6 +13,7 @@
 <!-- <div class="pb-[200px]"></div> -->
 <Partners />
 <Production />
+<SuperteamIrl />
 
 <!-- <CountryCard>
     <div class="shine"></div>
