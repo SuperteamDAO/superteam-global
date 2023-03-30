@@ -8,16 +8,23 @@
 	let carousel;
 	let currentPosition = 0;
 	function scrollLeft() {
-		currentPosition -= carousel.clientWidth / 2;
+		const minPosition = 0;
+		const scrollAmount = carousel.clientWidth / 2;
+		currentPosition = Math.max(currentPosition - scrollAmount, minPosition);
 		carousel.scrollTo({ left: currentPosition, behavior: 'smooth' });
 	}
+
 	function scrollRight() {
-		currentPosition += carousel.clientWidth / 2;
+		const maxPosition = carousel.scrollWidth - carousel.clientWidth;
+		const scrollAmount = carousel.clientWidth / 2;
+		currentPosition = Math.min(currentPosition + scrollAmount, maxPosition);
 		carousel.scrollTo({ left: currentPosition, behavior: 'smooth' });
 	}
 </script>
 
-<div class="carousel-main w-full flex flex-col col-span-5">
+<div
+	class="carousel-main relative left-1/2 right-1/2 -translate-x-1/2 w-screen overflow-x-visible flex flex-col col-span-5"
+>
 	<div
 		class="carousel-container flex items-center justify-between text-white mr-[71px] ml-[71px] mb-4"
 	>
@@ -56,15 +63,6 @@
 </div>
 
 <style lang="postcss">
-	.carousel-main {
-		position: relative;
-		left: 50%;
-		right: 50%;
-		transform: translateX(-50%);
-		width: 100vw;
-		overflow-x: visible;
-	}
-
 	.chapters {
 		font-family: inherit;
 		font-style: normal;
