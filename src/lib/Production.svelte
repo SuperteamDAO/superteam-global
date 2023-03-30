@@ -7,28 +7,28 @@
 	import founders_league from '../assets/cards/founders_league.png';
 </script>
 
-<div class="productions-container col-span-5 mt-44">
-	<div class="productions-text">
-		<p class="superteam">superteam</p>
+<div class="col-span-5 mt-44 flex flex-col justify-center text-center">
+	<div>
+		<p class="superteam font-semibold text-xl leading-none text-white">superteam</p>
 		<p class="productions">productions</p>
 	</div>
-	<div class="productions-cards col-span-5 justify-center gap-10">
-		<div class="left-cards mt-3">
-			<img src={earn} alt="earn" class="earn mb-8" />
+	<div class="col-span-5 flex justify-center gap-10">
+		<div class="mt-3">
+			<img src={earn} alt="earn" class="mb-8" />
 			<img src={ecosystem_calls} alt="ecosystem calls" />
 		</div>
-		<div class="center-cards">
+		<div>
 			<div class="center-text mt-3">
 				<p>Changing the world,</p>
 				<p>one line of code at a time</p>
 			</div>
-			<div class="center-pix mt-11">
-				<img src={instagrants} alt="instagrants" class="earn mb-8" />
+			<div class="mt-11">
+				<img src={instagrants} alt="instagrants" class="mb-8" />
 				<img src={alphasquad} alt="alpha squad" />
 			</div>
 		</div>
-		<div class="right-cards">
-			<img src={build} alt="build" class="earn mb-8" />
+		<div>
+			<img src={build} alt="build" class="mb-8" />
 			<img src={founders_league} alt="founders league" />
 		</div>
 	</div>
@@ -36,14 +36,7 @@
 
 <style>
 	.superteam {
-		font-family: inherit;
-		font-style: normal;
-		font-weight: 700;
-		font-size: 20px;
-		line-height: 22px;
-		text-align: center;
 		letter-spacing: -0.04em;
-		color: #ffffff;
 	}
 	.productions {
 		font-family: inherit;
@@ -59,12 +52,6 @@
 		background-clip: text;
 		text-fill-color: transparent;
 	}
-	.productions-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		text-align: center;
-	}
 	.center-text {
 		font-family: inherit;
 		font-style: normal;
@@ -75,9 +62,5 @@
 		letter-spacing: -0.04em;
 
 		color: #ffffff;
-	}
-	.productions-cards {
-		display: flex;
-		flex-direction: row;
 	}
 </style>

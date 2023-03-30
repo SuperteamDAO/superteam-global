@@ -20,13 +20,20 @@
 	}
 </script>
 
-<section class="w-full flex flex-col col-span-5">
-	<div class="carousel-container flex items-center justify-between text-white">
-		<NavButton direction="left" class="left" on:click={scrollLeft}><CaretLeft size={20} /></NavButton>
+<div class="carousel-main w-full flex flex-col col-span-5">
+	<div class="carousel-container flex items-center justify-between text-white mr-[71px] ml-[71px]">
+		<NavButton direction="left" class="left" on:click={scrollLeft}
+			><CaretLeft size={20} /></NavButton
+		>
 		<h2 class="chapters text-center">chapters</h2>
-		<NavButton direction="right" class="right" on:click={scrollRight}><CaretRight size={20} /></NavButton>
+		<NavButton direction="right" class="right" on:click={scrollRight}
+			><CaretRight size={20} /></NavButton
+		>
 	</div>
-	<div bind:this={carousel} class="country-cards-container py-12 w-full col-span-5 overflow-x-scroll overflow-y-visible scrollbar-hidden">
+	<div
+		bind:this={carousel}
+		class="country-cards-container py-12 w-full col-span-5 overflow-x-scroll overflow-y-visible scrollbar-hidden"
+	>
 		<div class="country-cards w-full flex gap-8">
 			<CountryCard />
 			<CountryCard />
@@ -37,7 +44,7 @@
 			<CountryCard />
 		</div>
 	</div>
-</section>
+</div>
 
 <style lang="postcss">
 	.chapters {
