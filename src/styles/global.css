@@ -3,23 +3,24 @@
 @tailwind utilities;
 
 * {
-  font-family: 'Satoshi-Variable', sans-serif;
+	font-family: 'Satoshi-Variable', sans-serif;
 }
 
-html, body {
-  height: 100%;
-  background: rgb(4, 5, 7);
+html,
+body {
+	height: 100%;
+	background: rgb(4, 5, 7);
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
-.scrollbar-hidden{
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.scrollbar-hidden {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
 .scrollbar-track {
-  background-color: transparent;
+	background-color: transparent;
 }
