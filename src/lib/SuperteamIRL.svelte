@@ -1,5 +1,5 @@
 <script>
-	import buildstations from '../assets/cards/buildstations.png';
+	import buildstations from '../assets/cards/buildstations2.png';
 	import supermeets from '../assets/cards/supermeets.png';
 	import uniprogram from '../assets/cards/uniprogram.png';
 	import IllustrationCard from './common/IllustrationCard.svelte';
