@@ -15,38 +15,23 @@
 	</div>
 	<p class="center-text lg:hidden">Changing the world,</p>
 	<p class="center-text lg:hidden">one line of code at a time</p>
-	<div class="col-span-5 grid grid-cols-1 lg:grid-cols-3 gap-0">
-		<div class="mt-[35px] flex flex-col items-center lg:hidden">
+	<div class="grid grid-cols-1 lg:grid-cols-8 gap-0 lg:gap-[24px] mx-auto">
+		<div
+			class="mt-[35px] lg:mt-[0px] col-span-1 lg:col-span-2 lg:col-start-2 flex flex-col items-center"
+		>
 			<IllustrationCard text="Earn" imageUrl={earn} />
 			<IllustrationCard text="Ecosystem Calls" imageUrl={ecosystem_calls} />
+		</div>
+		<div class="mt-[12px] col-span-1 lg:col-span-2 flex flex-col items-center lg:text-sm">
+			<p class="center-text md:hidden lg:block">Changing the world,</p>
+			<p class="center-text mb-[43px] md:hidden lg:block">one line of code at a time</p>
+
 			<IllustrationCard text="Instagrants" imageUrl={instagrants} />
 			<IllustrationCard text="Alpha Squad" imageUrl={alphasquad} />
+		</div>
+		<div class=" col-span-1 lg:col-span-2 flex flex-col items-center">
 			<IllustrationCard text="Build" imageUrl={build} />
 			<IllustrationCard text="Founder's League" imageUrl={founders_league} />
-		</div>
-		<div class="hidden lg:grid lg:grid-cols-5 lg:col-span-5 lg:gap-[24px] mx-auto">
-			<div class="col-span-1" />
-			<!-- Empty column -->
-			<div class="mt-3 flex flex-col items-center">
-				<IllustrationCard text="Earn" imageUrl={earn} />
-				<IllustrationCard text="Ecosystem Calls" imageUrl={ecosystem_calls} />
-			</div>
-			<div class="mt-3 flex flex-col items-center">
-				<div class="center-text">
-					<p class="max-[1113px]:text-sm">Changing the world,</p>
-					<p class="max-[1113px]:text-sm">one line of code at a time</p>
-				</div>
-				<div class="mt-11">
-					<IllustrationCard text="Instagrants" imageUrl={instagrants} />
-					<IllustrationCard text="Alpha Squad" imageUrl={alphasquad} />
-				</div>
-			</div>
-			<div class="mt-3 flex flex-col items-center">
-				<IllustrationCard text="Build" imageUrl={build} />
-				<IllustrationCard text="Founder's League" imageUrl={founders_league} />
-			</div>
-			<div class="col-span-1" />
-			<!-- Empty column -->
 		</div>
 	</div>
 </div>
@@ -74,7 +59,6 @@
 		font-style: normal;
 		font-weight: 700;
 		font-size: 16px;
-		/* line-height: 22px; */
 		text-align: center;
 		letter-spacing: -0.04em;
 
