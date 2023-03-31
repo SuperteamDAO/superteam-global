@@ -9,7 +9,7 @@
 html,
 body {
 	height: 100%;
-	background: rgb(4, 5, 7);
+	/* background: rgb(4, 5, 7); */
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
