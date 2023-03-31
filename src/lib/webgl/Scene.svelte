@@ -6,28 +6,29 @@
 
     export let size = { width: 0, height: 0 }
 
-    const scrollbar = getContext<Writable<Scrollbar | null>>('smoothScroll');
+    // const scrollbar = getContext<Writable<Scrollbar | null>>('smoothScroll');
 
-    let wrapper: HTMLElement | null = null;
+    // let wrapper: HTMLElement | null = null;
 
-    $: y = 0;
+    // $: y = 0;
 
 
-    $: {
-        if ($scrollbar) {
-            $scrollbar.addListener(({ offset }) => {
-                if (wrapper) {
-                    y = offset.y
-                }
-            })
-        }
-    }
+    // $: {
+    //     if ($scrollbar) {
+    //         $scrollbar.addListener(({ offset }) => {
+    //             if (wrapper) {
+    //                 y = offset.y
+    //             }
+    //         })
+    //     }
+    // }
+
+
 </script>
 
-<div 
-    bind:this={wrapper}
+<div
     class="fixed top-0 left-0 z-0"
-    style="height: {size.height}px; width: {size.width}px; transform: translate3d(0, {y}px, 0);"
+    style="height: {size.height}px; width: {size.width}px;"
 >
     <Canvas {size} >
     

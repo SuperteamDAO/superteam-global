@@ -3,9 +3,9 @@
   import "../styles/fonts.css";
   import "../styles/global.css";
 
-  import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-	import Scrollbar from 'smooth-scrollbar';
+  // import { gsap } from 'gsap';
+	// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	// import Scrollbar from 'smooth-scrollbar';
 	
 	import { onMount, setContext } from 'svelte';
 	import Header from "$lib/common/Header.svelte";
@@ -15,33 +15,33 @@
   let height = 0;
   let width = 0;
 
-  const smoothScroll = writable<null | Scrollbar>(null);
-  setContext('smoothScroll', smoothScroll);
+  // const smoothScroll = writable<null | Scrollbar>(null);
+  // setContext('smoothScroll', smoothScroll);
 
   onMount(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    const scroller = document.body;
-    $smoothScroll = Scrollbar.init(scroller, { damping: 0.01, delegateTo: document, alwaysShowTracks: false });
+    // gsap.registerPlugin(ScrollTrigger)
+    // const scroller = document.body;
+    // $smoothScroll = Scrollbar.init(scroller, { damping: 0.01, delegateTo: document, alwaysShowTracks: false });
 
-    ScrollTrigger.scrollerProxy(scroller, {
-      scrollTop(value) {
-        if (arguments.length) {
-          if (typeof value === 'number' && $smoothScroll !==  null) {
-            $smoothScroll.scrollTop = value;
-          }
-        }
-        if ($smoothScroll !== null) {
-          return $smoothScroll.scrollTop
-        }
-      }  
-    });
+    // ScrollTrigger.scrollerProxy(scroller, {
+    //   scrollTop(value) {
+    //     if (arguments.length) {
+    //       if (typeof value === 'number' && $smoothScroll !==  null) {
+    //         $smoothScroll.scrollTop = value;
+    //       }
+    //     }
+    //     if ($smoothScroll !== null) {
+    //       return $smoothScroll.scrollTop
+    //     }
+    //   }  
+    // });
 
-    $smoothScroll.addListener(ScrollTrigger.update);
+    // $smoothScroll.addListener(ScrollTrigger.update);
 
-    ScrollTrigger.defaults({ 
-			scroller: scroller,
-			pinType: 'transform'
-		});
+    // ScrollTrigger.defaults({ 
+		// 	scroller: scroller,
+		// 	pinType: 'transform'
+		// });
   })
 
 </script>
