@@ -16,8 +16,9 @@
 	<p class="center-text lg:hidden">Changing the world,</p>
 	<p class="center-text lg:hidden">one line of code at a time</p>
 	<div class="grid grid-cols-1 lg:grid-cols-8 gap-0 lg:gap-[24px] mx-auto">
-		<div class="col-span-1" />
-		<div class="mt-[35px] lg:mt-[0px] col-span-1 lg:col-span-2 flex flex-col items-center">
+		<div
+			class="mt-[35px] lg:mt-[0px] col-span-1 lg:col-span-2 lg:col-start-2 flex flex-col items-center"
+		>
 			<IllustrationCard text="Earn" imageUrl={earn} />
 			<IllustrationCard text="Ecosystem Calls" imageUrl={ecosystem_calls} />
 		</div>
@@ -32,7 +33,6 @@
 			<IllustrationCard text="Build" imageUrl={build} />
 			<IllustrationCard text="Founder's League" imageUrl={founders_league} />
 		</div>
-		<div class="col-span-1" />
 	</div>
 </div>
 
