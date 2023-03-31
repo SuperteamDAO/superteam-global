@@ -38,10 +38,12 @@
 
 <style>
 	.superteam {
+		font-family: 'Archivo_SemiExpanded';
 		letter-spacing: -0.04em;
+		line-height: 22px;
 	}
 	.productions {
-		font-family: inherit;
+		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
 		font-weight: 700;
 		font-size: 50px;
@@ -55,7 +57,7 @@
 		text-fill-color: transparent;
 	}
 	.center-text {
-		font-family: inherit;
+		font-family: 'Satoshi-Variable';
 		font-style: normal;
 		font-weight: 700;
 		font-size: 16px;
