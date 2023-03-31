@@ -1,6 +1,8 @@
 <script></script>
 
-<div class="respect-container mt-48 col-span-6">
+<div
+	class="respect-container h-[225px] md:h-[580px] mt-48 col-span-5 relative left-1/2 right-1/2 -translate-x-1/2 w-screen overflow-x-visible z-3"
+>
 	<div class="love-header">
 		<p class="love">Love and Respect</p>
 	</div>
@@ -12,8 +14,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		margin-left: -112px;
-		margin-right: -112px;
+		z-index: 4;
 	}
 	.love {
 		font-family: inherit;
@@ -28,7 +29,6 @@
 	}
 	.respect-cards {
 		height: 580px;
-		background-color: gainsboro;
 		width: 100%;
 	}
 </style>
