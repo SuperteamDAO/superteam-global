@@ -23,8 +23,8 @@
 			<IllustrationCard text="Ecosystem Calls" imageUrl={ecosystem_calls} />
 		</div>
 		<div class="mt-[12px] col-span-1 lg:col-span-2 flex flex-col items-center lg:text-sm">
-			<p class="center-text md:hidden lg:block">Changing the world,</p>
-			<p class="center-text mb-[43px] md:hidden lg:block">one line of code at a time</p>
+			<p class="center-text hidden lg:block">Changing the world,</p>
+			<p class="center-text mb-[43px] hidden lg:block">one line of code at a time</p>
 
 			<IllustrationCard text="Instagrants" imageUrl={instagrants} />
 			<IllustrationCard text="Alpha Squad" imageUrl={alphasquad} />
