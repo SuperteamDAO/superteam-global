@@ -8,13 +8,13 @@
 	class="collab-container col-span-5 flex flex-col justify-center align-middle relative left-1/2 right-1/2 -translate-x-1/2 w-screen -mt-[100px] z-1 bg-black h-fit md:h-fit md:rounded-[64px]"
 >
 	<div class="overlay absolute w-full h-full hidden md:block" />
-	<img src={blackhole1} alt="" class="h-fit md:h-fit md:rounded-[64px] hidden md:block" />
+	<img src={blackhole1} alt="" class="lg:h-fit h-[807px] md:rounded-[64px] hidden md:block" />
 
 	<div class="overlay-sm absolute w-full h-full block md:hidden" />
-	<img src={blackhole2} alt="" class="w-full h-full md:rounded-[64px] block md:hidden" />
+	<img src={blackhole2} alt="" class="w-full h-[669px] md:rounded-[64px] block md:hidden" />
 
 	<div
-		class="history-stuff w-full flex flex-col md:justify-center items-center h-[669px] md:h-[691px]"
+		class="history-stuff w-full flex flex-col md:justify-center items-center h-[669px] md:h-full"
 	>
 		<p class="history mt-[80px]">be a part of history</p>
 		<div class="button mt-[38px]">
