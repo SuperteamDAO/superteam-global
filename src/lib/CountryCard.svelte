@@ -7,8 +7,8 @@
     let thisCard: undefined | HTMLDivElement = undefined;
     let isActive = false;
 
-    const springInteractSettings = { stiffness: 0.066, damping: 0.25 };
-    const springPopoverSettings = { stiffness: 0.033, damping: 0.45 };
+    const springInteractSettings = { stiffness: 0.01, damping: 0.5, duration: 200 };
+    const springPopoverSettings = { stiffness: 0.01, damping: 0.5, duration: 200 };
 
     const mouse = writable({ x: 0, y: 0 });
 
