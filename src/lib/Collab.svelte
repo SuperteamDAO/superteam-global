@@ -25,7 +25,7 @@
 
 <style>
 	.history {
-		font-family: inherit;
+		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
 		font-weight: 700;
 		font-size: 36px;

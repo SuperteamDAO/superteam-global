@@ -62,7 +62,7 @@
 
 <style lang="postcss">
 	.chapters {
-		font-family: inherit;
+		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
 		font-weight: 600;
 		font-size: 24px;

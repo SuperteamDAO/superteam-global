@@ -17,7 +17,7 @@
 		z-index: 4;
 	}
 	.love {
-		font-family: inherit;
+		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
 		font-weight: 500;
 		font-size: 32px;
