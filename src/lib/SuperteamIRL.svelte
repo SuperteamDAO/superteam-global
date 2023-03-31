@@ -11,13 +11,17 @@
 	<div class="text-center">
 		<p class="font-semibold text-3xl leading-none text-white tracking-tighter">Superteam IRL</p>
 	</div>
-	<div class="col-span-5 lg:grid lg:grid-cols-5 gap-[24px] mt-11 lg:mt-4">
+	<div class="col-span-5 grid grid-cols-1 lg:grid lg:grid-cols-8 gap-[24px] mt-11 lg:mt-4">
 		<div />
-		<IllustrationCard imageUrl={buildstations2} text="BuildStations" />
-		<div class="md:mt-14">
+		<div class="col-span-1 lg:col-span-2 lg:col-start-2">
+			<IllustrationCard imageUrl={buildstations2} text="BuildStations" />
+		</div>
+		<div class="md:mt-14 col-span-1 lg:col-span-2">
 			<IllustrationCard imageUrl={supermeets} text="Supermeets" />
 		</div>
-		<IllustrationCard imageUrl={uniprogram} text="University Program" />
+		<div class="col-span-1 lg:col-span-2">
+			<IllustrationCard imageUrl={uniprogram} text="University Program" />
+		</div>
 		<div />
 	</div>
 </div>
