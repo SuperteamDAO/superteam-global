@@ -5,10 +5,10 @@
 </script>
 
 <div
-	class="collab-container col-span-5 flex flex-col justify-center align-middle relative left-1/2 right-1/2 -translate-x-1/2 w-screen -mt-[100px] z-1 bg-black h-[669px] md:h-[691px] md:rounded-[64px]"
+	class="collab-container col-span-5 flex flex-col justify-center align-middle relative left-1/2 right-1/2 -translate-x-1/2 w-screen -mt-[100px] z-1 bg-black h-fit md:h-fit md:rounded-[64px]"
 >
 	<div class="overlay absolute w-full h-full hidden md:block" />
-	<img src={blackhole1} alt="" class="h-[669px] md:h-[691px] md:rounded-[64px] hidden md:block" />
+	<img src={blackhole1} alt="" class="h-fit md:h-fit md:rounded-[64px] hidden md:block" />
 
 	<div class="overlay-sm absolute w-full h-full block md:hidden" />
 	<img src={blackhole2} alt="" class="w-full h-full md:rounded-[64px] block md:hidden" />
