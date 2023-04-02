@@ -19,7 +19,7 @@
 
 <style>
 	.partners-text {
-		font-style: normal;
+		font-style: 'Archivo_SemiExpanded';
 		font-weight: 700;
 		font-size: 24px;
 		line-height: 26px;
