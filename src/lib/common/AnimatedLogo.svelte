@@ -17,8 +17,8 @@
 
 <svg width="42" height="32" viewBox="0 0 42 32" fill="white" xmlns="http://www.w3.org/2000/svg">
     <clipPath id="clip0">
-        <polygon points="0 0, {$slices} 0, {$slices} 18, 0 18" />
-        <polygon points="{$slices2} 14, 21 14, 14 32, {$slices2} 32" />
+        <polygon points="0 0, {$slices} 0, {$slices} 16, 0 16" />
+        <polygon points="{$slices2} 15, 21 15, 15 32, {$slices2} 32" />
         <polygon points="21 0, 42 0, 42 {$slices3}, 21 {$slices3}" />
         <!-- <rect width={$slices} height="16" x="20" y="16" /> -->
     </clipPath>

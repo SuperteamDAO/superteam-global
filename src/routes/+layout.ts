@@ -1,3 +1,5 @@
+export const ssr = false
+
 import { browser } from '$app/environment'
 import '../i18n' // Import to initialize. Important :)
 import { locale, waitLocale } from 'svelte-i18n'
