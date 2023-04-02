@@ -24,11 +24,20 @@
 	}
 	.text-on-image {
 		position: absolute;
+
 		text-align: left;
 		line-height: 31px;
 		font-size: calc(1rem + 0.5vw);
 		width: calc(120px + 1.5vw);
 		margin-right: 10%;
+		font-family: 'Archivo_SemiExpanded';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 28.9199px;
+		line-height: 31px;
+		letter-spacing: -0.04em;
+
+		color: #ffffff;
 	}
 	@media screen and (max-width: 1023px) {
 		.text-on-image {

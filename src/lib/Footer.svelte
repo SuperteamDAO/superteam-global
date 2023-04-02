@@ -1,12 +1,85 @@
-<script></script>
+<script>
+	import superteam_footer from '../assets/logos/superteam_footer.svg';
+	import AnimatedLogo from './common/AnimatedLogo.svelte';
+</script>
 
 <div
-	class="footer-container relative left-1/2 right-1/2 -translate-x-1/2 w-screen lg:h-[477px] -mt-[90px] col-span-5"
-/>
+	class="footer-container relative left-1/2 right-1/2 -translate-x-1/2 w-screen h-fit lg:h-[477px] -mt-[90px] col-span-5 rounded-t-[48px] z-10 md:z-0"
+>
+	<div
+		class="main-container h-fit mt-[100px] lg:mt-[124px] flex lg:flex-row flex-col justify-between"
+	>
+		<div class="overlay-logo absolute ml-[40px] mt-[19px] lg:ml-[72px] lg:mt-[17px]">
+			<AnimatedLogo />
+		</div>
+		<div class="footer-logo ml-[40px] lg:ml-[45px]">
+			<div>
+				<img src={superteam_footer} alt="" />
+			</div>
+			<div class="overlay-text absolute -mt-[140px] lg:ml-[27px] lg:mt-0">
+				<p>superteam</p>
+				<p class="powered-text mt-[16px]">powered by solana</p>
+			</div>
+		</div>
+		<div
+			class="footer-texts lg:ml-0 ml-[40px] lg:mr-[72px] text-white lg:text-right flex lg:flex-row flex-col"
+		>
+			<div class="text-col-1">
+				<p class="footer-text">Instagrants</p>
+				<p class="footer-text mt-4">Earn</p>
+				<p class="footer-text mt-4">Ecosystem Calls</p>
+				<p class="footer-text mt-4">Alpha Squad</p>
+				<p class="footer-text mt-4">Founder's League</p>
+			</div>
+			<div class="text-col-2 lg:ml-[123px] lg:mt-0 mt-[64px] lg:mb-0 mb-[72px]">
+				<p class="footer-text">SuperteamIN</p>
+				<p class="footer-text mt-4">SuperteamGER</p>
+				<p class="footer-text mt-4">SuperteamTUR</p>
+				<p class="footer-text mt-4">SuperteamMEX</p>
+				<p class="footer-text mt-4">SuperteamMEX</p>
+				<p class="footer-text mt-4">SuperteamMEX</p>
+				<p class="footer-text mt-4">SuperteamMEX</p>
+				<p class="footer-text mt-4">SuperteamMEX</p>
+			</div>
+		</div>
+	</div>
+</div>
 
 <style>
 	.footer-container {
-		background-color: gray;
-		z-index: -1;
+		background-color: #121212;
+	}
+	.footer-text {
+		font-family: 'Satoshi-Variable';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 19px;
+		/* identical to box height */
+
+		color: #ffffff;
+	}
+	.overlay-text {
+		font-family: 'Archivo_SemiExpanded';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 35px;
+		/* identical to box height */
+
+		text-align: center;
+		letter-spacing: -0.04em;
+
+		color: #ffffff;
+	}
+	.powered-text {
+		font-family: 'Archivo_SemiExpanded';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 15px;
+		text-align: left;
+		color: #ffffff;
+		letter-spacing: 0.02em;
 	}
 </style>
