@@ -31,7 +31,7 @@
 			<div class="name text-white">
 				<p>{name}</p>
 			</div>
-			<div class="username">
+			<div class="username mt-[4px]">
 				<p>{username}</p>
 			</div>
 		</div>
@@ -44,7 +44,7 @@
 
 		background: linear-gradient(180deg, #161616 6.99%, rgba(22, 22, 22, 0) 158.45%);
 		border: 1px solid rgba(177, 177, 177, 0.2);
-		border-radius: 5.00463px;
+		border-radius: 5px;
 	}
 	.username {
 		color: #ffffff;

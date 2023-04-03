@@ -1,56 +1,55 @@
 <script>
+	import { onMount, onDestroy } from 'svelte';
 	import TestimonialCard from './common/TestimonialCard.svelte';
 	import pragun from '../assets/images/pragun.jpg';
-	import { afterUpdate, onMount } from 'svelte';
-
 	/**
-	 * @type {HTMLDivElement}
+	 * @type {{ scrollLeft: number; addEventListener: (arg0: string, arg1: { (): void; (): void; }) => void; }}
 	 */
-	let container;
-	const numRows = 2; // Set the number of fixed rows
-	const containerHeight = 580;
-
-	function layoutItems() {
-		const items = container.querySelectorAll('.masonry-item');
-		const columnWidth = items[0].clientWidth;
-
-		let columns = [[]];
-		let currentColumnHeight = 0;
-		let currentRow = 0;
-
-		items.forEach((item, index) => {
-			if (currentColumnHeight + item.clientHeight > containerHeight) {
-				currentRow++;
-				if (currentRow === numRows) {
-					currentRow = 0;
-					columns.push([]);
-					currentColumnHeight = 0;
-				}
-			}
-
-			columns[columns.length - 1].push(item);
-			currentColumnHeight += item.clientHeight + 32; // Add 32px margin-bottom to each item
-
-			// Set position of the item
-			const x = (columnWidth + 32) * (columns.length - 1);
-			const y = (currentRow * containerHeight) / numRows;
-			item.style.transform = `translate(${x}px, ${y}px)`;
-			currentRow = (currentRow + 1) % numRows;
-
-			// Calculate the number of columns needed
-			const neededColumns = Math.ceil(items.length / numRows);
-			// Set the width of the container
-			container.style.width = `${(columnWidth + 32) * neededColumns}px`;
-		});
-	}
+	let itemRow;
+	/**
+	 * @type {number | undefined}
+	 */
+	let scrollInterval;
 
 	onMount(() => {
-		layoutItems();
+		// Clone the content of the item-row and append it to create a seamless loop
+		const clonedContent = itemRow.children[0].cloneNode(true);
+		itemRow.children[0].appendChild(clonedContent);
+
+		scrollInterval = setInterval(() => {
+			itemRow.scrollLeft += 1;
+			// Reset the scroll position when reaching the end of the original content
+			if (itemRow.scrollLeft >= itemRow.scrollWidth / 2) {
+				itemRow.scrollLeft = 0;
+			}
+		}, 30);
+
+		itemRow.addEventListener('mouseover', () => {
+			clearInterval(scrollInterval);
+			scrollInterval = setInterval(() => {
+				itemRow.scrollLeft += 1;
+			}, 80);
+		});
+
+		itemRow.addEventListener('mouseout', () => {
+			clearInterval(scrollInterval);
+			scrollInterval = setInterval(() => {
+				itemRow.scrollLeft += 1;
+			}, 30);
+		});
+
+		return () => {
+			clearInterval(scrollInterval);
+		};
 	});
 
-	afterUpdate(() => {
-		layoutItems();
-	});
+	function onManualScroll() {
+		if (itemRow.scrollLeft >= itemRow.scrollWidth / 2) {
+			itemRow.scrollLeft = 0;
+		} else if (itemRow.scrollLeft === 0 && itemRow.scrollWidth > 0) {
+			itemRow.scrollLeft = itemRow.scrollWidth / 2;
+		}
+	}
 </script>
 
 <div
@@ -59,57 +58,171 @@
 	<div class="love-header">
 		<p class="love">Love and Respect</p>
 	</div>
+
 	<div
-		bind:this={container}
-		class="respect-cards mt-12 h-[full] overflow-x-visible scrollbar-hidden masonry-columns"
+		class="mt-12 overflow-x-scroll scrollbar-hidden"
+		bind:this={itemRow}
+		on:scroll={onManualScroll}
 	>
-		<div class="break-inside-avoid mb-[32px] masonry-item" id="card-2">
-			<TestimonialCard
-				imgurl={pragun}
-				name="Pragun Dua"
-				username="pragdua"
-				content="absoultely the best people in the game, no competetion the the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game"
-			/>
-		</div>
-		<div class="break-inside-avoid masonry-item" id="card-2">
-			<TestimonialCard
-				imgurl={pragun}
-				name="Pragun Dua"
-				username="pragdua"
-				content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-			/>
-		</div>
-		<div class="break-inside-avoid mb-[32px] masonry-item" id="card-2">
-			<TestimonialCard
-				imgurl={pragun}
-				name="Pragun Dua"
-				username="pragdua"
-				content="absoultely the best people in the game, no competetion the"
-			/>
-		</div>
-		<div class="break-inside-avoid mb-[32px] masonry-item" id="card-2">
-			<TestimonialCard
-				imgurl={pragun}
-				name="Pragun Dua"
-				username="pragdua"
-				content="absoultely the best people in the game, no competetion the"
-			/>
-		</div>
-		<div class="break-inside-avoid mb-[32px] masonry-item" id="card-2">
-			<TestimonialCard
-				imgurl={pragun}
-				name="Pragun Dua"
-				username="pragdua"
-				content="absoultely the best people in the game, no competetion the"
-			/>
+		<div class="item-row flex flex-row">
+			<div class="item-col flex flex-row md:flex-col h-[580px]">
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+			</div>
+			<div class="item-col flex flex-row md:flex-col md:h-[580px]">
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+			</div>
+			<div class="item-col flex flex-row md:flex-col h-[580px]">
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+			</div>
+			<div class="item-col flex flex-row md:flex-col h-[580px]">
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+			</div>
+			<div class="item-col flex flex-row md:flex-col h-[580px]">
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+			</div>
+			<div class="item-col flex flex-row md:flex-col h-[580px]">
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+			</div>
+			<div class="item-col flex flex-row md:flex-col h-[580px]">
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+			</div>
+			<div class="item-col flex flex-row md:flex-col h-[580px]">
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+				<div class="item">
+					<TestimonialCard
+						imgurl={pragun}
+						name="Pragun Dua"
+						username="@pragdua"
+						content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
+					/>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 
 <style>
 	.respect-container {
-		display: flex;
-		flex-direction: column;
+		justify-content: center;
+		z-index: 4;
+	}
+	.item {
+		margin-right: 24px;
+		margin-bottom: 24px;
+	}
+	.respect-container {
 		justify-content: center;
 		z-index: 4;
 	}
@@ -124,19 +237,7 @@
 
 		color: #ffffff;
 	}
-	.respect-cards {
-		position: relative;
-		height: 580px;
-		width: 100%;
-		display: grid;
-		grid-auto-flow: column;
-		grid-template-rows: repeat(2, 1fr); /* Set the number of fixed rows */
-		grid-gap: 32px;
-		height: 100vh; /* Set the fixed height */
-		overflow-x: auto;
-	}
-	.masonry-item {
-		position: absolute;
-		margin-bottom: 32px;
+	.item-col:nth-child(even) {
+		margin-top: 12px;
 	}
 </style>
