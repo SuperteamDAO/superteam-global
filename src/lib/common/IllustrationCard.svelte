@@ -7,8 +7,8 @@
 	 * @type {any}
 	 */
 	export let text;
-	export let top = '10%';
-	export let left = '10%';
+	export let top = '32px';
+	export let left = '30px';
 </script>
 
 <div class="image-with-text relative mb-8 rounded-lg">
