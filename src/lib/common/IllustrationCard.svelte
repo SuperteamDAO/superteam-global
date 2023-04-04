@@ -7,11 +7,14 @@
 	 * @type {any}
 	 */
 	export let text;
-	export let top = '10%';
-	export let left = '10%';
+	export let top = '32px';
+	export let left = '30px';
+
+	export let onClick = () => {};
 </script>
 
-<div class="image-with-text relative mb-8 rounded-lg">
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="image-with-text relative mb-8 rounded-lg cursor-pointer" on:click={onClick}>
 	<img src={imageUrl} alt="" />
 	<p class="text-on-image font-bold text-white" style="top: {top}; left: {left};">
 		{text}
@@ -24,7 +27,6 @@
 	}
 	.text-on-image {
 		position: absolute;
-
 		text-align: left;
 		line-height: 31px;
 		font-size: calc(1rem + 0.5vw);
