@@ -8,39 +8,13 @@
 	import thunder from '../assets/logos/thunder.svg';
 
 	let modalOpen = false;
-	/**
-	 * @type {any}
-	 */
 	let top_content;
-	/**
-	 * @type {any}
-	 */
 	let text;
-	/**
-	 * @type {any}
-	 */
 	let imgurl;
-	/**
-	 * @type {any}
-	 */
 	let points;
-	/**
-	 * @type {any}
-	 */
 	let btnText;
-	/**
-	 * @type {any}
-	 */
 	let bullet;
 
-	/**
-	 * @param {any} content
-	 * @param {any} [_text]
-	 * @param {any} [_imgurl]
-	 * @param {any} [_points]
-	 * @param {any} [_btnText]
-	 * @param {any} [_bullet]
-	 */
 	function openModal(content, _text, _imgurl, _points, _btnText, _bullet) {
 		top_content = content;
 		text = _text;
@@ -72,14 +46,14 @@
 			<IllustrationCard
 				imageUrl={buildstations2}
 				text="BuildStations"
-				onClick={() =>
+				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
 						instagrantsbg,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
-						bullet
+						thunder
 					)}
 			/>
 		</div>
@@ -87,14 +61,14 @@
 			<IllustrationCard
 				imageUrl={supermeets}
 				text="Supermeets"
-				onClick={() =>
+				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
 						instagrantsbg,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
-						bullet
+						thunder
 					)}
 			/>
 		</div>
@@ -102,14 +76,14 @@
 			<IllustrationCard
 				imageUrl={uniprogram}
 				text="University Program"
-				onClick={() =>
+				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
 						instagrantsbg,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
-						bullet
+						thunder
 					)}
 			/>
 		</div>

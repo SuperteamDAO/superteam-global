@@ -11,39 +11,13 @@
 	import thunder from '../assets/logos/thunder.svg';
 
 	let modalOpen = false;
-	/**
-	 * @type {any}
-	 */
 	let top_content;
-	/**
-	 * @type {any}
-	 */
 	let text;
-	/**
-	 * @type {any}
-	 */
 	let imgurl;
-	/**
-	 * @type {any}
-	 */
 	let points;
-	/**
-	 * @type {any}
-	 */
 	let btnText;
-	/**
-	 * @type {any}
-	 */
 	let bullet;
 
-	/**
-	 * @param {any} content
-	 * @param {any} [_text]
-	 * @param {any} [_imgurl]
-	 * @param {any} [_points]
-	 * @param {any} [_btnText]
-	 * @param {any} [_bullet]
-	 */
 	function openModal(content, _text, _imgurl, _points, _btnText, _bullet) {
 		top_content = content;
 		text = _text;
@@ -77,7 +51,7 @@
 			<IllustrationCard
 				text="Earn"
 				imageUrl={earn}
-				onClick={() =>
+				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
@@ -90,7 +64,7 @@
 			<IllustrationCard
 				text="Ecosystem Calls"
 				imageUrl={ecosystem_calls}
-				onClick={() =>
+				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
@@ -108,7 +82,7 @@
 			<IllustrationCard
 				text="Instagrants"
 				imageUrl={instagrants}
-				onClick={() =>
+				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
@@ -121,7 +95,7 @@
 			<IllustrationCard
 				text="Alpha Squad"
 				imageUrl={alphasquad}
-				onClick={() =>
+				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
@@ -136,7 +110,7 @@
 			<IllustrationCard
 				text="Build"
 				imageUrl={build}
-				onClick={() =>
+				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
@@ -149,7 +123,7 @@
 			<IllustrationCard
 				text="Founder's League"
 				imageUrl={founders_league}
-				onClick={() =>
+				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
