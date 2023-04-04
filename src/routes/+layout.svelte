@@ -3,10 +3,6 @@
   import "../styles/fonts.css";
   import "../styles/global.css";
 
-  // import { gsap } from 'gsap';
-	// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-	// import Scrollbar from 'smooth-scrollbar';
-	
 	import { onMount, setContext } from 'svelte';
 	import Header from "$lib/common/Header.svelte";
 	import Scene from "$lib/webgl/Scene.svelte";
@@ -15,33 +11,31 @@
   let height = 0;
   let width = 0;
 
-  // const smoothScroll = writable<null | Scrollbar>(null);
-  // setContext('smoothScroll', smoothScroll);
+  const mouse = writable({ x: 0, y: 0 });
+  setContext('mouse', $mouse);
+
+  const mouseMove = (e: MouseEvent) => {
+    mouse.set({ x: e.clientX, y: e.clientY });
+  }
+  
+  let parallaxElements = document.querySelectorAll('.parallax');
+
+  const parallax = (position:{ x: number; y: number }) => {
+    // const { x, y } = position;
+    // const moveX = x * -0.3 / 15;
+    // const moveY = y * -0.3 / 15;
+
+    // parallaxElements?.forEach((el) => {
+    //   el.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    // })
+  }
+
+  mouse.subscribe((position) => {
+    parallax(position);
+  })
 
   onMount(() => {
-    // gsap.registerPlugin(ScrollTrigger)
-    // const scroller = document.body;
-    // $smoothScroll = Scrollbar.init(scroller, { damping: 0.01, delegateTo: document, alwaysShowTracks: false });
-
-    // ScrollTrigger.scrollerProxy(scroller, {
-    //   scrollTop(value) {
-    //     if (arguments.length) {
-    //       if (typeof value === 'number' && $smoothScroll !==  null) {
-    //         $smoothScroll.scrollTop = value;
-    //       }
-    //     }
-    //     if ($smoothScroll !== null) {
-    //       return $smoothScroll.scrollTop
-    //     }
-    //   }  
-    // });
-
-    // $smoothScroll.addListener(ScrollTrigger.update);
-
-    // ScrollTrigger.defaults({ 
-		// 	scroller: scroller,
-		// 	pinType: 'transform'
-		// });
+    parallaxElements = document.querySelectorAll('.parallax');
   })
 
 </script>
@@ -52,14 +46,15 @@
 <svelte:window
   bind:innerHeight={height}
   bind:innerWidth={width}
+  on:mousemove={mouseMove}
 />
 
 <Scene size={{ width, height }} />
 
-<div class="relative h-full grid grid-cols-5 gap-5 px-10 md:px-[72px] mx-auto max-w-[1440px]">
+<!-- <div class="relative h-full grid grid-cols-5 gap-5 px-10 md:px-[72px] mx-auto max-w-[1440px]">
   <Header />
   <slot />
-</div>
+</div> -->
 
 <style>
   :global(.scrollbar-track) {

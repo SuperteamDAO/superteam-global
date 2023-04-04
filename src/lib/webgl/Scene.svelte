@@ -1,28 +1,15 @@
 <script lang="ts">
-    import { Canvas } from '@threlte/core'
-	import type Scrollbar from 'smooth-scrollbar';
-	import { onMount, getContext } from 'svelte';
-	import type { Writable } from 'svelte/store';
-
+    import { OrbitControls, PerspectiveCamera, Canvas, useTexture, AmbientLight, T } from '@threlte/core'
+	import { onMount } from 'svelte';
+	import { texturesConfig } from '../../constants/webgl';
+	
     export let size = { width: 0, height: 0 }
 
-    // const scrollbar = getContext<Writable<Scrollbar | null>>('smoothScroll');
+    const textures = useTexture(Object.values(texturesConfig).map((texture) => texture.path))
 
-    // let wrapper: HTMLElement | null = null;
+    onMount(() => {
 
-    // $: y = 0;
-
-
-    // $: {
-    //     if ($scrollbar) {
-    //         $scrollbar.addListener(({ offset }) => {
-    //             if (wrapper) {
-    //                 y = offset.y
-    //             }
-    //         })
-    //     }
-    // }
-
+    })
 
 </script>
 
@@ -31,13 +18,23 @@
     style="height: {size.height}px; width: {size.width}px;"
 >
     <Canvas {size} >
-    
+        <PerspectiveCamera
+            fov={50}
+            position={{ z: 5 }}
+        >
+            <!-- <OrbitControls /> -->
+            <AmbientLight color={0xd7681c} intensity={0.3} />
+        </PerspectiveCamera>
+        <T.Mesh>
+            <T.PlaneGeometry args={[7 * 16 / 9, 7 * 9 / 16]} />
+            <T.MeshBasicMaterial map={textures[0]} />
+        </T.Mesh>
     </Canvas>
 </div>
 
 <style lang="postcss">
     :global(canvas) {
         @apply w-full h-full;
-	    background: rgb(4, 5, 7);
+        background-color: rgb(4, 5, 7);
     }
 </style>
