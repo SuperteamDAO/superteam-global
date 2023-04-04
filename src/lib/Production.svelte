@@ -6,9 +6,64 @@
 	import build from '../assets/cards/build.png';
 	import founders_league from '../assets/cards/founders_league.png';
 	import IllustrationCard from './common/IllustrationCard.svelte';
+	import instagrantsbg from '../assets/images/instagrantsbg.png';
+	import Modal from './common/Modal.svelte';
+	import thunder from '../assets/logos/thunder.svg';
+
+	let modalOpen = false;
+	/**
+	 * @type {any}
+	 */
+	let top_content;
+	/**
+	 * @type {any}
+	 */
+	let text;
+	/**
+	 * @type {any}
+	 */
+	let imgurl;
+	/**
+	 * @type {any}
+	 */
+	let points;
+	/**
+	 * @type {any}
+	 */
+	let btnText;
+	/**
+	 * @type {any}
+	 */
+	let bullet;
+
+	/**
+	 * @param {any} content
+	 * @param {any} [_text]
+	 * @param {any} [_imgurl]
+	 * @param {any} [_points]
+	 * @param {any} [_btnText]
+	 * @param {any} [_bullet]
+	 */
+	function openModal(content, _text, _imgurl, _points, _btnText, _bullet) {
+		top_content = content;
+		text = _text;
+		imgurl = _imgurl;
+		points = _points;
+		btnText = _btnText;
+		bullet = _bullet;
+		modalOpen = true;
+	}
+
+	function closeModal() {
+		modalOpen = false;
+	}
 </script>
 
 <div class="col-span-5 mt-44 flex flex-col justify-center text-center">
+	{#if modalOpen}
+		<Modal {imgurl} {text} {top_content} {points} {btnText} on:close={closeModal} />
+	{/if}
+
 	<div>
 		<p class="superteam font-semibold text-xl leading-none text-white">superteam</p>
 		<p class="productions">productions</p>
@@ -19,19 +74,91 @@
 		<div
 			class="mt-[35px] lg:mt-[0px] col-span-1 lg:col-span-2 lg:col-start-2 flex flex-col items-center"
 		>
-			<IllustrationCard text="Earn" imageUrl={earn} />
-			<IllustrationCard text="Ecosystem Calls" imageUrl={ecosystem_calls} />
+			<IllustrationCard
+				text="Earn"
+				imageUrl={earn}
+				onClick={() =>
+					openModal(
+						'our very own job listing and bounty platform to find every earning opportunity in solana',
+						'ST earn',
+						instagrantsbg,
+						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
+						'Visit ST Earn',
+						thunder
+					)}
+			/>
+			<IllustrationCard
+				text="Ecosystem Calls"
+				imageUrl={ecosystem_calls}
+				onClick={() =>
+					openModal(
+						'our very own job listing and bounty platform to find every earning opportunity in solana',
+						'ST earn',
+						instagrantsbg,
+						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
+						'Visit ST Earn',
+						thunder
+					)}
+			/>
 		</div>
 		<div class="mt-[12px] col-span-1 lg:col-span-2 flex flex-col items-center lg:text-sm">
 			<p class="center-text hidden lg:block">Changing the world,</p>
 			<p class="center-text mb-[43px] hidden lg:block">one line of code at a time</p>
 
-			<IllustrationCard text="Instagrants" imageUrl={instagrants} />
-			<IllustrationCard text="Alpha Squad" imageUrl={alphasquad} />
+			<IllustrationCard
+				text="Instagrants"
+				imageUrl={instagrants}
+				onClick={() =>
+					openModal(
+						'our very own job listing and bounty platform to find every earning opportunity in solana',
+						'ST earn',
+						instagrantsbg,
+						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
+						'Visit ST Earn',
+						thunder
+					)}
+			/>
+			<IllustrationCard
+				text="Alpha Squad"
+				imageUrl={alphasquad}
+				onClick={() =>
+					openModal(
+						'our very own job listing and bounty platform to find every earning opportunity in solana',
+						'ST earn',
+						instagrantsbg,
+						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
+						'Visit ST Earn',
+						thunder
+					)}
+			/>
 		</div>
 		<div class=" col-span-1 lg:col-span-2 flex flex-col items-center">
-			<IllustrationCard text="Build" imageUrl={build} />
-			<IllustrationCard text="Founder's League" imageUrl={founders_league} />
+			<IllustrationCard
+				text="Build"
+				imageUrl={build}
+				onClick={() =>
+					openModal(
+						'our very own job listing and bounty platform to find every earning opportunity in solana',
+						'ST earn',
+						instagrantsbg,
+						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
+						'Visit ST Earn',
+						thunder
+					)}
+			/>
+			<IllustrationCard
+				text="Founder's League"
+				imageUrl={founders_league}
+				onClick={() =>
+					openModal(
+						'our very own job listing and bounty platform to find every earning opportunity in solana',
+						'ST earn',
+						instagrantsbg,
+						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
+						'Visit ST Earn',
+						thunder
+					)}
+			/>
 		</div>
 	</div>
 </div>
