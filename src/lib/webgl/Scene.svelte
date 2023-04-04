@@ -22,13 +22,15 @@
             fov={50}
             position={{ z: 5 }}
         >
-            <!-- <OrbitControls /> -->
+            <OrbitControls />
             <AmbientLight color={0xd7681c} intensity={0.3} />
         </PerspectiveCamera>
-        <T.Mesh>
-            <T.PlaneGeometry args={[7 * 16 / 9, 7 * 9 / 16]} />
-            <T.MeshBasicMaterial map={textures[0]} />
-        </T.Mesh>
+        {#each Object.values(texturesConfig) as texture, i}
+            <T.Mesh position={[0, 0, texture.z]}>
+                <T.PlaneGeometry args={[7 * 16 / 9, 7 * 9 / 16]} />
+                <T.MeshBasicMaterial map={textures[i]} transparent={true} />
+            </T.Mesh>
+        {/each}
     </Canvas>
 </div>
 
