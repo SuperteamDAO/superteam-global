@@ -2,26 +2,14 @@
 	import { createEventDispatcher } from 'svelte';
 	import thunder from '../../assets/logos/thunder.svg';
 	import PrimaryButton from './PrimaryButton.svelte';
-	import cross from '../../assets/logos/cross.svg';
+	import { X } from 'phosphor-svelte';
 	import { fade, scale } from 'svelte/transition';
 	const dispatch = createEventDispatcher();
 
-	/**
-	 * @type {any}
-	 */
 	export let imgurl;
 	export let bullet = thunder;
-	/**
-	 * @type {any}
-	 */
 	export let text;
-	/**
-	 * @type {any}
-	 */
 	export let top_content;
-	/**
-	 * @type {any[]}
-	 */
 	export let points = [];
 
 	export let btnText = '';
@@ -53,7 +41,7 @@
 			class="right relative h-full w-1/2 bg-[#161616] rounded-r-lg z-10 text-white text-left flex flex-col"
 		>
 			<div class="cross self-end mt-[46px] mr-[64px] cursor-pointer" on:click={handleClose}>
-				<img src={cross} alt="" />
+				<X size={30} />
 			</div>
 			<div class="top-content">{top_content}</div>
 			<div class="points ml-[64px]">
