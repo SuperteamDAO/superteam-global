@@ -25,3 +25,7 @@ body {
 .scrollbar-track {
 	background-color: transparent;
 }
+
+.parallax {
+	transform-style: preserve-3d;
+}
