@@ -6,7 +6,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="image-with-text relative mb-8 rounded-lg cursor-pointer" on:click>
 	<img src={imageUrl} alt="" />
-	<p class="text-on-image font-bold text-white" style="top: 32px; left: 32px;">
+	<p class="text-on-image absolute text-left font-bold text-white top-[32px] left-[32px]">
 		{text}
 	</p>
 </div>
@@ -26,7 +26,6 @@
 		font-size: 28.9199px;
 		line-height: 31px;
 		letter-spacing: -0.04em;
-
 		color: #ffffff;
 	}
 	@media screen and (max-width: 1023px) {
