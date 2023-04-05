@@ -1,8 +1,7 @@
 <script>
     import { T } from '@threlte/core'
     import { ScrollTrigger } from '../../utils/gsap';
-	import { gsap } from 'gsap';
-	import { getContext, onMount } from 'svelte';
+	import { onMount } from 'svelte';
 	import { tweened } from 'svelte/motion';
     import { expoOut } from 'svelte/easing';
 

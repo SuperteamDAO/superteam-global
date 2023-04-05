@@ -1,7 +1,7 @@
 <script>
 	import NamedLogo from "./NamedLogo.svelte";
 	import PrimaryButton from "./PrimaryButton.svelte";
-	import { getContext, onMount } from "svelte";
+	import { onMount } from "svelte";
 	import { tweened } from "svelte/motion";
     import { expoOut } from "svelte/easing";
 
