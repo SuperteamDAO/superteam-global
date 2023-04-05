@@ -1,28 +1,19 @@
 <script lang="ts">
-    import { Canvas } from '@threlte/core'
-	import type Scrollbar from 'smooth-scrollbar';
-	import { onMount, getContext } from 'svelte';
-	import type { Writable } from 'svelte/store';
-
+    import { Canvas, useTexture, T } from '@threlte/core'
+	import { onMount, setContext } from 'svelte';
+	import { texturesConfig } from '../../constants/webgl';
+	import Base from './Base.svelte';
+    import Productions from './Productions.svelte';
+	
     export let size = { width: 0, height: 0 }
 
-    // const scrollbar = getContext<Writable<Scrollbar | null>>('smoothScroll');
+    setContext('screenDimensions', size);
 
-    // let wrapper: HTMLElement | null = null;
+    const textures = useTexture(Object.values(texturesConfig).map((texture) => texture.path))
 
-    // $: y = 0;
+    onMount(() => {
 
-
-    // $: {
-    //     if ($scrollbar) {
-    //         $scrollbar.addListener(({ offset }) => {
-    //             if (wrapper) {
-    //                 y = offset.y
-    //             }
-    //         })
-    //     }
-    // }
-
+    })
 
 </script>
 
@@ -31,13 +22,19 @@
     style="height: {size.height}px; width: {size.width}px;"
 >
     <Canvas {size} >
-    
+        <Base {size} />
+        <Productions />
+            <!-- {#each Object.values(texturesConfig) as texture, i}
+            <T.Mesh position={[0, 0, texture.z]}>
+                <T.PlaneGeometry args={[7 * 16 / 9, 7 * 9 / 16]} />
+                <T.MeshBasicMaterial map={textures[i]} transparent={true} />
+            </T.Mesh>
+        {/each} -->
     </Canvas>
 </div>
 
 <style lang="postcss">
     :global(canvas) {
         @apply w-full h-full;
-	    background: rgb(4, 5, 7);
     }
 </style>

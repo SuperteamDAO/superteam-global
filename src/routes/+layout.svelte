@@ -1,54 +1,42 @@
 <script lang="ts">
-	import '../styles/reset.css';
-	import '../styles/fonts.css';
-	import '../styles/global.css';
+  import "../styles/reset.css";
+  import "../styles/fonts.css";
+  import "../styles/global.css";
+  import "../utils/gsap";
 
-	// import { gsap } from 'gsap';
-	// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-	// import Scrollbar from 'smooth-scrollbar';
+  import { gsap } from "gsap";
+	import { setContext } from 'svelte';
+	import Header from "$lib/common/Header.svelte";
+	import Scene from "$lib/webgl/Scene.svelte";
+	import { writable } from "svelte/store";
 
-	import { onMount, setContext } from 'svelte';
-	import Header from '$lib/common/Header.svelte';
-	import Scene from '$lib/webgl/Scene.svelte';
-	import { writable } from 'svelte/store';
+  const tl = gsap.timeline();
+  const mouse = writable({ x: 0, y: 0 });
+  $: width = 0;
+  $: height = 0;
+  
+  setContext('mouse', $mouse);
+  setContext('tl', tl);
 
-	let height = 0;
-	let width = 0;
+  const mouseMove = (e: MouseEvent) => {
+    mouse.set({ x: e.clientX, y: e.clientY });
+  }
 
-	// const smoothScroll = writable<null | Scrollbar>(null);
-	// setContext('smoothScroll', smoothScroll);
-
-	onMount(() => {
-		// gsap.registerPlugin(ScrollTrigger)
-		// const scroller = document.body;
-		// $smoothScroll = Scrollbar.init(scroller, { damping: 0.01, delegateTo: document, alwaysShowTracks: false });
-		// ScrollTrigger.scrollerProxy(scroller, {
-		//   scrollTop(value) {
-		//     if (arguments.length) {
-		//       if (typeof value === 'number' && $smoothScroll !==  null) {
-		//         $smoothScroll.scrollTop = value;
-		//       }
-		//     }
-		//     if ($smoothScroll !== null) {
-		//       return $smoothScroll.scrollTop
-		//     }
-		//   }
-		// });
-		// $smoothScroll.addListener(ScrollTrigger.update);
-		// ScrollTrigger.defaults({
-		// 	scroller: scroller,
-		// 	pinType: 'transform'
-		// });
-	});
+  
+  
 </script>
 
 <svelte:head>
 	<script src="https://unpkg.com/@phosphor-icons/web"></script>
 </svelte:head>
 
-<svelte:window bind:innerHeight={height} bind:innerWidth={width} />
+<svelte:window
+  bind:innerHeight={height}
+  bind:innerWidth={width}
+  on:mousemove={mouseMove}
+/>
 
-<Scene size={{ width, height }} />
+<Scene size={{ width: width, height: height }} />
 
 <div class="relative h-full grid grid-cols-5 gap-5 px-10 md:px-[72px] mx-auto max-w-[1440px]">
 	<Header />

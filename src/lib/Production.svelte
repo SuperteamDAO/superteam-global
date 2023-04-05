@@ -39,11 +39,11 @@
 	{/if}
 
 	<div>
-		<p class="superteam font-semibold text-xl leading-none text-white">superteam</p>
-		<p class="productions">productions</p>
+		<p class="superteam font-semibold text-xl leading-none text-white parallax transition-all duration-50">superteam</p>
+		<p class="productions parallax transition-all duration-100">productions</p>
+		<p class="center-text lg:hidden parallax transition-all duration-50">Changing the world,</p>
+		<p class="center-text lg:hidden parallax transition-all duration-50">one line of code at a time</p>
 	</div>
-	<p class="center-text lg:hidden">Changing the world,</p>
-	<p class="center-text lg:hidden">one line of code at a time</p>
 	<div class="grid grid-cols-1 lg:grid-cols-8 gap-0 lg:gap-[24px] mx-auto">
 		<div
 			class="mt-[35px] lg:mt-[0px] col-span-1 lg:col-span-2 lg:col-start-2 flex flex-col items-center"
@@ -76,8 +76,8 @@
 			/>
 		</div>
 		<div class="mt-[12px] col-span-1 lg:col-span-2 flex flex-col items-center lg:text-sm">
-			<p class="center-text hidden lg:block">Changing the world,</p>
-			<p class="center-text mb-[43px] hidden lg:block">one line of code at a time</p>
+			<p class="center-text hidden lg:block parallax">Changing the world,</p>
+			<p class="center-text mb-[43px] hidden lg:block parallax">one line of code at a time</p>
 
 			<IllustrationCard
 				text="Instagrants"
