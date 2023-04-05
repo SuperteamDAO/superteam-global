@@ -18,7 +18,7 @@
 </script>
 
 <div
-    class="fixed top-0 left-0 z-0"
+    class="fixed top-0 left-0 z-0 pointer-events-none"
     style="height: {size.height}px; width: {size.width}px;"
 >
     <Canvas {size} >
@@ -36,5 +36,6 @@
 <style lang="postcss">
     :global(canvas) {
         @apply w-full h-full;
+        @apply pointer-events-none;
     }
 </style>
