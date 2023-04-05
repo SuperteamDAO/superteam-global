@@ -25,8 +25,9 @@
   
   
 </script>
+
 <svelte:head>
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
 </svelte:head>
 
 <svelte:window
@@ -38,12 +39,12 @@
 <Scene size={{ width: width, height: height }} />
 
 <div class="relative h-full grid grid-cols-5 gap-5 px-10 md:px-[72px] mx-auto max-w-[1440px]">
-  <Header />
-  <slot />
+	<Header />
+	<slot />
 </div>
 
 <style>
-  :global(.scrollbar-track) {
-    background-color: transparent !important;
-  }
+	:global(.scrollbar-track) {
+		background-color: transparent !important;
+	}
 </style>
