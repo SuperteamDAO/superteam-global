@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="footer-container relative left-1/2 right-1/2 -translate-x-1/2 w-screen h-fit lg:h-[477px] -mt-[90px] col-span-5 rounded-t-[48px] z-10 md:z-0"
+	class="footer-container relative left-1/2 right-1/2 -translate-x-1/2 w-screen lg:w-[calc(100vw-144px)] h-fit lg:h-[477px] -mt-[90px] col-span-5 rounded-t-[48px] z-10"
 >
 	<div
 		class="main-container h-fit mt-[100px] lg:mt-[124px] flex lg:flex-row flex-col justify-between"

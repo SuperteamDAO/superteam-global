@@ -46,6 +46,7 @@
 	"dependencies": {
 		"clsx": "^1.2.1",
 		"gsap": "^3.11.5",
+		"sass": "^1.60.0",
 		"smooth-scrollbar": "^8.8.3",
 		"svelte-i18n": "^3.6.0"
 	}
