@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="collab-container col-span-5 flex flex-col justify-center align-middle relative left-1/2 right-1/2 -translate-x-1/2 w-screen -mt-[100px] z-1 bg-black h-fit md:h-fit md:rounded-[64px]"
+	class="collab-container col-span-5 flex flex-col justify-center align-middle relative left-1/2 right-1/2 -translate-x-1/2 w-screen mt-[100px] md:-mt-[100px] z-1 bg-black h-fit md:h-fit md:rounded-[64px]"
 >
 	<div class="overlay absolute w-full h-full hidden md:block" />
 	<img src={blackhole1} alt="" class="lg:h-fit h-[807px] md:rounded-[64px] hidden md:block" />
