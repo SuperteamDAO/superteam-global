@@ -9,7 +9,7 @@
     let slices3 = tweened(0, { duration: 1800, easing: cubicOut, delay: 300 });
 
     onMount(() => {
-        slices.set(21);
+        slices.set(20);
         slices2.set(0);
         slices3.set(32);
     });
@@ -17,9 +17,9 @@
 
 <svg width="42" height="32" viewBox="0 0 42 32" fill="white" xmlns="http://www.w3.org/2000/svg">
     <clipPath id="clip0">
-        <polygon points="0 0, {$slices} 0, {$slices} 16, 0 16" />
-        <polygon points="{$slices2} 15, 21 15, 15 32, {$slices2} 32" />
-        <polygon points="21 0, 42 0, 42 {$slices3}, 21 {$slices3}" />
+        <polygon points="-1 -1, {$slices} 0, {$slices} 16, 0 16" />
+        <polygon points="{$slices2} 15, 20 15, 15 32, {$slices2} 32" />
+        <polygon points="20 0, 42 0, 42 {$slices3}, 20 {$slices3}" />
         <!-- <rect width={$slices} height="16" x="20" y="16" /> -->
     </clipPath>
     <path 

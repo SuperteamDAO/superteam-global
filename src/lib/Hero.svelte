@@ -1,12 +1,13 @@
 <script>
 	import AnimatedLogo from './common/AnimatedLogo.svelte';
-	import PrimaryButton from './common/PrimaryButton.svelte';
+	import PrimaryButton from './common/PrimaryButton.svelte'
+	import { onMount, getContext } from 'svelte';
 	import { gsap } from 'gsap';
-	import { onMount } from 'svelte';
 
 	onMount(() => {
-		const timeline = gsap.timeline();
-		timeline.fromTo(
+		const tl = gsap.timeline();
+
+		tl.fromTo(
 			'.heading .line span',
 			{
 				y: 100,
@@ -20,25 +21,22 @@
 				opacity: 1,
 				duration: 1.8,
 				ease: 'power4.out'
-			}
-		);
+			});
 
-		timeline.fromTo(
+		tl.fromTo(
 			'.sub-heading',
 			{ y: 0, opacity: 0 },
 			{
 				opacity: 1,
-				duration: 1,
+				duration: 1.8,
 				ease: 'power4.out'
 			},
-			'-=1'
+			'-=1.8'
 		);
 
-		timeline.fromTo(
+		tl.to(
 			'.know-more-button',
-			{ opacity: 0 },
-			{ opacity: 1, duration: 1, ease: 'power4.out' },
-			'-=1'
+			{ opacity: 1, duration: 1.8, ease: 'power4.out' },
 		);
 	});
 </script>
@@ -58,7 +56,7 @@
 		</span>
 	</h1>
 	<p
-		class="sub-heading text-white font-primary text-[16px] md:text-[20px] leading-[1.35] tracking-[-4%] text-center mt-8"
+		class="sub-heading opacity-0 text-white font-primary text-[16px] md:text-[20px] leading-[1.35] tracking-[-4%] text-center mt-8"
 	>
 		superteam is the forefront community for web3,
 		<br />
