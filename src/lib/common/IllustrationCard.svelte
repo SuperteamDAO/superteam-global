@@ -1,19 +1,17 @@
 <script>
-	/**
-	 * @type {any}
-	 */
 	export let imageUrl;
-	/**
-	 * @type {any}
-	 */
 	export let text;
 	export let top = '32px';
 	export let left = '30px';
 </script>
 
-<div class="image-with-text relative mb-8 rounded-lg">
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="image-with-text relative mb-8 rounded-lg cursor-pointer" on:click>
 	<img src={imageUrl} alt="" />
-	<p class="text-on-image font-bold text-white" style="top: {top}; left: {left};">
+	<p
+		class="text-on-image absolute text-left font-bold text-white"
+		style="top: {top}; left: {left};"
+	>
 		{text}
 	</p>
 </div>
@@ -23,9 +21,6 @@
 		background: linear-gradient(180deg, #1d1d1d 0%, rgba(22, 22, 22, 0) 100%);
 	}
 	.text-on-image {
-		position: absolute;
-
-		text-align: left;
 		line-height: 31px;
 		font-size: calc(1rem + 0.5vw);
 		width: calc(120px + 1.5vw);
