@@ -42,27 +42,29 @@
 </script>
 
 <section
-	class="hero col-span-5 h-[calc(100vh-40px-32px)] flex flex-col justify-center items-center"
+	class="hero col-span-5 h-[calc(100vh-40px-32px)] flex flex-col items-center"
 >
-	<AnimatedLogo />
-	<h1
-		class="heading w-[280px] md:w-[430px] flex flex-col text-[32px] md:text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center"
-	>
-		<span class="line block">
-			<span> your portal to the </span>
-		</span>
-		<span class="line block">
-			<span> world of solana </span>
-		</span>
-	</h1>
-	<p
-		class="sub-heading opacity-0 text-white font-primary text-[16px] md:text-[20px] leading-[1.35] tracking-[-4%] text-center mt-8"
-	>
-		superteam is the forefront community for web3,
-		<br />
-		powered by solana.
-	</p>
-	<PrimaryButton class="know-more-button mt-8">Know more</PrimaryButton>
+	<div class="flex flex-col justify-start items-center mt-[72px] md:mt-[160px]">
+		<AnimatedLogo />
+		<h1
+			class="heading w-[280px] md:w-[430px] flex flex-col text-[32px] md:text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center"
+		>
+			<span class="line block">
+				<span> your portal to the </span>
+			</span>
+			<span class="line block">
+				<span> world of solana </span>
+			</span>
+		</h1>
+		<p
+			class="sub-heading opacity-0 text-white font-primary text-[16px] md:text-[20px] leading-[1.35] tracking-[-4%] text-center mt-8"
+		>
+			superteam is the forefront community for web3,
+			<br />
+			powered by solana.
+		</p>
+		<PrimaryButton class="know-more-button mt-8">Know more</PrimaryButton>
+	</div>
 </section>
 
 <style lang="postcss">
