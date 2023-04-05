@@ -33,7 +33,7 @@
 	}
 </script>
 
-<div class="col-span-5 mt-44 flex flex-col justify-center text-center">
+<div class="productions-container col-span-5 mt-44 flex flex-col justify-center text-center">
 	{#if modalOpen}
 		<Modal {imgurl} {text} {top_content} {points} {btnText} on:close={closeModal} />
 	{/if}
