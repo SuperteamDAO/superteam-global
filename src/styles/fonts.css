@@ -11,11 +11,19 @@
 // Font faces for the Archivo_SemiExpanded Bold, Itlaic, and Regular
 
 @font-face {
+  font-family: 'Archivo-Variable';
+  src: url('../fonts/Archivo-VariableFont.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
   font-family: 'Archivo_SemiExpanded';
   src: url('../fonts/Archivo_SemiExpanded-Bold.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;
-  font-style: normal;
+  font-style: bold;
 }
 
 @font-face {
