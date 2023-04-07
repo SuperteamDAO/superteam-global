@@ -2,7 +2,7 @@
 	import AnimatedLogo from "$lib/common/AnimatedLogo.svelte";
 
 </script>
-<div class="mt-[72px] md:mt-[96px] lg:mt[160px]">
+<div class="mt-[72px] md:mt-[96px] lg:mt[160px] flex flex-col items-center justify-center">
     <div class="flex items-center justify-center">
         <AnimatedLogo />
     </div>
