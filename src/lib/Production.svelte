@@ -146,6 +146,18 @@
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
 	}
+
+	/* .shine {
+		background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+		-webkit-background-size: 150px;
+		color: $text-color;
+		-webkit-background-clip: text;
+		-webkit-animation-name: shine;
+		-webkit-animation-duration: $duration;
+		-webkit-animation-iteration-count: infinite;
+		text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+	} */
+
 	.center-text {
 		font-family: 'Satoshi-Variable';
 		font-style: normal;
