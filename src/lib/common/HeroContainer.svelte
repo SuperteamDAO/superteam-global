@@ -28,7 +28,7 @@
 		{line4}
 	</p>
 	{#if buttonVisible}
-		<PrimaryButton class="know-more-button mt-8">Know more</PrimaryButton>
+		<PrimaryButton href="/" class="know-more-button mt-8">Know more</PrimaryButton>
 	{/if}
 </div>
 

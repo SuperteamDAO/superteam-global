@@ -18,7 +18,7 @@
 	>
 		<p class="history mt-[80px]">be a part of history</p>
 		<div class="button mt-[38px]">
-			<PrimaryButton>Collab with us</PrimaryButton>
+			<PrimaryButton href="/collaborate">Collab with us</PrimaryButton>
 		</div>
 	</div>
 </div>
