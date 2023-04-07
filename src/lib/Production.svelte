@@ -6,7 +6,6 @@
 	import build from '../assets/cards/build.jpg';
 	import founders_league from '../assets/cards/founders_league.jpg';
 	import IllustrationCard from './common/IllustrationCard.svelte';
-	import instagrantsbg from '../assets/images/instagrantsbg.png';
 	import Modal from './common/Modal.svelte';
 	import thunder from '../assets/logos/thunder.svg';
 
@@ -52,8 +51,8 @@
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
-						'ST earn',
-						instagrantsbg,
+						'Earn',
+						earn,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -66,8 +65,8 @@
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
-						'ST earn',
-						instagrantsbg,
+						"Ecosystem Calls",
+						ecosystem_calls,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -80,8 +79,8 @@
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
-						'ST earn',
-						instagrantsbg,
+						"Instagrants",
+						instagrants,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -94,8 +93,8 @@
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
-						'ST earn',
-						instagrantsbg,
+						'Alpha Squad',
+						alphasquad,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -108,8 +107,8 @@
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
-						'ST earn',
-						instagrantsbg,
+						'Build',
+						build,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -122,8 +121,8 @@
 					on:click={() =>
 						openModal(
 							'our very own job listing and bounty platform to find every earning opportunity in solana',
-							'ST earn',
-							instagrantsbg,
+							"Founder's League",
+							founders_league,
 							['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 							'Visit ST Earn',
 							thunder
