@@ -2,7 +2,9 @@
 	import TestimonialCard from './common/TestimonialCard.svelte';
 	import pragun from '../assets/images/pragun.jpg';
 	import clsx from 'clsx';
+	
 	export let collab = false;
+
 </script>
 
 <div
