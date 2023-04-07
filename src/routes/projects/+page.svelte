@@ -5,6 +5,7 @@
 
 </script>
 
+<img src={builbg} class="absolute top-0 left-0 w-full object-cover" alt="" />
 <section class="relative col-span-5 flex flex-col items-center pb-[300px]">   
     <ProjectPageHero />
     <ProjectsGrid />
