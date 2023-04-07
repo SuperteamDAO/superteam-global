@@ -17,7 +17,7 @@
             <p class="text-on-image text-left font-secondary text-white text-[24px] tracking-[-0.04em]">
                 ST Earn
             </p>
-            <p class="whitespace-pre-wrap font-primary text-white text-[18px] mt-6">
+            <p class="whitespace-pre-wrap font-primary font-bold text-white text-[18px] mt-6">
                 absoultely the best people inthe game, no competetion the 
             </p>
         </div>
