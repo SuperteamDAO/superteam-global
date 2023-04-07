@@ -1,7 +1,5 @@
 <script>
 	import Collab from '$lib/Collab.svelte';
-	import CountryCard from '$lib/CountryCard.svelte';
-	import Footer from '$lib/Footer.svelte';
 	import Geographies from '$lib/Geographies.svelte';
 	import Hero from '$lib/Hero.svelte';
 	import LoveRespect from '$lib/LoveRespect.svelte';
@@ -31,8 +29,6 @@
 <LoveRespect />
 
 <Collab />
-
-<Footer />
 
 <!-- <CountryCard>
     <div class="shine"></div>
