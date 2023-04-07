@@ -4,6 +4,7 @@
 	import { onMount } from "svelte";
 	import { tweened } from "svelte/motion";
     import { expoOut } from "svelte/easing";
+	import clsx from "clsx";
 
     const pos = tweened(-100, { duration: 1800, easing: expoOut });
     
@@ -12,7 +13,12 @@
     });
 </script>
 
-<header class="w-full col-span-5 flex items-center justify-between mt-8"  style="transform: translateY({$pos}px);">
+<header class={
+    clsx(
+        "w-full col-span-5 flex items-center justify-between mt-8",
+        $$props.class
+    )
+}  style="transform: translateY({$pos}px);">
     <a href="/">
         <NamedLogo />
     </a>

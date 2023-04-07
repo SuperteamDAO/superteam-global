@@ -1,6 +1,6 @@
 <script>
 	import clsx from "clsx";
-    import placeholder from '../../assets/cards/earn.jpg'
+    import placeholder from '../../assets/cards/instagrants.jpg'
 	import PrimaryButton from "$lib/common/PrimaryButton.svelte";
 
 
