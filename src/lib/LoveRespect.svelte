@@ -1,10 +1,15 @@
 <script>
 	import TestimonialCard from './common/TestimonialCard.svelte';
 	import pragun from '../assets/images/pragun.jpg';
+	import clsx from 'clsx';
+	export let collab = false;
 </script>
 
 <div
-	class="respect-container h-[225px] md:h-[580px] mt-48 col-span-5 relative left-1/2 right-1/2 -translate-x-1/2 w-screen overflow-x-visible z-3"
+	class={clsx(
+		'respect-container h-[225px] md:h-[580px] mt-48 col-span-5 relative left-1/2 right-1/2 -translate-x-1/2 w-screen overflow-x-visible z-11',
+		collab ? 'h-fit sm:h-fit md:h-fit' : ''
+	)}
 >
 	<div class="love-header">
 		<p class="love">Love and Respect</p>
