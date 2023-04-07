@@ -7,6 +7,7 @@
   import { gsap } from "gsap";
 	import { setContext } from 'svelte';
 	import Header from "$lib/common/Header.svelte";
+  import Footer from "$lib/common/Footer.svelte";
 	import Scene from "$lib/webgl/Scene.svelte";
 	import { writable } from "svelte/store";
 
@@ -41,7 +42,9 @@
 <div class="relative h-full grid grid-cols-5 gap-5 px-10 md:px-[72px] mx-auto max-w-[1440px]">
 	<Header />
 	<slot />
+  <Footer />
 </div>
+
 
 <style>
 	:global(.scrollbar-track) {

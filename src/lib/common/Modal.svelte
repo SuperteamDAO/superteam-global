@@ -32,7 +32,7 @@
 	>
 		<div class="left-img h-full w-1/2">
 			<div class="overlay h-full w-full" />
-			<img src={imgurl} alt={text} class="rounded-l-lg" />
+			<img src={imgurl} alt={text} class="w-full h-full object-cover " />
 			<p class="text-on-img text-white">
 				{text}
 			</p>

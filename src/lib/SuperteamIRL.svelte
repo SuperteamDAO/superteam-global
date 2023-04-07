@@ -6,6 +6,7 @@
 	import instagrantsbg from '../assets/images/instagrantsbg.png';
 	import Modal from './common/Modal.svelte';
 	import thunder from '../assets/logos/thunder.svg';
+	import founders_league from '../assets/cards/founders_league.jpg';
 
 	let modalOpen = false;
 	let top_content;
@@ -44,13 +45,13 @@
 		<div />
 		<div class="col-span-1 lg:col-span-2 lg:col-start-2">
 			<IllustrationCard
-				imageUrl={buildstations2}
+				imageUrl={founders_league}
 				text="BuildStations"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
-						instagrantsbg,
+						founders_league,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -59,13 +60,13 @@
 		</div>
 		<div class="md:mt-14 col-span-1 lg:col-span-2">
 			<IllustrationCard
-				imageUrl={supermeets}
+				imageUrl={founders_league}
 				text="Supermeets"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
-						instagrantsbg,
+						founders_league,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -74,13 +75,13 @@
 		</div>
 		<div class="col-span-1 lg:col-span-2">
 			<IllustrationCard
-				imageUrl={uniprogram}
+				imageUrl={founders_league}
 				text="University Program"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
-						instagrantsbg,
+						founders_league,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder

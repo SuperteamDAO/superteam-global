@@ -13,7 +13,9 @@
 </script>
 
 <header class="w-full col-span-5 flex items-center justify-between mt-8"  style="transform: translateY({$pos}px);">
-    <NamedLogo />
+    <a href="/">
+        <NamedLogo />
+    </a>
     <div class="hidden md:flex gap-6 items-center">
         <a href="/projects" class="text-white font-secondary font-bold text-[14px]">Projects</a>
         <PrimaryButton>
