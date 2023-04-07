@@ -1,15 +1,17 @@
 <script>
+	// @ts-nocheck
+
 	import TestimonialCard from './common/TestimonialCard.svelte';
 	import pragun from '../assets/images/pragun.jpg';
 	import clsx from 'clsx';
-	
-	export let collab = false;
+	import testimonials from '../i18n/locales/testimonials.json';
 
+	export let collab = false;
 </script>
 
 <div
 	class={clsx(
-		'respect-container h-[225px] md:h-[580px] mt-48 col-span-5 relative left-1/2 right-1/2 -translate-x-1/2 w-screen overflow-x-visible z-11',
+		'respect-container h-fit md:h-fit mt-48 col-span-5 relative left-1/2 right-1/2 -translate-x-1/2 w-screen overflow-x-visible',
 		collab ? 'h-fit sm:h-fit md:h-fit' : ''
 	)}
 >
@@ -20,283 +22,84 @@
 	<div class="mt-12 overflow-x-scroll scrollbar-hidden item-container flex-nowrap">
 		<div class="scroll-wrapper w-full grid grid-cols-2">
 			<div class="item-row item-row-1 flex flex-row slide-track">
-				<!-- Original content -->
-				<div class="item-col flex flex-row md:flex-col h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
-				<div class="item-col flex flex-row md:flex-col md:h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
-				<div class="item-col flex flex-row md:flex-col h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
-				<div class="item-col flex flex-row md:flex-col md:h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
-				<div class="item-col flex flex-row md:flex-col h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
+				{#each testimonials as testimonial, index}
+					{#if index % 2 === 0}
+						<div class="item-col flex flex-row md:flex-col h-[400px] h-fit">
+							<div class="item">
+								<TestimonialCard
+									imgurl={testimonial.imgurl}
+									name={testimonial.name}
+									username={testimonial.username}
+									content={testimonial.content}
+								/>
+							</div>
+							{#if testimonials[index + 1]}
+								<div class="item">
+									<TestimonialCard
+										imgurl={testimonials[index + 1].imgurl}
+										name={testimonials[index + 1].name}
+										username={testimonials[index + 1].username}
+										content={testimonials[index + 1].content}
+									/>
+								</div>
+							{/if}
+						</div>
+					{/if}
+				{/each}
 			</div>
 			<div class="item-row item-row-2 flex flex-row slide-track">
 				<!-- Duplicate content -->
-				<div class="item-col flex flex-row md:flex-col h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
-				<div class="item-col flex flex-row md:flex-col md:h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
-				<div class="item-col flex flex-row md:flex-col h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
-				<div class="item-col flex flex-row md:flex-col md:h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
-				<div class="item-col flex flex-row md:flex-col h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
+				{#each testimonials as testimonial, index}
+					{#if index % 2 === 0}
+						<div class="item-col flex flex-row md:flex-col h-fit">
+							<div class="item">
+								<TestimonialCard
+									imgurl={testimonial.imgurl}
+									name={testimonial.name}
+									username={testimonial.username}
+									content={testimonial.content}
+								/>
+							</div>
+							{#if testimonials[index + 1]}
+								<div class="item">
+									<TestimonialCard
+										imgurl={testimonials[index + 1].imgurl}
+										name={testimonials[index + 1].name}
+										username={testimonials[index + 1].username}
+										content={testimonials[index + 1].content}
+									/>
+								</div>
+							{/if}
+						</div>
+					{/if}
+				{/each}
 			</div>
 			<div class="item-row item-row-3 lg:flex-row slide-track hidden lg:flex">
 				<!-- Triplicate content -->
-				<div class="item-col flex flex-row md:flex-col h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
-				<div class="item-col flex flex-row md:flex-col md:h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
-				<div class="item-col flex flex-row md:flex-col h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
-				<div class="item-col flex flex-row md:flex-col md:h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
-				<div class="item-col flex flex-row md:flex-col h-[580px]">
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-					<div class="item">
-						<TestimonialCard
-							imgurl={pragun}
-							name="Pragun Dua"
-							username="@pragdua"
-							content="absoultely the best people in the game, no competetion the"
-						/>
-					</div>
-				</div>
+				{#each testimonials as testimonial, index}
+					{#if index % 2 === 0}
+						<div class="item-col flex flex-row md:flex-col h-fit">
+							<div class="item">
+								<TestimonialCard
+									imgurl={testimonial.imgurl}
+									name={testimonial.name}
+									username={testimonial.username}
+									content={testimonial.content}
+								/>
+							</div>
+							{#if testimonials[index + 1]}
+								<div class="item">
+									<TestimonialCard
+										imgurl={testimonials[index + 1].imgurl}
+										name={testimonials[index + 1].name}
+										username={testimonials[index + 1].username}
+										content={testimonials[index + 1].content}
+									/>
+								</div>
+							{/if}
+						</div>
+					{/if}
+				{/each}
 			</div>
 		</div>
 	</div>
@@ -310,10 +113,6 @@
 	.item {
 		margin-right: 24px;
 		margin-bottom: 24px;
-	}
-	.respect-container {
-		justify-content: center;
-		z-index: 4;
 	}
 	.love {
 		font-family: 'Archivo_SemiExpanded';
