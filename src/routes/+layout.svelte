@@ -32,14 +32,16 @@
 
 <svelte:window
   bind:innerHeight={height}
-  bind:innerWidth={width}
+  bind:innerWidth={width}  
   on:mousemove={mouseMove}
 />
 
 <Scene size={{ width: width, height: height }} />
 
 <Header class="mx-auto max-w-[1440px] px-10 md:px-[72px]" />
-<div class="relative h-full grid grid-cols-5 gap-5 px-10 md:px-[72px] mx-auto max-w-[1440px]">
+<div
+  class="relative h-full grid grid-cols-5 gap-5 px-10 md:px-[72px] mx-auto max-w-[1440px]"
+>
 	<slot />
   <Footer />
 </div>

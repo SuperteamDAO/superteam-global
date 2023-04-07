@@ -6,18 +6,15 @@
     import { page } from '$app/stores'
     import { useProgress } from '../../utils/hooks/useProgress';
 
-    
-    export let size = { width: 0, height: 0 }
-    const aspect = size.width / size.height
+    // export let size = { width: 0, height: 0 }
     const imageWidth = 12.8
     const imageHeight = 11
     const opacity = tweened(1, { duration: 500 })
-    let show = false
-    
-    const adaptedHeight = imageHeight * (aspect > imageWidth / imageHeight ? size.width / imageWidth : size.height / imageHeight)
-    const adaptedWidth = imageWidth * (aspect > imageWidth / imageHeight ? size.width / imageWidth : size.height / imageHeight)
-    
-    const { invalidate } = useThrelte();
+    const { size } = useThrelte()
+    $: aspect = $size.width / $size.height
+
+    $: adaptedHeight = imageHeight * (aspect > imageWidth / imageHeight ? $size.width / imageWidth : $size.height / imageHeight)
+    $: adaptedWidth = imageWidth * (aspect > imageWidth / imageHeight ? $size.width / imageWidth : $size.height / imageHeight)
     
     const layers = [
         {
@@ -35,11 +32,9 @@
         }
     ]
 
-    let textures = useTexture(layers.map(layer => layer.path))
-    const { finishedOnce, total, item } = useProgress()
+    const textures = useTexture(layers.map(layer => layer.path))    
     
     onMount(() => {
-
         ScrollTrigger.create({
             trigger: '.hero',
             start: 'top 50%',
@@ -50,7 +45,7 @@
                 }
             },
             onLeave: () => {
-                opacity.set(0);
+                // opacity.set(0);
             },
             onEnterBack: () => {
                 if ($page.route.id === "/") {
@@ -58,7 +53,7 @@
                 }
             },
             onLeaveBack: () => {
-                opacity.set(0);
+                // opacity.set(0);
             },
         })
     })
@@ -68,7 +63,7 @@
 <T.Group>
     {#each textures as texture, i}
         <T.Mesh position={[0, 0, layers[i].z]} scale={[adaptedWidth, adaptedHeight, 1]} receiveShadow castShadow>
-            <T.PlaneGeometry args={[0.128, 0.11]} />
+            <T.PlaneGeometry args={[0.1, 0.1]} />
             <T.MeshStandardMaterial args={[{ map: texture, transparent: true }]} opacity={1} />
         </T.Mesh>
     {/each}

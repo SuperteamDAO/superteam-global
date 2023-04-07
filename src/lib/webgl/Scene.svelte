@@ -13,12 +13,12 @@
 </script>
 
 <div
-    class="fixed top-0 left-0 z-0 pointer-events-none"
+    class="fixed top-[50%] left-[50%] z-0 pointer-events-none translate-x-[-50%] translate-y-[-50%]"
     style="height: {size.height}px; width: {size.width}px;"
 >
     <Canvas {size} >
-        <Base {size} />
-        <Hero {size} />
+        <Base />
+        <Hero  />
         <Productions />
             <!-- {#each Object.values(texturesConfig) as texture, i}
             <T.Mesh position={[0, 0, texture.z]}>
@@ -33,5 +33,6 @@
     :global(canvas) {
         @apply w-full h-full;
         @apply pointer-events-none;
+        background-color: rgb(4, 5, 7);
     }
 </style>
