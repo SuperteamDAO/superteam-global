@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import { tweened } from 'svelte/motion';
     import { expoOut } from 'svelte/easing';
+    import { page } from '$app/stores'
     import * as THREE from 'three';
 
     const sl1Intensity = tweened(0, { duration: 500, easing: expoOut });
@@ -16,13 +17,17 @@
             start: 'top 50%',
             end: 'bottom 50%',
             onEnter: () => {
-                sl1Intensity.set(1);
+                if ($page.route.id === "/") {
+                    sl1Intensity.set(1);
+                }
             },
             onLeave: () => {
                 sl1Intensity.set(0);
             },
             onEnterBack: () => {
-                sl1Intensity.set(1);
+                if ($page.route.id === "/") {
+                    sl1Intensity.set(1);
+                }
             },
             onLeaveBack: () => {
                 sl1Intensity.set(0);

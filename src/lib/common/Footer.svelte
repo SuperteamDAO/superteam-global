@@ -1,6 +1,6 @@
 <script>
-	import superteam_footer from '../assets/logos/superteam_footer.svg';
-	import AnimatedLogo from './common/AnimatedLogo.svelte';
+	import superteam_footer from '../../assets/logos/superteam_footer.svg';
+	import AnimatedLogo from './AnimatedLogo.svelte';
 </script>
 
 <div
