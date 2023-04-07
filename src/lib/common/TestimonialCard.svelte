@@ -1,42 +1,33 @@
 <script>
-	/**
-	 * @type {any}
-	 */
 	export let imgurl;
-	/**
-	 * @type {any}
-	 */
 	export let content;
-	/**
-	 * @type {any}
-	 */
 	export let name;
-	/**
-	 * @type {any}
-	 */
 	export let username;
+	export let twturl;
 </script>
 
-<div class="test-container h-fit flex flex-col items-start py-7 px-6 gap-[41px] rounded-[5px]">
-	<div class="content text-white">
-		<p>
-			{content}
-		</p>
-	</div>
-	<div class="flex flex-row">
-		<div class="image w-[40px] h-[40px] mr-[24px]">
-			<img src={imgurl} alt="" class="rounded-full" />
+<a href={twturl} class="cursor-pointer" target="_blank">
+	<div class="test-container h-fit flex flex-col items-start py-7 px-6 rounded-[5px]">
+		<div class="content text-white">
+			<p>
+				{content}
+			</p>
 		</div>
-		<div class="user">
-			<div class="name text-white">
-				<p>{name}</p>
+		<div class="flex flex-row mt-[40px]">
+			<div class="image w-[40px] h-[40px] mr-[24px]">
+				<img src={imgurl} alt="" class="rounded-full" />
 			</div>
-			<div class="username mt-[4px]">
-				<p>{username}</p>
+			<div class="user">
+				<div class="name text-white">
+					<p>{name}</p>
+				</div>
+				<div class="username mt-[4px]">
+					<p>{username}</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</a>
 
 <style>
 	.test-container {
@@ -48,7 +39,6 @@
 	}
 	.username {
 		color: #ffffff;
-
 		opacity: 0.4;
 	}
 	.content {

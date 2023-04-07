@@ -31,6 +31,7 @@
 									name={testimonial.name}
 									username={testimonial.username}
 									content={testimonial.content}
+									twturl={testimonial.tweet_link}
 								/>
 							</div>
 							{#if testimonials[index + 1]}
@@ -40,6 +41,7 @@
 										name={testimonials[index + 1].name}
 										username={testimonials[index + 1].username}
 										content={testimonials[index + 1].content}
+										twturl={testimonials[index + 1].tweet_link}
 									/>
 								</div>
 							{/if}
@@ -58,6 +60,7 @@
 									name={testimonial.name}
 									username={testimonial.username}
 									content={testimonial.content}
+									twturl={testimonial.tweet_link}
 								/>
 							</div>
 							{#if testimonials[index + 1]}
@@ -67,6 +70,7 @@
 										name={testimonials[index + 1].name}
 										username={testimonials[index + 1].username}
 										content={testimonials[index + 1].content}
+										twturl={testimonials[index + 1].tweet_link}
 									/>
 								</div>
 							{/if}
@@ -85,6 +89,7 @@
 									name={testimonial.name}
 									username={testimonial.username}
 									content={testimonial.content}
+									twturl={testimonial.tweet_link}
 								/>
 							</div>
 							{#if testimonials[index + 1]}
@@ -94,6 +99,7 @@
 										name={testimonials[index + 1].name}
 										username={testimonials[index + 1].username}
 										content={testimonials[index + 1].content}
+										twturl={testimonials[index + 1].tweet_link}
 									/>
 								</div>
 							{/if}
