@@ -9,7 +9,7 @@
     // export let size = { width: 0, height: 0 }
     const imageWidth = 12.8
     const imageHeight = 11
-    const opacity = tweened(1, { duration: 500 })
+    const opacity = tweened(0, { duration: 500 })
     const { size } = useThrelte()
     $: aspect = $size.width / $size.height
 
@@ -35,6 +35,7 @@
     const textures = useTexture(layers.map(layer => layer.path))    
     
     onMount(() => {
+        opacity.set(1)
         ScrollTrigger.create({
             trigger: '.hero',
             start: 'top 50%',
@@ -45,7 +46,7 @@
                 }
             },
             onLeave: () => {
-                // opacity.set(0);
+                opacity.set(0);
             },
             onEnterBack: () => {
                 if ($page.route.id === "/") {
@@ -53,7 +54,7 @@
                 }
             },
             onLeaveBack: () => {
-                // opacity.set(0);
+                opacity.set(0);
             },
         })
     })
@@ -64,7 +65,7 @@
     {#each textures as texture, i}
         <T.Mesh position={[0, 0, layers[i].z]} scale={[adaptedWidth, adaptedHeight, 1]} receiveShadow castShadow>
             <T.PlaneGeometry args={[0.1, 0.1]} />
-            <T.MeshStandardMaterial args={[{ map: texture, transparent: true }]} opacity={1} />
+            <T.MeshStandardMaterial args={[{ map: texture, transparent: true }]} opacity={$opacity} />
         </T.Mesh>
     {/each}
 </T.Group>
