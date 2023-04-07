@@ -1,5 +1,4 @@
 <script>
-	import Footer from '$lib/Footer.svelte';
 	import LoveRespect from '$lib/LoveRespect.svelte';
 	import Partners from '$lib/Partners.svelte';
 	import HeroContainer from '$lib/common/HeroContainer.svelte';
@@ -28,8 +27,6 @@
 <CollabServices />
 
 <LoveRespect collab={true} />
-
-<Footer />
 
 <style lang="postcss">
 </style>
