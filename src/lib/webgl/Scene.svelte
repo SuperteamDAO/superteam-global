@@ -1,19 +1,14 @@
 <script lang="ts">
-    import { Canvas, useTexture, T } from '@threlte/core'
-	import { onMount, setContext } from 'svelte';
-	import { texturesConfig } from '../../constants/webgl';
+    import { Canvas } from '@threlte/core'
+    import { useProgress } from '../../utils/hooks/useProgress';
+    import { onMount, setContext } from 'svelte';
 	import Base from './Base.svelte';
     import Productions from './Productions.svelte';
+	import Hero from './Hero.svelte';
 	
     export let size = { width: 0, height: 0 }
 
     setContext('screenDimensions', size);
-
-    const textures = useTexture(Object.values(texturesConfig).map((texture) => texture.path))
-
-    onMount(() => {
-
-    })
 
 </script>
 
@@ -23,6 +18,7 @@
 >
     <Canvas {size} >
         <Base {size} />
+        <Hero {size} />
         <Productions />
             <!-- {#each Object.values(texturesConfig) as texture, i}
             <T.Mesh position={[0, 0, texture.z]}>
