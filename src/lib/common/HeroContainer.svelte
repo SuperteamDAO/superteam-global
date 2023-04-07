@@ -11,7 +11,7 @@
 <div class="flex flex-col justify-start items-center mt-[72px] md:mt-[160px]">
 	<AnimatedLogo />
 	<h1
-		class="heading w-[280px] md:w-[430px] flex flex-col text-[32px] md:text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center"
+		class="heading w-[320px] md:w-[480px] flex flex-col text-[32px] md:text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center"
 	>
 		<span class="line block">
 			<span> {line1} </span>
