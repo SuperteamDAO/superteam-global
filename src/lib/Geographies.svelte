@@ -40,9 +40,9 @@
 	</div>
 	<div
 		bind:this={carousel}
-		class="country-cards-container py-12 w-full col-span-5 overflow-x-scroll overflow-y-visible scrollbar-hidden"
+		class="country-cards-container w-full col-span-5 overflow-x-scroll overflow-y-visible scrollbar-hidden pb-0"
 	>
-		<div class="country-cards w-full flex gap-8 min-[1630px]:justify-center">
+		<div class="country-cards w-full flex gap-8 min-[1630px]:justify-center py-12">
 			<CountryCard />
 			<CountryCard />
 			<CountryCard />
