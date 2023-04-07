@@ -32,7 +32,7 @@
 	>
 		<div class="left-img h-full w-1/2">
 			<div class="overlay h-full w-full" />
-			<img src={imgurl} alt={text} class="w-full h-full object-cover " />
+			<img src={imgurl} alt={text} class="w-full h-full object-cover" />
 			<p class="text-on-img text-white">
 				{text}
 			</p>
@@ -53,7 +53,7 @@
 				{/each}
 			</div>
 			<div class="mt-[32px] ml-[64px]">
-				<PrimaryButton class="font-bold">
+				<PrimaryButton href="/" class="font-bold">
 					{btnText}
 				</PrimaryButton>
 			</div>
