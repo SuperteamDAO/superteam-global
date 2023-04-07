@@ -10,6 +10,7 @@
   import Footer from "$lib/common/Footer.svelte";
 	import Scene from "$lib/webgl/Scene.svelte";
 	import { writable } from "svelte/store";
+  import { navigating } from "$app/stores"; 
 
   const tl = gsap.timeline();
   const mouse = writable({ x: 0, y: 0 });
@@ -21,9 +22,7 @@
 
   const mouseMove = (e: MouseEvent) => {
     mouse.set({ x: e.clientX, y: e.clientY });
-  }
-
-  
+  };
   
 </script>
 
