@@ -11,7 +11,13 @@
 	import Testimonials from '$lib/Testimonials.svelte';
 </script>
 
-<Hero />
+<Hero
+	line1="your portal to the"
+	line2="world of solana"
+	line3="superteam is the forefront community for web3,"
+	line4="powered by solana."
+	buttonVisible={true}
+/>
 
 <Geographies />
 
