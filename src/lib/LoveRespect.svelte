@@ -295,7 +295,7 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style>
 	.respect-container {
 		justify-content: center;
 		z-index: 4;

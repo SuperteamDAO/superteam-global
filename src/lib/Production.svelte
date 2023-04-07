@@ -1,10 +1,10 @@
 <script>
-	import earn from '../assets/cards/earn.png';
-	import ecosystem_calls from '../assets/cards/ecosystem_calls.png';
-	import instagrants from '../assets/cards/instagrants.png';
-	import alphasquad from '../assets/cards/alphasquad.png';
-	import build from '../assets/cards/build.png';
-	import founders_league from '../assets/cards/founders_league.png';
+	import earn from '../assets/cards/earn.jpg';
+	import ecosystem_calls from '../assets/cards/ecosystem_calls.jpg';
+	import instagrants from '../assets/cards/instagrants.jpg';
+	import alphasquad from '../assets/cards/alphasquad.jpg';
+	import build from '../assets/cards/build.jpg';
+	import founders_league from '../assets/cards/founders_league.jpg';
 	import IllustrationCard from './common/IllustrationCard.svelte';
 	import instagrantsbg from '../assets/images/instagrantsbg.png';
 	import Modal from './common/Modal.svelte';
@@ -39,18 +39,16 @@
 	{/if}
 
 	<div>
-		<p class="superteam font-semibold text-xl leading-none text-white parallax transition-all duration-50">superteam</p>
-		<p class="productions parallax transition-all duration-100">productions</p>
-		<p class="center-text lg:hidden parallax transition-all duration-50">Changing the world,</p>
-		<p class="center-text lg:hidden parallax transition-all duration-50">one line of code at a time</p>
+		<p class="font-secondary font-semibold text-xl leading-[22px] tracking-[-0.04em] text-white">superteam</p>
+		<p class="productions">productions</p>
+		<p class="center-text">Changing the world,<br /> one line of code at a time</p>
 	</div>
-	<div class="grid grid-cols-1 lg:grid-cols-8 gap-0 lg:gap-[24px] mx-auto">
-		<div
-			class="mt-[35px] lg:mt-[0px] col-span-1 lg:col-span-2 lg:col-start-2 flex flex-col items-center"
-		>
+	<div class="flex justify-center items-center">
+		<div class="flex flex-col gap-8 lg:grid lg:gap-0 cards-container">
 			<IllustrationCard
 				text="Earn"
 				imageUrl={earn}
+				class="col-start-1 row-start-1 row-end-2"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
@@ -62,6 +60,7 @@
 					)}
 			/>
 			<IllustrationCard
+				class="col-start-1 row-start-4 row-end-5"
 				text="Ecosystem Calls"
 				imageUrl={ecosystem_calls}
 				on:click={() =>
@@ -74,12 +73,8 @@
 						thunder
 					)}
 			/>
-		</div>
-		<div class="mt-[12px] col-span-1 lg:col-span-2 flex flex-col items-center lg:text-sm">
-			<p class="center-text hidden lg:block parallax">Changing the world,</p>
-			<p class="center-text mb-[43px] hidden lg:block parallax">one line of code at a time</p>
-
 			<IllustrationCard
+				class="col-start-2 row-start-2 row-end-4"
 				text="Instagrants"
 				imageUrl={instagrants}
 				on:click={() =>
@@ -93,6 +88,7 @@
 					)}
 			/>
 			<IllustrationCard
+				class="col-start-2 row-start-6"
 				text="Alpha Squad"
 				imageUrl={alphasquad}
 				on:click={() =>
@@ -105,9 +101,8 @@
 						thunder
 					)}
 			/>
-		</div>
-		<div class=" col-span-1 lg:col-span-2 flex flex-col items-center">
 			<IllustrationCard
+				class="col-start-3 row-start-1 row-end-2"
 				text="Build"
 				imageUrl={build}
 				on:click={() =>
@@ -121,28 +116,24 @@
 					)}
 			/>
 			<IllustrationCard
-				text="Founder's League"
-				imageUrl={founders_league}
-				on:click={() =>
-					openModal(
-						'our very own job listing and bounty platform to find every earning opportunity in solana',
-						'ST earn',
-						instagrantsbg,
-						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
-						'Visit ST Earn',
-						thunder
-					)}
-			/>
+					class="col-start-3 row-start-4 row-end-6"
+					text="Founder's League"
+					imageUrl={founders_league}
+					on:click={() =>
+						openModal(
+							'our very own job listing and bounty platform to find every earning opportunity in solana',
+							'ST earn',
+							instagrantsbg,
+							['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
+							'Visit ST Earn',
+							thunder
+						)}
+				/>
 		</div>
 	</div>
 </div>
 
 <style>
-	.superteam {
-		font-family: 'Archivo_SemiExpanded';
-		letter-spacing: -0.04em;
-		line-height: 22px;
-	}
 	.productions {
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
@@ -155,7 +146,6 @@
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
-		text-fill-color: transparent;
 	}
 	.center-text {
 		font-family: 'Satoshi-Variable';
@@ -166,5 +156,18 @@
 		letter-spacing: -0.04em;
 
 		color: #ffffff;
+	}
+	.cards-container {
+		--row-factor: 8px;
+		column-gap: 32px;
+	}
+
+	@media (min-width: 1024px) {
+		.cards-container {
+			grid-template-columns: repeat(3, 320px);
+			grid-template-rows: calc(7 * var(--row-factor)) calc(43 * var(--row-factor)) calc(4 * var(--row-factor)) 
+								calc(3 * var(--row-factor)) 
+								calc(4 * var(--row-factor)) calc(43 * var(--row-factor)) calc(7 * var(--row-factor));
+		}
 	}
 </style>

@@ -12,6 +12,7 @@
 </script>
 
 <Hero />
+
 <Geographies />
 
 <!-- <div class="pb-[200px]"></div> -->
@@ -21,7 +22,7 @@
 
 <SuperteamIrl />
 
-<!-- <LoveRespect /> -->
+<LoveRespect />
 
 <Collab />
 
