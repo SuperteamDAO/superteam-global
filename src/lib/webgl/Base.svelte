@@ -15,6 +15,7 @@
         <OrbitControls />
     </PerspectiveCamera>
     <!-- <DirectionalLight position={{ z: 100 }} color="white" /> -->
+    <T.AmbientLight />
     <T.Mesh position={[0, 0, 0]} receiveShadow castShadow>
         <T.PlaneGeometry args={[size.width / factor, size.height / factor]} />
         <T.MeshStandardMaterial color="rgb(4, 5, 7)" vertexColors={true} roughness={0.4} />
