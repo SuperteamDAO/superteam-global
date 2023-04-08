@@ -19,7 +19,6 @@
 
 <Geographies />
 
-<!-- <div class="pb-[200px]"></div> -->
 <Partners />
 
 <Production />
