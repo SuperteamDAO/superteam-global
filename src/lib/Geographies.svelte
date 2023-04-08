@@ -7,28 +7,30 @@
 	 */
 	let carousel;
 	let currentPosition = 0;
-	function scrollLeft() {
-		const minPosition = 0;
-		const scrollAmount = carousel.clientWidth / 2;
-		currentPosition = Math.max(currentPosition - scrollAmount, minPosition);
-		carousel.scrollTo({ left: currentPosition, behavior: 'smooth' });
-	}
+	// function scrollLeft() {
+	// 	const minPosition = 0;
+	// 	const scrollAmount = carousel.clientWidth / 2;
+	// 	currentPosition = Math.max(currentPosition - scrollAmount, minPosition);
+	// 	carousel.scrollTo({ left: currentPosition, behavior: 'smooth' });
+	// }
 
-	function scrollRight() {
-		const maxPosition = carousel.scrollWidth - carousel.clientWidth;
-		const scrollAmount = carousel.clientWidth / 2;
-		currentPosition = Math.min(currentPosition + scrollAmount, maxPosition);
-		carousel.scrollTo({ left: currentPosition, behavior: 'smooth' });
-	}
+	// function scrollRight() {
+	// 	const maxPosition = carousel.scrollWidth - carousel.clientWidth;
+	// 	const scrollAmount = carousel.clientWidth / 2;
+	// 	currentPosition = Math.min(currentPosition + scrollAmount, maxPosition);
+	// 	carousel.scrollTo({ left: currentPosition, behavior: 'smooth' });
+	// }
+
+
 </script>
 
 <div
 	class="carousel-main relative left-1/2 right-1/2 -translate-x-1/2 w-screen overflow-x-visible flex flex-col col-span-5"
 >
-	<div
+	<!-- <div
 		class="carousel-container flex items-center justify-between text-white mr-[71px] ml-[71px] mb-4"
-	>
-		<div class="nav-buttons w-full md:flex">
+	> -->
+		<!-- <div class="nav-buttons w-full md:flex">
 			<NavButton direction="left" class="left hidden md:flex" on:click={scrollLeft}
 				><CaretLeft size={20} /></NavButton
 			>
@@ -36,9 +38,9 @@
 			<NavButton direction="right" class="right hidden md:flex" on:click={scrollRight}
 				><CaretRight size={20} /></NavButton
 			>
-		</div>
-	</div>
-	<div
+		</div> -->
+	<!-- </div> -->
+	<!-- <div
 		bind:this={carousel}
 		class="country-cards-container w-full col-span-5 overflow-x-scroll overflow-y-visible scrollbar-hidden pb-0"
 	>
@@ -49,14 +51,22 @@
 			<CountryCard />
 			<CountryCard />
 		</div>
-	</div>
-	<div class="nav-buttons text-white md:hidden flex justify-center gap-11 mt-4">
+	</div> -->
+	<!-- <div class="nav-buttons text-white md:hidden flex justify-center gap-11 mt-4">
 		<NavButton direction="left" class="left" on:click={scrollLeft}
 			><CaretLeft size={20} /></NavButton
 		>
 		<NavButton direction="right" class="right" on:click={scrollRight}
 			><CaretRight size={20} /></NavButton
 		>
+	</div> -->
+	<div bind:this={carousel} class="h-[400px] w-full flex items-center px-6">
+		<CountryCard />
+		<!-- <CountryCard />
+		<CountryCard />
+		<CountryCard />
+		<CountryCard />
+		<CountryCard /> -->
 	</div>
 </div>
 
