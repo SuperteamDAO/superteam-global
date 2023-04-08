@@ -4,7 +4,7 @@
 	import TestimonialCard from './common/TestimonialCard.svelte';
 	import pragun from '../assets/images/pragun.jpg';
 	import clsx from 'clsx';
-	import testimonials from '../i18n/locales/testimonials.json';
+	import { _ } from 'svelte-i18n';
 
 	export let collab = false;
 </script>
@@ -22,9 +22,9 @@
 	<div class="mt-12 overflow-x-scroll scrollbar-hidden item-container flex-nowrap">
 		<div class="scroll-wrapper w-full grid grid-cols-2">
 			<div class="item-row item-row-1 flex flex-row slide-track">
-				{#each testimonials as testimonial, index}
+				{#each $_('page.home.testimonials.data') as testimonial, index}
 					{#if index % 2 === 0}
-						<div class="item-col flex flex-row md:flex-col h-[400px] h-fit">
+						<div class="item-col flex flex-row md:flex-col h-fit">
 							<div class="item">
 								<TestimonialCard
 									imgurl={testimonial.imgurl}
@@ -34,14 +34,14 @@
 									twturl={testimonial.tweet_link}
 								/>
 							</div>
-							{#if testimonials[index + 1]}
+							{#if $_('page.home.testimonials.data')[index + 1]}
 								<div class="item">
 									<TestimonialCard
-										imgurl={testimonials[index + 1].imgurl}
-										name={testimonials[index + 1].name}
-										username={testimonials[index + 1].username}
-										content={testimonials[index + 1].content}
-										twturl={testimonials[index + 1].tweet_link}
+										imgurl={$_('page.home.testimonials.data')[index + 1].imgurl}
+										name={$_('page.home.testimonials.data')[index + 1].name}
+										username={$_('page.home.testimonials.data')[index + 1].username}
+										content={$_('page.home.testimonials.data')[index + 1].content}
+										twturl={$_('page.home.testimonials.data')[index + 1].tweet_link}
 									/>
 								</div>
 							{/if}
@@ -51,7 +51,7 @@
 			</div>
 			<div class="item-row item-row-2 flex flex-row slide-track">
 				<!-- Duplicate content -->
-				{#each testimonials as testimonial, index}
+				{#each $_('page.home.testimonials.data') as testimonial, index}
 					{#if index % 2 === 0}
 						<div class="item-col flex flex-row md:flex-col h-fit">
 							<div class="item">
@@ -63,14 +63,14 @@
 									twturl={testimonial.tweet_link}
 								/>
 							</div>
-							{#if testimonials[index + 1]}
+							{#if $_('page.home.testimonials.data')[index + 1]}
 								<div class="item">
 									<TestimonialCard
-										imgurl={testimonials[index + 1].imgurl}
-										name={testimonials[index + 1].name}
-										username={testimonials[index + 1].username}
-										content={testimonials[index + 1].content}
-										twturl={testimonials[index + 1].tweet_link}
+										imgurl={$_('page.home.testimonials.data')[index + 1].imgurl}
+										name={$_('page.home.testimonials.data')[index + 1].name}
+										username={$_('page.home.testimonials.data')[index + 1].username}
+										content={$_('page.home.testimonials.data')[index + 1].content}
+										twturl={$_('page.home.testimonials.data')[index + 1].tweet_link}
 									/>
 								</div>
 							{/if}
@@ -80,7 +80,7 @@
 			</div>
 			<div class="item-row item-row-3 lg:flex-row slide-track hidden lg:flex">
 				<!-- Triplicate content -->
-				{#each testimonials as testimonial, index}
+				{#each $_('page.home.testimonials.data') as testimonial, index}
 					{#if index % 2 === 0}
 						<div class="item-col flex flex-row md:flex-col h-fit">
 							<div class="item">
@@ -92,14 +92,14 @@
 									twturl={testimonial.tweet_link}
 								/>
 							</div>
-							{#if testimonials[index + 1]}
+							{#if $_('page.home.testimonials.data')[index + 1]}
 								<div class="item">
 									<TestimonialCard
-										imgurl={testimonials[index + 1].imgurl}
-										name={testimonials[index + 1].name}
-										username={testimonials[index + 1].username}
-										content={testimonials[index + 1].content}
-										twturl={testimonials[index + 1].tweet_link}
+										imgurl={$_('page.home.testimonials.data')[index + 1].imgurl}
+										name={$_('page.home.testimonials.data')[index + 1].name}
+										username={$_('page.home.testimonials.data')[index + 1].username}
+										content={$_('page.home.testimonials.data')[index + 1].content}
+										twturl={$_('page.home.testimonials.data')[index + 1].tweet_link}
 									/>
 								</div>
 							{/if}
