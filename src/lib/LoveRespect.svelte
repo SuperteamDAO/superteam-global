@@ -16,7 +16,7 @@
 	)}
 >
 	<div class="love-header">
-		<p class="love">Love and Respect</p>
+		<p class="love text-[24px] md:text-[32px] lg:leading-[35px] leading-[26px]">Love and Respect</p>
 	</div>
 
 	<div class="mt-12 overflow-x-scroll scrollbar-hidden item-container flex-nowrap">
@@ -123,9 +123,7 @@
 	.love {
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
-		font-weight: 500;
-		font-size: 32px;
-		line-height: 35px;
+		font-weight: 700;
 		text-align: center;
 		letter-spacing: -0.04em;
 

@@ -3,8 +3,8 @@
 	import PrimaryButton from './PrimaryButton.svelte';
 	export let line1 = '';
 	export let line2 = '';
-	export let line3 = '';
-	export let line4 = '';
+	export let line3 = 'superteam is the forefront community for web3,';
+	export let line4 = 'powered by solana.';
 	export let buttonVisible = true;
 </script>
 

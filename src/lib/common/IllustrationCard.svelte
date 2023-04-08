@@ -1,5 +1,5 @@
 <script>
-	import clsx from "clsx";
+	import clsx from 'clsx';
 
 	export let imageUrl;
 	export let text;
@@ -7,14 +7,13 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div
-	class={clsx(
-		"image-with-text relative rounded-lg cursor-pointer p-[1px] bg-white",
-		$$props.class
-	)} 
+	class={clsx('image-with-text relative rounded-lg cursor-pointer p-[1px] bg-white', $$props.class)}
 	on:click
 >
 	<img src={imageUrl} class="rounded-lg" alt="" />
-	<p class="text-on-image absolute text-left font-bold text-white top-[32px] left-[32px]">
+	<p
+		class="text-on-image absolute text-left font-bold text-white top-[32px] left-[32px] text-[20px] md:text-[28px]"
+	>
 		{text}
 	</p>
 </div>
@@ -25,20 +24,13 @@
 	}
 	.text-on-image {
 		line-height: 31px;
-		font-size: calc(1rem + 0.5vw);
 		width: calc(120px + 1.5vw);
 		margin-right: 10%;
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
 		font-weight: 700;
-		font-size: 28.9199px;
 		line-height: 31px;
 		letter-spacing: -0.04em;
 		color: #ffffff;
-	}
-	@media screen and (max-width: 1023px) {
-		.text-on-image {
-			font-size: calc(1.2rem + 1vw);
-		}
 	}
 </style>
