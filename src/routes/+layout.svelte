@@ -36,7 +36,7 @@
   on:mousemove={mouseMove}
 />
 
-<Scene size={{ width: width, height: height }} />
+<!-- <Scene size={{ width: width, height: height }} /> -->
 
 <Header class="mx-auto max-w-[1440px] px-10 md:px-[72px]" />
 <div

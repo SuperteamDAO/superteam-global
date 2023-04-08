@@ -21,7 +21,7 @@
                 absoultely the best people inthe game, no competetion the 
             </p>
         </div>
-        <PrimaryButton class="w-full">
+        <PrimaryButton href="" class="w-full text-center">
             Visit
         </PrimaryButton>
     </div>
