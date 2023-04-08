@@ -16,8 +16,10 @@
 	<div
 		class="history-stuff w-full flex flex-col md:justify-center items-center h-[669px] md:h-full"
 	>
-		<p class="history mt-[80px]">be a part of history</p>
-		<div class="button mt-[38px]">
+		<p class="history mt-[80px] text-[24px] w-[189px] md:text-[32px] md:w-[245px]">
+			be a part of history
+		</p>
+		<div class="button mt-[50px]">
 			<PrimaryButton href="/collaborate">Collab with us</PrimaryButton>
 		</div>
 	</div>
@@ -28,12 +30,10 @@
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
 		font-weight: 700;
-		font-size: 36px;
 		line-height: 39px;
 		text-align: center;
 		letter-spacing: -0.04em;
 		color: #ffffff;
-		width: 245px;
 		height: 78px;
 	}
 	.collab-container {

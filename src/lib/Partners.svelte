@@ -7,7 +7,11 @@
 </script>
 
 <div class="partners-container col-span-5 w-full flex flex-col items-center mt-24">
-	<h2 class="partners-text text-center text-white mb-4 mr-[71px] ml-[71px]">partners</h2>
+	<h2
+		class="partners-text text-center text-white mb-4 mr-[71px] ml-[71px] text-[20px] md:[24px] lg:leading-[26px] leading-[22px]"
+	>
+		partners
+	</h2>
 	<div class="logos-container flex flex-wrap justify-center items-center mt-6 gap-11">
 		<img class="logo wormhole w-36 h-8" src={wormhole} alt="Wormhole" />
 		<img class="logo pyth w-24 h-8" src={pyth} alt="Pyth" />
@@ -21,8 +25,6 @@
 	.partners-text {
 		font-style: 'Archivo_SemiExpanded';
 		font-weight: 700;
-		font-size: 24px;
-		line-height: 26px;
 		text-align: center;
 		letter-spacing: -0.04em;
 
