@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { spring } from "svelte/motion";
+	import { spring, tweened } from "svelte/motion";
 	import { writable } from "svelte/store";
     import { clamp, round, adjust } from "../utils/math";
 
@@ -7,15 +7,14 @@
     let thisCard: undefined | HTMLDivElement = undefined;
     let isActive = false;
 
-    const springInteractSettings = { stiffness: 0.01, damping: 0.5, duration: 200 };
-    const springPopoverSettings = { stiffness: 0.01, damping: 0.5, duration: 200 };
+    const springInteractSettings = { stiffness: 0.1, damping: 0.5, duration: 100 };
+    const springPopoverSettings = { stiffness: 0.1, damping: 0.5, duration: 100 };
 
     const mouse = writable({ x: 0, y: 0 });
 
-    let springRotate = spring({ x: 0, y: 0 }, springInteractSettings);
-    let springGlare = spring({ x: 50, y: 50, o: 0 }, springInteractSettings);
-    let springBackground = spring({ x: 50, y: 50 }, springInteractSettings);
-    let springRotateDelta = spring({ x: 0, y: 0 }, springPopoverSettings);
+    let springRotate = tweened({ x: 0, y: 0 }, springInteractSettings);
+    let springGlare = tweened({ x: 50, y: 50, o: 0 }, springInteractSettings);
+    let springBackground = tweened({ x: 50, y: 50 }, springInteractSettings);
     
     const update = () => {
         if (!thisCard) return;
@@ -39,7 +38,7 @@
         })
 
         springRotate.set({
-            x: round(-(center.x / 3.5)),
+            x: -1 * round(center.x / 3.5),
             y: round(center.y / 2),
         })
 
@@ -73,46 +72,42 @@
         isActive = false;
 
         setTimeout(function () {
-            const snapStiff = 0.01;
-            const snapDamp = 0.06;
-      
-            springRotate.stiffness = snapStiff;
-            springRotate.damping = snapDamp;
-            springRotate.set({ x: 0, y: 0 }, { soft: 1 });
-
-            springGlare.stiffness = snapStiff;
-            springGlare.damping = snapDamp;
-            springGlare.set({ x: 50, y: 50, o: 0 }, { soft: 1 });
-
-            springBackground.stiffness = snapStiff;
-            springBackground.damping = snapDamp;
-            springBackground.set({ x: 50, y: 50 }, { soft: 1 });
+            springRotate.set({ x: 0, y: 0 });
+            springGlare.set({ x: 50, y: 50, o: 0 });
+            springBackground.set({ x: 50, y: 50 });
         }, 200);
     }
 
-    $: dynamicStyles = `
-        --mouseX: ${$springGlare.x}%;
-        --mouseY: ${$springGlare.y}%;
-        --mouse-from-center: ${ 
-        clamp( Math.sqrt( 
-            ($springGlare.y - 50) * ($springGlare.y - 50) + 
-            ($springGlare.x - 50) * ($springGlare.x - 50) 
-        ) / 50, 0, 1) };
-        --mouse-from-top: ${$springGlare.y / 100};
-        --mouse-from-left: ${$springGlare.x / 100};
-        --card-opacity: ${$springGlare.o};
-        --rotateX: ${$springRotate.x + $springRotateDelta.x}deg;
-        --rotateY: ${$springRotate.y + $springRotateDelta.y}deg;
-        --backgroundX: ${$springBackground.x}%;
-        --backgroundY: ${$springBackground.y}%;
-        --opacity: ${isActive ? 1 : 0};
-	`;
+    let dynamicStyles = "";
+
+    $: {
+        let rotateX = $springRotate.x;
+        let rotateY = $springRotate.y;
+
+        dynamicStyles = `
+            --mouseX: ${$springGlare.x}%;
+            --mouseY: ${$springGlare.y}%;
+            --mouse-from-center: ${ 
+            clamp( Math.sqrt( 
+                ($springGlare.y - 50) * ($springGlare.y - 50) + 
+                ($springGlare.x - 50) * ($springGlare.x - 50) 
+            ) / 50, 0, 1) };
+            --mouse-from-top: ${$springGlare.y / 100};
+            --mouse-from-left: ${$springGlare.x / 100};
+            --card-opacity: ${$springGlare.o};
+            --rotateX: ${rotateX}deg;
+            --rotateY: ${rotateY}deg;
+            --backgroundX: ${$springBackground.x}%;
+            --backgroundY: ${$springBackground.y}%;
+            --opacity: ${isActive ? 1 : 0};
+	    `;
+    }
 
 </script>
 
 <div 
     style={dynamicStyles}
-    class="card"
+    class="card country-card"
     bind:this={thisCard}
     on:mouseenter={enter}
     on:mousemove={move}
@@ -144,13 +139,13 @@
         --mouse-from-left: var(--mouse-from-center);
         --scale: 1;
 
-        @apply w-fit h-fit rounded-xl relative z-10;
+        @apply w-[300px] h-[400px] rounded-xl relative z-10;
     }
     
     .card_rotator {
         @apply w-fit h-fit relative rounded-xl;
         transform-style: preserve-3d;
-        transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(var(--rotateY)) scale3d(var(--scale),var(--scale),var(--scale));
+        transform: perspective(var(--perspective)) rotateY(var(--rotateX)) rotateX(var(--rotateY)) scale3d(var(--scale),var(--scale),var(--scale));
     }
 
     .card-content {
@@ -210,3 +205,5 @@
         filter: brightness(1) contrast(1.5);
     }
 </style>
+
+<!-- url('../assets/cards/monochrome.jpg') -->
