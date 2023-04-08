@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { spring } from "svelte/motion";
+	import { spring, tweened } from "svelte/motion";
 	import { writable } from "svelte/store";
     import { clamp, round, adjust } from "../utils/math";
 
@@ -7,15 +7,15 @@
     let thisCard: undefined | HTMLDivElement = undefined;
     let isActive = false;
 
-    const springInteractSettings = { stiffness: 0.01, damping: 0.5, duration: 200 };
-    const springPopoverSettings = { stiffness: 0.01, damping: 0.5, duration: 200 };
+    const springInteractSettings = { stiffness: 0.1, damping: 0.5, duration: 100 };
+    const springPopoverSettings = { stiffness: 0.1, damping: 0.5, duration: 100 };
 
     const mouse = writable({ x: 0, y: 0 });
 
-    let springRotate = spring({ x: 0, y: 0 }, springInteractSettings);
-    let springGlare = spring({ x: 50, y: 50, o: 0 }, springInteractSettings);
-    let springBackground = spring({ x: 50, y: 50 }, springInteractSettings);
-    let springRotateDelta = spring({ x: 0, y: 0 }, springPopoverSettings);
+    let springRotate = tweened({ x: 0, y: 0 }, springInteractSettings);
+    let springGlare = tweened({ x: 50, y: 50, o: 0 }, springInteractSettings);
+    let springBackground = tweened({ x: 50, y: 50 }, springInteractSettings);
+    let springRotateDelta = tweened({ x: 0, y: 0 }, springPopoverSettings);
     
     const update = () => {
         if (!thisCard) return;
@@ -39,7 +39,7 @@
         })
 
         springRotate.set({
-            x: round(-(center.x / 3.5)),
+            x: Math.min(round(-(center.x / 3.5)), 20),
             y: round(center.y / 2),
         })
 
@@ -76,17 +76,11 @@
             const snapStiff = 0.01;
             const snapDamp = 0.06;
       
-            springRotate.stiffness = snapStiff;
-            springRotate.damping = snapDamp;
-            springRotate.set({ x: 0, y: 0 }, { soft: 1 });
+            springRotate.set({ x: 0, y: 0 });
 
-            springGlare.stiffness = snapStiff;
-            springGlare.damping = snapDamp;
-            springGlare.set({ x: 50, y: 50, o: 0 }, { soft: 1 });
+            springGlare.set({ x: 50, y: 50, o: 0 });
 
-            springBackground.stiffness = snapStiff;
-            springBackground.damping = snapDamp;
-            springBackground.set({ x: 50, y: 50 }, { soft: 1 });
+            springBackground.set({ x: 50, y: 50 });
         }, 200);
     }
 
@@ -144,7 +138,7 @@
         --mouse-from-left: var(--mouse-from-center);
         --scale: 1;
 
-        @apply w-fit h-fit rounded-xl relative z-10;
+        @apply w-[300px] h-[400px] rounded-xl relative z-10;
     }
     
     .card_rotator {
@@ -210,3 +204,5 @@
         filter: brightness(1) contrast(1.5);
     }
 </style>
+
+<!-- url('../assets/cards/monochrome.jpg') -->
