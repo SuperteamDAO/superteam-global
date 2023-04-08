@@ -8,7 +8,7 @@
 
 <a href={twturl} class="cursor-pointer" target="_blank">
 	<div class="test-container h-fit flex flex-col items-start py-7 px-6 rounded-[5px]">
-		<div class="content text-white">
+		<div class="content text-white lg:text-[18px] md:text-[16px] text-[14px]">
 			<p>
 				{content}
 			</p>
@@ -18,10 +18,14 @@
 				<img src={imgurl} alt="" class="rounded-full" />
 			</div>
 			<div class="user">
-				<div class="name text-white">
+				<div
+					class="name text-white text-[12px] lg:text-[16px] md:text-[15px] lg:leading-[17px] md:leading-[16px] leading-[13px]"
+				>
 					<p>{name}</p>
 				</div>
-				<div class="username mt-[4px]">
+				<div
+					class="username mt-[4px] text-[12px] lg:text-[16px] md:text-[15px] lg:leading-[17px] md:leading-[16px] leading-[13px]"
+				>
 					<p>{username}</p>
 				</div>
 			</div>
@@ -45,16 +49,12 @@
 		font-family: 'Satoshi-Variable';
 		font-style: normal;
 		font-weight: 700;
-		font-size: 18px;
-		line-height: 24px;
 		letter-spacing: -0.04em;
 	}
 	.user {
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
 		font-weight: 700;
-		font-size: 16px;
-		line-height: 17px;
 		letter-spacing: -0.04em;
 	}
 </style>
