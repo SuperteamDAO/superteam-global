@@ -44,22 +44,22 @@
 
 		tl.to('.know-more-button', { opacity: 1, duration: 1.8, ease: 'power4.out' });
 
-		tl.to('.heading .line',{
-			position: 'relative',
-		})
+		tl.to('.heading .line', {
+			position: 'relative'
+		});
 	});
 </script>
 
 <div class="flex flex-col justify-start items-center hero-content">
 	<AnimatedLogo />
 	<h1
-		class="heading w-[320px] md:w-[480px] flex flex-col text-[32px] md:text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center"
+		class="heading w-[320px] text-[calc(24px+0.5vw)] md:w-full flex flex-col md:text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center"
 	>
-		<span class="line block">
-			<span> {line1} </span>
+		<span class="line block h-9 md:h-12 w-full">
+			<span class="heading-text"> {line1} </span>
 		</span>
-		<span class="line block">
-			<span> {line2} </span>
+		<span class="line block h-9 md:h-12">
+			<span class="heading-text"> {line2} </span>
 		</span>
 	</h1>
 	<p
@@ -79,12 +79,15 @@
 		margin-top: calc((100vh / 800) * 160);
 	}
 	.heading .line {
-		@apply block relative overflow-hidden w-full h-12;
+		@apply block relative overflow-hidden w-full;
 	}
 	br {
 		content: '';
 	}
 	.heading .line span {
 		@apply absolute w-full top-0 left-0;
+	}
+	.heading {
+		white-space: nowrap;
 	}
 </style>
