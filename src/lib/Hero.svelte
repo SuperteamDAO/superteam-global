@@ -1,8 +1,4 @@
 <script>
-	import AnimatedLogo from './common/AnimatedLogo.svelte';
-	import PrimaryButton from './common/PrimaryButton.svelte';
-	import { onMount, getContext } from 'svelte';
-	import { gsap } from 'gsap';
 	import HeroContainer from './common/HeroContainer.svelte';
 	export let line1 = '';
 	export let line2 = '';
