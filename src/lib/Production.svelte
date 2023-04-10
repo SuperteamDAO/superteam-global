@@ -139,16 +139,29 @@
 </div>
 
 <style>
+	@keyframes shine {
+		0%, 10% {
+			background-position: center, -500px;
+		}
+		100% {
+			background-position: center, 500px;
+		}
+	}
 	.productions {
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
 		font-weight: 700;
 		letter-spacing: -0.04em;
 
-		background: linear-gradient(173.91deg, rgba(255, 255, 255, 0) -102.4%, #ffffff 116.87%);
+		background: 
+			linear-gradient(173.91deg, rgba(255, 255, 255, 0) -102.4%, #ffffff 116.87%),
+			linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+		background-size: cover, 500px;
+		background-position: center, -1000px;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
+		animation: shine 5s infinite;
 	}
 
 	/* .shine {

@@ -78,7 +78,7 @@
 		margin-top: calc((100vh / 800) * 160);
 	}
 	.heading .line {
-		@apply block relative overflow-hidden w-full h-12;
+		@apply block relative overflow-hidden w-full h-8 md:h-12;
 	}
 	br {
 		content: '';
