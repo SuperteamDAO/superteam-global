@@ -53,7 +53,7 @@
 			<IllustrationCard
 				text="Earn"
 				imageUrl={earn}
-				class="col-start-1 row-start-1 row-end-2"
+				class="col-start-1 row-start-1 row-end-3"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
@@ -65,7 +65,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-1 row-start-4 row-end-5"
+				class="col-start-1 row-start-4 row-end-7"
 				text="Ecosystem Calls"
 				imageUrl={ecosystem_calls}
 				on:click={() =>
@@ -79,7 +79,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-2 row-start-2 row-end-4"
+				class="col-start-2 row-start-2 row-end-5"
 				text="Instagrants"
 				imageUrl={instagrants}
 				on:click={() =>
@@ -93,7 +93,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-2 row-start-6"
+				class="col-start-2 row-start-6 row-end-[-1]"
 				text="Alpha Squad"
 				imageUrl={alphasquad}
 				on:click={() =>
@@ -107,7 +107,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-3 row-start-1 row-end-2"
+				class="col-start-3 row-start-1 row-end-3"
 				text="Build"
 				imageUrl={build}
 				on:click={() =>
@@ -121,7 +121,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-3 row-start-4 row-end-6"
+				class="col-start-3 row-start-4 row-end-7"
 				text="Founder's League"
 				imageUrl={founders_league}
 				on:click={() =>
