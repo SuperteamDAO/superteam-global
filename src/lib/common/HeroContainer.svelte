@@ -4,7 +4,6 @@
 
 	import AnimatedLogo from './AnimatedLogo.svelte';
 	import PrimaryButton from './PrimaryButton.svelte';
-	import { T } from '@threlte/core';
 	export let line1 = '';
 	export let line2 = '';
 	export let line3 = 'superteam is the forefront community for web3,';
@@ -79,7 +78,7 @@
 		margin-top: calc((100vh / 800) * 160);
 	}
 	.heading .line {
-		@apply block relative overflow-hidden w-full;
+		@apply block relative overflow-hidden w-full h-8 md:h-12;
 	}
 	br {
 		content: '';
