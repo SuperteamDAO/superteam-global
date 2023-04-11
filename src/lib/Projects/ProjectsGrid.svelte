@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
 	import ProjectCard from './ProjectCard.svelte';
 
     export let projects;
