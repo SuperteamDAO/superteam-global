@@ -3,6 +3,9 @@
     import placeholder from '../../assets/cards/instagrants.jpg'
 	import PrimaryButton from "$lib/common/PrimaryButton.svelte";
 
+    export let name;
+    export let tagline;
+    export let projectLink;
 
 </script>
 <div class={
@@ -15,13 +18,13 @@
     <div class="absolute w-full h-full top-0 left-0 px-8 py-6 flex flex-col justify-between">
         <div>
             <p class="text-on-image text-left font-secondary text-white text-[24px] tracking-[-0.04em]">
-                ST Earn
+                {name}
             </p>
             <p class="whitespace-pre-wrap font-primary font-bold text-white text-[18px] mt-6">
-                absoultely the best people inthe game, no competetion the 
+                {tagline}
             </p>
         </div>
-        <PrimaryButton href="" class="w-full text-center">
+        <PrimaryButton href={projectLink} target="_blank" class="w-full text-center">
             Visit
         </PrimaryButton>
     </div>
