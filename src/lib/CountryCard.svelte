@@ -110,7 +110,7 @@
 
 <div 
     style={dynamicStyles}
-    class="card country-card"
+    class="card country-card w-[300px] h-[400px]"
     bind:this={thisCard}
     on:mouseenter={enter}
     on:mousemove={move}
@@ -142,11 +142,11 @@
         --mouse-from-left: var(--mouse-from-center);
         --scale: 1;
 
-        @apply w-[300px] h-[400px] rounded-xl relative z-10;
+        @apply rounded-xl relative;
     }
     
     .card_rotator {
-        @apply w-fit h-fit relative rounded-xl;
+        @apply w-[300px] h-[400px] relative rounded-xl;
         transform-style: preserve-3d;
         transform: perspective(var(--perspective)) rotateY(var(--rotateX)) rotateX(var(--rotateY)) scale3d(var(--scale),var(--scale),var(--scale));
     }
