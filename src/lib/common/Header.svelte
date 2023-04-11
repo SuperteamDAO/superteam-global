@@ -1,6 +1,5 @@
 <script>
 	import NamedLogo from './NamedLogo.svelte';
-	import PrimaryButton from './PrimaryButton.svelte';
 	import { onMount } from 'svelte';
 	import { tweened } from 'svelte/motion';
 	import { expoOut } from 'svelte/easing';
@@ -8,23 +7,38 @@
 	import MenuButtons from './MenuButtons.svelte';
 	import { clickOutside } from '../../utils/clickOutside';
 	import { X } from 'phosphor-svelte';
+	import { navigating } from '$app/stores'
 
 	const pos = tweened(-100, { duration: 1800, easing: expoOut });
-	const menuPos = tweened(-192, { duration: 1000, easing: expoOut });
+	const menuPos = tweened(-192, { duration: 500, easing: expoOut });
+
+	const openMenu = () => {
+		menuPos.set(-32);
+	};
+
+	const closeMenu = () => {
+		menuPos.set(-192);
+	};
 
 	const toggleMenu = () => {
 		if ($menuPos === -32) {
-			menuPos.set(-192);
+			closeMenu();
 		} else {
-			menuPos.set(-32);
+			openMenu();
 		}
 	};
 
 	const handleClickOutside = () => {
 		if ($menuPos === -32) {
-			menuPos.set(-192);
+			closeMenu();
 		}
 	};
+
+	$: {
+		if ($navigating && $menuPos === -32) {
+			closeMenu();
+		}
+	}
 
 	onMount(() => {
 		pos.set(0);

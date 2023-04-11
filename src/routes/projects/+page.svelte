@@ -7,10 +7,6 @@
 
     export let data
 
-    onMount(() => {
-        console.log(data)
-    })
-
 </script>
 
 <img src={builbg} class="absolute top-0 left-0 w-full object-cover" alt="" />
