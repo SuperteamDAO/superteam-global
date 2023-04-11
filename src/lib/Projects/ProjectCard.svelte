@@ -6,6 +6,7 @@
     export let name;
     export let tagline;
     export let projectLink;
+    export let imgUrl;
 
 </script>
 <div class={
@@ -14,7 +15,7 @@
         $$props.class
     )}
 >
-    <img src={placeholder} class="rounded-lg" alt="">
+    <img src={imgUrl} class="rounded-lg h-full bg-cover" alt="">
     <div class="absolute w-full h-full top-0 left-0 px-8 py-6 flex flex-col justify-between">
         <div>
             <p class="text-on-image text-left font-secondary text-white text-[24px] tracking-[-0.04em]">
