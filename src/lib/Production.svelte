@@ -164,6 +164,10 @@
 		animation: shine 5s infinite;
 	}
 
+	/* .cards-container {
+		background: linear-gradient(76.5deg, #2E1488 27.32%, rgba(0, 0, 0, 0) 102.38%),
+					linear-gradient(97.17deg, #8866FF -4.26%, rgba(37, 62, 47, 0) 67.32%);;
+	} */
 	/* .shine {
 		background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
 		-webkit-background-size: 150px;
