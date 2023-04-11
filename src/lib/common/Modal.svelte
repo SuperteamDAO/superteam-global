@@ -27,24 +27,45 @@
 >
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div
-		class="modal-content scale-up flex flex-row bg-white w-[780px] h-[600px] rounded-lg"
+		class="modal-content scale-up flex flex-col md:flex-row bg-white w-3/4 md:w-[95%] lg:w-[780px] h-fit md:h-[600px] rounded-lg"
 		on:click={(e) => e.stopPropagation()}
 	>
-		<div class="left-img h-full w-1/2">
+		<div class="left-img h-[120px] md:h-full w-full md:w-1/2">
 			<div class="overlay h-full w-full" />
-			<img src={imgurl} alt={text} class="w-full h-full object-cover" />
-			<p class="text-on-img text-white">
-				{text}
-			</p>
+			<img
+				src={imgurl}
+				alt={text}
+				class="w-full h-full object-cover rounded-t-lg md:rounded-t-none md:rounded-l-lg"
+			/>
+			<div
+				class="text-on-img text-[24px] md:text-[32px] text-white top-[24px] left-[24px] md:top-[53px] md:left-[40px] flex flex-row w-5/6 justify-between"
+			>
+				<div>
+					{text}
+				</div>
+				<div class="cross cursor-pointer md:hidden z-11" on:click={handleClose}>
+					<X size={20} color="#727272" weight="duotone" />
+				</div>
+			</div>
 		</div>
+
 		<div
-			class="right relative h-full w-1/2 bg-[#161616] rounded-r-lg z-10 text-white text-left flex flex-col"
+			class="right relative h-fit md:h-full w-full md:w-1/2 bg-[#161616] rounded-b-lg md:rounded-bl-none md:rounded-r-lg z-10 text-white text-left flex flex-col"
 		>
-			<div class="cross self-end mt-[46px] mr-[64px] cursor-pointer" on:click={handleClose}>
+			<div
+				class="cross self-end mt-[46px] mr-[64px] cursor-pointer hidden md:block"
+				on:click={handleClose}
+			>
 				<X size={30} />
 			</div>
-			<div class="top-content">{top_content}</div>
-			<div class="points ml-[64px]">
+			<div
+				class="top-content w-fit md:w-[230px] text-[14px] md:text-[18px] mt-[32px] ml-[32px] mr-[38px] md:mr-0 md:ml-[64px] md:leading-[19px] leading-[14px]"
+			>
+				{top_content}
+			</div>
+			<div
+				class="points ml-[36px] md:ml-[64px] text-[14px] md:text-[18px] w-fit md:w-[250px] mr-[36px] md:mr-[64px]"
+			>
 				{#each points as point, index}
 					<div class={`point${index + 1} mt-[${index === 0 ? 32 : 12}px] flex flex-row`}>
 						<img src={bullet} alt="" class="mr-[19px]" />
@@ -52,7 +73,7 @@
 					</div>
 				{/each}
 			</div>
-			<div class="mt-[32px] ml-[64px]">
+			<div class="mt-[32px] ml-[32px] md:ml-[64px] mb-[32px]">
 				<PrimaryButton href="/" class="font-bold">
 					{btnText}
 				</PrimaryButton>
@@ -80,12 +101,9 @@
 	.text-on-img {
 		position: absolute;
 		z-index: 11;
-		top: 53px;
-		left: 40px;
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
 		font-weight: 700;
-		font-size: 32px;
 		line-height: 35px;
 		text-align: center;
 		letter-spacing: -0.04em;
@@ -93,24 +111,17 @@
 		color: #ffffff;
 	}
 	.top-content {
-		width: 230px;
-		margin-top: 32px;
-		margin-left: 64px;
 		font-family: 'Satoshi-Variable';
 		font-style: normal;
 		font-weight: 700;
-		font-size: 18px;
-		line-height: 24px;
 		letter-spacing: -0.04em;
 
 		color: #ffffff;
 	}
 	.points {
-		width: 250px;
 		font-family: 'Satoshi-Variable';
 		font-style: normal;
 		font-weight: 700;
-		font-size: 18px;
 		line-height: 171.5%;
 		/* identical to box height, or 31px */
 
