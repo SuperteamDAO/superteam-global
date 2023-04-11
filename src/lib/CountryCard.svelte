@@ -3,6 +3,9 @@
 	import { writable } from "svelte/store";
     import { clamp, round, adjust } from "../utils/math";
 
+    export let imgPath: string;
+    export let name: string;
+
     let request: number;
     let thisCard: undefined | HTMLDivElement = undefined;
     let isActive = false;
@@ -114,11 +117,11 @@
     on:mouseleave={leave}
     on:blur={leave}
 >
-    <div class="card_rotator">
+    <div class="card_rotator w-full h-full">
         <div class="shine"></div>
         <div class="glare"></div>
         <div class="card-content">
-            <slot />
+            <img src={imgPath} alt={name} />
         </div> 
     </div>
 </div>
@@ -149,20 +152,15 @@
     }
 
     .card-content {
-        @apply w-[300px] h-[400px] flex flex-row items-center justify-center rounded-lg;
-        background-image: url('../assets/cards/india.png');
+        @apply w-full h-full top-0 left-0 flex flex-row items-center justify-center rounded-lg overflow-hidden z-0;
     }
 
-    .card-content:hover {
-        /* background-image: linear-gradient(
-            181.01deg, 
-            #0E0E0E 6.89%, 
-            #D70000 32.57%, 
-            #FFB701 58.8%); */
+    .card-content img {
+        filter: grayscale(100%) brightness(0.5);
     }
 
     .shine, .glare {
-        @apply absolute w-full h-full rounded-lg;
+        @apply absolute w-full h-full rounded-lg z-10;
         will-change: transform, opacity, background-image, background-size,
             background-position, background-blend-mode, filter;
     }
@@ -178,7 +176,7 @@
         background-position: center center, calc( (100% * var(--mouse-from-left))) calc( (100% * var(--mouse-from-top))) , center center;
         filter: brightness(0.6) contrast(1.5) saturate(1);
         mix-blend-mode: color-dodge;
-        opacity: calc( (1.5 * var(--opacity)) - var(--mouse-from-center));
+        opacity: calc(var(--opacity));
     }
 
     .glare {
@@ -190,7 +188,7 @@
         hsla(0, 0%, 0%, 0.75) 90%
         );
         filter: brightness(.7) contrast(1.5);
-        mix-blend-mode: overlay;
+        mix-blend-mode: color-dodge;
     }
 
     .glare::after {

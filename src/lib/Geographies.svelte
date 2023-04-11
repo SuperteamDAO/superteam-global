@@ -1,12 +1,44 @@
 <script>
-	import { onMount } from 'svelte';
 	import CountryCard from './CountryCard.svelte';
-	import NavButton from './common/NavButton.svelte';
-	import { CaretLeft, CaretRight } from 'phosphor-svelte';
+	import india from '../assets/chapters/india.jpg';
+	import germany from '../assets/chapters/germany.jpg';
+	import turkey from '../assets/chapters/turkey.jpg';
+	import vietnam from '../assets/chapters/vietnam.jpg';
+	import mexico from '../assets/chapters/mexico.jpg';
+
 	/**
 	 * @type {HTMLElement}
 	 */
 	let carousel;
+
+	// india, germany, turkey, vietnam and mexico
+	const countries = [
+		{
+			key: 'india',
+			name: 'India',
+			path: india,
+		},
+		{
+			key: 'germany',
+			name: 'Germany',
+			path: germany,
+		},
+		{
+			key: 'turkey',
+			name: 'Turkey',
+			path: turkey,
+		},
+		{
+			key: 'vietnam',
+			name: 'Vietnam',
+			path: vietnam,
+		},
+		{
+			key: 'mexico',
+			name: 'Mexico',
+			path: mexico,
+		},
+	]
 	
 </script>
 
@@ -18,11 +50,12 @@
 	<!-- <button class="text-white">Left</button> -->
 	<div bind:this={carousel} class="carousel-wrapper h-fit w-full flex items-center px-6 py-8 gap-6 overflow-x-scroll overflow-y-visible scrollbar-hidden">
 		<div class="left-offset"></div>
-		<CountryCard />
-		<CountryCard />
-		<CountryCard />
-		<CountryCard />
-		<CountryCard />
+		{#each countries as country}
+			<CountryCard 
+				imgPath={country.path} 
+				name={country.name}
+			/>
+		{/each}
 	</div>
 	<!-- <button class="text-white">Right</button> -->
 </div>
