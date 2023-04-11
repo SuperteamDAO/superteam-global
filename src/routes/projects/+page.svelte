@@ -1,8 +1,15 @@
 <script>
+	import { onMount } from "svelte";
 	import ProjectPageHero from "$lib/Projects/ProjectPageHero.svelte";
 	import ProjectsGrid from "$lib/Projects/ProjectsGrid.svelte";
 	import HeroContainer from "$lib/common/HeroContainer.svelte";
     import builbg from '../../assets/bg-build.jpg';
+
+    export let data
+
+    onMount(() => {
+        console.log(data)
+    })
 
 </script>
 
@@ -14,5 +21,5 @@
          line3="superteam is the forefront community for web3,"
          line4="powered by solana."
     />
-    <ProjectsGrid />
+    <ProjectsGrid projects={data.projects} />
 </section>

@@ -5,15 +5,15 @@
     import CaretRight from 'phosphor-svelte/lib/CaretRight';
     import CaretLeft from 'phosphor-svelte/lib/CaretLeft';
 
-    let scrollArea: HTMLElement;
+    let scrollArea: HTMLElement | null = null;
 
-    const left = () => {
-        console.log('left')
-    }
+    // const left = () => {
+    //     console.log('left')
+    // }
 
-    const right = () => {
-        console.log('right')
-    }
+    // const right = () => {
+    //     console.log('right')
+    // }
 
 </script>
 
@@ -27,10 +27,10 @@
         </h3>
     </div>
     <div class="flex items-center justify-between">
-        <NavButton class="left" on:click={left}>
+        <NavButton class="left">
             <CaretLeft size={24} color="#fff" />
         </NavButton>
-        <NavButton class="right" on:click={right} >
+        <NavButton class="right" >
             <CaretRight size={24} color="#fff" />
         </NavButton>
     </div>

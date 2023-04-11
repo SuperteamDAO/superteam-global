@@ -1,14 +1,17 @@
 <script>
+	import { onMount } from 'svelte';
 	import ProjectCard from './ProjectCard.svelte';
 
-    let array = (new Array(9)).fill(false);
-    array[1] = true;
+    export let projects;
 
-    for (let i = 2; i < 9; i++) {
+    let offsetArray = (new Array(projects?.length ?? 0)).fill(false);
+    offsetArray[1] = true;
+
+    for (let i = 2; i < projects?.length ?? 0; i++) {
         if ((i - 1) % 3 === 0) {
-            array[i] = true;
+            offsetArray[i] = true;
         } else {
-            array[i] = false;
+            offsetArray[i] = false;
         }
     }
 
@@ -16,9 +19,12 @@
 
 <div class="flex justify-center items-center mt-[42px]">
 	<div class="flex flex-col gap-8 lg:grid lg:gap-0 cards-container">
-        {#each array as offset}
-            <ProjectCard 
-                class="col-span-1 row-span-1 {offset ? 'lg:mt-8' : ''}" 
+        {#each projects as { fields }, index}
+            <ProjectCard
+                name={fields.Name}
+                tagline={fields.Tagline}
+                projectLink={fields["Project Link"]}
+                class="col-span-1 row-span-1 {offsetArray[index] ? 'lg:mt-8' : ''}" 
             />
         {/each}
 	</div>
