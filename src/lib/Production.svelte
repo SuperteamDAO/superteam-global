@@ -53,7 +53,7 @@
 			<IllustrationCard
 				text="Earn"
 				imageUrl={earn}
-				class="col-start-1 row-start-1 row-end-2"
+				class="col-start-1 row-start-1 row-end-3"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
@@ -65,7 +65,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-1 row-start-4 row-end-5"
+				class="col-start-1 row-start-4 row-end-7"
 				text="Ecosystem Calls"
 				imageUrl={ecosystem_calls}
 				on:click={() =>
@@ -79,7 +79,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-2 row-start-2 row-end-4"
+				class="col-start-2 row-start-2 row-end-5"
 				text="Instagrants"
 				imageUrl={instagrants}
 				on:click={() =>
@@ -93,7 +93,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-2 row-start-6"
+				class="col-start-2 row-start-6 row-end-[-1]"
 				text="Alpha Squad"
 				imageUrl={alphasquad}
 				on:click={() =>
@@ -107,7 +107,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-3 row-start-1 row-end-2"
+				class="col-start-3 row-start-1 row-end-3"
 				text="Build"
 				imageUrl={build}
 				on:click={() =>
@@ -121,7 +121,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-3 row-start-4 row-end-6"
+				class="col-start-3 row-start-4 row-end-7"
 				text="Founder's League"
 				imageUrl={founders_league}
 				on:click={() =>
@@ -139,18 +139,35 @@
 </div>
 
 <style>
+	@keyframes shine {
+		0%, 10% {
+			background-position: center, -500px;
+		}
+		100% {
+			background-position: center, 500px;
+		}
+	}
 	.productions {
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
 		font-weight: 700;
 		letter-spacing: -0.04em;
 
-		background: linear-gradient(173.91deg, rgba(255, 255, 255, 0) -102.4%, #ffffff 116.87%);
+		background: 
+			linear-gradient(173.91deg, rgba(255, 255, 255, 0) -102.4%, #ffffff 116.87%),
+			linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+		background-size: cover, 500px;
+		background-position: center, -1000px;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
+		animation: shine 5s infinite;
 	}
 
+	/* .cards-container {
+		background: linear-gradient(76.5deg, #2E1488 27.32%, rgba(0, 0, 0, 0) 102.38%),
+					linear-gradient(97.17deg, #8866FF -4.26%, rgba(37, 62, 47, 0) 67.32%);;
+	} */
 	/* .shine {
 		background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
 		-webkit-background-size: 150px;

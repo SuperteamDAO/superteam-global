@@ -8,7 +8,7 @@
 
 <a href={twturl} class="cursor-pointer" target="_blank">
 	<div class="test-container h-fit flex flex-col items-start py-7 px-6 rounded-[5px]">
-		<div class="content text-white lg:text-[18px] md:text-[16px] text-[14px]">
+		<div class="font-primary font-medium leading-[-0.04em] text-white lg:text-[18px] md:text-[16px] text-[14px]">
 			<p>
 				{content}
 			</p>
