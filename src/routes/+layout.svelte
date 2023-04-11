@@ -26,10 +26,6 @@
   
 </script>
 
-<svelte:head>
-	<script src="https://unpkg.com/@phosphor-icons/web"></script>
-</svelte:head>
-
 <svelte:window
   bind:innerHeight={height}
   bind:innerWidth={width}  
