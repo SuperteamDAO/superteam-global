@@ -117,7 +117,7 @@
     on:mouseleave={leave}
     on:blur={leave}
 >
-    <div class="card_rotator w-full h-full">
+    <div class="card_rotator">
         <div class="shine"></div>
         <div class="glare"></div>
         <div class="card-content">
