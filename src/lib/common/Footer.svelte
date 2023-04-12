@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="footer-container relative left-1/2 right-1/2 -translate-x-1/2 w-screen lg:w-[calc(100vw-144px)] h-fit lg:h-[477px] col-span-5 rounded-t-[48px] z-10"
+	class="footer-container relative left-1/2 right-1/2 -translate-x-1/2 w-screen md:w-[calc(100vw-144px)] h-fit lg:h-[477px] col-span-5 rounded-t-[48px] z-10"
 >
 	<div
 		class="main-container h-fit mt-[100px] lg:mt-[124px] flex lg:flex-row flex-col justify-between"
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div
-			class="footer-texts lg:ml-0 ml-[40px] lg:mr-[72px] text-white lg:text-right flex lg:flex-row flex-col"
+			class="footer-texts lg:ml-0 ml-[40px] lg:mr-[72px] text-white lg:text-right flex md:flex-row flex-col"
 		>
 			<div class="text-col-1">
 				<p class="footer-text">Instagrants</p>
@@ -31,14 +31,10 @@
 				<p class="footer-text mt-4">Alpha Squad</p>
 				<p class="footer-text mt-4">Founder's League</p>
 			</div>
-			<div class="text-col-2 lg:ml-[123px] lg:mt-0 mt-[64px] lg:mb-0 mb-[72px]">
+			<div class="text-col-2 md:ml-[164px] lg:ml-[123px] md:mt-0 mt-[64px] lg:mb-0 mb-[72px]">
 				<p class="footer-text">SuperteamIN</p>
 				<p class="footer-text mt-4">SuperteamGER</p>
 				<p class="footer-text mt-4">SuperteamTUR</p>
-				<p class="footer-text mt-4">SuperteamMEX</p>
-				<p class="footer-text mt-4">SuperteamMEX</p>
-				<p class="footer-text mt-4">SuperteamMEX</p>
-				<p class="footer-text mt-4">SuperteamMEX</p>
 				<p class="footer-text mt-4">SuperteamMEX</p>
 			</div>
 		</div>
