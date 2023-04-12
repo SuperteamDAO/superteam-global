@@ -1,9 +1,8 @@
 <script>
-	import buildstations2 from '../assets/cards/buildstations2.png';
-	import supermeets from '../assets/cards/supermeets.png';
-	import uniprogram from '../assets/cards/uniprogram.png';
+	import buildstations from '../assets/cards/buildstations.jpg';
+	import supermeets from '../assets/cards/super_meets.jpg';
+	import university_program from '../assets/cards/university_program.jpg';
 	import IllustrationCard from './common/IllustrationCard.svelte';
-	import instagrantsbg from '../assets/images/instagrantsbg.png';
 	import Modal from './common/Modal.svelte';
 	import thunder from '../assets/logos/thunder.svg';
 	import founders_league from '../assets/cards/founders_league.jpg';
@@ -49,13 +48,13 @@
 		<div />
 		<div class="col-span-1 lg:col-span-2 lg:col-start-2">
 			<IllustrationCard
-				imageUrl={founders_league}
+				imageUrl={buildstations}
 				text="BuildStations"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
-						founders_league,
+						buildstations,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -64,13 +63,13 @@
 		</div>
 		<div class="md:mt-14 col-span-1 lg:col-span-2">
 			<IllustrationCard
-				imageUrl={founders_league}
+				imageUrl={supermeets}
 				text="Supermeets"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
-						founders_league,
+						supermeets,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -79,13 +78,13 @@
 		</div>
 		<div class="col-span-1 lg:col-span-2">
 			<IllustrationCard
-				imageUrl={founders_league}
+				imageUrl={university_program}
 				text="University Program"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
-						founders_league,
+						university_program,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder

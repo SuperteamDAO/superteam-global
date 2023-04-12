@@ -1,6 +1,4 @@
 <script>
-	import { onMount } from "svelte";
-	import ProjectPageHero from "$lib/Projects/ProjectPageHero.svelte";
 	import ProjectsGrid from "$lib/Projects/ProjectsGrid.svelte";
 	import HeroContainer from "$lib/common/HeroContainer.svelte";
     import builbg from '../../assets/bg-build.jpg';
