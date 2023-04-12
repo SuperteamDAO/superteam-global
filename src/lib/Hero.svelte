@@ -29,6 +29,16 @@
 	$starTwoScrollDuration: 125s;
 	$starThreeScrollDuration: 175s;
 
+	@keyframes animStar {
+		from {
+			transform: translateY(0px);
+		}
+		to {
+			transform: translateY(-#{$starFieldHeight}px)
+		}
+	}
+
+
 	@function create-stars($n) {
   		$stars: "#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";
 
