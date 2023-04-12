@@ -36,7 +36,7 @@
 <div
 	class="mt-48 col-span-5 relative left-1/2 right-1/2 -translate-x-1/2 w-screen flex flex-col justify-center items-center"
 >
-	<div class="text-center">
+	<div class="text-center font-primary">
 		<p
 			class="font-[700] text-[24px] md:text-[32px] lg:leading-[35px] leading-[26px] text-white tracking-tighter"
 		>
@@ -96,9 +96,3 @@
 		<div />
 	</div>
 </div>
-
-<style>
-	.text-center {
-		font-family: 'Satoshi-Variable';
-	}
-</style>
