@@ -75,6 +75,7 @@
 
 <style lang="postcss">
 	.hero-content {
+		z-index: 20;
 		margin-top: calc((100vh / 800) * 160);
 	}
 	.heading .line {

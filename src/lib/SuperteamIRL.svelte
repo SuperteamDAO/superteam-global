@@ -5,7 +5,6 @@
 	import IllustrationCard from './common/IllustrationCard.svelte';
 	import Modal from './common/Modal.svelte';
 	import thunder from '../assets/logos/thunder.svg';
-	import founders_league from '../assets/cards/founders_league.jpg';
 
 	let modalOpen = false;
 	let top_content;
@@ -50,6 +49,7 @@
 			<IllustrationCard
 				imageUrl={buildstations}
 				text="BuildStations"
+				class="max-w-[300px] max-h-[400px]"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
@@ -65,6 +65,7 @@
 			<IllustrationCard
 				imageUrl={supermeets}
 				text="Supermeets"
+				class="max-w-[300px] max-h-[400px]"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
@@ -80,6 +81,7 @@
 			<IllustrationCard
 				imageUrl={university_program}
 				text="University Program"
+				class="max-w-[300px] max-h-[400px]"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',

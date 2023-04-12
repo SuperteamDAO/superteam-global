@@ -48,7 +48,7 @@
 			Changing the world,<br /> one line of code at a time
 		</p>
 	</div>
-	<div class="flex justify-center items-center mt-[68px] lg:mt-0">
+	<div class="flex justify-center items-center mt-[68px] lg:mt-0 all-cards-wrapper">
 		<div class="flex flex-col gap-8 lg:grid lg:gap-0 cards-container">
 			<IllustrationCard
 				text="Earn"
@@ -147,6 +147,11 @@
 			background-position: center, 500px;
 		}
 	}
+	
+	.productions-container {
+		/* background: url(../assets/bg-productions.svg); */
+	}
+
 	.productions {
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
@@ -164,29 +169,16 @@
 		animation: shine 5s infinite;
 	}
 
-	/* .cards-container {
-		background: linear-gradient(76.5deg, #2E1488 27.32%, rgba(0, 0, 0, 0) 102.38%),
-					linear-gradient(97.17deg, #8866FF -4.26%, rgba(37, 62, 47, 0) 67.32%);;
-	} */
-	/* .shine {
-		background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
-		-webkit-background-size: 150px;
-		color: $text-color;
-		-webkit-background-clip: text;
-		-webkit-animation-name: shine;
-		-webkit-animation-duration: $duration;
-		-webkit-animation-iteration-count: infinite;
-		text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
-	} */
 
 	.center-text {
-		font-family: 'Satoshi-Variable';
+		@apply font-primary;
 		font-style: normal;
 		text-align: center;
 		letter-spacing: -0.04em;
 
 		color: #ffffff;
 	}
+
 	.cards-container {
 		--row-factor: 8px;
 		column-gap: 32px;
