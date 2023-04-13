@@ -20,13 +20,10 @@
 
 <style>
 	.image-with-text {
-		/* background: linear-gradient(144.34deg, rgba(247, 243, 243, 0) -29.96%, rgba(63, 63, 63, 0) 131.56%); */
 		background: linear-gradient(144.34deg, rgba(247, 243, 243, 0) -29.96%, rgba(63, 63, 63, 0) 131.56%);
 		transition: background 0.5s ease;
 	}
 	.image-with-text:hover {
-		/* background: linear-gradient(180deg, #1d1d1d 0%, rgba(22, 22, 22, 0) 100%); */
-		/* background: linear-gradient(144.34deg, rgba(247, 243, 243, 1) -29.96%, rgba(63, 63, 63, 0.67) 131.56%); */
 		background: linear-gradient(144.34deg, rgba(247, 243, 243, 1) -29.96%, rgba(63, 63, 63, 0.67) 131.56%);
 	}
 

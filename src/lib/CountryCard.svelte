@@ -122,6 +122,11 @@
         <div class="glare"></div>
         <div class="card-content">
             <img src={imgPath} alt={name} />
+            <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
+                <p class="text-white font-secondary font-semibold text-[24px] country-name">
+                    {name}
+                </p>
+            </div>
         </div> 
     </div>
 </div>
@@ -173,10 +178,11 @@
             url('../assets/cards/monochrome.jpg');
         background-blend-mode: soft-light, difference;
         background-size: 120% 120%, 200% 200%, cover, cover;
-        background-position: center center, calc( (100% * var(--mouse-from-left))) calc( (100% * var(--mouse-from-top))) , center center;
+        background-position: center center, calc( (50% * var(--mouse-from-left))) calc( (100% * var(--mouse-from-top))) , center center;
         filter: brightness(0.6) contrast(1.5) saturate(1);
         mix-blend-mode: color-dodge;
         opacity: calc(var(--opacity));
+        transition: all 0.2s ease-out;
     }
 
     .glare {
@@ -187,21 +193,16 @@
         hsla(0, 0%, 100%, 0.5) 20%,
         hsla(0, 0%, 0%, 0.75) 90%
         );
-        filter: brightness(.7) contrast(1.5);
+        filter: brightness(0.1) contrast(0.5);
         mix-blend-mode: color-dodge;
+        transition: all 0.2s ease-out;
     }
 
-    .glare::after {
-        content: "";
-        opacity: var(--opacity);
-        background-image: radial-gradient( 
-        farthest-corner circle at var(--mouseX) var(--mouseY), 
-        hsl(0, 0%, 100%) 10%, 
-        hsla(0, 0%, 100%, 0.5) 20%, 
-        hsla(0, 0%, 0%, 0.5) 120% 
-        );
-        filter: brightness(1) contrast(1.5);
+    .country-name {
+        transform-style: preserve-3d;
+        transform: translateZ(100px);
     }
+
 </style>
 
 <!-- url('../assets/cards/monochrome.jpg') -->

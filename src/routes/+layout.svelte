@@ -26,6 +26,10 @@
   
 </script>
 
+<svelte:head>
+  <meta name="viewport" content="minimum-scale=1"/>
+</svelte:head>
+
 <svelte:window
   bind:innerHeight={height}
   bind:innerWidth={width}  
