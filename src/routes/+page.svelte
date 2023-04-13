@@ -6,7 +6,6 @@
 	import Partners from '$lib/Partners.svelte';
 	import Production from '$lib/Production.svelte';
 	import SuperteamIrl from '$lib/SuperteamIRL.svelte';
-	import Testimonials from '$lib/Testimonials.svelte';
 </script>
 
 <Hero

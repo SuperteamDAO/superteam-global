@@ -68,6 +68,10 @@
 		}
 	}
 
+	.hero {
+		perspective: 1000px;
+	}
+
 	.hero-bg {
 		width: 100%;
 		height: calc(100% + 48px);
