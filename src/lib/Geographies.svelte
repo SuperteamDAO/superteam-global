@@ -17,26 +17,32 @@
 			key: 'india',
 			name: 'India',
 			path: india,
+			countryGradient: 'linear-gradient(135deg, #FF9A37 0%, rgba(255, 255, 255, 0.8) 48.96%, #369A2C 100%)',
 		},
 		{
 			key: 'germany',
 			name: 'Germany',
 			path: germany,
+			countryGradient: 'linear-gradient(179.04deg, #0E0E0E 11.44%, #D70000 31.14%, #FFB701 99.38%)'
+
 		},
 		{
 			key: 'turkey',
 			name: 'Turkey',
 			path: turkey,
+			countryGradient: 'radial-gradient(121.53% 96.25% at 50% 50%, rgba(255, 255, 255, 0.64) 20.72%, #D70000 69.33%)',
 		},
 		{
 			key: 'vietnam',
 			name: 'Vietnam',
 			path: vietnam,
+			countryGradient: 'radial-gradient(85.39% 67.63% at 50% 50%, #FFB701 22.29%, #D70000 69.33%)',
 		},
 		{
 			key: 'mexico',
 			name: 'Mexico',
 			path: mexico,
+			countryGradient: 'linear-gradient(135deg, #016C4B -15.5%, #D9021A 139%)',
 		},
 	]
 	
@@ -53,6 +59,7 @@
 			<CountryCard 
 				imgPath={country.path} 
 				name={country.name}
+				countryGradient={country.countryGradient}
 			/>
 		{/each}
 	</div>

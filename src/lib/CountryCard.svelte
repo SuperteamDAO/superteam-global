@@ -5,6 +5,7 @@
 
     export let imgPath: string;
     export let name: string;
+    export let countryGradient: string;
 
     let request: number;
     let thisCard: undefined | HTMLDivElement = undefined;
@@ -101,6 +102,7 @@
             --backgroundX: ${$springBackground.x}%;
             --backgroundY: ${$springBackground.y}%;
             --opacity: ${isActive ? 1 : 0};
+            --country-gradient: ${countryGradient};
 	    `;
     }
 
@@ -119,7 +121,7 @@
         <div class="shine"></div>
         <div class="glare"></div>
         <div class="card-content">
-            <img src={imgPath} alt={name} />
+            <img src={imgPath} alt={name} loading="lazy" />
             <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-end pb-10">
                 <p class="text-white font-secondary font-semibold text-[24px] country-name">
                     {name}
@@ -171,13 +173,13 @@
         mask-image: url('../assets/cards/invert.jpg');
         background-image:
             radial-gradient(circle at var(--mouseX) var(--mouseY), #fff 5%, #000 50%, #fff 80% ),
-            linear-gradient(135deg, #FF9A37 0%, rgba(255, 255, 255, 1) 48.96%, #369A2C 100%),
+            var(--country-gradient),
             url('../assets/cards/grain.webp'),
             url('../assets/cards/monochrome.jpg');
-        background-blend-mode: soft-light, difference, difference, difference;
+        background-blend-mode: soft-light, hard-light, difference, difference;
         background-size: 120% 120%, 200% 200%, cover, cover;
         background-position: center center, calc((50% * var(--mouse-from-left))) calc((100% * var(--mouse-from-top))) , center center, center center;
-        filter: brightness(0.6) contrast(1.5) saturate(1);
+        filter: brightness(0.6) contrast(1.5) saturate(1.5);
         mix-blend-mode: color-dodge;
         opacity: calc(var(--opacity));
         transition: all 0.2s ease-out;
@@ -191,7 +193,7 @@
         hsla(0, 0%, 100%, 0.5) 20%,
         hsla(0, 0%, 0%, 0.75) 90%
         );
-        filter: brightness(0.1) contrast(0.5);
+        filter: brightness(0.1) contrast(1.5) saturate(1.5);
         mix-blend-mode: color-dodge;
         transition: all 0.2s ease-out;
     }
