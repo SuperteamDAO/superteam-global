@@ -1,5 +1,5 @@
 <script>
-	import { onMount, getContext } from 'svelte';
+	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 
 	import AnimatedLogo from './AnimatedLogo.svelte';
