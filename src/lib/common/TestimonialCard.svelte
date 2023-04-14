@@ -45,12 +45,6 @@
 		color: #ffffff;
 		opacity: 0.4;
 	}
-	.content {
-		font-family: 'Satoshi-Variable';
-		font-style: normal;
-		font-weight: 700;
-		letter-spacing: -0.04em;
-	}
 	.user {
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
