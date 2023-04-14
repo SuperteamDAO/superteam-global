@@ -97,7 +97,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-image: url('../assets/hero/Hero_L2.png');
+		background-image: url('../assets/hero/Hero_L2.webp');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
