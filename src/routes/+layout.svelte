@@ -8,9 +8,7 @@
 	import { setContext } from 'svelte';
 	import Header from "$lib/common/Header.svelte";
   import Footer from "$lib/common/Footer.svelte";
-	import Scene from "$lib/webgl/Scene.svelte";
 	import { writable } from "svelte/store";
-  import { navigating } from "$app/stores"; 
 
   const tl = gsap.timeline();
   const mouse = writable({ x: 0, y: 0 });
@@ -25,10 +23,6 @@
   };
   
 </script>
-
-<svelte:head>
-  <meta name="viewport" content="minimum-scale=1"/>
-</svelte:head>
 
 <svelte:window
   bind:innerHeight={height}
