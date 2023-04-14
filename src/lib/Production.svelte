@@ -43,7 +43,7 @@
 	{#if modalOpen}
 		<Modal {imgurl} {text} {top_content} {points} {btnText} on:close={closeModal} />
 	{/if}
-	<div class="star-container absolute h-[85px] w-[285px] md:w-[350px] z-10 self-center top-0">
+	<div class="star-container absolute h-[85px] w-[285px] md:w-[350px] self-center top-0">
 		<Star class="absolute mt-[8%] ml-[90%] md:mt-[6.5%] lg:mt-[8%]" />
 		<Star class="absolute mt-[17%] ml-0 md:mt-[15.5%] lg:mt-[17%]" />
 		<Star class="absolute mt-[22%] ml-[5%] md:mt-[20.5%] lg:mt-[22%]" blur={true} />
