@@ -39,8 +39,8 @@
         })
 
         springRotate.set({
-            x: -1 * round(center.x / 3.5),
-            y: round(center.y / 2),
+            x: -1 * round(center.x / 5),
+            y: round(center.y / 4),
         })
 
         springGlare.set({
