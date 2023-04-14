@@ -9,6 +9,10 @@
 	import Modal from './common/Modal.svelte';
 	import thunder from '../assets/logos/thunder.svg';
 	import Star from './common/Star.svelte';
+	import leftlight from '../assets/images/left-light.svg';
+	import rightlight from '../assets/images/right-light.svg';
+	import toplight from '../assets/images/top-light.svg';
+	import bottomlight from '../assets/images/bottom-light.svg';
 
 	let modalOpen = false;
 	let top_content;
@@ -46,6 +50,36 @@
 		<Star class="absolute mt-[0%] ml-[85%] md:-mt-[1.5%] lg:mt-[0%]" blur={true} />
 		<Star class="absolute mt-[4%] ml-[82%] md:mt-[2.5%] lg:mt-[4%]" blur={true} />
 		<Star class="absolute mt-[2%] ml-[98%] md:mt-[0.5%] lg:mt-[2%]" blur={true} />
+	</div>
+
+	<div
+		class="absolute h-full bg-images left-1/2 right-1/2 -translate-x-1/2 w-screen flex flex-col lg:flex-row"
+	>
+		<div class="block lg:hidden">
+			<img
+				src={toplight}
+				alt="top light"
+				class="absolute -mt-[600px] justify-items-start w-full h-full"
+			/>
+			<img
+				src={bottomlight}
+				alt="bottom light"
+				class="absolute z-10 justify-items-end w-full right-0 h-full mt-[500px]"
+			/>
+		</div>
+
+		<div class="hidden lg:block">
+			<img
+				src={leftlight}
+				alt="left light"
+				class="absolute -mt-[62px] justify-items-start lg:w-2/3 lg:h-full lg:left-0"
+			/>
+			<img
+				src={rightlight}
+				alt="right light"
+				class="absolute z-10 justify-items-end w-full lg:w-3/4 lg:right-0 lg:h-full -mt-[222px]"
+			/>
+		</div>
 	</div>
 
 	<div class="prod-head">
@@ -201,6 +235,7 @@
 		--row-factor: 8px;
 		column-gap: 32px;
 	}
+
 	@media (min-width: 1024px) {
 		.cards-container {
 			grid-template-columns: repeat(3, 320px);
