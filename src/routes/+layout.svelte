@@ -7,15 +7,7 @@
 	import Header from "$lib/common/Header.svelte";
   import Footer from "$lib/common/Footer.svelte";
 
-  $: width = 0;
-  $: height = 0;
-  
 </script>
-
-<svelte:window
-  bind:innerHeight={height}
-  bind:innerWidth={width}
-/>
 
 <!-- <Scene size={{ width: width, height: height }} /> -->
 
