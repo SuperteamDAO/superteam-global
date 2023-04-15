@@ -3,7 +3,6 @@
     import { tweened } from "svelte/motion";
     import { cubicOut } from 'svelte/easing';
 
-
     let slices = tweened(0, { duration: 1800, easing: cubicOut, delay: 300 });
     let slices2 = tweened(21, { duration: 1800, easing: cubicOut, delay: 300 });
     let slices3 = tweened(0, { duration: 1800, easing: cubicOut, delay: 300 });

@@ -4,32 +4,10 @@
 	import '../styles/global.css';
 	import '../utils/gsap';
 
-	import { gsap } from 'gsap';
-	import { setContext } from 'svelte';
-	import Header from '$lib/common/Header.svelte';
-	import Footer from '$lib/common/Footer.svelte';
-	import Scene from '$lib/webgl/Scene.svelte';
-	import { writable } from 'svelte/store';
-	import { navigating } from '$app/stores';
+	import Header from "$lib/common/Header.svelte";
+  import Footer from "$lib/common/Footer.svelte";
 
-	const tl = gsap.timeline();
-	const mouse = writable({ x: 0, y: 0 });
-	$: width = 0;
-	$: height = 0;
-
-	setContext('mouse', $mouse);
-	setContext('tl', tl);
-
-	const mouseMove = (e: MouseEvent) => {
-		mouse.set({ x: e.clientX, y: e.clientY });
-	};
 </script>
-
-<!-- <svelte:head>
-  <meta name="viewport" content="minimum-scale=1"/>
-</svelte:head> -->
-
-<svelte:window bind:innerHeight={height} bind:innerWidth={width} on:mousemove={mouseMove} />
 
 <!-- <Scene size={{ width: width, height: height }} /> -->
 
