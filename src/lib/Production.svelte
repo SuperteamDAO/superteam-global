@@ -8,6 +8,11 @@
 	import IllustrationCard from './common/IllustrationCard.svelte';
 	import Modal from './common/Modal.svelte';
 	import thunder from '../assets/logos/thunder.svg';
+	import Star from './common/Star.svelte';
+	import leftlight from '../assets/images/left-light.svg';
+	import rightlight from '../assets/images/right-light.svg';
+	import toplight from '../assets/images/top-light.svg';
+	import bottomlight from '../assets/images/bottom-light.svg';
 
 	let modalOpen = false;
 	let top_content;
@@ -32,18 +37,63 @@
 	}
 </script>
 
-<div class="productions-container col-span-5 mt-44 flex flex-col justify-center text-center">
+<div
+	class="productions-container relative col-span-5 mt-44 flex flex-col justify-center text-center"
+>
 	{#if modalOpen}
 		<Modal {imgurl} {text} {top_content} {points} {btnText} on:close={closeModal} />
 	{/if}
+	<div class="star-container absolute h-[85px] w-[285px] md:w-[350px] self-center top-0">
+		<Star class="absolute mt-[8%] ml-[90%] md:mt-[6.5%] lg:mt-[8%]" />
+		<Star class="absolute mt-[17%] ml-0 md:mt-[15.5%] lg:mt-[17%]" />
+		<Star class="absolute mt-[22%] ml-[5%] md:mt-[20.5%] lg:mt-[22%]" blur={true} />
+		<Star class="absolute mt-[0%] ml-[85%] md:-mt-[1.5%] lg:mt-[0%]" blur={true} />
+		<Star class="absolute mt-[4%] ml-[82%] md:mt-[2.5%] lg:mt-[4%]" blur={true} />
+		<Star class="absolute mt-[2%] ml-[98%] md:mt-[0.5%] lg:mt-[2%]" blur={true} />
+	</div>
 
-	<div>
+	<div
+		class="absolute h-full bg-images left-1/2 right-1/2 -translate-x-1/2 w-screen flex flex-col lg:flex-row"
+	>
+		<div class="block lg:hidden">
+			<img
+				src={toplight}
+				alt="top light"
+				loading="lazy"
+				class="absolute -mt-[600px] justify-items-start w-full h-full"
+			/>
+			<img
+				src={bottomlight}
+				alt="bottom light"
+				loading="lazy"
+				class="absolute z-10 justify-items-end w-full right-0 h-full mt-[500px]"
+			/>
+		</div>
+
+		<div class="hidden lg:block">
+			<img
+				src={leftlight}
+				alt="left light"
+				loading="lazy"
+				class="absolute -mt-[62px] justify-items-start lg:w-2/3 lg:h-full lg:left-0"
+			/>
+			<img
+				src={rightlight}
+				alt="right light"
+				loading="lazy"
+				class="absolute z-10 justify-items-end w-full lg:w-3/4 lg:right-0 lg:h-full -mt-[222px]"
+			/>
+		</div>
+	</div>
+
+	<div class="prod-head">
 		<p class="font-secondary font-semibold text-xl leading-[22px] tracking-[-0.04em] text-white">
 			superteam
 		</p>
-		<p class="productions text-[40px] md:text-[50px] lg:leading-[54px] leading-[44px]">
+
+		<div class="productions text-[40px] md:text-[50px] lg:leading-[54px] leading-[44px]">
 			productions
-		</p>
+		</div>
 		<p class="center-text text-[14px] md:text-[16px] lg:leading-[22px] leading-[19px] font-[700]">
 			Changing the world,<br /> one line of code at a time
 		</p>
@@ -140,14 +190,15 @@
 
 <style>
 	@keyframes shine {
-		0%, 10% {
+		0%,
+		10% {
 			background-position: center, -500px;
 		}
 		100% {
 			background-position: center, 500px;
 		}
 	}
-	
+
 	.productions-container {
 		/* background: url(../assets/bg-productions.svg); */
 	}
@@ -158,9 +209,15 @@
 		font-weight: 700;
 		letter-spacing: -0.04em;
 
-		background: 
-			linear-gradient(173.91deg, rgba(255, 255, 255, 0) -102.4%, #ffffff 116.87%),
-			linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+		background: linear-gradient(173.91deg, rgba(255, 255, 255, 0) -102.4%, #ffffff 116.87%),
+			linear-gradient(
+				-40deg,
+				transparent 0%,
+				transparent 40%,
+				#fff 50%,
+				transparent 60%,
+				transparent 100%
+			);
 		background-size: cover, 500px;
 		background-position: center, -1000px;
 		-webkit-background-clip: text;
@@ -168,7 +225,6 @@
 		background-clip: text;
 		animation: shine 5s infinite;
 	}
-
 
 	.center-text {
 		@apply font-primary;
