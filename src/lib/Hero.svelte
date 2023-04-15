@@ -97,11 +97,13 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-image: url('../assets/hero/Hero_L2.png');
+		background-image: url('../assets/hero/Hero_L2.webp');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
 		z-index: 5;
+		transform-style: preserve-3d;
+		transform: translateZ(100px);
 	}
 
 	.hero-bg::before {
@@ -115,6 +117,8 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
+		// transform-style: preserve-3d;
+		// transform: translateZ(200px);
 		z-index: 10;
 	}
 

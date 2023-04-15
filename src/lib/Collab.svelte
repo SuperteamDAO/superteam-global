@@ -50,9 +50,6 @@
 	.history-stuff {
 		position: absolute;
 	}
-	img {
-		object-fit: cover;
-	}
 	.overlay {
 		border-radius: 64px;
 		background: radial-gradient(

@@ -1,18 +1,17 @@
 <script lang="ts">
-	import { spring, tweened } from "svelte/motion";
+	import { tweened } from "svelte/motion";
 	import { writable } from "svelte/store";
     import { clamp, round, adjust } from "../utils/math";
 
     export let imgPath: string;
     export let name: string;
+    export let countryGradient: string;
 
     let request: number;
     let thisCard: undefined | HTMLDivElement = undefined;
     let isActive = false;
 
     const springInteractSettings = { stiffness: 0.1, damping: 0.5, duration: 100 };
-    const springPopoverSettings = { stiffness: 0.1, damping: 0.5, duration: 100 };
-
     const mouse = writable({ x: 0, y: 0 });
 
     let springRotate = tweened({ x: 0, y: 0 }, springInteractSettings);
@@ -41,8 +40,8 @@
         })
 
         springRotate.set({
-            x: -1 * round(center.x / 3.5),
-            y: round(center.y / 2),
+            x: -1 * round(center.x / 5),
+            y: round(center.y / 4),
         })
 
         springGlare.set({
@@ -103,6 +102,7 @@
             --backgroundX: ${$springBackground.x}%;
             --backgroundY: ${$springBackground.y}%;
             --opacity: ${isActive ? 1 : 0};
+            --country-gradient: ${countryGradient};
 	    `;
     }
 
@@ -121,8 +121,8 @@
         <div class="shine"></div>
         <div class="glare"></div>
         <div class="card-content">
-            <img src={imgPath} alt={name} />
-            <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
+            <img src={imgPath} alt={name} loading="lazy" />
+            <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-end pb-10">
                 <p class="text-white font-secondary font-semibold text-[24px] country-name">
                     {name}
                 </p>
@@ -172,14 +172,14 @@
     .shine {
         mask-image: url('../assets/cards/invert.jpg');
         background-image:
-            radial-gradient(circle at var(--mouseX) var(--mouseY), #fff 5%, #000 50%, #fff 80% ), 
-            linear-gradient( -45deg, #000 15%, #fff, #000 85%),
+            radial-gradient(circle at var(--mouseX) var(--mouseY), #fff 5%, #000 50%, #fff 80% ),
+            var(--country-gradient),
             url('../assets/cards/grain.webp'),
             url('../assets/cards/monochrome.jpg');
-        background-blend-mode: soft-light, difference;
+        background-blend-mode: soft-light, hard-light, difference, difference;
         background-size: 120% 120%, 200% 200%, cover, cover;
-        background-position: center center, calc( (50% * var(--mouse-from-left))) calc( (100% * var(--mouse-from-top))) , center center;
-        filter: brightness(0.6) contrast(1.5) saturate(1);
+        background-position: center center, calc((50% * var(--mouse-from-left))) calc((100% * var(--mouse-from-top))) , center center, center center;
+        filter: brightness(0.6) contrast(1.5) saturate(1.5);
         mix-blend-mode: color-dodge;
         opacity: calc(var(--opacity));
         transition: all 0.2s ease-out;
@@ -193,7 +193,7 @@
         hsla(0, 0%, 100%, 0.5) 20%,
         hsla(0, 0%, 0%, 0.75) 90%
         );
-        filter: brightness(0.1) contrast(0.5);
+        filter: brightness(0.1) contrast(1.5) saturate(1.5);
         mix-blend-mode: color-dodge;
         transition: all 0.2s ease-out;
     }
