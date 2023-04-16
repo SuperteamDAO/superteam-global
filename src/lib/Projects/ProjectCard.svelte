@@ -17,7 +17,7 @@
 >
     <div class="flex flex-col gap-8">
         <div class="flex flex-col items-start gap-4">
-            <img src={imgUrl} height={32} width="auto" alt="" class="rounded-full h-[32px] w-auto">
+            <img src={imgUrl} height={32} width="auto" alt="" class="rounded-full h-[32px] w-auto" loading="lazy">
             <h2 class="font-secondary text-[24px] font-bold text-white" >{name}</h2>
         </div>
         <p class="text-white font-primary font-medium">

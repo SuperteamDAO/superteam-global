@@ -4,6 +4,7 @@
 	import PrimaryButton from './PrimaryButton.svelte';
 	import { X } from 'phosphor-svelte';
 	import { fade, scale } from 'svelte/transition';
+	import Thunder from './Thunder.svelte';
 	const dispatch = createEventDispatcher();
 
 	export let imgurl;
@@ -67,8 +68,10 @@
 				class="points ml-[36px] md:ml-[64px] text-[14px] md:text-[18px] w-fit md:w-[250px] mr-[36px] md:mr-[64px]"
 			>
 				{#each points as point, index}
-					<div class={`point${index + 1} mt-[${index === 0 ? 32 : 12}px] flex flex-row`}>
-						<img src={bullet} alt="" class="mr-[19px]" />
+					<div class={`point${index + 1} mt-[${index === 0 ? 32 : 12}px] flex flex-row gap-4`}>
+						<span class="mt-1 md:mt-2">
+							<Thunder size={16} />
+						</span>
 						<p>{point}</p>
 					</div>
 				{/each}
