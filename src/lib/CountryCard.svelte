@@ -177,8 +177,8 @@
             var(--country-gradient),
             url('../assets/cards/grain.webp'),
             url('../assets/cards/monochrome.jpg');
-        background-blend-mode: soft-light, hard-light, difference, difference;
-        background-size: 120% 120%, 200% 200%, cover, cover;
+        background-blend-mode: soft-light, darken, difference, difference;
+        background-size: 120% 120%, 150% 150%, cover, cover;
         background-position: center center, calc((50% * var(--mouse-from-left))) calc((100% * var(--mouse-from-top))) , center center, center center;
         filter: brightness(0.6) contrast(1.5) saturate(1.5);
         mix-blend-mode: color-dodge;
