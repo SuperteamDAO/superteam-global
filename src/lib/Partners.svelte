@@ -12,12 +12,12 @@
 	>
 		Partners
 	</h2>
-	<div class="logos-container flex flex-wrap justify-center items-center mt-6 gap-11">
-		<img class="logo wormhole w-36 h-8" src={wormhole} alt="Wormhole" loading="lazy" />
-		<img class="logo pyth w-24 h-8" src={pyth} alt="Pyth" loading="lazy" />
-		<img class="logo foundation w-52 h-4" src={foundation} alt="Foundation" loading="lazy" />
-		<img class="logo backpack w-30 h-6" src={backpack} alt="Backpack" loading="lazy" />
-		<img class="logo ftx w-24 h-6" src={ftx} alt="FTX" loading="lazy" />
+	<div class="logos-container flex flex-wrap justify-center items-center mt-6 gap-11 w-full">
+		<img class="logo wormhole h-8 w-auto" src={wormhole} alt="Wormhole" loading="lazy" />
+		<img class="logo pyth h-8 w-auto" src={pyth} alt="Pyth" loading="lazy" />
+		<img class="logo foundation h-6 w-auto" src={foundation} alt="Foundation" loading="lazy" />
+		<img class="logo backpack h-8 w-auto" src={backpack} alt="Backpack" loading="lazy" />
+		<img class="logo ftx h-8 w-auto" src={ftx} alt="FTX" loading="lazy" />
 	</div>
 </div>
 
