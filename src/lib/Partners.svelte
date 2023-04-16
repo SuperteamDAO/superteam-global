@@ -8,7 +8,7 @@
 
 <div class="partners-container col-span-5 w-full flex flex-col items-center mt-24">
 	<h2
-		class="partners-text text-center text-white mb-4 mr-[71px] ml-[71px] text-[20px] md:text-[24x] md:[24px] lg:leading-[26px] leading-[22px]"
+		class="partners-text font-secondary text-center font-bold text-white mb-4 mr-[71px] ml-[71px] text-[24px] md:text-[32x] lg:leading-[26px] leading-[22px]"
 	>
 		Partners
 	</h2>
@@ -23,8 +23,6 @@
 
 <style>
 	.partners-text {
-		font-style: 'Archivo_SemiExpanded';
-		font-weight: 700;
 		text-align: center;
 		letter-spacing: -0.04em;
 

@@ -9,6 +9,22 @@
 
 </script>
 
+<svelte:head>
+	<link rel="preconnect" href="https://abs.twimg.com/">
+	<link rel="preconnect" href="https://api.twitter.com/">
+	<link rel="preconnect" href="https://pbs.twimg.com/">
+	<link rel="preconnect" href="https://t.co/">
+	<link rel="preconnect" href="https://video.twimg.com/">
+	<link rel="dns-prefetch" href="https://abs.twimg.com/">
+	<link rel="dns-prefetch" href="https://api.twitter.com/">
+	<link rel="dns-prefetch" href="https://pbs.twimg.com/">
+	<link rel="dns-prefetch" href="https://t.co/">
+	<link rel="dns-prefetch" href="https://video.twimg.com/">
+
+	<link rel="preconnect" href="https://res.cloudinary.com/">
+	<link rel="dns-prefetch" href="https://res.cloudinary.com/">
+</svelte:head>
+
 <!-- <Scene size={{ width: width, height: height }} /> -->
 
 <Header class="mx-auto px-10 md:px-[72px]" />

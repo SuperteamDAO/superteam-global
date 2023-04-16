@@ -6,6 +6,7 @@
     export let imgPath: string;
     export let name: string;
     export let countryGradient: string;
+    export let invert: boolean;
 
     let request: number;
     let thisCard: undefined | HTMLDivElement = undefined;
@@ -118,7 +119,7 @@
     on:blur={leave}
 >
     <div class="card_rotator">
-        <div class="shine"></div>
+        <div class="shine" class:invert-shine={invert} ></div>
         <div class="glare"></div>
         <div class="card-content">
             <img src={imgPath} alt={name} loading="lazy" />
@@ -183,6 +184,15 @@
         mix-blend-mode: color-dodge;
         opacity: calc(var(--opacity));
         transition: all 0.2s ease-out;
+    }
+
+    .invert-shine {
+        mask-image: url('../assets/cards/monochrome.jpg');
+        background-image:
+            radial-gradient(circle at var(--mouseX) var(--mouseY), #fff 5%, #000 50%, #fff 80% ),
+            var(--country-gradient),
+            url('../assets/cards/grain.webp'),
+            url('../assets/cards/invert.jpg');
     }
 
     .glare {
