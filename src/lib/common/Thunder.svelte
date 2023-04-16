@@ -1,0 +1,8 @@
+<script>
+    export let size;
+</script>
+
+<svg width={size ?? 12} height={size ?? 15} viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 14.5L5 9.5L1 8L8 0.5L7 5.5L11 7L4 14.5Z" stroke="#868686" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+    
