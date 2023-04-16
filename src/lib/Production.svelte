@@ -58,13 +58,13 @@
 		<div class="block lg:hidden">
 			<img
 				src={toplight}
-				alt="top light"
+				alt=""
 				loading="lazy"
 				class="absolute -mt-[600px] justify-items-start w-full h-full"
 			/>
 			<img
 				src={bottomlight}
-				alt="bottom light"
+				alt=""
 				loading="lazy"
 				class="absolute z-10 justify-items-end w-full right-0 h-full mt-[500px]"
 			/>
@@ -73,13 +73,13 @@
 		<div class="hidden lg:block">
 			<img
 				src={leftlight}
-				alt="left light"
+				alt=""
 				loading="lazy"
 				class="absolute -mt-[62px] justify-items-start lg:w-2/3 lg:h-full lg:left-0"
 			/>
 			<img
 				src={rightlight}
-				alt="right light"
+				alt=""
 				loading="lazy"
 				class="absolute z-10 justify-items-end w-full lg:w-3/4 lg:right-0 lg:h-full -mt-[222px]"
 			/>

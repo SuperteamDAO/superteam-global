@@ -3,6 +3,7 @@
 	import Geographies from '$lib/Geographies.svelte';
 	import Hero from '$lib/Hero.svelte';
 	import LoveRespect from '$lib/LoveRespect.svelte';
+	import Media from '$lib/Media.svelte';
 	import Partners from '$lib/Partners.svelte';
 	import Production from '$lib/Production.svelte';
 	import SuperteamIrl from '$lib/SuperteamIRL.svelte';
@@ -21,6 +22,8 @@
 <Partners />
 
 <Production />
+
+<Media />
 
 <SuperteamIrl />
 

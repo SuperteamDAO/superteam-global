@@ -1,12 +1,18 @@
 <script>
-	import star from '../../assets/images/star.svg';
-	import clsx from 'clsx';
 	export let blur = false;
 </script>
 
-<div>
-	<img {...$$props} src={star} alt="star" class={clsx($$props.class, blur ? 'blur' : '')} />
-</div>
+<svg 
+	{...$$props} 
+	class={$$props.class}
+	class:blur={blur}
+	width="10" 
+	height="9" 
+	viewBox="0 0 10 9" 
+	fill="none"
+>
+	<path d="M4.79492 0.5625L5.95833 3.61784L9.01367 4.78125L5.95833 5.94466L4.79492 9L3.63151 5.94466L0.576172 4.78125L3.63151 3.61784L4.79492 0.5625Z" fill="#F5EDCF"/>
+</svg>		
 
 <style>
 	.blur {

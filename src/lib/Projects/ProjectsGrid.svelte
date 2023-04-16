@@ -39,6 +39,7 @@
                 name={fields.Name}
                 tagline={fields.Tagline}
                 projectLink={fields["Project Link"]}
+                twitterLink={fields["Project Twitter"]}
                 imgUrl={fields["Logo Link"]}
                 class="col-span-1 row-span-1 {getOffsetClasses(index)}"
             />

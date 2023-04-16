@@ -10,7 +10,7 @@
 	class={clsx('image-with-text relative rounded-lg cursor-pointer p-[1px]', $$props.class)}
 	on:click
 >
-	<img src={imageUrl} class="rounded-lg" loading="lazy" alt="" />
+	<img src={imageUrl} width={300} height={400} class="rounded-lg" loading="lazy" alt="" />
 	<p
 		class="text-on-image absolute text-left font-bold text-white top-[32px] left-[32px] text-[20px] md:text-[28px]"
 	>
