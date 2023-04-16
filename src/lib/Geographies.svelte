@@ -24,7 +24,7 @@
 			key: 'germany',
 			name: 'Germany',
 			path: germany,
-			countryGradient: 'linear-gradient(179.04deg, #0E0E0E 11.44%, #D70000 31.14%, #FFB701 99.38%)',
+			countryGradient: 'linear-gradient(135deg, #0E0E0E 11.44%, #D70000 31.14%, #FFB701 99.38%)',
 			invert: true
 		},
 		{
@@ -64,7 +64,7 @@
 				imgPath={country.path} 
 				name={country.name}
 				countryGradient={country.countryGradient}
-				invert={country.invert}
+				invert={true}
 			/>
 		{/each}
 	</div>

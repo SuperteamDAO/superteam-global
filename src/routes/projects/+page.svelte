@@ -14,6 +14,7 @@
          line2="Projects"
          line3="superteam is the forefront community for web3,"
          line4="powered by solana."
+         buttonVisible={false}
     />
     <ProjectsGrid projects={data.projects} />
 </section>
