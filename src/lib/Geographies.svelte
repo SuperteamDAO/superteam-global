@@ -17,7 +17,8 @@
 			key: 'india',
 			name: 'India',
 			path: india,
-			countryGradient: 'linear-gradient(135deg, #FF9A37 0%, rgba(255, 255, 255, 0.8) 48.96%, #369A2C 100%)',
+			countryGradient:
+				'linear-gradient(135deg, #FF9A37 0%, rgba(255, 255, 255, 0.8) 48.96%, #369A2C 100%)',
 			invert: false
 		},
 		{
@@ -31,7 +32,8 @@
 			key: 'turkey',
 			name: 'Turkey',
 			path: turkey,
-			countryGradient: 'radial-gradient(121.53% 96.25% at 50% 50%, rgba(255, 255, 255, 0.64) 20.72%, #D70000 69.33%)',
+			countryGradient:
+				'radial-gradient(121.53% 96.25% at 50% 50%, rgba(255, 255, 255, 0.64) 20.72%, #D70000 69.33%)',
 			invert: false
 		},
 		{
@@ -47,9 +49,8 @@
 			path: mexico,
 			countryGradient: 'linear-gradient(135deg, #016C4B -15.5%, #D9021A 139%)',
 			invert: true
-		},
-	]
-	
+		}
+	];
 </script>
 
 <svelte:window />
@@ -57,11 +58,14 @@
 <div
 	class="carousel-main relative left-1/2 right-1/2 -translate-x-1/2 w-screen overflow-x-visible flex flex-col col-span-5"
 >
-	<div bind:this={carousel} class="carousel-wrapper h-fit w-full flex items-center px-6 py-8 gap-6 overflow-x-scroll overflow-y-visible scrollbar-hidden">
-		<div class="left-offset"></div>
+	<div
+		bind:this={carousel}
+		class="carousel-wrapper h-fit w-full pl-[40px] md:pl-[72px] flex items-center px-6 py-8 gap-6 overflow-x-scroll overflow-y-visible scrollbar-hidden"
+	>
+		<!-- <div class="left-offset" /> -->
 		{#each countries as country}
-			<CountryCard 
-				imgPath={country.path} 
+			<CountryCard
+				imgPath={country.path}
 				name={country.name}
 				countryGradient={country.countryGradient}
 				invert={true}
