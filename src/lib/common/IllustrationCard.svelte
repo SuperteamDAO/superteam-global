@@ -19,6 +19,9 @@
 	.image-with-text {
 		background: linear-gradient(177.68deg, #0e0e0e -18.67%, #000000 114.79%);
 		transition: background 0.5s ease;
+
+		border: 1px solid transparent;
+		transition: border 400ms;
 	}
 	.image-with-text:hover {
 		border: 1px solid #202020;
