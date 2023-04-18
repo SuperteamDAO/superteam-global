@@ -127,26 +127,24 @@
 		font-style: normal;
 		font-weight: 700;
 		line-height: 171.5%;
-		/* identical to box height, or 31px */
-
 		letter-spacing: -0.04em;
 
 		color: #ffffff;
 	}
 	@keyframes scaleUp {
 		0% {
-			transform: scale(0.8); /* Start from the specified dimensions */
+			transform: scale(0.8);
 			opacity: 0;
 		}
 		100% {
-			transform: scale(1); /* Scale up to the actual dimensions */
+			transform: scale(1);
 			opacity: 1;
 		}
 	}
 
 	.scale-up {
 		@media (min-width: 641px) {
-			animation: scaleUp 300ms; /* Apply the scaleUp animation with 300ms duration */
+			animation: scaleUp 300ms;
 		}
 	}
 
@@ -157,7 +155,7 @@
 			opacity: 0;
 		}
 
-		60%,
+		50%,
 		100% {
 			transform: translateY(0);
 			opacity: 1;
@@ -165,7 +163,6 @@
 	}
 
 	.bottom-sheet {
-		/* Add the styles within a media query for small screens */
 		@media (max-width: 640px) {
 			position: fixed;
 			bottom: 0;
@@ -173,7 +170,7 @@
 			border-top-left-radius: 15px;
 			border-top-right-radius: 15px;
 			overflow: hidden;
-			animation: slideUp 1000ms;
+			animation: slideUp 600ms;
 		}
 	}
 
@@ -181,8 +178,6 @@
 		transition: opacity 0.3s ease;
 		z-index: 10;
 		display: flex;
-
-		/* Add the styles within a media query for small screens */
 		@media (max-width: 640px) {
 			align-items: flex-end;
 			justify-content: center;
