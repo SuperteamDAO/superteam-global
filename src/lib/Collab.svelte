@@ -9,7 +9,12 @@
 >
 	<div class="overlay absolute w-full h-full hidden md:block" />
 	<!-- uncomment the following line to add the updated image: -->
-	<img src={collabpic} loading="lazy" alt="" class="h-fit md:rounded-[64px] hidden md:block" />
+	<img
+		src={collabpic}
+		loading="lazy"
+		alt=""
+		class="lg:h-fit h-[690px] md:rounded-[64px] hidden md:block object-cover"
+	/>
 
 	<!-- placeholder below, remove the following line after updating the image : -->
 	<!-- <div class="h-[807px] md:rounded-[64px] hidden md:block" /> -->
