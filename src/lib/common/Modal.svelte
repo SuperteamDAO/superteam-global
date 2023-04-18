@@ -70,10 +70,10 @@
 			>
 				{#each points as point, index}
 					<div class={`point${index + 1} mt-[${index === 0 ? 32 : 12}px] flex flex-row gap-4`}>
-						<span class="mt-1 md:mt-2 self-center">
+						<span class="mt-2 md:mt-2 self-center">
 							<Thunder size={16} />
 						</span>
-						<p>{point}</p>
+						<p class="mt-2">{point}</p>
 					</div>
 				{/each}
 			</div>
