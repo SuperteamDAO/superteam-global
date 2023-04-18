@@ -29,7 +29,7 @@
 >
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div
-		class="modal-content bottom-sheet scale-up flex flex-col md:flex-row bg-white w-full md:w-[95%] lg:w-[780px] h-fit md:h-[600px] rounded-lg"
+		class="modal-content bottom-sheet scale-up flex flex-col md:flex-row bg-white w-full md:w-[95%] lg:w-[780px] h-fit md:h-[600px] md:rounded-lg"
 		on:click={(e) => e.stopPropagation()}
 	>
 		<div class="left-img h-[120px] md:h-full w-full md:w-1/2">
@@ -173,7 +173,7 @@
 			border-top-left-radius: 15px;
 			border-top-right-radius: 15px;
 			overflow: hidden;
-			animation: slideUp 600ms;
+			animation: slideUp 1000ms;
 		}
 	}
 
