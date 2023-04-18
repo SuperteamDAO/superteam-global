@@ -92,9 +92,6 @@
 		<div class="productions text-[40px] md:text-[50px] lg:leading-[54px] leading-[44px]">
 			productions
 		</div>
-		<p class="center-text text-[14px] md:text-[16px] lg:leading-[22px] leading-[19px] font-[700]">
-			Changing the world,<br /> one line of code at a time
-		</p>
 	</div>
 	<div class="flex justify-center items-center mt-[68px] lg:mt-0 all-cards-wrapper">
 		<div class="flex flex-col gap-8 lg:grid lg:gap-0 cards-container">
