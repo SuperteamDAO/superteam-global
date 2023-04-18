@@ -1,7 +1,6 @@
 <script>
 	import collabpic from '../assets/images/collabpic.png';
 	import collabsm from '../assets/images/collab-sm.png';
-	import blackhole2 from '../assets/images/blackhole2.png';
 	import PrimaryButton from './common/PrimaryButton.svelte';
 </script>
 
@@ -9,24 +8,14 @@
 	class="collab-container col-span-5 flex flex-col justify-center align-middle relative left-1/2 right-1/2 -translate-x-1/2 w-screen -mt-[70px] md:-mt-[150px] -mb-[50px] md:-mb-[20px] lg:-mb-[30px] z-1 bg-black h-fit md:rounded-[64px] md:h-fit"
 >
 	<div class="overlay absolute w-full h-full hidden md:block" />
-	<!-- image for large screens: -->
 	<img
-		src={collabpic}
+		src={collabsm}
+		srcset={`${collabsm} 640w, ${collabpic} 1024w`}
+		sizes="(max-width: 640px) 100vw, 1024px"
 		loading="lazy"
 		alt=""
-		class="lg:h-fit h-[690px] md:rounded-[64px] hidden md:block object-cover"
+		class="lg:h-fit h-[690px] md:rounded-[64px] object-cover"
 	/>
-
-	<!-- placeholder below, remove the following line after updating the image : -->
-	<!-- <div class="h-[807px] md:rounded-[64px] hidden md:block" /> -->
-
-	<!-- uncomment following line for overlay in small devices: -->
-	<!-- <div class="overlay-sm absolute w-full h-full block md:hidden" /> -->
-	<!-- image for small screens: -->
-	<img src={collabsm} alt="" class="w-full h-[518px] object-cover block md:hidden" />
-
-	<!-- placeholder below, remove the following line after updating the image : -->
-	<!-- <div class="w-full h-[669px] md:rounded-[64px] block md:hidden" /> -->
 
 	<div
 		class="history-stuff w-full flex flex-col md:justify-center items-center h-[669px] md:h-full"
