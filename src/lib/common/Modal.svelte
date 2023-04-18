@@ -61,23 +61,23 @@
 				<X size={30} />
 			</div>
 			<div
-				class="top-content w-fit md:w-[230px] text-[14px] md:text-[18px] mt-[32px] ml-[32px] mr-[38px] md:mr-0 md:ml-[64px] md:leading-[19px] leading-[14px]"
+				class="top-content w-fit md:w-[230px] text-[14px] md:text-[18px] mt-[32px] ml-[32px] mr-[105px] md:mr-0 md:ml-[64px] md:leading-[19px] leading-[19px]"
 			>
 				{top_content}
 			</div>
 			<div
-				class="points ml-[36px] md:ml-[64px] text-[14px] md:text-[18px] w-fit md:w-[250px] mr-[36px] md:mr-[64px]"
+				class="points ml-[36px] md:ml-[64px] text-[14px] md:text-[18px] w-fit md:w-[250px] mr-[80px] md:mr-[64px]"
 			>
 				{#each points as point, index}
 					<div class={`point${index + 1} mt-[${index === 0 ? 32 : 12}px] flex flex-row gap-4`}>
-						<span class="mt-1 md:mt-2">
+						<span class="mt-1 md:mt-2 self-center">
 							<Thunder size={16} />
 						</span>
 						<p>{point}</p>
 					</div>
 				{/each}
 			</div>
-			<div class="mt-[32px] ml-[32px] md:ml-[64px] mb-[32px]">
+			<div class="mt-[32px] ml-[32px] md:ml-[64px] mb-[34px]">
 				<PrimaryButton href="/" class="font-bold">
 					{btnText}
 				</PrimaryButton>
@@ -119,8 +119,10 @@
 		font-style: normal;
 		font-weight: 700;
 		letter-spacing: -0.04em;
-
 		color: #ffffff;
+		@media (max-width: 640px) {
+			line-height: 19px;
+		}
 	}
 	.points {
 		font-family: 'Satoshi-Variable';
