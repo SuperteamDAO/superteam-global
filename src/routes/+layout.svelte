@@ -5,8 +5,34 @@
 	import '../utils/gsap';
 
 	import Header from "$lib/common/Header.svelte";
-  import Footer from "$lib/common/Footer.svelte";
+  	import Footer from "$lib/common/Footer.svelte";
 
+	import { navigating } from '$app/stores'
+	import { loading } from '../store/loading'
+	// import { onMount } from 'svelte';
+
+	// let imagesLoaded = 0
+	// let isLoaded = false
+	// let imgCount = -1
+
+	// onMount(() => {
+	// 	const imgs = document.querySelectorAll('img')
+	// 	imgs.forEach(img => {
+	// 		img.addEventListener('load', () => {
+	// 			imagesLoaded++
+	// 		})
+	// 	})
+
+	// 	window.addEventListener("error", (event) => {
+	// 		imgCount--;
+	// 	}, true);
+	// })
+
+	// $: if (imagesLoaded === imgCount) {
+	// 	isLoaded = true
+	// }
+	// $: console.log(isLoaded)
+	$: loading.setNavigate(!!$navigating)
 </script>
 
 <svelte:head>
@@ -27,11 +53,18 @@
 
 <!-- <Scene size={{ width: width, height: height }} /> -->
 
-<Header class="mx-auto px-10 md:px-[72px]" />
-<div class="relative h-full grid grid-cols-5 gap-5 px-10 md:px-[72px] mx-auto">
-	<slot />
-	<Footer />
-</div>
+<!-- {#if $loading.status === 'LOADING' || $loading.status === 'NAVIGATING'}
+	<div>
+		Loading...
+	</div>
+{:else} -->
+	<Header class="mx-auto px-10 md:px-[72px]" />
+	<div class="relative h-full grid grid-cols-5 gap-5 px-10 md:px-[72px] mx-auto">
+		<slot />
+		<Footer />
+	</div>
+<!-- {/if} -->
+	
 
 <style>
 	:global(.scrollbar-track) {
