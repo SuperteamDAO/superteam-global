@@ -87,9 +87,7 @@
 	</div>
 
 	<div class="prod-head">
-		<p class="font-secondary font-semibold text-xl leading-[22px] tracking-[-0.04em] text-white">
-			superteam
-		</p>
+		<p class="font-secondary font-semibold text-xl leading-[22px] text-white">superteam</p>
 
 		<div class="productions text-[40px] md:text-[50px] lg:leading-[54px] leading-[44px]">
 			productions
