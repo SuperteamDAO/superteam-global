@@ -29,6 +29,7 @@
 
 <svelte:window on:keydown={handleKeydown} />
 <!-- svelte-ignore a11y-click-events-have-key-events -->
+
 <div
 	class="modal-backdrop col-span-5 fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
 	on:click={handleClose}
@@ -36,10 +37,10 @@
 >
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div
-		class="modal-content scale-up flex flex-col md:flex-row bg-white w-3/4 md:w-[95%] lg:w-[780px] h-fit md:h-[600px] rounded-lg"
+		class="modal-content bottom-sheet scale-up flex flex-col md:flex-row bg-white w-full md:w-[95%] lg:w-[780px] h-fit md:h-[600px] md:rounded-lg"
 		on:click={(e) => e.stopPropagation()}
 	>
-		<div class="left-img h-[120px] md:h-full w-full md:w-1/2">
+		<div class="left-img h-[200px] md:h-full w-full md:w-1/2">
 			<div class="overlay h-full w-full" />
 			<img
 				src={imgurl}
@@ -59,7 +60,7 @@
 		</div>
 
 		<div
-			class="right relative h-fit md:h-full w-full md:w-1/2 bg-[#161616] rounded-b-lg md:rounded-bl-none md:rounded-r-lg z-10 text-white text-left flex flex-col"
+			class="right relative h-fit md:h-full w-full md:w-1/2 bg-[#161616] md:rounded-b-lg md:rounded-bl-none md:rounded-r-lg z-10 text-white text-left flex flex-col"
 		>
 			<div
 				class="cross self-end mt-[46px] mr-[64px] cursor-pointer hidden md:block"
@@ -68,23 +69,23 @@
 				<X size={30} />
 			</div>
 			<div
-				class="top-content w-fit md:w-[230px] text-[14px] md:text-[18px] mt-[32px] ml-[32px] mr-[38px] md:mr-0 md:ml-[64px] md:leading-[19px] leading-[14px]"
+				class="top-content w-fit md:w-[230px] text-[14px] md:text-[18px] mt-[32px] ml-[32px] mr-[105px] md:mr-0 md:ml-[64px] md:leading-[19px] leading-[19px]"
 			>
 				{top_content}
 			</div>
 			<div
-				class="points ml-[36px] md:ml-[64px] text-[14px] md:text-[18px] w-fit md:w-[250px] mr-[36px] md:mr-[64px]"
+				class="points ml-[36px] md:ml-[64px] text-[14px] md:text-[18px] w-fit md:w-[250px] mr-[80px] md:mr-[64px]"
 			>
 				{#each points as point, index}
 					<div class={`point${index + 1} mt-[${index === 0 ? 32 : 12}px] flex flex-row gap-4`}>
-						<span class="mt-1 md:mt-2">
+						<span class="mt-2 md:mt-2 self-center">
 							<Thunder size={16} />
 						</span>
-						<p>{point}</p>
+						<p class="mt-2">{point}</p>
 					</div>
 				{/each}
 			</div>
-			<div class="mt-[32px] ml-[32px] md:ml-[64px] mb-[32px]">
+			<div class="mt-[32px] ml-[32px] md:ml-[64px] mb-[34px]">
 				<PrimaryButton href="/" class="font-bold">
 					{btnText}
 				</PrimaryButton>
@@ -125,33 +126,74 @@
 		font-family: 'Satoshi-Variable';
 		font-style: normal;
 		font-weight: 700;
-		letter-spacing: -0.04em;
-
 		color: #ffffff;
+		@media (max-width: 640px) {
+			line-height: 19px;
+		}
 	}
 	.points {
 		font-family: 'Satoshi-Variable';
 		font-style: normal;
 		font-weight: 700;
 		line-height: 171.5%;
-		/* identical to box height, or 31px */
-
 		letter-spacing: -0.04em;
 
 		color: #ffffff;
 	}
+	.left-img {
+		background: linear-gradient(177.68deg, #0e0e0e -18.67%, #000000 114.79%);
+		transition: background 0.5s ease;
+	}
 	@keyframes scaleUp {
 		0% {
-			transform: scale(0.8); /* Start from the specified dimensions */
+			transform: scale(0.8);
 			opacity: 0;
 		}
 		100% {
-			transform: scale(1); /* Scale up to the actual dimensions */
+			transform: scale(1);
 			opacity: 1;
 		}
 	}
 
 	.scale-up {
-		animation: scaleUp 300ms; /* Apply the scaleUp animation with 300ms duration */
+		@media (min-width: 641px) {
+			animation: scaleUp 300ms;
+		}
+	}
+
+	@keyframes slideUp {
+		0%,
+		50% {
+			transform: translateY(100%);
+			opacity: 0;
+		}
+
+		50%,
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	.bottom-sheet {
+		@media (max-width: 640px) {
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+			overflow: hidden;
+			animation: slideUp 600ms;
+		}
+	}
+
+	.modal-backdrop {
+		transition: opacity 0.3s ease;
+		z-index: 10;
+		display: flex;
+		@media (max-width: 640px) {
+			align-items: flex-end;
+			justify-content: center;
+		}
 	}
 </style>
