@@ -52,7 +52,7 @@
 		</div>
 
 		<div
-			class="right relative h-fit md:h-full w-full md:w-1/2 bg-[#161616] rounded-b-lg md:rounded-bl-none md:rounded-r-lg z-10 text-white text-left flex flex-col"
+			class="right relative h-fit md:h-full w-full md:w-1/2 bg-[#161616] md:rounded-b-lg md:rounded-bl-none md:rounded-r-lg z-10 text-white text-left flex flex-col"
 		>
 			<div
 				class="cross self-end mt-[46px] mr-[64px] cursor-pointer hidden md:block"
@@ -118,7 +118,6 @@
 		font-family: 'Satoshi-Variable';
 		font-style: normal;
 		font-weight: 700;
-		letter-spacing: -0.04em;
 		color: #ffffff;
 		@media (max-width: 640px) {
 			line-height: 19px;
