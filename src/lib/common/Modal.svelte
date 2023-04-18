@@ -1,5 +1,5 @@
 <script>
-	import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 	import thunder from '../../assets/logos/thunder.svg';
 	import PrimaryButton from './PrimaryButton.svelte';
 	import { X } from 'phosphor-svelte';
@@ -18,8 +18,16 @@
 	function handleClose() {
 		dispatch('close');
 	}
+
+	function handleKeydown(e) {
+		if (e.key === 'Escape') {
+			handleClose();
+		}
+	}
+	
 </script>
 
+<svelte:window on:keydown={handleKeydown} />
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
 <div

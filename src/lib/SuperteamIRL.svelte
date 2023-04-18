@@ -38,7 +38,7 @@
 >
 	<div class="text-center font-primary">
 		<p
-			class="font-bold text-[24px] md:text-[32px] lg:leading-[35px] leading-[26px] text-white tracking-normal"
+			class="font-bold font-secondary text-[24px] md:text-[32px] lg:leading-[35px] leading-[26px] text-white tracking-tighter"
 		>
 			Superteam IRL
 		</p>
