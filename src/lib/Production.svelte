@@ -1,10 +1,10 @@
 <script>
-	import earn from '../assets/cards/earn.jpg';
-	import ecosystem_calls from '../assets/cards/ecosystem_calls.jpg';
-	import instagrants from '../assets/cards/instagrants.jpg';
-	import alphasquad from '../assets/cards/alphasquad.jpg';
-	import build from '../assets/cards/build.jpg';
-	import founders_league from '../assets/cards/founders_league.jpg';
+	import earn from '../assets/cards/earn.png';
+	import ecosystem_calls from '../assets/cards/ecosystem_calls.png';
+	import instagrants from '../assets/cards/instagrants.png';
+	import alphasquad from '../assets/cards/alphasquad.png';
+	import build from '../assets/cards/build.png';
+	import founders_league from '../assets/cards/founders_league.png';
 	import IllustrationCard from './common/IllustrationCard.svelte';
 	import Modal from './common/Modal.svelte';
 	import thunder from '../assets/logos/thunder.svg';

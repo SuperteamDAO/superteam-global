@@ -132,6 +132,10 @@
 
 		color: #ffffff;
 	}
+	.left-img {
+		background: linear-gradient(177.68deg, #0e0e0e -18.67%, #000000 114.79%);
+		transition: background 0.5s ease;
+	}
 	@keyframes scaleUp {
 		0% {
 			transform: scale(0.8);

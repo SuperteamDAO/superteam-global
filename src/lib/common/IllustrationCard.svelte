@@ -6,10 +6,7 @@
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div
-	class={clsx('image-with-text relative rounded-lg cursor-pointer p-[1px]', $$props.class)}
-	on:click
->
+<div class={clsx('image-with-text relative rounded-lg cursor-pointer', $$props.class)} on:click>
 	<img src={imageUrl} width={300} height={400} class="rounded-lg" loading="lazy" alt="" />
 	<p
 		class="text-on-image absolute text-left font-bold text-white top-[32px] left-[32px] text-[20px] md:text-[28px]"
@@ -20,11 +17,11 @@
 
 <style>
 	.image-with-text {
-		background: linear-gradient(144.34deg, rgba(247, 243, 243, 0) -29.96%, rgba(63, 63, 63, 0) 131.56%);
+		background: linear-gradient(177.68deg, #0e0e0e -18.67%, #000000 114.79%);
 		transition: background 0.5s ease;
 	}
 	.image-with-text:hover {
-		background: linear-gradient(144.34deg, rgba(247, 243, 243, 1) -29.96%, rgba(63, 63, 63, 0.67) 131.56%);
+		border: 1px solid #202020;
 	}
 
 	.text-on-image {
