@@ -21,6 +21,7 @@
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
+
 <div
 	class="modal-backdrop col-span-5 fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
 	on:click={handleClose}
@@ -28,7 +29,7 @@
 >
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div
-		class="modal-content scale-up flex flex-col md:flex-row bg-white w-3/4 md:w-[95%] lg:w-[780px] h-fit md:h-[600px] rounded-lg"
+		class="modal-content bottom-sheet scale-up flex flex-col md:flex-row bg-white w-full md:w-[95%] lg:w-[780px] h-fit md:h-[600px] rounded-lg"
 		on:click={(e) => e.stopPropagation()}
 	>
 		<div class="left-img h-[120px] md:h-full w-full md:w-1/2">
@@ -144,6 +145,47 @@
 	}
 
 	.scale-up {
-		animation: scaleUp 300ms; /* Apply the scaleUp animation with 300ms duration */
+		@media (min-width: 641px) {
+			animation: scaleUp 300ms; /* Apply the scaleUp animation with 300ms duration */
+		}
+	}
+
+	@keyframes slideUp {
+		0%,
+		50% {
+			transform: translateY(100%);
+			opacity: 0;
+		}
+
+		60%,
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	.bottom-sheet {
+		/* Add the styles within a media query for small screens */
+		@media (max-width: 640px) {
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+			overflow: hidden;
+			animation: slideUp 600ms;
+		}
+	}
+
+	.modal-backdrop {
+		transition: opacity 0.3s ease;
+		z-index: 10;
+		display: flex;
+
+		/* Add the styles within a media query for small screens */
+		@media (max-width: 640px) {
+			align-items: flex-end;
+			justify-content: center;
+		}
 	}
 </style>
