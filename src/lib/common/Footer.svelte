@@ -7,22 +7,22 @@
 	class="footer-container relative left-1/2 right-1/2 -translate-x-1/2 w-screen md:w-[calc(100vw-144px)] h-fit lg:h-[477px] col-span-5 rounded-t-[48px] z-10"
 >
 	<div
-		class="main-container h-fit mt-[100px] lg:mt-[124px] flex lg:flex-row flex-col justify-between"
+		class="main-container h-fit mt-[100px] lg:mt-[74px] flex lg:flex-row flex-col justify-between"
 	>
 		<div class="overlay-logo absolute ml-[40px] mt-[19px] lg:ml-[72px] lg:mt-[17px]">
 			<AnimatedLogo />
 		</div>
 		<div class="footer-logo ml-[40px] lg:ml-[45px]">
 			<div>
-				<img src={superteam_footer} alt="" />
+				<img src={superteam_footer} alt="" class="w-3/4 md:w-1/2 lg:w-full" />
 			</div>
-			<div class="overlay-text absolute -mt-[140px] lg:ml-[27px] lg:mt-0">
+			<div class="overlay-text absolute -mt-[80px] md:-mt-[140px] lg:ml-[27px] lg:mt-0">
 				<p>superteam</p>
 				<p class="powered-text mt-[16px]">powered by solana</p>
 			</div>
 		</div>
 		<div
-			class="footer-texts lg:ml-0 ml-[40px] lg:mr-[72px] text-white lg:text-right flex md:flex-row flex-col"
+			class="footer-texts mt-[64px] lg:mt-0 lg:ml-0 ml-[40px] lg:mr-[72px] text-white lg:text-right flex md:flex-row flex-col"
 		>
 			<div class="text-col-1">
 				<p class="footer-text">Instagrants</p>

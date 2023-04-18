@@ -125,7 +125,6 @@
 		font-style: normal;
 		font-weight: 700;
 		text-align: center;
-		letter-spacing: -0.04em;
 
 		color: #ffffff;
 	}

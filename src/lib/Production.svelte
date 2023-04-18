@@ -1,10 +1,10 @@
 <script>
-	import earn from '../assets/cards/earn.jpg';
-	import ecosystem_calls from '../assets/cards/ecosystem_calls.jpg';
-	import instagrants from '../assets/cards/instagrants.jpg';
-	import alphasquad from '../assets/cards/alphasquad.jpg';
-	import build from '../assets/cards/build.jpg';
-	import founders_league from '../assets/cards/founders_league.jpg';
+	import earn from '../assets/cards/Earn_new.png';
+	import ecosystem_calls from '../assets/cards/ecosystem_calls_new.png';
+	import instagrants from '../assets/cards/Instagrants_new.png';
+	import alphasquad from '../assets/cards/alphasquad_new.png';
+	import build from '../assets/cards/Build_new.png';
+	import founders_league from '../assets/cards/founders_league_new.png';
 	import IllustrationCard from './common/IllustrationCard.svelte';
 	import Modal from './common/Modal.svelte';
 	import thunder from '../assets/logos/thunder.svg';
@@ -87,16 +87,11 @@
 	</div>
 
 	<div class="prod-head">
-		<p class="font-secondary font-semibold text-xl leading-[22px] tracking-[-0.04em] text-white">
-			superteam
-		</p>
+		<p class="font-secondary font-semibold text-xl leading-[22px] text-white">superteam</p>
 
 		<div class="productions text-[40px] md:text-[50px] lg:leading-[54px] leading-[44px]">
 			productions
 		</div>
-		<p class="center-text text-[14px] md:text-[16px] lg:leading-[22px] leading-[19px] font-[700]">
-			Changing the world,<br /> one line of code at a time
-		</p>
 	</div>
 	<div class="flex justify-center items-center mt-[68px] lg:mt-0 all-cards-wrapper">
 		<div class="flex flex-col gap-8 lg:grid lg:gap-0 cards-container">
