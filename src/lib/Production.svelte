@@ -1,9 +1,9 @@
 <script>
-	import earn from '../assets/cards/earn_new.png';
+	import earn from '../assets/cards/Earn_new.png';
 	import ecosystem_calls from '../assets/cards/ecosystem_calls_new.png';
-	import instagrants from '../assets/cards/instagrants_new.png';
+	import instagrants from '../assets/cards/Instagrants_new.png';
 	import alphasquad from '../assets/cards/alphasquad_new.png';
-	import build from '../assets/cards/build_new.png';
+	import build from '../assets/cards/Build_new.png';
 	import founders_league from '../assets/cards/founders_league_new.png';
 	import IllustrationCard from './common/IllustrationCard.svelte';
 	import Modal from './common/Modal.svelte';
