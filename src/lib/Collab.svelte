@@ -40,7 +40,6 @@
 		font-weight: 700;
 		line-height: 39px;
 		text-align: center;
-		letter-spacing: -0.04em;
 		color: #ffffff;
 		height: 78px;
 	}
