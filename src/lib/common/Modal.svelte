@@ -32,7 +32,7 @@
 		class="modal-content bottom-sheet scale-up flex flex-col md:flex-row bg-white w-full md:w-[95%] lg:w-[780px] h-fit md:h-[600px] md:rounded-lg"
 		on:click={(e) => e.stopPropagation()}
 	>
-		<div class="left-img h-[120px] md:h-full w-full md:w-1/2">
+		<div class="left-img h-[200px] md:h-full w-full md:w-1/2">
 			<div class="overlay h-full w-full" />
 			<img
 				src={imgurl}
