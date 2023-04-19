@@ -1,6 +1,5 @@
 <script>
 	import wormhole from '../assets/logos/wormhole.svg';
-	import pyth from '../assets/logos/pyth.svg';
 	import foundation from '../assets/logos/foundation.svg';
 	import backpack from '../assets/logos/backpack.svg';
 	import ftx from '../assets/logos/ftx.svg';
@@ -14,10 +13,9 @@
 	</h2>
 	<div class="logos-container flex flex-wrap justify-center items-center mt-6 gap-11 w-full">
 		<img class="logo wormhole h-8 w-auto" src={wormhole} alt="Wormhole" loading="lazy" />
-		<img class="logo pyth h-8 w-auto" src={pyth} alt="Pyth" loading="lazy" />
 		<img class="logo foundation h-6 w-auto" src={foundation} alt="Foundation" loading="lazy" />
 		<img class="logo backpack h-8 w-auto" src={backpack} alt="Backpack" loading="lazy" />
-		<img class="logo ftx h-8 w-auto" src={ftx} alt="FTX" loading="lazy" />
+		<img class="logo ftx h-8 w-auto opacity-30" src={ftx} alt="FTX" loading="lazy" />
 	</div>
 </div>
 
