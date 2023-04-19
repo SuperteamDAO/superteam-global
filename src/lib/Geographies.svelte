@@ -25,29 +25,28 @@
 			key: 'germany',
 			name: 'Germany',
 			path: germany,
-			countryGradient: 'linear-gradient(135deg, #0E0E0E 11.44%, #D70000 31.14%, #FFB701 99.38%)',
+			countryGradient: 'linear-gradient(151.47deg, #D70000 0%, #FFFFFF 50.7%, #FFB701 98.53%)',
 			invert: true
 		},
 		{
 			key: 'turkey',
 			name: 'Turkey',
 			path: turkey,
-			countryGradient:
-				'radial-gradient(121.53% 96.25% at 50% 50%, rgba(255, 255, 255, 0.64) 20.72%, #D70000 69.33%)',
+			countryGradient: 'linear-gradient(151.47deg, #DA1212 0%, #FFFFFF 50.7%, #D70000 98.53%)',
 			invert: false
 		},
 		{
 			key: 'vietnam',
 			name: 'Vietnam',
 			path: vietnam,
-			countryGradient: 'radial-gradient(85.39% 67.63% at 50% 50%, #FFB701 22.29%, #D70000 69.33%)',
+			countryGradient: 'linear-gradient(151.47deg, #FFB701 0%, #FFFFFF 50.7%, #D70000 98.53%)',
 			invert: true
 		},
 		{
 			key: 'mexico',
 			name: 'Mexico',
 			path: mexico,
-			countryGradient: 'linear-gradient(135deg, #016C4B -15.5%, #D9021A 139%)',
+			countryGradient: 'linear-gradient(161.18deg, #00B17B -3.45%, #FFFFFF 47.74%, #FF4D60 96.31%)',
 			invert: true
 		}
 	];

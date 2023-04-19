@@ -11,9 +11,9 @@
 
 <Hero
 	line1="your portal to the"
-	line2="world of solana"
-	line3="superteam is the forefront community for web3,"
-	line4="powered by solana."
+	line2="new world of crypto"
+	line3="superteam is a community of the best talent learning,"
+	line4="earning and building in crypto"
 	buttonVisible={true}
 />
 
