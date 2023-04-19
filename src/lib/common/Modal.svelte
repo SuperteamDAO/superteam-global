@@ -8,7 +8,6 @@
 	const dispatch = createEventDispatcher();
 
 	export let imgurl;
-	export let bullet = thunder;
 	export let text;
 	export let top_content;
 	export let points = [];
