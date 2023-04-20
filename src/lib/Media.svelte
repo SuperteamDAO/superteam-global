@@ -5,7 +5,7 @@
 
 <div class="relative col-span-5 mt-44 flex flex-col justify-center text-center">
 	<p
-		class="font-bold font-secondary text-[24px] md:text-[32px] lg:leading-[35px] leading-[26px] text-white tracking-normal"
+		class="section-heading font-bold font-secondary text-[24px] md:text-[32px] lg:leading-[35px] leading-[26px] text-white tracking-normal"
 	>
 		Media
 	</p>

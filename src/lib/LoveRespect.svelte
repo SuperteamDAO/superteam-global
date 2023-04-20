@@ -16,7 +16,7 @@
 	)}
 >
 	<div class="love-header">
-		<p class="love text-[24px] md:text-[32px] lg:leading-[35px] leading-[26px]">Love and Respect</p>
+		<p class="love text-[24px] md:text-[32px] lg:leading-[35px] leading-[26px] section-heading">Love and Respect</p>
 	</div>
 
 	<div class="mt-12 overflow-x-scroll scrollbar-hidden item-container flex-nowrap">

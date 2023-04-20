@@ -36,15 +36,15 @@
 >
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div
-		class="modal-content bottom-sheet scale-up flex flex-col md:flex-row bg-white w-full md:w-[95%] lg:w-[780px] h-fit md:h-[600px] md:rounded-lg"
+		class="modal-content bottom-sheet scale-up flex flex-col md:flex-row bg-white w-full md:w-[95%] lg:w-[780px] h-fit md:h-[600px] md:rounded-lg overflow-hidden"
 		on:click={(e) => e.stopPropagation()}
 	>
-		<div class="left-img h-[200px] md:h-full w-full md:w-1/2">
+		<div class="left-img h-[200px] md:h-full w-full md:w-1/2 overflow-hidden">
 			<div class="overlay h-full w-full" />
 			<img
 				src={imgurl}
 				alt={text}
-				class="w-full h-full object-cover rounded-t-lg md:rounded-t-none md:rounded-l-lg"
+				class="w-full h-full object-cover"
 			/>
 			<div
 				class="text-on-img text-[24px] md:text-[32px] text-white top-[24px] left-[24px] md:top-[53px] md:left-[40px] flex flex-row w-5/6 justify-between"
@@ -124,7 +124,7 @@
 	.top-content {
 		font-family: 'Satoshi-Variable';
 		font-style: normal;
-		font-weight: 700;
+		font-weight: 500;
 		color: #ffffff;
 		@media (max-width: 640px) {
 			line-height: 19px;
@@ -133,7 +133,7 @@
 	.points {
 		font-family: 'Satoshi-Variable';
 		font-style: normal;
-		font-weight: 700;
+		font-weight: 500;
 		line-height: 171.5%;
 		letter-spacing: -0.04em;
 
