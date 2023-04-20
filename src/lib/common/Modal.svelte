@@ -49,7 +49,7 @@
 			<div
 				class="text-on-img text-[24px] md:text-[32px] text-white top-[24px] left-[24px] md:top-[53px] md:left-[40px] flex flex-row w-5/6 justify-between"
 			>
-				<div>
+				<div class="section-heading">
 					{text}
 				</div>
 				<div class="cross cursor-pointer md:hidden z-11" on:click={handleClose}>
