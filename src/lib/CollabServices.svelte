@@ -39,7 +39,7 @@
 	{/if}
 
 	<div>
-		<p class="center-text md:mb-0 mb-[68px]">Services</p>
+		<p class="section-heading center-text md:mb-0 mb-[68px]">Services</p>
 	</div>
 	<div class="flex justify-center items-center">
 		<div class="flex flex-col gap-8 lg:grid lg:gap-0 cards-container">

@@ -199,6 +199,7 @@
 	}
 
 	.productions {
+		@apply font-secondary font-bold ;
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
 		font-weight: 700;
