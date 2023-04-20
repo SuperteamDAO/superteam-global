@@ -89,16 +89,16 @@
 	<div class="prod-head">
 		<p class="font-secondary font-semibold text-xl leading-[22px] text-white">superteam</p>
 
-		<div class="productions text-[40px] md:text-[50px] lg:leading-[54px] leading-[44px]">
+		<div class="section-heading text-[40px] md:text-[50px] lg:leading-[54px] leading-[44px]">
 			productions
 		</div>
 	</div>
 	<div class="flex justify-center items-center mt-[68px] lg:mt-0 all-cards-wrapper">
-		<div class="flex flex-col gap-8 lg:grid lg:gap-0 cards-container">
+		<div class="flex flex-col max-w-[240px] sm:max-w-full gap-8 md:grid md:gap-0 cards-container">
 			<IllustrationCard
 				text="Earn"
 				imageUrl={earn}
-				class="col-start-1 row-start-1 row-end-3"
+				class="md:col-start-1 md:row-start-2 md:row-end-4 lg:row-start-1 lg:row-end-3"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
@@ -110,7 +110,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-1 row-start-4 row-end-7"
+				class="md:col-start-2 md:row-start-1 md:row-end-3 lg:col-start-1 lg:row-start-4 lg:row-end-7"
 				text="Ecosystem Calls"
 				imageUrl={ecosystem_calls}
 				on:click={() =>
@@ -124,7 +124,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-2 row-start-2 row-end-5"
+				class="md:col-start-1 md:row-start-5 md:row-end-7 lg:col-start-2 lg:row-start-2 lg:row-end-5"
 				text="Instagrants"
 				imageUrl={instagrants}
 				on:click={() =>
@@ -138,7 +138,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-2 row-start-6 row-end-[-1]"
+				class="md:col-start-2 md:row-start-4 md:row-end-6 lg:col-start-2 lg:row-start-6 lg:row-end-[-1]"
 				text="Alpha Squad"
 				imageUrl={alphasquad}
 				on:click={() =>
@@ -152,7 +152,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-3 row-start-1 row-end-3"
+				class="md:col-start-1 md:row-start-[8] md:row-end-[10] lg:col-start-3 lg:row-start-1 lg:row-end-3"
 				text="Build"
 				imageUrl={build}
 				on:click={() =>
@@ -166,7 +166,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-3 row-start-4 row-end-7"
+				class="md:col-start-2 md:row-start-7 md:row-end-[9] lg:col-start-3 lg:row-start-4 lg:row-end-7"
 				text="Founder's League"
 				imageUrl={founders_league}
 				on:click={() =>
@@ -184,44 +184,6 @@
 </div>
 
 <style>
-	@keyframes shine {
-		0%,
-		10% {
-			background-position: center, -500px;
-		}
-		100% {
-			background-position: center, 500px;
-		}
-	}
-
-	.productions-container {
-		/* background: url(../assets/bg-productions.svg); */
-	}
-
-	.productions {
-		@apply font-secondary font-bold ;
-		font-family: 'Archivo_SemiExpanded';
-		font-style: normal;
-		font-weight: 700;
-		letter-spacing: -0.04em;
-
-		background: linear-gradient(173.91deg, rgba(255, 255, 255, 0) -102.4%, #ffffff 116.87%),
-			linear-gradient(
-				-40deg,
-				transparent 0%,
-				transparent 40%,
-				#fff 50%,
-				transparent 60%,
-				transparent 100%
-			);
-		background-size: cover, 500px;
-		background-position: center, -1000px;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		animation: shine 5s infinite;
-	}
-
 	.center-text {
 		@apply font-primary;
 		font-style: normal;
@@ -234,6 +196,13 @@
 	.cards-container {
 		--row-factor: 8px;
 		column-gap: 32px;
+	}
+
+	@media (min-width: 768px) {
+		.cards-container {
+			grid-template-columns: repeat(2, 240px);
+			grid-template-rows: repeat(3, calc(5*var(--row-factor)) calc(32.5*var(--row-factor)) calc(5*var(--row-factor)));
+		}	
 	}
 
 	@media (min-width: 1024px) {
