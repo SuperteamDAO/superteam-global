@@ -96,7 +96,7 @@
 <style>
 	.modal-backdrop {
 		transition: opacity 0.3s ease;
-		z-index: 10;
+		z-index: 9999;
 	}
 	.modal-content {
 		transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s ease 0.3s;

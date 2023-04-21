@@ -49,10 +49,10 @@
 	});
 </script>
 
-<div class="flex flex-col justify-start items-center hero-content">
+<div class="flex flex-col justify-start items-center hero-content w-full">
 	<AnimatedLogo />
 	<h1
-		class="heading w-[320px] text-[calc(24px+0.5vw)] md:w-full flex flex-col md:text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center"
+		class="heading w-[320px] text-[calc(24px+0.5vw)] md:w-[500px] flex flex-col md:text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center"
 	>
 		<span class="line block h-9 md:h-12 w-full">
 			<span class="heading-text"> {line1} </span>
@@ -64,9 +64,12 @@
 	<p
 		class="sub-heading opacity-0 text-white font-primary text-[16px] md:text-[20px] leading-[1.35] tracking-[-4%] text-center mt-8"
 	>
-		{line3}
-		<br />
-		{line4}
+		<span class="inline sm:block">
+			{line3}
+		</span>
+		<span class="inline sm:block">
+			{line4}
+		</span>
 	</p>
 	{#if buttonVisible}
 		<PrimaryButton href="/" class="know-more-button mt-8">Know more</PrimaryButton>
@@ -80,9 +83,6 @@
 	}
 	.heading .line {
 		@apply block relative overflow-hidden w-full h-8 md:h-12;
-	}
-	br {
-		content: '';
 	}
 	.heading .line span {
 		@apply absolute w-full top-0 left-0;

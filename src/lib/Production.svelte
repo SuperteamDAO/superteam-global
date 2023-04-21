@@ -81,6 +81,7 @@
 			<img
 				src={midlight}
 				alt=""
+				loading="lazy"
 				class="midlight absolute justify-items-center top-0 lg:w-[900px] left-[21%] min-[2000px]:left-[32%] w-[900px] h-fit lg:-mt-[192px]"
 			/>
 			<img
@@ -93,7 +94,7 @@
 	</div>
 
 	<div class="prod-head">
-		<p class="font-secondary font-semibold text-xl leading-[22px] text-white relative z-10">
+		<p class="font-secondary font-semibold text-xl leading-[22px] text-white relative">
 			superteam
 		</p>
 
@@ -231,9 +232,7 @@
 	.midlight {
 		z-index: -999;
 	}
-	.section-heading {
-		z-index: 50;
-	}
+
 	.leftlight {
 		z-index: -999;
 	}
