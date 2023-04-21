@@ -9,29 +9,31 @@
 
 	import { navigating } from '$app/stores'
 	import { loading } from '../store/loading'
-	// import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
-	// let imagesLoaded = 0
-	// let isLoaded = false
-	// let imgCount = -1
+	let imagesLoaded = 0
+	let isLoaded = false
+	let imgCount = 0
+	let imgError = 0
 
-	// onMount(() => {
-	// 	const imgs = document.querySelectorAll('img')
-	// 	imgs.forEach(img => {
-	// 		img.addEventListener('load', () => {
-	// 			imagesLoaded++
-	// 		})
-	// 	})
+	onMount(() => {
+		const imgs = document.querySelectorAll('img')
+		imgs.forEach(img => {
+			img.addEventListener('load', () => {
+				imagesLoaded++
+			})
+		})
 
-	// 	window.addEventListener("error", (event) => {
-	// 		imgCount--;
-	// 	}, true);
-	// })
+		window.addEventListener("error", (event) => {
+			imgError++;
+		}, true);
+	})
 
-	// $: if (imagesLoaded === imgCount) {
-	// 	isLoaded = true
-	// }
-	// $: console.log(isLoaded)
+	$: if (imagesLoaded + imgError === imgCount) {
+		isLoaded = true
+	}
+
+	$: console.log(isLoaded)
 	$: loading.setNavigate(!!$navigating)
 </script>
 
