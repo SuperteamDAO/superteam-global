@@ -3,6 +3,7 @@
 	import Partners from '$lib/Partners.svelte';
 	import HeroContainer from '$lib/common/HeroContainer.svelte';
 	import CollabServices from '$lib/CollabServices.svelte';
+	import Collab from '$lib/Collab.svelte';
 </script>
 
 <div class="col-span-5 h-fit">
@@ -22,7 +23,8 @@
 
 	<CollabServices />
 
-	<LoveRespect collab={true} />
+	<LoveRespect />
+	<Collab />
 </div>
 
 <style lang="postcss">
