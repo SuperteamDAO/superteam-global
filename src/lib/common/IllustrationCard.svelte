@@ -8,7 +8,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class={clsx('image-with-text rounded-lg cursor-pointer', $$props.class)} on:click>
 	<div class="image-with-text-content w-full h-full relative overflow-hidden rounded-lg">
-		<img src={imageUrl} width={300} height={400} class="rounded-lg absolute z-10" loading="lazy" alt="" />
+		<img src={imageUrl} width={300} height={400} class="rounded-lg absolute z-10 object-cover" loading="lazy" alt="" />
 		<p
 			class="z-10 text-on-image absolute text-left font-bold text-white top-[32px] left-[32px] text-[20px] md:text-[28px]"
 		>
@@ -29,6 +29,12 @@
 
 	.image-with-text-content {
 		background: linear-gradient(177.68deg, #0e0e0e -18.67%, #000000 114.79%);
+	}
+
+	.image-with-text-content img {
+		min-width: 100%;
+		min-height: 100%;
+		object-fit: cover;
 	}
 
 	.image-with-text::after {
