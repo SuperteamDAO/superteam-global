@@ -242,5 +242,8 @@
 	}
 	img {
 		pointer-events: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
 	}
 </style>
