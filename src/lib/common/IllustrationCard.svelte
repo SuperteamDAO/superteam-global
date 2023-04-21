@@ -8,9 +8,16 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class={clsx('image-with-text rounded-lg cursor-pointer', $$props.class)} on:click>
 	<div class="image-with-text-content w-full h-full relative overflow-hidden rounded-lg">
-		<img src={imageUrl} width={300} height={400} class="rounded-lg absolute z-10 object-cover" loading="lazy" alt="" />
+		<img
+			src={imageUrl}
+			width={300}
+			height={400}
+			class="rounded-lg absolute z-10 object-cover"
+			loading="lazy"
+			alt=""
+		/>
 		<p
-			class="z-10 text-on-image absolute text-left font-bold text-white top-[32px] left-[32px] text-[20px] md:text-[28px]"
+			class="z-10 text-on-image absolute text-left font-semibold text-white top-[32px] left-[32px] text-[20px] md:text-[28px]"
 		>
 			{text}
 		</p>
@@ -45,7 +52,7 @@
 		left: 0px;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(144.34deg, #F7F3F3 -29.96%, rgba(63, 63, 63, 0.67) 131.56%);
+		background: linear-gradient(144.34deg, #f7f3f3 -29.96%, rgba(63, 63, 63, 0.67) 131.56%);
 		opacity: 0;
 		transition: opacity 0.3s ease;
 	}
@@ -60,9 +67,8 @@
 		margin-right: 10%;
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
-		font-weight: 700;
+		font-weight: 600;
 		line-height: 31px;
-		letter-spacing: -0.04em;
 		color: #ffffff;
 	}
 </style>
