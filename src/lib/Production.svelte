@@ -81,7 +81,7 @@
 			<img
 				src={midlight}
 				alt=""
-				class="midlight absolute justify-items-center top-0 lg:w-[900px] left-[21%] 2xl:left-[32%] w-[900px] h-fit lg:-mt-[192px]"
+				class="midlight absolute justify-items-center top-0 lg:w-[900px] left-[21%] min-[2000px]:left-[32%] w-[900px] h-fit lg:-mt-[192px]"
 			/>
 			<img
 				src={rightlight}
@@ -93,9 +93,13 @@
 	</div>
 
 	<div class="prod-head">
-		<p class="font-secondary font-semibold text-xl leading-[22px] text-white">superteam</p>
+		<p class="font-secondary font-semibold text-xl leading-[22px] text-white relative z-10">
+			superteam
+		</p>
 
-		<div class="section-heading text-[40px] md:text-[50px] lg:leading-[54px] leading-[44px]">
+		<div
+			class="section-heading relative text-[40px] md:text-[50px] lg:leading-[54px] leading-[44px]"
+		>
 			productions
 		</div>
 	</div>
@@ -222,5 +226,21 @@
 				calc(4 * var(--row-factor))
 				calc(4 * var(--row-factor)) calc(42 * var(--row-factor)) calc(8 * var(--row-factor));
 		}
+	}
+
+	.midlight {
+		z-index: -999;
+	}
+	.section-heading {
+		z-index: 50;
+	}
+	.leftlight {
+		z-index: -999;
+	}
+	.rightlight {
+		z-index: -999;
+	}
+	img {
+		pointer-events: none;
 	}
 </style>
