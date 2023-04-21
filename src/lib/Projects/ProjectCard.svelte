@@ -1,5 +1,6 @@
 <script>
-	import clsx from "clsx";
+	import ImageLoader from "$lib/ImageLoader.svelte";
+import clsx from "clsx";
     import { TwitterLogo, Globe } from 'phosphor-svelte';
 
     export let name;
@@ -17,7 +18,7 @@
 >
     <div class="flex flex-col gap-8">
         <div class="flex flex-col items-start gap-4">
-            <img src={imgUrl} height={32} width="auto" alt="" class="rounded-full h-[32px] w-auto" loading="lazy">
+            <ImageLoader src={imgUrl} height={32} width="auto" alt="" class="rounded-full h-[32px] w-auto" loading="lazy" />
             <h2 class="font-secondary text-[24px] font-bold text-white" >{name}</h2>
         </div>
         <p class="text-white font-primary font-medium">
@@ -28,7 +29,7 @@
         <a href={projectLink} target="_blank">
             <Globe size={24} color="white" />
         </a>
-        <a href={projectLink} target="_blank">
+        <a href={twitterLink} target="_blank">
             <TwitterLogo size={24} color="white" />
         </a>
     </div>

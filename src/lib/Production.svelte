@@ -109,7 +109,7 @@
 			<IllustrationCard
 				text="Earn"
 				imageUrl={earn}
-				class="md:col-start-1 md:row-start-2 md:row-end-4 lg:row-start-1 lg:row-end-3"
+				class="md:col-start-1 md:row-start-2 md:row-end-4 lg:row-start-1 lg:row-end-3 min-h-[300px] min-w-[240px]"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
@@ -121,7 +121,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="md:col-start-2 md:row-start-1 md:row-end-3 lg:col-start-1 lg:row-start-4 lg:row-end-7"
+				class="md:col-start-2 md:row-start-1 md:row-end-3 lg:col-start-1 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
 				text="Ecosystem Calls"
 				imageUrl={ecosystem_calls}
 				on:click={() =>
@@ -135,7 +135,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="md:col-start-1 md:row-start-5 md:row-end-7 lg:col-start-2 lg:row-start-2 lg:row-end-5"
+				class="md:col-start-1 md:row-start-5 md:row-end-7 lg:col-start-2 lg:row-start-2 lg:row-end-5 min-h-[300px] min-w-[240px]"
 				text="Instagrants"
 				imageUrl={instagrants}
 				on:click={() =>
@@ -149,7 +149,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="md:col-start-2 md:row-start-4 md:row-end-6 lg:col-start-2 lg:row-start-6 lg:row-end-[-1]"
+				class="md:col-start-2 md:row-start-4 md:row-end-6 lg:col-start-2 lg:row-start-6 lg:row-end-[-1] min-h-[300px] min-w-[240px]"
 				text="Alpha Squad"
 				imageUrl={alphasquad}
 				on:click={() =>
@@ -163,7 +163,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="md:col-start-1 md:row-start-[8] md:row-end-[10] lg:col-start-3 lg:row-start-1 lg:row-end-3"
+				class="md:col-start-1 md:row-start-[8] md:row-end-[10] lg:col-start-3 lg:row-start-1 lg:row-end-3 min-h-[300px] min-w-[240px]"
 				text="Build"
 				imageUrl={build}
 				on:click={() =>
@@ -177,7 +177,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="md:col-start-2 md:row-start-7 md:row-end-[9] lg:col-start-3 lg:row-start-4 lg:row-end-7"
+				class="md:col-start-2 md:row-start-7 md:row-end-[9] lg:col-start-3 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
 				text="Founder's League"
 				imageUrl={founders_league}
 				on:click={() =>

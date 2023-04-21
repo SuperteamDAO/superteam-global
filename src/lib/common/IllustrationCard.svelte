@@ -1,4 +1,5 @@
 <script>
+	import ImageLoader from '$lib/ImageLoader.svelte';
 	import clsx from 'clsx';
 
 	export let imageUrl;
@@ -7,11 +8,11 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class={clsx('image-with-text rounded-lg cursor-pointer', $$props.class)} on:click>
-	<div class="image-with-text-content w-full h-full relative overflow-hidden rounded-lg">
-		<img
+	<div class="image-with-text-content min-w-[238px] min-h-[298px] w-full h-full relative overflow-hidden rounded-lg">
+		<ImageLoader
 			src={imageUrl}
-			width={300}
-			height={400}
+			width={240}
+			height={300}
 			class="rounded-lg absolute z-10 object-cover"
 			loading="lazy"
 			alt=""

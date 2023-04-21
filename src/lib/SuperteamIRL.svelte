@@ -43,7 +43,7 @@
 			Superteam IRL
 		</p>
 	</div>
-	<div class="col-span-5 flex flex-col md:grid gap-x-8 mt-11 lg:mt-4 superteam-irl-container">
+	<div class="col-span-5 flex flex-col gap-6 lg:grid lg:gap-x-8 lg:gap-y-0 mt-11 lg:mt-4 cards-container">
 			<IllustrationCard
 				imageUrl={buildstations}
 				text="BuildStations"
@@ -90,13 +90,28 @@
 </div>
 
 <style>
-	.superteam-irl-container {
+	.cards-container {
 		--row-factor: 8px;
+		column-gap: 32px;
 	}
+
+	@media (min-width: 768px) {
+		.cards-container {
+			grid-template-columns: repeat(2, 240px);
+			grid-template-rows: repeat(
+				3,
+				calc(5 * var(--row-factor)) calc(32.5 * var(--row-factor)) calc(5 * var(--row-factor))
+			);
+		}
+	}
+
 	@media (min-width: 1024px) {
-		.superteam-irl-container {
-			grid-template-columns: repeat(3, 300px);
-			grid-template-rows: calc(8 * var(--row-factor)) calc(42 * var(--row-factor)) calc(4 * var(--row-factor)) calc(4 * var(--row-factor));
+		.cards-container {
+			grid-template-columns: repeat(3, 320px);
+			grid-template-rows:
+				calc(8 * var(--row-factor)) calc(42 * var(--row-factor)) calc(4 * var(--row-factor))
+				calc(4 * var(--row-factor))
+				calc(4 * var(--row-factor)) calc(42 * var(--row-factor)) calc(8 * var(--row-factor));
 		}
 	}
 </style>
