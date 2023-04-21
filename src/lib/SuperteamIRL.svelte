@@ -34,7 +34,7 @@
 {/if}
 
 <div
-	class="mt-48 col-span-5 relative left-1/2 right-1/2 -translate-x-1/2 w-screen flex flex-col justify-center items-center"
+	class="superteam-irl mt-48 col-span-5 relative left-1/2 right-1/2 -translate-x-1/2 w-screen flex flex-col justify-center items-center"
 >
 	<div class="text-center font-primary">
 		<p
@@ -43,13 +43,11 @@
 			Superteam IRL
 		</p>
 	</div>
-	<div class="col-span-5 grid grid-cols-1 lg:grid lg:grid-cols-8 gap-[24px] mt-11 lg:mt-4">
-		<div />
-		<div class="col-span-1 lg:col-span-2 lg:col-start-2">
+	<div class="col-span-5 flex flex-col md:grid gap-x-8 mt-11 lg:mt-4 superteam-irl-container">
 			<IllustrationCard
 				imageUrl={buildstations}
 				text="BuildStations"
-				class="max-w-[300px] max-h-[400px]"
+				class="col-start-1 col-end-2 lg:row-start-1 lg:row-end-3"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
@@ -60,12 +58,10 @@
 						thunder
 					)}
 			/>
-		</div>
-		<div class="md:mt-14 col-span-1 lg:col-span-2">
 			<IllustrationCard
 				imageUrl={supermeets}
 				text="Supermeets"
-				class="max-w-[300px] max-h-[400px]"
+				class="col-start-2 col-end-3 lg:row-start-2 lg:row-end-4"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
@@ -76,23 +72,31 @@
 						thunder
 					)}
 			/>
-		</div>
-		<div class="col-span-1 lg:col-span-2">
 			<IllustrationCard
 				imageUrl={university_program}
 				text="University Program"
-				class="max-w-[300px] max-h-[400px]"
+				class="col-start-3 col-end-4 lg:row-start-1 lg:row-end-3"
 				on:click={() =>
-					openModal(
-						'our very own job listing and bounty platform to find every earning opportunity in solana',
-						'ST earn',
-						university_program,
-						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
-						'Visit ST Earn',
-						thunder
-					)}
+				openModal(
+					'our very own job listing and bounty platform to find every earning opportunity in solana',
+					'ST earn',
+					university_program,
+					['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
+					'Visit ST Earn',
+					thunder
+				)}
 			/>
-		</div>
-		<div />
 	</div>
 </div>
+
+<style>
+	.superteam-irl-container {
+		--row-factor: 8px;
+	}
+	@media (min-width: 1024px) {
+		.superteam-irl-container {
+			grid-template-columns: repeat(3, 300px);
+			grid-template-rows: calc(8 * var(--row-factor)) calc(42 * var(--row-factor)) calc(4 * var(--row-factor)) calc(4 * var(--row-factor));
+		}
+	}
+</style>

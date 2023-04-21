@@ -209,9 +209,9 @@
 		.cards-container {
 			grid-template-columns: repeat(3, 320px);
 			grid-template-rows:
-				calc(7 * var(--row-factor)) calc(43 * var(--row-factor)) calc(4 * var(--row-factor))
-				calc(3 * var(--row-factor))
-				calc(4 * var(--row-factor)) calc(43 * var(--row-factor)) calc(7 * var(--row-factor));
+				calc(8 * var(--row-factor)) calc(42 * var(--row-factor)) calc(4 * var(--row-factor))
+				calc(4 * var(--row-factor))
+				calc(4 * var(--row-factor)) calc(42 * var(--row-factor)) calc(8 * var(--row-factor));
 		}
 	}
 </style>
