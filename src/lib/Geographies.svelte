@@ -55,7 +55,7 @@
 <svelte:window />
 
 <div
-	class="carousel-main relative left-1/2 right-1/2 -translate-x-1/2 w-screen overflow-x-visible flex flex-col col-span-5"
+	class="carousel-main relative left-1/2 right-1/2 -translate-x-1/2 w-screen overflow-x-visible flex flex-col col-span-5 -mt-[130px]"
 >
 	<div
 		bind:this={carousel}
