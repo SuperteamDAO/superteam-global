@@ -67,7 +67,6 @@
 		margin-right: 10%;
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
-		font-weight: 600;
 		line-height: 31px;
 		color: #ffffff;
 	}
