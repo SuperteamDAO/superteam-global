@@ -13,6 +13,7 @@
 	import rightlight from '../assets/images/right-light.svg';
 	import toplight from '../assets/images/top-light.svg';
 	import bottomlight from '../assets/images/bottom-light.svg';
+	import midlight from '../assets/images/mid-light.svg';
 
 	let modalOpen = false;
 	let top_content;
@@ -75,13 +76,18 @@
 				src={leftlight}
 				alt=""
 				loading="lazy"
-				class="absolute -mt-[62px] justify-items-start lg:w-2/3 lg:h-full lg:left-0"
+				class="leftlight absolute -mt-[62px] justify-items-start lg:w-2/3 lg:h-full lg:left-0"
+			/>
+			<img
+				src={midlight}
+				alt=""
+				class="midlight absolute justify-items-center top-0 lg:w-[900px] left-[21%] 2xl:left-[32%] w-[900px] h-fit lg:-mt-[192px]"
 			/>
 			<img
 				src={rightlight}
 				alt=""
 				loading="lazy"
-				class="absolute z-10 justify-items-end w-full lg:w-3/4 lg:right-0 lg:h-full -mt-[222px]"
+				class="rightlight absolute z-10 justify-items-end w-full lg:w-3/4 lg:right-0 lg:h-full -mt-[222px]"
 			/>
 		</div>
 	</div>
@@ -201,8 +207,11 @@
 	@media (min-width: 768px) {
 		.cards-container {
 			grid-template-columns: repeat(2, 240px);
-			grid-template-rows: repeat(3, calc(5*var(--row-factor)) calc(32.5*var(--row-factor)) calc(5*var(--row-factor)));
-		}	
+			grid-template-rows: repeat(
+				3,
+				calc(5 * var(--row-factor)) calc(32.5 * var(--row-factor)) calc(5 * var(--row-factor))
+			);
+		}
 	}
 
 	@media (min-width: 1024px) {
