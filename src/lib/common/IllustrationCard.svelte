@@ -7,7 +7,7 @@
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class={clsx('image-with-text rounded-lg cursor-pointer', $$props.class)} on:click>
+<div class={clsx('image-with-text z-[1] rounded-lg cursor-pointer', $$props.class)} on:click>
 	<div class="image-with-text-content min-w-[238px] min-h-[298px] w-full h-full relative overflow-hidden rounded-lg">
 		<ImageLoader
 			src={imageUrl}
@@ -28,7 +28,6 @@
 <style>
 	.image-with-text {
 		position: relative;
-		z-index: 1;
 		background: #202020;
 		padding: 1px;
 		transition: background 0.5s ease;
