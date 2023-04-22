@@ -43,11 +43,11 @@
 			Superteam IRL
 		</p>
 	</div>
-	<div class="col-span-5 flex flex-col gap-6 lg:grid lg:gap-x-8 lg:gap-y-0 mt-11 lg:mt-4 cards-container">
+	<div class="relative gap-6 col-span-5 flex flex-col md:gap-0 md:grid lg:gap-x-8 lg:gap-y-0 mt-11 lg:mt-4 cards-container">
 			<IllustrationCard
 				imageUrl={buildstations}
 				text="BuildStations"
-				class="col-start-1 col-end-2 lg:row-start-1 lg:row-end-3"
+				class="md:z-[1] col-start-1 lg:col-end-2 md:col-end-3 md:row-start-2 md:row-end-5 lg:row-start-1 lg:row-end-3"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
@@ -61,7 +61,7 @@
 			<IllustrationCard
 				imageUrl={supermeets}
 				text="Supermeets"
-				class="col-start-2 col-end-3 lg:row-start-2 lg:row-end-5"
+				class="md:z-[2] md:col-start-2 md:col-end-5 lg:col-start-2 lg:col-end-3 md:row-start-3 md:row-end-6 lg:row-start-2 lg:row-end-5"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
@@ -75,7 +75,7 @@
 			<IllustrationCard
 				imageUrl={university_program}
 				text="University Program"
-				class="col-start-3 col-end-4 lg:row-start-1 lg:row-end-3"
+				class="md:z-[1] md:row-start-1 md:row-end-4 md:col-start-4 md:col-end-6 lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-3"
 				on:click={() =>
 				openModal(
 					'our very own job listing and bounty platform to find every earning opportunity in solana',
@@ -92,16 +92,16 @@
 <style>
 	.cards-container {
 		--row-factor: 8px;
-		column-gap: 32px;
 	}
 
 	@media (min-width: 768px) {
 		.cards-container {
-			grid-template-columns: repeat(2, 240px);
-			grid-template-rows: repeat(
-				3,
-				calc(5 * var(--row-factor)) calc(32.5 * var(--row-factor)) calc(5 * var(--row-factor))
-			);
+			grid-template-columns: 	calc(21 * var(--row-factor)) calc(9 * var(--row-factor))
+									calc(3.5 * var(--row-factor)) calc(17.5 * var(--row-factor)) 
+									calc(12.5 * var(--row-factor));
+			grid-template-rows: calc(4 * var(--row-factor)) calc(32.5 * var(--row-factor))
+				                var(--row-factor) calc(4 * var(--row-factor))
+								calc(32.5 * var(--row-factor));
 		}
 	}
 
