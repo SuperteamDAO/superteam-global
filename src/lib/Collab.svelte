@@ -1,6 +1,6 @@
 <script>
-	import collabpic from '../assets/images/collabpic.png';
-	import collabsm from '../assets/images/collab-sm.png';
+	import collabpic from '../assets/images/collabpic2.png';
+	import collabsm from '../assets/images/collab-sm2.png';
 	import PrimaryButton from './common/PrimaryButton.svelte';
 </script>
 
