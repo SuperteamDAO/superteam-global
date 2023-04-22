@@ -61,7 +61,7 @@
 			<IllustrationCard
 				imageUrl={supermeets}
 				text="Supermeets"
-				class="col-start-2 col-end-3 lg:row-start-2 lg:row-end-4"
+				class="col-start-2 col-end-3 lg:row-start-2 lg:row-end-5"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
