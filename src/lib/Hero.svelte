@@ -1,7 +1,7 @@
 <script>
 	import hero05x from '../assets/hero/hero_home0.5x.webp';
 	import hero from '../assets/hero/hero_home.webp';
-	import hero2x from '../assets/hero/hero_home2x.webp';
+	import hero1_5x from '../assets/hero/hero_home1.5x.webp';
 	import ImageLoader from './ImageLoader.svelte';
 	import HeroContainer from './common/HeroContainer.svelte';
 	export let line1 = '';
@@ -20,7 +20,7 @@
 		<div class="w-full h-full relative">
 			<ImageLoader
 				src={hero}
-				srcset={`${hero05x} 640w, ${hero} 12800w, ${hero2x} 2560w`}
+				srcset={`${hero05x} 640w, ${hero} 1280w, ${hero1_5x} 2560w`}
 				sizes="(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 2560px"
 				loading="lazy"
 				alt=""
