@@ -1,10 +1,10 @@
 <script>
-	import earn from '../assets/cards/earn.jpg';
-	import ecosystem_calls from '../assets/cards/ecosystem_calls.jpg';
-	import instagrants from '../assets/cards/instagrants.jpg';
-	import alphasquad from '../assets/cards/alphasquad.jpg';
-	import build from '../assets/cards/build.jpg';
-	import founders_league from '../assets/cards/founders_league.jpg';
+	import bounties from '../assets/images/bounties_new.png';
+	import grants from '../assets/images/grant_new.png';
+	import fellowships from '../assets/images/fellowships_new.png';
+	import hackathon from '../assets/images/hackathon_new.png';
+	import market from '../assets/images/market_new.png';
+	import bootcamps from '../assets/images/bootcamps_new.png';
 	import IllustrationCard from './common/IllustrationCard.svelte';
 	import instagrantsbg from '../assets/images/instagrantsbg.png';
 	import Modal from './common/Modal.svelte';
@@ -45,13 +45,13 @@
 		<div class="flex flex-col gap-8 lg:grid lg:gap-0 cards-container">
 			<IllustrationCard
 				text="Bounties"
-				imageUrl={earn}
+				imageUrl={bounties}
 				class="col-start-1 row-start-1 row-end-3"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
-						earn,
+						bounties,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -60,12 +60,12 @@
 			<IllustrationCard
 				class="col-start-1 row-start-4 row-end-7"
 				text="Bootcamps"
-				imageUrl={ecosystem_calls}
+				imageUrl={bootcamps}
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
-						ecosystem_calls,
+						bootcamps,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -73,13 +73,13 @@
 			/>
 			<IllustrationCard
 				class="col-start-2 row-start-2 row-end-5"
-				text="Grant Programs"
-				imageUrl={instagrants}
+				text="Fellowships"
+				imageUrl={fellowships}
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
-						instagrants,
+						fellowships,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -87,13 +87,13 @@
 			/>
 			<IllustrationCard
 				class="col-start-2 row-start-6 row-end-[8]"
-				text="Fellowships"
-				imageUrl={alphasquad}
+				text="Grant Programs"
+				imageUrl={grants}
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
-						alphasquad,
+						grants,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -102,12 +102,12 @@
 			<IllustrationCard
 				class="col-start-3 row-start-1 row-end-3"
 				text="Hackathon Sponsorships"
-				imageUrl={build}
+				imageUrl={hackathon}
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
-						build,
+						hackathon,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
@@ -116,12 +116,12 @@
 			<IllustrationCard
 				class="col-start-3 row-start-4 row-end-7"
 				text="Go-to-Market"
-				imageUrl={founders_league}
+				imageUrl={market}
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'ST earn',
-						founders_league,
+						market,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
 						thunder
