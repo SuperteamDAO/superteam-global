@@ -1,4 +1,5 @@
 <script>
+	import hero05x from '../assets/hero/hero_home0.5x.webp';
 	import hero from '../assets/hero/hero_home.webp';
 	import hero2x from '../assets/hero/hero_home2x.webp';
 	import ImageLoader from './ImageLoader.svelte';
@@ -19,8 +20,8 @@
 		<div class="w-full h-full relative">
 			<ImageLoader
 				src={hero}
-				srcset={`${hero} 1440w, ${hero2x} 2560w`}
-				sizes="(max-width: 1440px) 100vw, 2560px"
+				srcset={`${hero05x} 640w, ${hero} 1280w, ${hero2x} 1920w`}
+				sizes='(max-width: 640px) 640px, (min-width: 641px) and (max-width: 1280px) 1280px, 1920px'
 				loading="lazy"
 				alt=""
 				class="object-cover w-full h-full z-10"
