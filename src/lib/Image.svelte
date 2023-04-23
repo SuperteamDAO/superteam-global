@@ -22,4 +22,4 @@
     }
   </style>
   
-  <img {...$$props} class:loaded bind:this={thisImage} loading="lazy" />
+  <img {...$$props} class:loaded bind:this={thisImage} />
