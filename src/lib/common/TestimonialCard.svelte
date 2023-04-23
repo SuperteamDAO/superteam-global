@@ -19,7 +19,7 @@
 		</div>
 		<div class="flex flex-row mt-[40px]">
 			<div class="image w-[40px] h-[40px] mr-[24px]">
-				<ImageLoader src={imgurl} width={40} height={40} alt="" class="rounded-full" />
+				<ImageLoader src={imgurl} width={40} height={40} alt="" class="rounded-full" loading="lazy" />
 			</div>
 			<div class="user">
 				<div

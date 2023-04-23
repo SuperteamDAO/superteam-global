@@ -20,9 +20,9 @@
 		<div class="w-full h-full relative">
 			<ImageLoader
 				src={hero}
-				srcset={`${hero05x} 640w, ${hero} 1280w, ${hero1_5x} 2560w`}
-				sizes="(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 2560px"
-				loading="lazy"
+				srcset={`${hero05x} 640w, ${hero} 1440w, ${hero1_5x} 2560w`}
+				sizes="(max-width: 640px) 100vw, (max-width: 1440px) 100vw, 2560px"
+				loading="eager"
 				alt=""
 				class="object-cover w-full h-full z-10"
 			/>
