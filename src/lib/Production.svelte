@@ -12,6 +12,7 @@
 	import leftlight from '../assets/images/left-light.svg';
 	import rightlight from '../assets/images/right-light.svg';
 	import toplight from '../assets/images/top-light.svg';
+	import top_right_light from '../assets/images/top-right-light.svg';
 	import bottomlight from '../assets/images/bottom-light.svg';
 	import midlight from '../assets/images/mid-light.svg';
 
@@ -56,47 +57,87 @@
 	<div
 		class="absolute h-full bg-images left-1/2 right-1/2 -translate-x-1/2 w-screen flex flex-col lg:flex-row"
 	>
-		<div class="block lg:hidden">
+		<!-- Mobile -->
+		<picture class="block md:hidden">
+			<img
+				src={midlight}
+				alt=""
+				loading="lazy"
+				style="width: calc(100% + 100px); transform: scale(2.0);"
+				class="midlight-sm justify-items-center -mt-[100px] h-[300px] object-cover w-full -mr-[200px] overflow-visible"
+			/>
+		</picture>
+
+		<!-- Tablet -->
+		<picture class="hidden md:block lg:hidden">
+			<source media="(min-width: 768px)" />
 			<img
 				src={toplight}
 				alt=""
 				loading="lazy"
-				class="absolute -mt-[600px] justify-items-start w-full h-full"
+				class="absolute -mt-[600px] md:mt-0 md:h-[50%] md:w-full md:object-cover md:max-w-full md:overflow-y-visible justify-items-start w-full h-full"
 			/>
+		</picture>
+		<picture class="hidden md:block lg:hidden">
+			<source media="(min-width: 768px)" />
+			<img
+				src={midlight}
+				alt=""
+				loading="lazy"
+				class="midlight justify-items-center -mt-[200px] left-[21%] h-fit"
+			/>
+		</picture>
+		<picture class="hidden md:block lg:hidden">
+			<source media="(min-width: 768px)" />
+			<img
+				src={top_right_light}
+				alt=""
+				loading="lazy"
+				class="absolute justify-items-end w-3/5 scale-150 -mr-[50px] -mt-[100px] right-0 top-0"
+			/>
+		</picture>
+		<picture class="hidden md:block lg:hidden">
+			<source media="(min-width: 768px)" />
 			<img
 				src={bottomlight}
 				alt=""
 				loading="lazy"
-				class="absolute z-10 justify-items-end w-full right-0 h-full mt-[500px]"
+				class="absolute z-10 justify-items-end w-1/2 right-0 h-1/2 -mt-[250px]"
 			/>
-		</div>
+		</picture>
 
-		<div class="hidden lg:block">
+		<!-- Desktop -->
+		<picture class="hidden lg:block">
+			<source media="(min-width: 1024px)" />
 			<img
 				src={leftlight}
 				alt=""
 				loading="lazy"
 				class="leftlight absolute -mt-[62px] justify-items-start lg:w-2/3 lg:h-full lg:left-0"
 			/>
+		</picture>
+		<picture class="hidden lg:block">
+			<source media="(min-width: 1024px)" />
 			<img
 				src={midlight}
 				alt=""
 				loading="lazy"
 				class="midlight absolute justify-items-center top-0 lg:w-[900px] left-[21%] min-[2000px]:left-[32%] w-[900px] h-fit lg:-mt-[192px]"
 			/>
+		</picture>
+		<picture class="hidden lg:block">
+			<source media="(min-width: 1024px)" />
 			<img
 				src={rightlight}
 				alt=""
 				loading="lazy"
 				class="rightlight absolute z-10 justify-items-end w-full lg:w-3/4 lg:right-0 lg:h-full -mt-[222px]"
 			/>
-		</div>
+		</picture>
 	</div>
 
 	<div class="prod-head">
-		<p class="font-secondary font-semibold text-xl leading-[22px] text-white relative">
-			superteam
-		</p>
+		<p class="font-secondary font-semibold text-xl leading-[22px] text-white relative">superteam</p>
 
 		<div
 			class="section-heading relative text-[40px] md:text-[50px] lg:leading-[54px] leading-[44px]"
