@@ -1,4 +1,7 @@
 <script>
+	import hero from '../assets/hero/hero_home.webp';
+	import hero2x from '../assets/hero/hero_home2x.webp';
+	import ImageLoader from './ImageLoader.svelte';
 	import HeroContainer from './common/HeroContainer.svelte';
 	export let line1 = '';
 	export let line2 = '';
@@ -13,6 +16,16 @@
 		<div class="stars"></div>
 		<div class="stars2"></div>
 		<div class="stars3"></div>
+		<div class="w-full h-full relative">
+			<ImageLoader
+				src={hero}
+				srcset={`${hero} 1440w, ${hero2x} 2560w`}
+				sizes="(max-width: 1440px) 100vw, 2560px"
+				loading="lazy"
+				alt=""
+				class="object-cover w-full h-full z-10"
+			/>
+		</div>
 	</div>
 </section>
 
@@ -97,29 +110,9 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-image: url('../assets/hero/Hero_L2.webp');
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
 		z-index: 5;
 		transform-style: preserve-3d;
 		transform: translateZ(100px);
-	}
-
-	.hero-bg::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: url('../assets/hero/Hero_L1.png');
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		// transform-style: preserve-3d;
-		// transform: translateZ(200px);
-		z-index: 10;
 	}
 
 	@media (min-width: 768px) {

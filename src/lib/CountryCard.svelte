@@ -162,10 +162,6 @@
         @apply w-full h-full top-0 left-0 flex flex-row items-center justify-center rounded-lg overflow-hidden z-0;
     }
 
-    .card-content img {
-        filter: grayscale(100%) brightness(0.5);
-    }
-
     .shine, .glare {
         @apply absolute w-full h-full rounded-lg z-10;
         will-change: transform, opacity, background-image, background-size,

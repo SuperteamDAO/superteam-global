@@ -1,10 +1,10 @@
 <script>
 	import CountryCard from './CountryCard.svelte';
-	import india from '../assets/chapters/india.jpg';
-	import germany from '../assets/chapters/germany.jpg';
-	import turkey from '../assets/chapters/turkey.jpg';
-	import vietnam from '../assets/chapters/vietnam.jpg';
-	import mexico from '../assets/chapters/mexico.jpg';
+	import india from '../assets/chapters/india.webp';
+	import germany from '../assets/chapters/germany.webp';
+	import turkey from '../assets/chapters/turkey.webp';
+	import vietnam from '../assets/chapters/vietnam.webp';
+	import mexico from '../assets/chapters/mexico.webp';
 
 	/**
 	 * @type {HTMLElement}
