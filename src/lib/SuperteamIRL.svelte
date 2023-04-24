@@ -1,7 +1,7 @@
 <script>
-	import buildstations from '../assets/cards/buildstations.jpg';
-	import supermeets from '../assets/cards/super_meets.jpg';
-	import university_program from '../assets/cards/university_program.jpg';
+	import buildstations from '../assets/cards/build_stations.jpg';
+	import supermeets from '../assets/cards/super_meets_new.jpg';
+	import university_program from '../assets/cards/uni_prg.jpg';
 	import IllustrationCard from './common/IllustrationCard.svelte';
 	import Modal from './common/Modal.svelte';
 	import thunder from '../assets/logos/thunder.svg';
@@ -34,7 +34,7 @@
 {/if}
 
 <div
-	class="superteam-irl mt-48 col-span-5 relative left-1/2 right-1/2 -translate-x-1/2 w-screen flex flex-col justify-center items-center"
+	class="superteam-irl mt-[224px] col-span-5 relative left-1/2 right-1/2 -translate-x-1/2 w-screen flex flex-col justify-center items-center"
 >
 	<div class="text-center font-primary">
 		<p
