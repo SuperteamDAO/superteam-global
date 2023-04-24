@@ -38,6 +38,7 @@
 </script>
 
 <svelte:head>
+	<meta charset="UTF-8">
 	<link rel="preconnect" href="https://abs.twimg.com/">
 	<link rel="preconnect" href="https://api.twitter.com/">
 	<link rel="preconnect" href="https://pbs.twimg.com/">
@@ -51,6 +52,20 @@
 
 	<link rel="preconnect" href="https://res.cloudinary.com/">
 	<link rel="dns-prefetch" href="https://res.cloudinary.com/">
+	<meta name='keywords' content='crypto, technology, india, earn, build'>
+	<meta name='copyright' content='Superteam'>
+	<meta name='reply-to' content='hello@superteam.fun'>
+	<meta name='url' content='http://superteam.fun'>
+	<meta name='identifier-URL' content='http://superteam.fun'>
+	<meta name='coverage' content='Worldwide'>
+	<meta name='distribution' content='Global'>
+	<meta name="description" content="Superteam is a community of the best talent learning, earning and building in crypto.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="news_keywords" content="crypto">
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@SuperteamDAO" />
+	<meta name="twitter:description" content="a community of operators, devs & grantees working on promising @solana projects" />
+	<meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1505359960942657539/sMjuxRcg_400x400.jpg" />
 </svelte:head>
 
 <!-- <Scene size={{ width: width, height: height }} /> -->

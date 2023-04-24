@@ -9,6 +9,17 @@
 	import SuperteamIrl from '$lib/SuperteamIRL.svelte';
 </script>
 
+<svelte:head>
+	<title>Welcome to Superteam</title>
+	<meta name="description" content="">
+	<meta name='og:title' content='Welcome to Superteam'>
+	<meta name='og:type' content='community'>
+	<meta name='og:url' content='https://superteam.fun'>
+	<meta name='application-name' content='superteam'>
+	<meta name='og:email' content='hello@superteam.fun'>
+	<meta name="twitter:title" content="Welcome to Superteam" />
+</svelte:head>
+
 <Hero
 	line1="your portal to the"
 	line2="new world of crypto"

@@ -11,6 +11,18 @@
 	import hero1_5x from '../../assets/hero/hero_collaborate1.5x.png'
 </script>
 
+<svelte:head>
+	<title>Work with us</title>
+	<meta name="description" content="Explore projects Superteam Members around the world have built and launched!">
+	<meta name='og:title' content='Work with us'>
+	<meta name='og:type' content='community'>
+	<meta name='og:url' content='https://superteam.fun'>
+	<meta name='application-name' content='superteam'>
+	<meta name='og:email' content='hello@superteam.fun'>
+	<meta name="twitter:title" content="Work with us" />
+</svelte:head>
+
+
 <div class="col-span-5 h-fit">
 	<section class="hero relative col-span-5 h-[calc(100vh-40px-32px)] flex flex-col items-centerr">
 		<HeroContainer
