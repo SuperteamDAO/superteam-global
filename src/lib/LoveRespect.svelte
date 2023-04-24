@@ -11,7 +11,7 @@
 
 <div
 	class={clsx(
-		'respect-container h-fit md:h-fit mt-48 col-span-5 relative left-1/2 right-1/2 -translate-x-1/2 w-screen overflow-x-visible',
+		'respect-container h-fit md:h-fit mt-[224px] lg:-mt-[176px] col-span-5 relative left-1/2 right-1/2 -translate-x-1/2 w-screen overflow-x-visible',
 		collab ? 'h-fit sm:h-fit md:h-fit' : ''
 	)}
 >
