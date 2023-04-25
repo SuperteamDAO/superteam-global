@@ -7,8 +7,8 @@
 	import Partners from '$lib/Partners.svelte';
 	import Production from '$lib/Production.svelte';
 	import SuperteamIrl from '$lib/SuperteamIRL.svelte';
-	import hero05x from '../../assets/hero/hero_home0.5x.webp';
-	import hero from '../../assets/hero/hero_home.webp';
+	import hero05x from '../assets/hero/hero_home0.5x.webp';
+	import hero from '../assets/hero/hero_home.webp';
 	import hero1_5x from '../assets/hero/hero_home1.5x.webp';
 </script>
 
