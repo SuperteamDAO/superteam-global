@@ -6,22 +6,24 @@
 	import Collab from '$lib/Collab.svelte';
 	import ImageLoader from '$lib/ImageLoader.svelte';
 
-	import hero05x from '../../assets/hero/hero_collaborate0.5x.png'
-	import hero from '../../assets/hero/hero_collaborate.png'
-	import hero1_5x from '../../assets/hero/hero_collaborate1.5x.png'
+	import hero05x from '../../assets/hero/hero_collaborate0.5x.png';
+	import hero from '../../assets/hero/hero_collaborate.png';
+	import hero1_5x from '../../assets/hero/hero_collaborate1.5x.png';
 </script>
 
 <svelte:head>
 	<title>Work with us</title>
-	<meta name="description" content="Explore projects Superteam Members around the world have built and launched!">
-	<meta name='og:title' content='Work with us'>
-	<meta name='og:type' content='community'>
-	<meta name='og:url' content='https://superteam.fun'>
-	<meta name='application-name' content='superteam'>
-	<meta name='og:email' content='hello@superteam.fun'>
+	<meta
+		name="description"
+		content="Explore projects Superteam Members around the world have built and launched!"
+	/>
+	<meta name="og:title" content="Work with us" />
+	<meta name="og:type" content="community" />
+	<meta name="og:url" content="https://superteam.fun" />
+	<meta name="application-name" content="superteam" />
+	<meta name="og:email" content="hello@superteam.fun" />
 	<meta name="twitter:title" content="Work with us" />
 </svelte:head>
-
 
 <div class="col-span-5 h-fit">
 	<section class="hero relative col-span-5 h-[calc(100vh-40px-32px)] flex flex-col items-centerr">
@@ -33,9 +35,9 @@
 			buttonVisible={false}
 		/>
 		<div class="hero-bg absolute top-0 left-0 w-full h-[calc(100vh)] overflow-hidden">
-			<div class="stars"></div>
-			<div class="stars2"></div>
-			<div class="stars3"></div>
+			<div class="stars" />
+			<div class="stars2" />
+			<div class="stars3" />
 			<div class="w-full h-full relative">
 				<ImageLoader
 					src={hero}
@@ -54,7 +56,7 @@
 
 	<CollabServices />
 
-	<LoveRespect />
+	<LoveRespect collab={true} />
 	<Collab />
 </div>
 
@@ -76,18 +78,17 @@
 			transform: translateY(0px);
 		}
 		to {
-			transform: translateY(-#{$starFieldHeight}px)
+			transform: translateY(-#{$starFieldHeight}px);
 		}
 	}
 
-
 	@function create-stars($n) {
-  		$stars: "#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";
+		$stars: '#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF';
 
 		@for $i from 2 through $n {
-			$stars: "#{$stars} , #{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";
+			$stars: '#{$stars} , #{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF';
 		}
-  		@return unquote($stars);
+		@return unquote($stars);
 	}
 
 	@mixin star-template($numStars, $starSize, $scrollSpeed) {
@@ -99,7 +100,7 @@
 		box-shadow: create-stars($numStars);
 		animation: animStar $scrollSpeed linear infinite;
 		&:after {
-			content: " ";
+			content: ' ';
 			top: -$starStartOffset;
 			width: $starSize;
 			height: $starSize;
