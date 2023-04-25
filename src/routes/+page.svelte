@@ -13,9 +13,13 @@
 </script>
 
 <svelte:head>
-	<link rel="preload" as="image" href={hero05x} />
-	<link rel="preload" as="image" href={hero} />
-	<link rel="preload" as="image" href={hero1_5x} />
+	<link
+		rel="preload"
+		as="image"
+		href={hero05x}
+		imagesrcset={`${hero05x} 640w, ${hero} 1440w, ${hero1_5x} 2560w`}
+		imagesizes="(max-width: 640px) 100vw, (max-width: 1440px) 100vw, 2560px"
+	/>
 	<title>Welcome to Superteam</title>
 	<meta name="description" content="" />
 	<meta name="og:title" content="Welcome to Superteam" />
