@@ -31,7 +31,7 @@
 	sizes="(max-width: 640px) 100vw, (max-width: 1440px) 100vw, 2560px"
 	loading="eager"
 	alt=""
-	class="absolute top-0 left-0 w-full object-cover"
+	class="absolute top-0 left-0 w-full object-cover -mt-[72px]"
 />
 
 <section class="relative col-span-5 flex flex-col items-center pb-[300px]">
