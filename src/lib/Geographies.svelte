@@ -19,35 +19,40 @@
 			path: india,
 			countryGradient:
 				'linear-gradient(135deg, #FF9A37 0%, rgba(255, 255, 255, 0.8) 48.96%, #369A2C 100%)',
-			invert: false
+			invert: false,
+			href: 'https://in.superteam.fun/'
 		},
 		{
 			key: 'germany',
 			name: 'Germany',
 			path: germany,
 			countryGradient: 'linear-gradient(151.47deg, #D70000 0%, #FFFFFF 50.7%, #FFB701 98.53%)',
-			invert: true
+			invert: true,
+			href: 'https://de.superteam.fun/'
 		},
 		{
 			key: 'turkey',
 			name: 'Turkey',
 			path: turkey,
 			countryGradient: 'linear-gradient(151.47deg, #DA1212 0%, #FFFFFF 50.7%, #D70000 98.53%)',
-			invert: false
+			invert: false,
+			href: 'https://tr.superteam.fun/'
 		},
 		{
 			key: 'vietnam',
 			name: 'Vietnam',
 			path: vietnam,
 			countryGradient: 'linear-gradient(151.47deg, #FFB701 0%, #FFFFFF 50.7%, #D70000 98.53%)',
-			invert: true
+			invert: true,
+			href: 'https://vn.superteam.fun/'
 		},
 		{
 			key: 'mexico',
 			name: 'Mexico',
 			path: mexico,
 			countryGradient: 'linear-gradient(161.18deg, #00B17B -3.45%, #FFFFFF 47.74%, #FF4D60 96.31%)',
-			invert: true
+			invert: true,
+			href: 'https://mx.superteam.fun/'
 		}
 	];
 </script>
@@ -63,12 +68,14 @@
 	>
 		<!-- <div class="left-offset" /> -->
 		{#each countries as country}
-			<CountryCard
-				imgPath={country.path}
-				name={country.name}
-				countryGradient={country.countryGradient}
-				invert={true}
-			/>
+			<a href={country.href} target="_blank">
+				<CountryCard
+					imgPath={country.path}
+					name={country.name}
+					countryGradient={country.countryGradient}
+					invert={true}
+				/>
+			</a>
 		{/each}
 	</div>
 	<!-- <button class="text-white">Right</button> -->
