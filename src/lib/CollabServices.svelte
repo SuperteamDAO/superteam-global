@@ -39,14 +39,14 @@
 	{/if}
 
 	<div>
-		<p class="section-heading center-text md:mb-0 mb-[68px]">Services</p>
+		<p class="section-heading center-text lg:mb-0 mb-[68px]">Services</p>
 	</div>
 	<div class="flex justify-center items-center">
-		<div class="flex flex-col gap-8 lg:grid lg:gap-0 cards-container">
+		<div class="flex flex-col max-w-[240px] sm:max-w-full gap-8 md:grid md:gap-0 cards-container">
 			<IllustrationCard
 				text="Bounties"
 				imageUrl={bounties}
-				class="col-start-1 row-start-1 row-end-3"
+				class="md:col-start-1 md:row-start-2 md:row-end-4 lg:row-start-1 lg:row-end-3 min-h-[300px] min-w-[240px]"
 				on:click={() =>
 					openModal(
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
@@ -58,7 +58,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-1 row-start-4 row-end-7"
+				class="md:col-start-2 md:row-start-1 md:row-end-3 lg:col-start-1 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
 				text="Bootcamps"
 				imageUrl={bootcamps}
 				on:click={() =>
@@ -72,7 +72,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-2 row-start-2 row-end-5"
+				class="md:col-start-1 md:row-start-5 md:row-end-7 lg:col-start-2 lg:row-start-2 lg:row-end-5 min-h-[300px] min-w-[240px]"
 				text="Fellowships"
 				imageUrl={fellowships}
 				on:click={() =>
@@ -86,7 +86,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-2 row-start-6 row-end-[8]"
+				class="md:col-start-2 md:row-start-4 md:row-end-6 lg:col-start-2 lg:row-start-6 lg:row-end-[-1] min-h-[300px] min-w-[240px]"
 				text="Grant Programs"
 				imageUrl={grants}
 				on:click={() =>
@@ -100,7 +100,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-3 row-start-1 row-end-3"
+				class="md:col-start-1 md:row-start-[8] md:row-end-[10] lg:col-start-3 lg:row-start-1 lg:row-end-3 min-h-[300px] min-w-[240px]"
 				text="Hackathon Sponsorships"
 				imageUrl={hackathon}
 				on:click={() =>
@@ -114,7 +114,7 @@
 					)}
 			/>
 			<IllustrationCard
-				class="col-start-3 row-start-4 row-end-7"
+				class="md:col-start-2 md:row-start-7 md:row-end-[9] lg:col-start-3 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
 				text="Go-to-Market"
 				imageUrl={market}
 				on:click={() =>
@@ -148,13 +148,23 @@
 		column-gap: 32px;
 	}
 
+	@media (min-width: 768px) {
+		.cards-container {
+			grid-template-columns: repeat(2, 240px);
+			grid-template-rows: repeat(
+				3,
+				calc(5 * var(--row-factor)) calc(32.5 * var(--row-factor)) calc(5 * var(--row-factor))
+			);
+		}
+	}
+
 	@media (min-width: 1024px) {
 		.cards-container {
 			grid-template-columns: repeat(3, 320px);
 			grid-template-rows:
-				calc(7 * var(--row-factor)) calc(43 * var(--row-factor)) calc(4 * var(--row-factor))
-				calc(3 * var(--row-factor))
-				calc(4 * var(--row-factor)) calc(43 * var(--row-factor)) calc(7 * var(--row-factor));
+				calc(8 * var(--row-factor)) calc(42 * var(--row-factor)) calc(4 * var(--row-factor))
+				calc(4 * var(--row-factor))
+				calc(4 * var(--row-factor)) calc(42 * var(--row-factor)) calc(8 * var(--row-factor));
 		}
 	}
 </style>
