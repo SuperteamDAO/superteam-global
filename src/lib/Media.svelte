@@ -13,7 +13,7 @@
 		<div
 			class="flex flex-col lg:flex-row w-full lg:justify-center items-center gap-[32px] mt-[64px]"
 		>
-			<div class="img-container z-[1] rounded-md">
+			<a href="https://superteam.substack.com/" target="_blank" class="img-container z-[1] rounded-md">
 				<div class="cursor-pointer p-[1px]">
 					<p
 						class="img-heading absolute font-secondary font-semibold text-[18px] md:text-[24px] leading-[26px] text-white mt-[24px] ml-[24px]"
@@ -27,8 +27,8 @@
 						class="img-heading h-[90px] md:h-[150px] w-[295px] md:w-[624px] lg:w-[489px]"
 					/>
 				</div>
-			</div>
-			<div class="img-container z-[1] rounded-md">
+			</a>
+			<a href="https://www.youtube.com/results?search_query=superteam+podcast" target="_blank" class="img-container z-[1] rounded-md">
 				<div class="cursor-pointer">
 					<p
 						class="absolute font-secondary font-semibold text-[18px] md:text-[24px] leading-[26px] text-white mt-[24px] ml-[24px]"
@@ -42,7 +42,7 @@
 						class="h-[90px] md:h-[150px] w-[295px] md:w-[624px] lg:w-[489px]"
 					/>
 				</div>
-			</div>
+			</a>
 		</div>
 	</div>
 </div>
