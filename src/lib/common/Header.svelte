@@ -49,7 +49,7 @@
 	class={clsx('w-full relative z-10 col-span-5 flex items-center justify-between mt-8', $$props.class)}
 	style="transform: translateY({$pos}px);"
 >
-	<a href="/">
+	<a href="/" aria-label="superteam">
 		<NamedLogo />
 	</a>
 	<div class="hidden md:inline">
@@ -67,7 +67,7 @@
 			</button>
 		</div>
 	</div>
-	<button on:click={toggleMenu} class="inline md:hidden">
+	<button on:click={toggleMenu} class="inline md:hidden" aria-label="Menu button">
 		<svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M0.320312 1.00781H24.3825" stroke="white" stroke-width="2.00518"/>
 			<path d="M0.320312 11.0337H24.3825" stroke="white" stroke-width="2.00518"/>
