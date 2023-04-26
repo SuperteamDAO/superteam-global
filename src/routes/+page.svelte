@@ -7,16 +7,26 @@
 	import Partners from '$lib/Partners.svelte';
 	import Production from '$lib/Production.svelte';
 	import SuperteamIrl from '$lib/SuperteamIRL.svelte';
+	import hero05x from '../assets/hero/hero_home0.5x.webp';
+	import hero from '../assets/hero/hero_home.webp';
+	import hero1_5x from '../assets/hero/hero_home1.5x.webp';
 </script>
 
 <svelte:head>
+	<link
+		rel="preload"
+		as="image"
+		href={hero05x}
+		imagesrcset={`${hero05x} 640w, ${hero} 1440w, ${hero1_5x} 2560w`}
+		imagesizes="(max-width: 640px) 100vw, (max-width: 1440px) 100vw, 2560px"
+	/>
 	<title>Welcome to Superteam</title>
-	<meta name="description" content="">
-	<meta name='og:title' content='Welcome to Superteam'>
-	<meta name='og:type' content='community'>
-	<meta name='og:url' content='https://superteam.fun'>
-	<meta name='application-name' content='superteam'>
-	<meta name='og:email' content='hello@superteam.fun'>
+	<meta name="description" content="" />
+	<meta name="og:title" content="Welcome to Superteam" />
+	<meta name="og:type" content="community" />
+	<meta name="og:url" content="https://superteam.fun" />
+	<meta name="application-name" content="superteam" />
+	<meta name="og:email" content="hello@superteam.fun" />
 	<meta name="twitter:title" content="Welcome to Superteam" />
 </svelte:head>
 

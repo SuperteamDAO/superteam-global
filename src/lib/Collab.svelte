@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="collab-container col-span-5 flex flex-col justify-center align-middle relative left-1/2 right-1/2 -translate-x-1/2 w-screen -mt-[70px] md:-mt-[150px] -mb-[50px] md:-mb-[20px] lg:-mb-[30px] z-1 bg-black h-fit md:rounded-[64px] md:h-fit"
+	class="collab-container col-span-5 flex flex-col justify-center align-middle relative left-1/2 right-1/2 -translate-x-1/2 w-screen -mt-[70px] md:-mt-[250px] -mb-[50px] md:-mb-[20px] lg:-mb-[30px] z-1 bg-black h-fit md:rounded-[64px] md:h-fit"
 >
 	<div class="overlay absolute w-full h-full hidden md:block" />
 	<ImageLoader
