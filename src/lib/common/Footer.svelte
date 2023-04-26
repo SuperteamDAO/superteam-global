@@ -23,18 +23,22 @@
 		<div
 			class="footer-texts mt-[64px] lg:mt-0 lg:ml-0 ml-[40px] lg:mr-[72px] text-white lg:text-right flex md:flex-row flex-col"
 		>
-			<div class="text-col-1">
-				<p class="footer-text">Instagrants</p>
-				<p class="footer-text mt-4">Earn</p>
+			<div class="text-col-1 flex flex-col items-end gap-4">
+				<a href="https://twitter.com/SuperteamDAO" target="_blank" class="footer-text">Twitter</a>
+				<a href="mailto:hello@superteam.fun" target="_blank" class="footer-text">Email</a>
+				<a href="https://superteam.substack.com/" target="_blank" class="footer-text">Blog</a>
+				<a href="https://www.youtube.com/channel/UCi-pkXLbm7sqXFhV1NBLUfQ" target="_blank" class="footer-text">Podcast</a>
+				<!-- <p class="footer-text mt-4">Earn</p>
 				<p class="footer-text mt-4">Ecosystem Calls</p>
 				<p class="footer-text mt-4">Alpha Squad</p>
-				<p class="footer-text mt-4">Founder's League</p>
+				<p class="footer-text mt-4">Founder's League</p> -->
 			</div>
-			<div class="text-col-2 md:ml-[164px] lg:ml-[123px] md:mt-0 mt-[64px] lg:mb-0 mb-[72px]">
-				<p class="footer-text">SuperteamIN</p>
-				<p class="footer-text mt-4">SuperteamGER</p>
-				<p class="footer-text mt-4">SuperteamTUR</p>
-				<p class="footer-text mt-4">SuperteamMEX</p>
+			<div class="text-col-2 md:ml-[164px] lg:ml-[123px] md:mt-0 mt-[64px] lg:mb-0 mb-[72px] flex flex-col items-end gap-4">
+				<a href="https://in.superteam.fun/" target="_blank" class="footer-text">SuperteamIN</a>
+				<a href="https://de.superteam.fun/" target="_blank" class="footer-text">SuperteamDE</a>
+				<a href="https://tr.superteam.fun/" target="_blank" class="footer-text">SuperteamTR</a>
+				<a href="https://vn.superteam.fun/" target="_blank" class="footer-text">SuperteamVN</a>
+				<a href="https://mx.superteam.fun/" target="_blank" class="footer-text">SuperteamMX</a>
 			</div>
 		</div>
 	</div>
