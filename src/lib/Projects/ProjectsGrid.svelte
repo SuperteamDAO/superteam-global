@@ -32,7 +32,7 @@
 
 </script>
 
-<div class="flex justify-center items-center mt-[42px]">
+<div class="flex justify-center items-center mt-[42px] z-20">
 	<div class="flex flex-col gap-8 md:grid md:gap-0 cards-container">
         {#each projects as { fields }, index}
             <ProjectCard
