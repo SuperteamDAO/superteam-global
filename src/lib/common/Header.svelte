@@ -62,7 +62,7 @@
 	>
 		<div class="flex-1 flex flex-col items-center">
 			<MenuButtons />
-			<button on:click={toggleMenu} class="mt-8 text-white px-8">
+			<button on:click={toggleMenu} class="mt-8 text-white px-8" aria-label="Close button">
 				<X size={24} />
 			</button>
 		</div>
