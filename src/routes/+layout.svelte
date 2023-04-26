@@ -64,7 +64,6 @@
 	<meta name="news_keywords" content="crypto">
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@SuperteamDAO" />
-	<meta name="twitter:description" content="a community of operators, devs & grantees working on promising @solana projects" />
 	<meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1505359960942657539/sMjuxRcg_400x400.jpg" />
 </svelte:head>
 
