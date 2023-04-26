@@ -40,7 +40,7 @@
 </script>
 
 <div
-	class="productions-container relative col-span-5 mt-44 flex flex-col justify-center text-center"
+	class="productions-container relative col-span-5 mt-[224px] flex flex-col justify-center text-center"
 >
 	{#if modalOpen}
 		<Modal {imgurl} {text} {top_content} {points} {btnText} on:close={closeModal} />
@@ -240,7 +240,6 @@
 		@apply font-primary;
 		font-style: normal;
 		text-align: center;
-		letter-spacing: -0.04em;
 
 		color: #ffffff;
 	}
