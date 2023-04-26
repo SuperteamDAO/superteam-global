@@ -168,12 +168,12 @@
             background-position, background-blend-mode, filter;
     }
     .shine {
-        mask-image: url('../assets/cards/invert.jpg');
+        mask-image: url('../assets/cards/invert.webp');
         background-image:
             radial-gradient(circle at var(--mouseX) var(--mouseY), #fff 5%, #000 50%, #fff 80% ),
             var(--country-gradient),
             url('../assets/cards/grain.webp'),
-            url('../assets/cards/monochrome.jpg');
+            url('../assets/cards/monochrome.webp');
         background-blend-mode: soft-light, darken, difference, difference;
         background-size: 120% 120%, 150% 150%, cover, cover;
         background-position: center center, calc((50% * var(--mouse-from-left))) calc((100% * var(--mouse-from-top))) , center center, center center;
@@ -184,12 +184,12 @@
     }
 
     .invert-shine {
-        mask-image: url('../assets/cards/monochrome.jpg');
+        mask-image: url('../assets/cards/monochrome.webp');
         background-image:
-            radial-gradient(circle at var(--mouseX) var(--mouseY), #fff 5%, #000 50%, #fff 80% ),
+            radial-gradient(circle at var(--mouseX) var(--mouseY), #fff 5%, #000 50%, #fff 80%),
             var(--country-gradient),
             url('../assets/cards/grain.webp'),
-            url('../assets/cards/invert.jpg');
+            url('../assets/cards/invert.webp');
     }
 
     .glare {
