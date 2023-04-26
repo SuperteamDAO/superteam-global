@@ -123,7 +123,7 @@
         <div class="shine" class:invert-shine={invert} ></div>
         <div class="glare"></div>
         <div class="card-content">
-            <ImageLoader src={imgPath} alt={name} class="brightness-50 grayscale" loading="lazy" />
+            <ImageLoader src={imgPath} alt={name} loading="lazy" />
             <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-end pb-10">
                 <p class="text-white font-secondary font-semibold text-[24px] country-name">
                     {name}
