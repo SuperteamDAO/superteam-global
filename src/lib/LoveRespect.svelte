@@ -137,7 +137,7 @@
 		width: 100%;
 	}
 	.item-container {
-		--scroll-duration: 40s;
+		--scroll-duration: 80s;
 		--factor: 1;
 		--displacement: 0%;
 		--scroll-duration-hover: 60s;
@@ -156,7 +156,7 @@
 	@media (min-width: 1670px) {
 		.scroll-wrapper {
 			grid-template-columns: repeat(3, auto);
-			--scroll-duration: 40s;
+			--scroll-duration: 80s;
 		}
 	}
 
