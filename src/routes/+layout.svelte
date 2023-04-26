@@ -6,35 +6,35 @@
 
 	import Header from "$lib/common/Header.svelte";
   	import Footer from "$lib/common/Footer.svelte";
+	import Analytics from '$lib/common/Analytics.svelte';
 
-	import { navigating } from '$app/stores'
-	import { loading } from '../store/loading'
-	import { onMount } from 'svelte';
+	// import { navigating } from '$app/stores'
+	// import { loading } from '../store/loading'
+	// import { onMount } from 'svelte';
 
-	let imagesLoaded = 0
-	let isLoaded = false
-	let imgCount = 0
-	let imgError = 0
+	// let imagesLoaded = 0
+	// let isLoaded = false
+	// let imgCount = 0
+	// let imgError = 0
 
-	onMount(() => {
-		const imgs = document.querySelectorAll('img')
-		imgs.forEach(img => {
-			img.addEventListener('load', () => {
-				imagesLoaded++
-			})
-		})
+	// onMount(() => {
+	// 	const imgs = document.querySelectorAll('img')
+	// 	imgs.forEach(img => {
+	// 		img.addEventListener('load', () => {
+	// 			imagesLoaded++
+	// 		})
+	// 	})
 
-		window.addEventListener("error", (event) => {
-			imgError++;
-		}, true);
-	})
+	// 	window.addEventListener("error", (event) => {
+	// 		imgError++;
+	// 	}, true);
+	// })
 
-	$: if (imagesLoaded + imgError === imgCount) {
-		isLoaded = true
-	}
+	// $: if (imagesLoaded + imgError === imgCount) {
+	// 	isLoaded = true
+	// }
 
-	$: console.log(isLoaded)
-	$: loading.setNavigate(!!$navigating)
+	// $: loading.setNavigate(!!$navigating)
 </script>
 
 <svelte:head>
@@ -66,6 +66,8 @@
 	<meta name="twitter:site" content="@SuperteamDAO" />
 	<meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1505359960942657539/sMjuxRcg_400x400.jpg" />
 </svelte:head>
+
+<Analytics />
 
 <!-- <Scene size={{ width: width, height: height }} /> -->
 
