@@ -5,12 +5,12 @@
 	import '../utils/gsap';
 
 	import Header from "$lib/common/Header.svelte";
-  	import Footer from "$lib/common/Footer.svelte";
+	import Footer from "$lib/common/Footer.svelte";
 	import Analytics from '$lib/common/Analytics.svelte';
-
-	// import { navigating } from '$app/stores'
+	
 	// import { loading } from '../store/loading'
-	// import { onMount } from 'svelte';
+	import { disableScrollHandling } from '$app/navigation';
+	import { onMount } from 'svelte';
 
 	// let imagesLoaded = 0
 	// let isLoaded = false
@@ -35,6 +35,9 @@
 	// }
 
 	// $: loading.setNavigate(!!$navigating)
+	onMount(async () => {
+    	disableScrollHandling();
+	});
 </script>
 
 <svelte:head>
