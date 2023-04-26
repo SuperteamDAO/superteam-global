@@ -2,7 +2,7 @@
 	import wormhole from '../assets/logos/wormhole.svg';
 	import foundation from '../assets/logos/foundation.svg';
 	import backpack from '../assets/logos/backpack.svg';
-	import ftx from '../assets/logos/ftx.svg';
+	import circle from '../assets/logos/circle.svg';
 </script>
 
 <div class="partners-container col-span-5 w-full flex flex-col items-center mt-[224px]">
@@ -21,7 +21,9 @@
 		<a href="https://www.backpack.app/" target="_blank">
 			<img class="logo backpack h-8 w-auto" src={backpack} alt="Backpack" loading="lazy" />
 		</a>
-		<img class="logo ftx h-8 w-auto opacity-30" src={ftx} alt="FTX" loading="lazy" />
+		<a href="https://www.circle.com/en/pressroom" target="_blank">
+			<img class="logo backpack h-8 w-auto" src={circle} alt="Backpack" loading="lazy" />
+		</a>
 	</div>
 </div>
 
