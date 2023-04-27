@@ -28,7 +28,7 @@
 					/>
 				</div>
 			</a>
-			<a href="https://www.youtube.com/results?search_query=superteam+podcast" target="_blank" class="img-container z-[1] rounded-md">
+			<a href="https://www.youtube.com/@superteampodcast" target="_blank" class="img-container z-[1] rounded-md">
 				<div class="cursor-pointer">
 					<p
 						class="absolute font-secondary font-semibold text-[18px] md:text-[24px] leading-[26px] text-white mt-[24px] ml-[24px]"
