@@ -7,7 +7,8 @@
 	import Header from "$lib/common/Header.svelte";
 	import Footer from "$lib/common/Footer.svelte";
 	import Analytics from '$lib/common/Analytics.svelte';
-	
+	import cover from "../assets/superteam-cover.png";
+
 	// import { loading } from '../store/loading'
 	import { disableScrollHandling } from '$app/navigation';
 	import { onMount } from 'svelte';
@@ -67,7 +68,17 @@
 	<meta name="news_keywords" content="crypto">
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@SuperteamDAO" />
-	<meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1505359960942657539/sMjuxRcg_400x400.jpg" />
+	<meta name="twitter:title" content="Welcome to Superteam" />
+	<meta name="twitter:image" content={cover}>
+	<meta name="og:image" content={cover}>
+	<meta name="og:site_name" content="Superteam">
+	<meta name="og:title" content="Welcome to Superteam" />
+	<meta name="og:type" content="community" />
+	<meta name="og:url" content="https://superteam.fun" />
+	<meta name="application-name" content="superteam" />
+	<meta name="og:email" content="hello@superteam.fun" />
+	<meta name="og:description" content="Superteam is a community of the best talent learning, earning and building in crypto.">
+	<!-- <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1505359960942657539/sMjuxRcg_400x400.jpg" /> -->
 </svelte:head>
 
 <Analytics />
