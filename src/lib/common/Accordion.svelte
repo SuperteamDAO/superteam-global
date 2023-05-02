@@ -42,8 +42,8 @@
 					alt=""
 					class={clsx(
 						isOpen
-							? 'accordion-image overflow-visible h-[400px] w-[340px]'
-							: 'w-[340px] overflow-hidden'
+							? 'accordion-image  w-[340px]'
+							: 'accordion-image-closed w-[340px] overflow-hidden object-cover'
 					)}
 				/>
 			</div>
@@ -95,20 +95,27 @@
 	}
 	.open {
 		height: 400px;
-		transition: height 0.5s ease-in-out;
+		transition: height 0.3s ease-in-out;
 	}
 
 	.closed {
 		height: 100px;
 		overflow: hidden;
-		transition: height 0.5s ease-in-out;
+		transition: height 0.3s ease-in-out;
+	}
+	.accordion-image {
+		height: 400px;
+		transition: height 0.3s ease-in-out;
+	}
+	.accordion-image-closed {
+		height: 100px;
+		overflow: hidden;
+		transition: height 0.3s ease-in-out;
 	}
 
 	.accordion-content,
-	.accordion-btn,
-	.accordion-image {
-		opacity: 0;
-		transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+	.accordion-btn {
+		transition: opacity 1s ease-in-out, transform 0.7s ease-in-out;
 	}
 
 	.open .accordion-content {
@@ -127,15 +134,6 @@
 	}
 
 	.closed .accordion-btn {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-	.open .accordion-image {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	.closed .accordion-image {
 		opacity: 0;
 		transform: translateY(20px);
 	}
