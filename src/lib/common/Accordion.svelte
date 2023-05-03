@@ -166,5 +166,9 @@
 			justify-content: center;
 			height: 122px;
 		}
+		.accordion-content,
+		.accordion-btn {
+			transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+		}
 	}
 </style>
