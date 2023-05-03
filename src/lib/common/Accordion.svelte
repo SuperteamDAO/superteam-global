@@ -23,33 +23,40 @@
 		on:click={toggleAccordion}
 	>
 		<div class="h-[100px] flex flex-row justify-between">
-			<div class="flex flex-row items-center">
-				<div class="ml-[64px] font-semibold text-[24px] leading-[26px] font-secondary">
+			<div class="flex flex-col max-md:mt-[32px] text-left md:flex-row md:items-center w-full">
+				<div
+					class="ml-[32px] md:ml-[64px] z-[1] text-left font-semibold max-[360px]:text-[20px] text-[24px] leading-[26px] font-secondary"
+				>
 					<p>{heading}</p>
 				</div>
 				<div
 					class={clsx(
-						'ml-[48px] font-primary text-[18px] leading-[24px] font-medium',
+						'ml-[32px] max-md:mt-[8px] md:ml-[48px] font-primary max-[360px]:text-[15px] text-[18px] z-[1] leading-[24px] font-medium',
 						isOpen ? 'hidden' : 'visible'
 					)}
 				>
 					<p>{subheading}</p>
 				</div>
 			</div>
-			<div class="h-fit">
+			<div class="h-fit image-container">
 				<img
 					src={image}
 					alt=""
 					class={clsx(
 						isOpen
-							? 'accordion-image  w-[340px]'
-							: 'accordion-image-closed w-[340px] overflow-hidden object-cover'
+							? 'accordion-image absolute md:relative w-full max-md:left-0 md:w-[340px] max-md:z-0'
+							: 'accordion-image-closed absolute md:relative w-full max-md:left-0 md:w-[340px] max-md:z-0 overflow-hidden object-cover'
 					)}
 				/>
 			</div>
 		</div>
-		<div class={clsx('mt-[16px] text-left ml-[64px] h-fit w-[267px]', 'accordion-content')}>
-			<div class="font-primary text-[18px] leading-[24px]">
+		<div
+			class={clsx(
+				'md:mt-[16px] text-left ml-[32px] md:ml-[64px] h-fit md:w-[267px]',
+				'accordion-content'
+			)}
+		>
+			<div class="font-primary max-[360px]:text-[15px] text-[18px] leading-[24px]">
 				<p>
 					{content1}
 					<br />
@@ -58,7 +65,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="accordion-btn ml-[64px] mt-[51px] w-fit">
+		<div class="accordion-btn ml-[32px] md:ml-[64px] mt-[51px] w-fit">
 			<PrimaryButton class="w-fit" href="">{btnText}</PrimaryButton>
 		</div>
 	</div>
@@ -105,7 +112,8 @@
 	}
 	.accordion-image {
 		height: 400px;
-		transition: height 0.3s ease-in-out;
+		overflow: visible;
+		transition: overflow 1s ease-in-out;
 	}
 	.accordion-image-closed {
 		height: 100px;
@@ -136,5 +144,21 @@
 	.closed .accordion-btn {
 		opacity: 0;
 		transform: translateY(20px);
+	}
+	@media (max-width: 768px) {
+		.closed {
+			height: 122px;
+		}
+		.accordion-image-closed {
+			height: 122px;
+			padding: 1px;
+			border-radius: 8px;
+			opacity: 50%;
+		}
+		.accordion-image {
+			padding: 1px;
+			border-radius: 8px;
+			opacity: 50%;
+		}
 	}
 </style>
