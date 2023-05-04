@@ -23,9 +23,12 @@
 		on:click={toggleAccordion}
 	>
 		<div class="h-[100px] flex flex-row justify-between">
-			<div class="flex flex-col text-left md:flex-row md:items-center w-full h-container">
+			<div class={clsx('flex flex-col text-left md:flex-row md:items-center w-full h-container')}>
 				<div
-					class="ml-[32px] md:ml-[64px] z-[1] text-left font-semibold max-[360px]:text-[20px] text-[24px] leading-[26px] font-secondary"
+					class={clsx(
+						'ml-[32px] md:ml-[64px] z-[1] text-left font-semibold max-[360px]:text-[20px] text-[24px] leading-[26px] font-secondary',
+						isOpen ? 'pb-[32px]' : ''
+					)}
 				>
 					<p>{heading}</p>
 				</div>
