@@ -2,13 +2,8 @@
 	import bounties from '../assets/images/bounties_new.png';
 	import grants from '../assets/images/grant_new.png';
 	import fellowships from '../assets/images/fellowships_new.png';
-	import hackathon from '../assets/images/hackathon_new.png';
 	import market from '../assets/images/market_new.png';
 	import bootcamps from '../assets/images/bootcamps_new.png';
-	import IllustrationCard from './common/IllustrationCard.svelte';
-	import instagrantsbg from '../assets/images/instagrantsbg.png';
-	import Modal from './common/Modal.svelte';
-	import thunder from '../assets/logos/thunder.svg';
 	import Accordion from './common/Accordion.svelte';
 </script>
 
