@@ -57,16 +57,16 @@
 		top: calc(2.25% * (100vw / 1440px));
 	}
 
-	@media screen and (max-width: 786px) {
+	@media screen and (max-width: 850px) {
 		.stars-bg {
 			visibility: hidden;
 		}
 	}
 
-	@media (min-width: 787px) and (max-width: 1024px) {
+	@media (min-width: 851px) and (max-width: 1024px) {
 		.stars-bg {
 			width: 60%;
-			height: 6.5%;
+			height: 10.5%;
 			top: 2%;
 		}
 	}
