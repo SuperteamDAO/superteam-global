@@ -27,7 +27,7 @@
 				<div
 					class={clsx(
 						'ml-[32px] md:ml-[64px] z-[1] text-left font-semibold max-[360px]:text-[20px] text-[24px] leading-[26px] font-secondary',
-						isOpen ? 'pb-[32px]' : ''
+						isOpen ? 'max-md:pb-[32px]' : ''
 					)}
 				>
 					<p>{heading}</p>
