@@ -9,9 +9,13 @@
 
 <div class="productions-container col-span-5 mt-44 flex flex-col justify-center text-center">
 	<div>
-		<p class="section-heading center-text lg:mb-0 mb-[68px]">Services</p>
+		<p
+			class="section-heading center-text text-[24px] md:text-[32px] lg:leading-[35px] leading-[26px] lg:mb-0 mb-[48px]"
+		>
+			Services
+		</p>
 	</div>
-	<div class="flex flex-col gap-[12px] mt-[53px]">
+	<div class="flex flex-col gap-[12px] mt-[0px] lg:mt-[53px]">
 		<Accordion
 			image={bounties}
 			heading="Bounties"
@@ -60,8 +64,6 @@
 		font-family: 'Archivo_SemiExpanded';
 		font-style: normal;
 		font-weight: 700;
-		font-size: 32px;
-		line-height: 35px;
 		text-align: center;
 		letter-spacing: -0.04em;
 
