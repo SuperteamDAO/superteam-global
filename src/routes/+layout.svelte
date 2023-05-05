@@ -11,7 +11,6 @@
 	// import { loading } from '../store/loading'
 	import { disableScrollHandling } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import og_pic from '../assets/images/og_pic.webp';
 
 	// let imagesLoaded = 0
 	// let isLoaded = false
@@ -75,15 +74,6 @@
 		name="twitter:image"
 		content="https://pbs.twimg.com/profile_images/1505359960942657539/sMjuxRcg_400x400.jpg"
 	/>
-
-	<meta name="og:title" content="Welcome to Superteam" />
-	<meta name="og:type" content="community" />
-	<meta name="og:url" content="https://superteam.fun" />
-	<meta name="application-name" content="superteam" />
-	<meta name="og:email" content="hello@superteam.fun" />
-	<meta name="og:image" content={og_pic} />
-	<meta name="twitter:image" content={og_pic} />
-	<meta name="twitter:title" content="Welcome to Superteam" />
 </svelte:head>
 
 <Analytics />
