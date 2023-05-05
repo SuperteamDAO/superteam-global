@@ -23,6 +23,7 @@
 	/>
 	<title>Welcome to Superteam</title>
 	<meta name="description" content="" />
+
 </svelte:head>
 
 <Hero
