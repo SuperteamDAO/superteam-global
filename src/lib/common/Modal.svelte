@@ -23,7 +23,6 @@
 			handleClose();
 		}
 	}
-	
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
@@ -41,11 +40,7 @@
 	>
 		<div class="left-img h-[200px] md:h-full w-full md:w-1/2 overflow-hidden">
 			<div class="overlay h-full w-full" />
-			<img
-				src={imgurl}
-				alt={text}
-				class="w-full h-full object-cover"
-			/>
+			<img src={imgurl} alt={text} class="w-full h-full object-cover md:blur-md" />
 			<div
 				class="text-on-img text-[24px] md:text-[32px] text-white top-[24px] left-[24px] md:top-[53px] md:left-[40px] flex flex-row w-5/6 justify-between"
 			>
