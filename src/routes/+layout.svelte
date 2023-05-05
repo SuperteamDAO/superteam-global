@@ -11,6 +11,7 @@
 	// import { loading } from '../store/loading'
 	import { disableScrollHandling } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import og_pic from '../assets/images/og_pic.webp';
 
 	// let imagesLoaded = 0
 	// let isLoaded = false
@@ -70,10 +71,24 @@
 	<meta name="news_keywords" content="crypto" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@SuperteamDAO" />
+
+	<meta name="twitter:title" content="Welcome to Superteam" />
+	<meta name="twitter:image" content={og_pic} />
+	<meta name="og:image" content={og_pic} />
+	<meta name="og:site_name" content="Superteam" />
+	<meta name="og:title" content="Welcome to Superteam" />
+	<meta name="og:type" content="community" />
+	<meta name="og:url" content="https://superteam.fun" />
+	<meta name="application-name" content="superteam" />
+	<meta name="og:email" content="hello@superteam.fun" />
 	<meta
+		name="og:description"
+		content="Superteam is a community of the best talent learning, earning and building in crypto."
+	/>
+	<!-- <meta
 		name="twitter:image"
 		content="https://pbs.twimg.com/profile_images/1505359960942657539/sMjuxRcg_400x400.jpg"
-	/>
+	/> -->
 </svelte:head>
 
 <Analytics />

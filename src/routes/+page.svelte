@@ -22,14 +22,6 @@
 	/>
 	<title>Welcome to Superteam</title>
 	<meta name="description" content="" />
-	<meta name="og:title" content="Welcome to Superteam" />
-	<meta name="og:type" content="community" />
-	<meta name="og:url" content="https://superteam.fun" />
-	<meta name="application-name" content="superteam" />
-	<meta name="og:email" content="hello@superteam.fun" />
-	<meta name="og:image" content="https://superteam-global.vercel.app/og_pic.webp" />
-	<meta name="twitter:image" content="https://superteam-global.vercel.app/og_pic.webp" />
-	<meta name="twitter:title" content="Welcome to Superteam" />
 </svelte:head>
 
 <Hero
