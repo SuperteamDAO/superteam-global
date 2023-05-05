@@ -27,6 +27,8 @@
 	<meta name="og:url" content="https://superteam.fun" />
 	<meta name="application-name" content="superteam" />
 	<meta name="og:email" content="hello@superteam.fun" />
+	<meta property="og:image" content="https://superteam-global.vercel.app/og-pic" />
+	<meta name="twitter:image" content="https://superteam-global.vercel.app/og-pic" />
 	<meta name="twitter:title" content="Welcome to Superteam" />
 </svelte:head>
 
