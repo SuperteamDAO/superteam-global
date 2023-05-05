@@ -45,14 +45,14 @@
 	{#if modalOpen}
 		<Modal {imgurl} {text} {top_content} {points} {btnText} on:close={closeModal} />
 	{/if}
-	<div class="star-container absolute h-[85px] w-[285px] md:w-[350px] self-center top-0">
+	<!-- <div class="star-container absolute h-[85px] w-[285px] md:w-[350px] self-center top-0">
 		<Star class="absolute mt-[8%] ml-[90%] md:mt-[6.5%] lg:mt-[8%]" />
 		<Star class="absolute mt-[17%] ml-0 md:mt-[15.5%] lg:mt-[17%]" />
 		<Star class="absolute mt-[22%] ml-[5%] md:mt-[20.5%] lg:mt-[22%]" blur={true} />
 		<Star class="absolute mt-[0%] ml-[85%] md:-mt-[1.5%] lg:mt-[0%]" blur={true} />
 		<Star class="absolute mt-[4%] ml-[82%] md:mt-[2.5%] lg:mt-[4%]" blur={true} />
 		<Star class="absolute mt-[2%] ml-[98%] md:mt-[0.5%] lg:mt-[2%]" blur={true} />
-	</div>
+	</div> -->
 
 	<div
 		class="absolute h-full bg-images left-1/2 right-1/2 -translate-x-1/2 w-screen flex flex-col lg:flex-row"
