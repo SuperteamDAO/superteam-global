@@ -42,13 +42,21 @@
 				</div>
 			</div>
 			<div class="h-fit image-container">
+				<div
+					class={clsx(
+						'absolute gradient-overlay -ml-[56px] hidden md:block',
+						isOpen
+							? 'accordion-image md:w-[263px] z-[10]'
+							: 'accordion-image-closed md:w-[263px] z-[10] overflow-hidden'
+					)}
+				/>
 				<img
 					src={image}
 					alt=""
 					class={clsx(
 						isOpen
-							? 'accordion-image absolute md:relative w-full max-md:left-0 md:w-[340px] max-md:z-0'
-							: 'accordion-image-closed absolute md:relative w-full max-md:left-0 md:w-[340px] max-md:z-0 overflow-hidden'
+							? 'accordion-image absolute md:relative w-full max-md:left-0 md:w-[400px] max-md:z-0'
+							: 'accordion-image-closed absolute md:relative w-full max-md:left-0 md:w-[400px] max-md:z-0 overflow-hidden'
 					)}
 				/>
 			</div>
@@ -179,5 +187,9 @@
 		.accordion-btn {
 			transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 		}
+	}
+
+	.gradient-overlay {
+		background: linear-gradient(88.24deg, #0c0c0c 21.99%, rgba(14, 14, 14, 0) 87.4%);
 	}
 </style>
