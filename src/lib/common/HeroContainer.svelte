@@ -72,7 +72,14 @@
 		</span>
 	</p>
 	{#if buttonVisible}
-		<PrimaryButton href="/" class="know-more-button mt-8">Know more</PrimaryButton>
+		<PrimaryButton href="/" class="know-more-button mt-8 w-[149px] text-center"
+			>Join Us</PrimaryButton
+		>
+		<a
+			href="/"
+			class="mt-[16px] text-white font-secondary font-bold text-[14px] underline cursor-pointer"
+			>Know More</a
+		>
 	{/if}
 </div>
 
