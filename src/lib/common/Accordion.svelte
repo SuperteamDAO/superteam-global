@@ -84,8 +84,7 @@
 
 <style>
 	.accordion {
-		background: linear-gradient(108.93deg, #121212 8.36%, rgba(18, 18, 18, 0) 128.46%);
-		background-color: black;
+		background-color: #121212;
 	}
 	.overlay {
 		position: relative;
@@ -190,6 +189,6 @@
 	}
 
 	.gradient-overlay {
-		background: linear-gradient(88.24deg, #0c0c0c 21.99%, rgba(14, 14, 14, 0) 87.4%);
+		background: linear-gradient(88.24deg, #121212 32.37%, rgba(14, 14, 14, 0) 87.4%);
 	}
 </style>
