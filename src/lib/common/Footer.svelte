@@ -18,9 +18,6 @@
 			</div>
 			<div class=" absolute -mt-[80px] md:-mt-[140px] lg:ml-[27px] lg:mt-0">
 				<p class="overlay-text">superteam</p>
-				<p class="text-white mt-4 font-secondary text-[14px] font-bold leading-[15px]">
-					Powered by Solana
-				</p>
 			</div>
 		</div>
 		<div
