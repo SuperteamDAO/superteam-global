@@ -21,7 +21,7 @@
 		<a href="https://www.backpack.app/" target="_blank">
 			<img class="logo backpack h-8 w-auto" src={backpack} alt="Backpack" loading="lazy" />
 		</a>
-		<a href="https://www.circle.com/en/pressroom" target="_blank">
+		<a href="https://www.circle.com/" target="_blank">
 			<img class="logo backpack h-8 w-auto" src={circle} alt="Backpack" loading="lazy" />
 		</a>
 	</div>
