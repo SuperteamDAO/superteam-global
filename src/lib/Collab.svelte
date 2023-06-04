@@ -25,7 +25,7 @@
 			be a part of history
 		</p>
 		<div class="button mt-[50px]">
-			<PrimaryButton href="/collaborate">Collab with us</PrimaryButton>
+			<PrimaryButton class="bg-white" href="/collaborate">Collab with us</PrimaryButton>
 		</div>
 	</div>
 </div>
