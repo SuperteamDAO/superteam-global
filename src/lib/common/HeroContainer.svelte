@@ -71,6 +71,7 @@
 			{line4}
 		</span>
 	</p>
+	<slot />
 	{#if buttonVisible}
 		<PrimaryButton href="/" class="know-more-button mt-8 w-[149px] text-center"
 			>Join Us</PrimaryButton

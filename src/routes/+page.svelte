@@ -10,6 +10,8 @@
 	import hero05x from '../assets/hero/hero_home0.5x.webp';
 	import hero from '../assets/hero/hero_home.webp';
 	import hero1_5x from '../assets/hero/hero_home1.5x.webp';
+	import PrimaryButton from '$lib/common/PrimaryButton.svelte';
+	import { TwitterLogo } from 'phosphor-svelte';
 </script>
 
 <svelte:head>
@@ -25,12 +27,16 @@
 </svelte:head>
 
 <Hero
-	line1="your portal to the"
-	line2="new world of crypto"
+	line1="A skyhook for"
+	line2="your web3 career"
 	line3="superteam is a community of the best talent learning,"
 	line4="earning and building in crypto"
-	buttonVisible={true}
-/>
+	buttonVisible={false}
+>
+	<PrimaryButton class="mt-8 text-center text-white bg-[#1DA1F2]" href="https://twitter.com/SuperteamDAO">
+		Twitter
+	</PrimaryButton>
+</Hero>
 
 <Geographies />
 
@@ -40,7 +46,7 @@
 
 <Media />
 
-<SuperteamIrl />
+<!-- <SuperteamIrl /> -->
 
 <LoveRespect />
 

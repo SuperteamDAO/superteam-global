@@ -155,17 +155,11 @@
 			/>
 			<IllustrationCard
 				class="md:col-start-2 md:row-start-1 md:row-end-3 lg:col-start-1 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
-				text="Ecosystem Calls"
+				text="Event Calendar"
 				imageUrl={ecosystem_calls}
-				on:click={() =>
-					openModal(
-						'our very own job listing and bounty platform to find every earning opportunity in solana',
-						'Ecosystem Calls',
-						ecosystem_calls,
-						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
-						'Visit ST Earn',
-						thunder
-					)}
+				on:click={() => {
+					window.open('https://lu.ma/superteam', '_blank');
+				}}
 			/>
 			<IllustrationCard
 				class="md:col-start-1 md:row-start-5 md:row-end-7 lg:col-start-2 lg:row-start-2 lg:row-end-5 min-h-[300px] min-w-[240px]"
@@ -213,15 +207,9 @@
 				class="md:col-start-2 md:row-start-7 md:row-end-[9] lg:col-start-3 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
 				text="Founder's League"
 				imageUrl={founders_league}
-				on:click={() =>
-					openModal(
-						'our very own job listing and bounty platform to find every earning opportunity in solana',
-						"Founder's League",
-						founders_league,
-						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
-						'Visit ST Earn',
-						thunder
-					)}
+				on:click={() =>{
+					window.open('https://docs.superteam.fun/the-superteam-handbook/', '_blank');
+				}}
 			/>
 		</div>
 	</div>

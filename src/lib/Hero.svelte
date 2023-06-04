@@ -12,7 +12,9 @@
 </script>
 
 <section class="hero relative col-span-5 h-[calc(100vh-40px-32px)] flex flex-col items-center">
-	<HeroContainer {line1} {line2} {line3} {line4} {buttonVisible} />
+	<HeroContainer {line1} {line2} {line3} {line4} {buttonVisible}>
+		<slot />
+	</HeroContainer>
 	<div class="hero-bg absolute top-0 left-0 w-full h-full overflow-hidden">
 		<div class="stars"></div>
 		<div class="stars2"></div>
