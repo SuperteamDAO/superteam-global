@@ -2,7 +2,6 @@
 	// @ts-nocheck
 
 	import TestimonialCard from './common/TestimonialCard.svelte';
-	import pragun from '../assets/images/pragun.jpg';
 	import clsx from 'clsx';
 	import { _ } from 'svelte-i18n';
 

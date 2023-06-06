@@ -12,6 +12,10 @@
 	import hero1_5x from '../assets/hero/hero_home1.5x.webp';
 	import PrimaryButton from '$lib/common/PrimaryButton.svelte';
 	import { TwitterLogo } from 'phosphor-svelte';
+	import Events from '$lib/Events.svelte';
+
+	export let data;
+
 </script>
 
 <svelte:head>
@@ -46,6 +50,7 @@
 
 <Media />
 
+<Events events={data.events} />
 <!-- <SuperteamIrl /> -->
 
 <LoveRespect />
