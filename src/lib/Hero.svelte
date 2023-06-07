@@ -25,6 +25,7 @@
 				srcset={`${hero05x} 640w, ${hero} 1440w, ${hero1_5x} 2560w`}
 				sizes="(max-width: 640px) 100vw, (max-width: 1440px) 100vw, 2560px"
 				loading="eager"
+				fetchpriority="high"
 				alt=""
 				class="object-cover w-full h-full z-10"
 			/>
