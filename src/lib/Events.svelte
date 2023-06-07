@@ -1,9 +1,36 @@
 <script>
     import clsx from "clsx";
 	import Event from "./Event.svelte";
+	import { tweened } from "../utils/pauseableTween";
+	import { onMount, setContext } from "svelte";
     export let events;
 
-    console.log(events);
+    const eventsLength = events.length;
+    const totalWidth = eventsLength * 400 + (eventsLength) * 24;
+
+    const translateX = tweened(0, {
+        duration: 0,
+    });
+
+    $: {
+        if ($translateX >= totalWidth) {
+            translateX.set(-totalWidth, { duration: 0 });
+            translateX.set(0, { duration: eventsLength * 4000 });
+        } else if ($translateX <= -totalWidth) {
+            translateX.set(0, { duration: 0 });
+            translateX.set(-totalWidth, { duration: eventsLength * 4000 });
+        }
+    }
+
+    setContext("translateX", translateX);
+    setContext("totalWidth", totalWidth);
+
+    onMount(() => {
+        translateX.set(-totalWidth, {
+            duration: eventsLength * 3500,
+        });
+    })
+
 </script>
 
 <div
@@ -19,16 +46,16 @@
 
     <div class="flex w-full flex-col gap-6 mt-20">
         <div class="w-full grid grid-cols-1 scrollbar-hidden">
-            <div class="h-[300px] flex flex-row gap-6">
-                {#each events as event}
-                    <Event event={event} />
+            <div class="h-[300px] relative">
+                {#each events as event, index}
+                    <Event event={event} index={index} class="absolute top-0 left-0" />
                 {/each}
             </div>
         </div>
         <div class="w-full grid greid-cols-1">
-            <div class="h-[300px] flex flex-row gap-6">
-                {#each events as event}
-                    <Event event={event} />
+            <div class="h-[300px] relative">
+                {#each events as event, index}
+                    <Event event={event} index={index} reverse={true} class="absolute top-0 left-0" />
                 {/each}
             </div>
         </div>

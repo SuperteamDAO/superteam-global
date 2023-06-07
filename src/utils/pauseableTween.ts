@@ -1,9 +1,14 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import { tweened as nativeTweened } from 'svelte/motion'
+import { tweened as nativeTweened, type Tweened } from 'svelte/motion'
 import { get } from 'svelte/store'
 
-export function tweened(initial, options={}) {
+export function tweened(initial, options={}): Tweened<any> & {
+	pause: () => Promise<void>,
+	reset: () => Promise<void>,
+	continue: () => Promise<void>,
+	replay: () => Promise<void>,
+} {
 	const store = nativeTweened(initial, options)
 	const set = store.set
 	store.lastSet = initial
