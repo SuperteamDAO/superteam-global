@@ -15,10 +15,10 @@
     $: {
         if ($translateX >= totalWidth) {
             translateX.set(-totalWidth, { duration: 0 });
-            translateX.set(0, { duration: eventsLength * 4000 });
+            translateX.set(0, { duration: eventsLength * 6000 });
         } else if ($translateX <= -totalWidth) {
             translateX.set(0, { duration: 0 });
-            translateX.set(-totalWidth, { duration: eventsLength * 4000 });
+            translateX.set(-totalWidth, { duration: eventsLength * 6000 });
         }
     }
 
@@ -27,7 +27,7 @@
 
     onMount(() => {
         translateX.set(-totalWidth, {
-            duration: eventsLength * 3500,
+            duration: eventsLength * 6000,
         });
     })
 
