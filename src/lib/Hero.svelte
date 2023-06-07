@@ -71,7 +71,7 @@
 		border-radius: 50%;
 		background: transparent;
 		box-shadow: create-stars($numStars);
-		animation: animStar $scrollSpeed linear infinite;
+		animation: animStar $scrollSpeed linear infinite, fadeIn 1s ease-in-out;
 		&:after {
 			content: " ";
 			top: -$starStartOffset;
@@ -116,6 +116,15 @@
 		z-index: 5;
 		transform-style: preserve-3d;
 		transform: translateZ(100px);
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 
 	@media (min-width: 768px) {

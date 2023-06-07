@@ -6,12 +6,10 @@
 	import Media from '$lib/Media.svelte';
 	import Partners from '$lib/Partners.svelte';
 	import Production from '$lib/Production.svelte';
-	import SuperteamIrl from '$lib/SuperteamIRL.svelte';
 	import hero05x from '../assets/hero/hero_home0.5x.webp';
 	import hero from '../assets/hero/hero_home.webp';
 	import hero1_5x from '../assets/hero/hero_home1.5x.webp';
 	import PrimaryButton from '$lib/common/PrimaryButton.svelte';
-	import { TwitterLogo } from 'phosphor-svelte';
 	import Events from '$lib/Events.svelte';
 
 	export let data;
@@ -37,9 +35,11 @@
 	line4="earning and building in crypto"
 	buttonVisible={false}
 >
-	<PrimaryButton class="mt-8 text-center text-white bg-[#1DA1F2]" href="https://twitter.com/SuperteamDAO">
-		Twitter
-	</PrimaryButton>
+	<div class="mt-8">
+		<PrimaryButton class="text-center text-white bg-[#1DA1F2]" href="https://twitter.com/SuperteamDAO">
+			Twitter
+		</PrimaryButton>
+	</div>
 </Hero>
 
 <Geographies />

@@ -93,7 +93,7 @@
 		@apply block relative overflow-hidden w-full h-8 md:h-12;
 	}
 	.heading .line span {
-		@apply absolute w-full top-0 left-0;
+		@apply absolute w-full top-0 left-0 opacity-0;
 	}
 	.heading {
 		white-space: nowrap;
