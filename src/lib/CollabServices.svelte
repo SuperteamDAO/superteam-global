@@ -12,7 +12,7 @@
 		<p
 			class="section-heading center-text text-[24px] md:text-[32px] lg:leading-[35px] leading-[26px] lg:mb-0 mb-[48px]"
 		>
-			Services
+      Work with Community Experts
 		</p>
 	</div>
 	<div class="flex flex-col gap-[12px] mt-[0px] lg:mt-[53px]">
