@@ -1,13 +1,14 @@
 <script>
 	import clsx from 'clsx';
-	import PrimaryButton from './PrimaryButton.svelte';
+	import SecondaryButton from './SecondaryButton.svelte';
+
 	let isOpen = false;
 	export let image;
 	export let heading = '';
 	export let subheading = '';
-	export let content1 = '';
-	export let content2 = '';
+	export let content = '';
 	export let btnText = '';
+  export let btnLink = '';
 	function toggleAccordion() {
 		isOpen = !isOpen;
 	}
@@ -69,15 +70,12 @@
 		>
 			<div class="font-primary max-[360px]:text-[15px] text-[18px] leading-[24px]">
 				<p>
-					{content1}
-					<br />
-					<br />
-					{content2}
+					{content}
 				</p>
 			</div>
 		</div>
 		<div class="accordion-btn ml-[32px] md:ml-[64px] mt-[51px] w-fit">
-			<PrimaryButton class="w-fit" href="">{btnText}</PrimaryButton>
+			<SecondaryButton class="w-fi" href={btnLink} target="_blank" rel="noopener noreferrer">{btnText}</SecondaryButton>
 		</div>
 	</div>
 </div>
