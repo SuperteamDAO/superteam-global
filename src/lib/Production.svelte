@@ -150,7 +150,7 @@
 						'our very own job listing and bounty platform to find every earning opportunity in solana',
 						'Earn',
 						earn,
-						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
+						['1,000+ verified user profiles', 'Global pay standards', 'End-to-end bounty management'],
 						'Visit ST Earn',
             'https://earn.superteam.fun',
 						thunder
@@ -208,10 +208,10 @@
 				imageUrl={alphasquad}
 				on:click={() =>
 					openModal(
-						'give top Superteam members early access to your products to get the best feedback and contributions to make it even better',
+						'helping connect Solana founders to new users for beta testing, product feedback, and community building.',
 						'Alpha Squad',
 						alphasquad,
-						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
+						['Users get early access & bounties', 'Projects get detailed feedback reports', 'Zero fees'],
 						'Start here!',
             'https://www.alphasquad.fun/',
 						thunder
