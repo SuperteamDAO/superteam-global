@@ -154,42 +154,6 @@
 					)}
 			/>
 			<IllustrationCard
-				class="md:col-start-2 md:row-start-1 md:row-end-3 lg:col-start-1 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
-				text="Event Calendar"
-				imageUrl={ecosystem_calls}
-				on:click={() => {
-					window.open('https://lu.ma/superteam', '_blank');
-				}}
-			/>
-			<IllustrationCard
-				class="md:col-start-1 md:row-start-5 md:row-end-7 lg:col-start-2 lg:row-start-2 lg:row-end-5 min-h-[300px] min-w-[240px]"
-				text="Instagrants"
-				imageUrl={instagrants}
-				on:click={() =>
-					openModal(
-						'our very own job listing and bounty platform to find every earning opportunity in solana',
-						'Instagrants',
-						instagrants,
-						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
-						'Visit ST Earn',
-						thunder
-					)}
-			/>
-			<IllustrationCard
-				class="md:col-start-2 md:row-start-4 md:row-end-6 lg:col-start-2 lg:row-start-6 lg:row-end-[-1] min-h-[300px] min-w-[240px]"
-				text="Alpha Squad"
-				imageUrl={alphasquad}
-				on:click={() =>
-					openModal(
-						'our very own job listing and bounty platform to find every earning opportunity in solana',
-						'Alpha Squad',
-						alphasquad,
-						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
-						'Visit ST Earn',
-						thunder
-					)}
-			/>
-			<IllustrationCard
 				class="md:col-start-1 md:row-start-[8] md:row-end-[10] lg:col-start-3 lg:row-start-1 lg:row-end-3 min-h-[300px] min-w-[240px]"
 				text="Build"
 				imageUrl={build}
@@ -204,12 +168,48 @@
 					)}
 			/>
 			<IllustrationCard
+				class="md:col-start-1 md:row-start-5 md:row-end-7 lg:col-start-2 lg:row-start-2 lg:row-end-5 min-h-[300px] min-w-[240px]"
+				text="Instagrants"
+				imageUrl={instagrants}
+				on:click={() =>
+					openModal(
+						'get grants to get started with your dream code, content, and community projects from our partners',
+						'Instagrants',
+						instagrants,
+						['application takes less than 2 mins', '$1-$10,000 grants', 'paid out every week'],
+						'Visit ST Earn',
+						thunder
+					)}
+			/>
+      <IllustrationCard
 				class="md:col-start-2 md:row-start-7 md:row-end-[9] lg:col-start-3 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
-				text="Founder's League"
+				text="Superteam Handbook"
 				imageUrl={founders_league}
 				on:click={() =>{
 					window.open('https://docs.superteam.fun/the-superteam-handbook/', '_blank');
 				}}
+			/>
+      <IllustrationCard
+				class="md:col-start-2 md:row-start-1 md:row-end-3 lg:col-start-1 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
+				text="Event Calendar"
+				imageUrl={ecosystem_calls}
+				on:click={() => {
+					window.open('https://lu.ma/superteam', '_blank');
+				}}
+			/>
+			<IllustrationCard
+				class="md:col-start-2 md:row-start-4 md:row-end-6 lg:col-start-2 lg:row-start-6 lg:row-end-[-1] min-h-[300px] min-w-[240px]"
+				text="Alpha Squad"
+				imageUrl={alphasquad}
+				on:click={() =>
+					openModal(
+						'our very own job listing and bounty platform to find every earning opportunity in solana',
+						'Alpha Squad',
+						alphasquad,
+						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
+						'Visit ST Earn',
+						thunder
+					)}
 			/>
 		</div>
 	</div>
