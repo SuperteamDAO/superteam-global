@@ -22,14 +22,16 @@
 	let imgurl;
 	let points;
 	let btnText;
+  let btnLink;
 	let bullet;
 
-	function openModal(content, _text, _imgurl, _points, _btnText, _bullet) {
+	function openModal(content, _text, _imgurl, _points, _btnText, _btnLink, _bullet) {
 		top_content = content;
 		text = _text;
 		imgurl = _imgurl;
 		points = _points;
 		btnText = _btnText;
+    btnLink = _btnLink;
 		bullet = _bullet;
 		modalOpen = true;
 	}
@@ -43,7 +45,7 @@
 	class="productions-container relative col-span-5 mt-[224px] flex flex-col justify-center text-center"
 >
 	{#if modalOpen}
-		<Modal {imgurl} {text} {top_content} {points} {btnText} on:close={closeModal} />
+		<Modal {imgurl} {text} {top_content} {points} {btnText} {btnLink} on:close={closeModal} />
 	{/if}
 
 	<div
@@ -150,6 +152,7 @@
 						earn,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Visit ST Earn',
+            'https://earn.superteam.fun',
 						thunder
 					)}
 			/>
@@ -163,7 +166,8 @@
 						'Build',
 						build,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
-						'Visit ST Earn',
+						'Visit ST Build',
+            'https://build.superteam.fun',
 						thunder
 					)}
 			/>
@@ -177,7 +181,8 @@
 						'Instagrants',
 						instagrants,
 						['application takes less than 2 mins', '$1-$10,000 grants', 'paid out every week'],
-						'Visit ST Earn',
+						'Apply now!',
+            'https://earn.superteam.fun/grants/',
 						thunder
 					)}
 			/>
@@ -203,11 +208,12 @@
 				imageUrl={alphasquad}
 				on:click={() =>
 					openModal(
-						'our very own job listing and bounty platform to find every earning opportunity in solana',
+						'give top Superteam members early access to your products to get the best feedback and contributions to make it even better',
 						'Alpha Squad',
 						alphasquad,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
-						'Visit ST Earn',
+						'Start here!',
+            'https://alphasquad.fun/',
 						thunder
 					)}
 			/>
