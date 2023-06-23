@@ -5,6 +5,7 @@
 	import turkey from '../assets/chapters/turkey.webp';
 	import vietnam from '../assets/chapters/vietnam.webp';
 	import mexico from '../assets/chapters/mexico.webp';
+  import uk from '../assets/chapters/uk.webp';
 
 	/**
 	 * @type {HTMLElement}
@@ -53,7 +54,15 @@
 			countryGradient: 'linear-gradient(161.18deg, #00B17B -3.45%, #FFFFFF 47.74%, #FF4D60 96.31%)',
 			invert: true,
 			href: 'https://mx.superteam.fun/'
-		}
+		},
+    {
+			key: 'uk',
+			name: 'United Kingdom',
+			path: uk,
+			countryGradient: 'linear-gradient(161.18deg, #c8102e -3.45%, #FFFFFF 47.74%, #012169 96.31%)',
+			invert: true,
+			href: 'https://uk.superteam.fun/'
+		},
 	];
 </script>
 
