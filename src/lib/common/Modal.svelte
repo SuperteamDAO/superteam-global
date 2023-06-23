@@ -5,6 +5,7 @@
 	import { X } from 'phosphor-svelte';
 	import { fade, scale } from 'svelte/transition';
 	import Thunder from './Thunder.svelte';
+	import SecondaryButton from './SecondaryButton.svelte';
 	const dispatch = createEventDispatcher();
 
 	export let imgurl;
@@ -13,6 +14,7 @@
 	export let points = [];
 
 	export let btnText = '';
+  export let btnLink = '';
 
 	function handleClose() {
 		dispatch('close');
@@ -80,9 +82,9 @@
 				{/each}
 			</div>
 			<div class="mt-[32px] ml-[32px] md:ml-[64px] mb-[34px]">
-				<PrimaryButton href="/" class="font-bold">
+				<SecondaryButton target="_blank" ref="noopener noreferrer" href={btnLink} class="font-bold">
 					{btnText}
-				</PrimaryButton>
+				</SecondaryButton>
 			</div>
 		</div>
 	</div>
