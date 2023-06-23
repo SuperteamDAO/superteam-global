@@ -213,7 +213,7 @@
 						alphasquad,
 						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
 						'Start here!',
-            'https://alphasquad.fun/',
+            'https://www.alphasquad.fun/',
 						thunder
 					)}
 			/>
