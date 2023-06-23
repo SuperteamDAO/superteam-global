@@ -4,41 +4,41 @@
 	import { tweened } from 'svelte/motion';
 	import { expoOut } from 'svelte/easing';
 	import clsx from 'clsx';
-	// import MenuButtons from './MenuButtons.svelte';
-	// import { clickOutside } from '../../utils/clickOutside';
-	// import { X } from 'phosphor-svelte';
+	import MenuButtons from './MenuButtons.svelte';
+	import { clickOutside } from '../../utils/clickOutside';
+	import { X } from 'phosphor-svelte';
 	import { navigating } from '$app/stores'
 
 	const pos = tweened(-100, { duration: 1800, easing: expoOut });
-	// const menuPos = tweened(-192, { duration: 500, easing: expoOut });
+	const menuPos = tweened(-192, { duration: 500, easing: expoOut });
 
-	// const openMenu = () => {
-	// 	menuPos.set(-32);
-	// };
+	const openMenu = () => {
+		menuPos.set(-32);
+	};
 
-	// const closeMenu = () => {
-	// 	menuPos.set(-192);
-	// };
+	const closeMenu = () => {
+		menuPos.set(-192);
+	};
 
-	// const toggleMenu = () => {
-	// 	if ($menuPos === -32) {
-	// 		closeMenu();
-	// 	} else {
-	// 		openMenu();
-	// 	}
-	// };
+	const toggleMenu = () => {
+		if ($menuPos === -32) {
+			closeMenu();
+		} else {
+			openMenu();
+		}
+	};
 
-	// const handleClickOutside = () => {
-	// 	if ($menuPos === -32) {
-	// 		closeMenu();
-	// 	}
-	// };
+	const handleClickOutside = () => {
+		if ($menuPos === -32) {
+			closeMenu();
+		}
+	};
 
-	// $: {
-	// 	if ($navigating && $menuPos === -32) {
-	// 		closeMenu();
-	// 	}
-	// }
+	$: {
+		if ($navigating && $menuPos === -32) {
+			closeMenu();
+		}
+	}
 
 	onMount(() => {
 		pos.set(0);
@@ -52,10 +52,10 @@
 	<a href="/" aria-label="superteam">
 		<NamedLogo />
 	</a>
-	<!-- <div class="hidden md:inline">
+	<div class="hidden md:inline">
 		<MenuButtons />
-	</div> -->
-	<!-- <div 
+	</div>
+	<div
 		class="flex md:hidden fixed h-[160px] pt-8 dropdown z-50 top-0 left-0 w-full"
 		style="transform: translateY({$menuPos}px);"
 		use:clickOutside on:click_outside={handleClickOutside}
@@ -66,13 +66,13 @@
 				<X size={24} />
 			</button>
 		</div>
-	</div> -->
-	<!-- <button on:click={toggleMenu} class="inline md:hidden" aria-label="Menu button">
+	</div>
+	<button on:click={toggleMenu} class="inline md:hidden" aria-label="Menu button">
 		<svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M0.320312 1.00781H24.3825" stroke="white" stroke-width="2.00518"/>
 			<path d="M0.320312 11.0337H24.3825" stroke="white" stroke-width="2.00518"/>
-		</svg>	
-	</button> -->
+		</svg>
+	</button>
 </header>
 
 <style>
