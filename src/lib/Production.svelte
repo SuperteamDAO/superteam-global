@@ -151,7 +151,7 @@
 						'Earn',
 						earn,
 						['1,000+ verified user profiles', 'Global pay standards', 'End-to-end bounty management'],
-						'Visit ST Earn',
+						'Start Earning',
             'https://earn.superteam.fun',
 						thunder
 					)}
@@ -161,15 +161,8 @@
 				text="Idea Bank"
 				imageUrl={build}
 				on:click={() =>
-					openModal(
-						'our very own job listing and bounty platform to find every earning opportunity in solana',
-						'Build',
-						build,
-						['$100,000 in wealth created', '5000 jobs listed across 50+ fields', '2400 jobs given'],
-						'Visit ST Build',
-            'https://build.superteam.fun',
-						thunder
-					)}
+          window.open('https://build.superteam.fun', '_blank')
+        }
 			/>
 			<IllustrationCard
 				class="md:col-start-1 md:row-start-5 md:row-end-7 lg:col-start-2 lg:row-start-2 lg:row-end-5 min-h-[300px] min-w-[240px]"
