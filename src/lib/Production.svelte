@@ -155,7 +155,7 @@
 			/>
 			<IllustrationCard
 				class="md:col-start-1 md:row-start-[8] md:row-end-[10] lg:col-start-3 lg:row-start-1 lg:row-end-3 min-h-[300px] min-w-[240px]"
-				text="Build"
+				text="Idea Bank"
 				imageUrl={build}
 				on:click={() =>
 					openModal(
@@ -182,7 +182,7 @@
 					)}
 			/>
       <IllustrationCard
-				class="md:col-start-2 md:row-start-7 md:row-end-[9] lg:col-start-3 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
+        class="md:col-start-2 md:row-start-4 md:row-end-6 lg:col-start-2 lg:row-start-6 lg:row-end-[-1] min-h-[300px] min-w-[240px]"
 				text="Superteam Handbook"
 				imageUrl={founders_league}
 				on:click={() =>{
@@ -198,7 +198,7 @@
 				}}
 			/>
 			<IllustrationCard
-				class="md:col-start-2 md:row-start-4 md:row-end-6 lg:col-start-2 lg:row-start-6 lg:row-end-[-1] min-h-[300px] min-w-[240px]"
+        class="md:col-start-2 md:row-start-7 md:row-end-[6] lg:col-start-3 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
 				text="Alpha Squad"
 				imageUrl={alphasquad}
 				on:click={() =>
