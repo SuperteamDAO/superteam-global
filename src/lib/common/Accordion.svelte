@@ -8,7 +8,7 @@
 	export let subheading = '';
 	export let content = '';
 	export let btnText = '';
-  export let btnLink = '';
+	export let btnLink = '';
 	function toggleAccordion() {
 		isOpen = !isOpen;
 	}
@@ -75,7 +75,9 @@
 			</div>
 		</div>
 		<div class="accordion-btn ml-[32px] md:ml-[64px] mt-[51px] w-fit">
-			<SecondaryButton class="w-fi" href={btnLink} target="_blank" rel="noopener noreferrer">{btnText}</SecondaryButton>
+			<SecondaryButton class="w-fit" href={btnLink} target="_blank" rel="noopener noreferrer"
+				>{btnText}</SecondaryButton
+			>
 		</div>
 	</div>
 </div>
