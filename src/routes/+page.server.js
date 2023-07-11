@@ -7,10 +7,10 @@ export const load = async () => {
             headers: {
                 Authorization: `Bearer patxsdodhsqrCOBfA.61524b1ebfc269e0a0d631a3bdb451e7ab048ff9b02fc3f137e2b5eec628403f`
             }
-        })
-
+        });
+        const filtered = result?.data?.records.filter((item) => item.fields['Website Picture']?.length > 0);
         return {
-            events: result?.data?.records ?? []
+            events: filtered ?? []
         };
     } catch (error) {
         console.log(error)
