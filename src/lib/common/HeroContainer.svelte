@@ -42,6 +42,7 @@
 		);
 
 		tl.to('.know-more-button', { opacity: 1, duration: 1.8, ease: 'power4.out' });
+		tl.to('.slot', { opacity: 1, duration: 1.8, ease: 'power4.out' }, '-=1.8');
 
 		tl.to('.heading .line', {
 			position: 'relative'
