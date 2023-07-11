@@ -14,7 +14,9 @@
 				{content}
 			</p>
 		<div class="flex flex-row mt-[40px]">
-			<ImageLoader src={imgurl} width={40} height={40} alt="" class="rounded-full w-[40px] h-[40px] mr-[24px]" loading="lazy" />
+			<div class="w-10 h-10  mr-[24px]">
+				<ImageLoader src={imgurl} width={40} height={40} alt="" class="rounded-full w-[40px] h-[40px]" loading="lazy" />
+			</div>
 			<div class="user">
 				<p class="font-secondary font-bold text-white text-[12px] lg:text-[16px] md:text-[15px] lg:leading-[17px] md:leading-[16px] leading-[13px]">{name}</p>
 				<p
