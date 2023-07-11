@@ -1,4 +1,7 @@
 <script>
+	import { gsap } from 'gsap';
+	import { onMount } from 'svelte';
+
 	import Collab from '$lib/Collab.svelte';
 	import Geographies from '$lib/Geographies.svelte';
 	import Hero from '$lib/Hero.svelte';
@@ -13,6 +16,20 @@
 	import Events from '$lib/Events.svelte';
 
 	export let data;
+
+	onMount(() => {
+		const tl = gsap.timeline()
+
+		tl.fromTo(
+			'.twitter-button',
+			{ y: 0, opacity: 0 },
+			{
+				opacity: 1,
+				duration: 1.8,
+				ease: 'power4.out'
+			},
+		);
+	})
 
 </script>
 
@@ -35,7 +52,7 @@
 	line4="earning and building in crypto"
 	buttonVisible={false}
 >
-	<div class="mt-8">
+	<div class="mt-8 twitter-button opacity-0">
 		<PrimaryButton class="text-center text-white bg-[#1DA1F2]" href="https://twitter.com/SuperteamDAO">
 			Twitter
 		</PrimaryButton>
