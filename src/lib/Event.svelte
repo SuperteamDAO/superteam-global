@@ -43,7 +43,7 @@
 				{format(new Date(event.fields.Date), 'dd.M.yyyy')}
 			</div>
 			<div class="w-fit py-2 px-3 text-center font-bold bg-black rounded-full">
-				{event.fields.Geo[0]}
+				{event.fields.Flag} {event.fields.Geo[0]}
 			</div>
 		</div>
 		{#if event.fields?.Pictures?.[0]?.url}
