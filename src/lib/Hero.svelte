@@ -1,14 +1,30 @@
 <script>
+	import { gsap } from 'gsap';
 	import hero05x from '../assets/hero/hero_home0.5x.webp';
 	import hero from '../assets/hero/hero_home.webp';
 	import hero1_5x from '../assets/hero/hero_home1.5x.webp';
 	import ImageLoader from './ImageLoader.svelte';
 	import HeroContainer from './common/HeroContainer.svelte';
+	import { onMount } from 'svelte';
 	export let line1 = '';
 	export let line2 = '';
 	export let line3 = '';
 	export let line4 = '';
 	export let buttonVisible = true;
+
+	onMount(() => {
+		const tl = gsap.timeline()
+
+		tl.fromTo(
+			'.fade-in',
+			{ y: 0, opacity: 0 },
+			{
+				opacity: 1,
+				duration: 1.8,
+				ease: 'power4.out'
+			},
+		);
+	})
 </script>
 
 <section class="hero relative col-span-5 h-[calc(100vh-40px-32px)] flex flex-col items-center">
@@ -16,9 +32,9 @@
 		<slot />
 	</HeroContainer>
 	<div class="hero-bg absolute top-0 left-0 w-full h-full overflow-hidden">
-		<div class="stars"></div>
-		<div class="stars2"></div>
-		<div class="stars3"></div>
+		<div class="stars opacity-0 fade-in"></div>
+		<div class="stars2 opacity-0 fade-in"></div>
+		<div class="stars3 opacity-0 fade-in"></div>
 		<div class="w-full h-full relative">
 			<ImageLoader
 				src={hero}
