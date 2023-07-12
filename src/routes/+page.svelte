@@ -53,7 +53,7 @@
 	buttonVisible={false}
 >
 	<div class="mt-8 twitter-button opacity-0">
-		<PrimaryButton class="text-center text-white bg-[#1DA1F2]" href="https://twitter.com/SuperteamDAO">
+		<PrimaryButton target="_blank" rel="noopener noreferrer" class="text-center text-white bg-[#1DA1F2]" href="https://twitter.com/SuperteamDAO">
 			Twitter
 		</PrimaryButton>
 	</div>
