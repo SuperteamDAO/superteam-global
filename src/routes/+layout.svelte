@@ -8,34 +8,10 @@
 	import Footer from '$lib/common/Footer.svelte';
 	import Analytics from '$lib/common/Analytics.svelte';
 
-	// import { loading } from '../store/loading'
 	import { disableScrollHandling } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import og_pic from '../assets/images/og_pic.png';
+	import og_pic from '../assets/images/og_pic.png'
 
-	// let imagesLoaded = 0
-	// let isLoaded = false
-	// let imgCount = 0
-	// let imgError = 0
-
-	// onMount(() => {
-	// 	const imgs = document.querySelectorAll('img')
-	// 	imgs.forEach(img => {
-	// 		img.addEventListener('load', () => {
-	// 			imagesLoaded++
-	// 		})
-	// 	})
-
-	// 	window.addEventListener("error", (event) => {
-	// 		imgError++;
-	// 	}, true);
-	// })
-
-	// $: if (imagesLoaded + imgError === imgCount) {
-	// 	isLoaded = true
-	// }
-
-	// $: loading.setNavigate(!!$navigating)
 	onMount(async () => {
 		disableScrollHandling();
 	});
