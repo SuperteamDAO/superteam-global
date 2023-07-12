@@ -82,9 +82,9 @@
 				{/each}
 			</div>
 			<div class="mt-[32px] ml-[32px] md:ml-[64px] mb-[34px]">
-				<SecondaryButton target="_blank" ref="noopener noreferrer" href={btnLink} class="font-bold">
+				<PrimaryButton class="bg-white" target="_blank" ref="noopener noreferrer" href={btnLink}>
 					{btnText}
-				</SecondaryButton>
+				</PrimaryButton>
 			</div>
 		</div>
 	</div>
