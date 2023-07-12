@@ -9,7 +9,7 @@
 	<h2
 		class="partners-text section-heading font-secondary text-center font-bold text-white mb-4 mr-[71px] ml-[71px] text-[24px] md:text-[32px] lg:leading-[26px] leading-[22px]"
 	>
-		Partners
+		Grant Partners
 	</h2>
 	<div class="logos-container flex flex-wrap justify-center items-center mt-6 gap-11 w-full">
 		<a href="https://wormhole.com/" target="_blank">
