@@ -8,34 +8,10 @@
 	import Footer from '$lib/common/Footer.svelte';
 	import Analytics from '$lib/common/Analytics.svelte';
 
-	// import { loading } from '../store/loading'
 	import { disableScrollHandling } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import og_pic from '../assets/images/og_pic.png';
+	import og_pic from '../assets/images/og_pic.png'
 
-	// let imagesLoaded = 0
-	// let isLoaded = false
-	// let imgCount = 0
-	// let imgError = 0
-
-	// onMount(() => {
-	// 	const imgs = document.querySelectorAll('img')
-	// 	imgs.forEach(img => {
-	// 		img.addEventListener('load', () => {
-	// 			imagesLoaded++
-	// 		})
-	// 	})
-
-	// 	window.addEventListener("error", (event) => {
-	// 		imgError++;
-	// 	}, true);
-	// })
-
-	// $: if (imagesLoaded + imgError === imgCount) {
-	// 	isLoaded = true
-	// }
-
-	// $: loading.setNavigate(!!$navigating)
 	onMount(async () => {
 		disableScrollHandling();
 	});
@@ -73,8 +49,10 @@
 	<meta name="twitter:site" content="@SuperteamDAO" />
 
 	<meta name="twitter:title" content="Welcome to Superteam" />
-	<meta name="twitter:image" content={og_pic} />
-	<meta name="og:image" content={og_pic} />
+	<meta name="twitter:image" content="https://res.cloudinary.com/dgvnuwspr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1689167718/Global%20Dashboard/3EB05A88C23EF39E104FDE_7C0_uicwxz.jpg?_s=public-apps" />
+	<meta name="og:image:secure_url" content="https://res.cloudinary.com/dgvnuwspr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1689167718/Global%20Dashboard/3EB05A88C23EF39E104FDE_7C0_uicwxz.jpg?_s=public-apps" />
+	<meta property="og:image" content="https://res.cloudinary.com/dgvnuwspr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1689167718/Global%20Dashboard/3EB05A88C23EF39E104FDE_7C0_uicwxz.jpg?_s=public-apps" />
+	<meta name="og:image" content="https://res.cloudinary.com/dgvnuwspr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1689167718/Global%20Dashboard/3EB05A88C23EF39E104FDE_7C0_uicwxz.jpg?_s=public-apps" />
 	<meta name="og:site_name" content="Superteam" />
 	<meta name="og:title" content="Welcome to Superteam" />
 	<meta name="og:type" content="community" />
