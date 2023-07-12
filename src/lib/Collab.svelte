@@ -25,7 +25,7 @@
 			be a part of history
 		</p>
 		<div class="button mt-[50px]">
-			<PrimaryButton class="bg-white" href="/collaborate">Collab with us</PrimaryButton>
+			<PrimaryButton class="bg-white" target="_blank" ref="noopener noreferrer" href="https://twitter.com/messages/compose?recipient_id=1250424920372174853&text=Hello%2C%20wanted%20to%20explore%20working%20together%20on">Collab with us</PrimaryButton>
 		</div>
 	</div>
 </div>
