@@ -46,8 +46,8 @@
 </svelte:head>
 
 <Hero
-	line1="A skyhook for"
-	line2="your web3 career"
+	line1="A Skyhook for"
+	line2="your web3 journey"
 	line3="superteam is a community of the best talent learning,"
 	line4="earning and building in crypto"
 	buttonVisible={false}
