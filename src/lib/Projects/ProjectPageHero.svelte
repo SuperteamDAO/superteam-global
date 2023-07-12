@@ -10,7 +10,7 @@
 		class="heading w-[280px] md:w-[430px] flex flex-col text-[32px] md:text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center"
 	>
 		<span class="line block">
-			<span> Industry leading </span>
+			<span> Industry Leading </span>
 		</span>
 		<span class="line block">
 			<span> Projects </span>
