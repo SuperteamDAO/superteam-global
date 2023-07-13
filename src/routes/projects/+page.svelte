@@ -37,7 +37,7 @@
 <section class="relative col-span-5 flex flex-col items-center pb-[300px]">
 	<img src={stars_bg} alt="" class="stars-bg" />
 	<HeroContainer
-		line1="Industry leading"
+		line1="Industry Leading"
 		line2="Projects"
 		line3="superteam is the forefront community for web3,"
 		line4="powered by solana."
