@@ -6,6 +6,8 @@
 	import vietnam from '../assets/chapters/vietnam.webp';
 	import mexico from '../assets/chapters/mexico.webp';
   import uk from '../assets/chapters/uk.webp';
+  import uae from '../assets/chapters/uae.webp';
+
 
 	/**
 	 * @type {HTMLElement}
@@ -62,6 +64,14 @@
 			countryGradient: 'linear-gradient(161.18deg, #c8102e -3.45%, #FFFFFF 47.74%, #012169 96.31%)',
 			invert: true,
 			href: 'https://uk.superteam.fun/'
+		},
+    {
+			key: 'uae',
+			name: 'United Arab Emirates',
+			path: uae,
+			countryGradient: 'linear-gradient(161.18deg, #FF0000 -3.45%, #FFFFFF 47.74%, #00732F 96.31%)',
+			invert: true,
+			href: 'https://uae.superteam.fun/'
 		},
 	];
 </script>
