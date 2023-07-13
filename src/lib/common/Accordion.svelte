@@ -1,6 +1,6 @@
 <script>
 	import clsx from 'clsx';
-	import SecondaryButton from './SecondaryButton.svelte';
+	import PrimaryButton from './PrimaryButton.svelte';
 
 	let isOpen = false;
 	export let image;
@@ -75,9 +75,7 @@
 			</div>
 		</div>
 		<div class="accordion-btn ml-[32px] md:ml-[64px] mt-[51px] w-fit">
-			<SecondaryButton class="w-fit" href={btnLink} target="_blank" rel="noopener noreferrer"
-				>{btnText}</SecondaryButton
-			>
+			<PrimaryButton class="bg-white w-fit" href={btnLink} target="_blank" rel="noopener noreferrer">{btnText}</PrimaryButton>
 		</div>
 	</div>
 </div>
