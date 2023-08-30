@@ -7,6 +7,7 @@
 	import mexico from '../assets/chapters/mexico.webp';
   import uk from '../assets/chapters/uk.webp';
   import uae from '../assets/chapters/uae.webp';
+  import nigeria from '../assets/chapters/nigeria.webp';
 
 
 	/**
@@ -72,6 +73,14 @@
 			countryGradient: 'linear-gradient(161.18deg, #FF0000 -3.45%, #FFFFFF 47.74%, #00732F 96.31%)',
 			invert: true,
 			href: 'https://uae.superteam.fun/'
+		},
+    {
+			key: 'nigeria',
+			name: 'Nigeria',
+			path: nigeria,
+			countryGradient: 'linear-gradient(161.18deg, #1B7339 -3.45%, #FFFFFF 47.74%, #1B7339 96.31%)',
+			invert: true,
+			href: 'https://ng.superteam.fun/'
 		},
 	];
 </script>
