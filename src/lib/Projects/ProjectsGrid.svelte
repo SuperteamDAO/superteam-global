@@ -3,6 +3,8 @@
 
     export let projects;
 
+    projects.sort((a, b) => a.fields['Rank'] - b.fields['Rank']);
+
     let offsetArray = (new Array(projects?.length ?? 0)).fill(false);
     offsetArray[1] = true;
 
