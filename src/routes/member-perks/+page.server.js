@@ -10,7 +10,6 @@ export const load = async () => {
     });
 
     const data = result?.data?.records ?? [];
-    console.log(data);
 
     const completedPerks = data.filter((d) => d.fields['Status'] === 'Completed');
     const comingSoonPerks = data.filter((d) => d.fields['Status'] === 'Coming Soon');
