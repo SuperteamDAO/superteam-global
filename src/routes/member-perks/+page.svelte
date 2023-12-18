@@ -15,12 +15,12 @@
 		name="description"
 		content="Explore perks Superteam Members around the world are eligible to claim!"
 	/>
-	<meta name="og:title" content="Projects" />
+	<meta name="og:title" content="Member Perks" />
 	<meta name="og:type" content="community" />
 	<meta name="og:url" content="https://superteam.fun" />
 	<meta name="application-name" content="superteam" />
 	<meta name="og:email" content="hello@superteam.fun" />
-	<meta name="twitter:title" content="Projects" />
+	<meta name="twitter:title" content="Member Perks" />
 </svelte:head>
 
 <!-- <img src={build_lg} class="absolute top-0 left-0 w-full object-cover" loading="eager" alt="" /> -->
