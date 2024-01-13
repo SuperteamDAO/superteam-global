@@ -20,41 +20,41 @@
 			image={bounties}
 			heading="Bounties"
 			subheading="projects for the community"
-			content="Put out work in the form of small tasks and projects for the community to get involved."
-			btnText="Let's talk"
-			btnLink="https://t.me/pratikdholani"
+			content="Sponsor or participate in small tasks and projects in the Solana ecosystem."
+			btnText="Learn more"
+			btnLink="https://earn.superteam.fun"
 		/>
 		<Accordion
 			image={grants}
 			heading="Instagrants"
 			subheading="fast grants to incentivize builders"
-			content="Fund community projects with small grants to incentivize them tinkering with your project. Get them playing with your codebase and integrating your primitives, and they might just make your ecosystem moonshot dApp."
-			btnText="Let's talk"
-			btnLink="https://twitter.com/messages/compose?recipient_id=824384532312842240&text=Hey%2C%20I%20was%20exploring%20starting%20a%20grants%20program%20with%20the%20Superteam%20community!"
+			content="Fund or apply for small grants to get started any projects — code, content or community for the Solana ecosystem. You might just make the next moonshot!"
+			btnText="Learn more"
+			btnLink="https://earn.superteam.fun/grants/"
 		/>
 		<Accordion
 			image={bootcamps}
 			heading="Bootcamps"
 			subheading="micro events and hackathons to get started"
 			content="Organize talks, working groups, and office hours to help community devs get started with your APIs and SDKs."
-			btnText="Let's talk"
-			btnLink="https://twitter.com/messages/compose?recipient_id=824384532312842240&text=Hey%2C%20I%20was%20exploring%20starting%20a%20bootcamp%20for%20the%20Superteam%20community!%20Can%20you%20help%20me%20out%3F"
+			btnText="Learn more"
+			btnLink="https://in.superteam.fun/instagrants/superteam-education-fund"
 		/>
 		<Accordion
 			image={fellowships}
-			heading="Fellowships"
+			heading="Fellowship"
 			subheading="structured programs for in-depth engagement"
 			content="Work with the community to train highest-intent devs to become experts. 6-8 weeks of learning, building and earning with your team."
-			btnText="Let's talk"
-			btnLink="https://twitter.com/messages/compose?recipient_id=824384532312842240&text=Hey%2C%20I%20wanted%20to%20put%20up%20a%20fellowship%20for%20Superteam%20community%20devs.%20Let's%20talk%3F"
+			btnText="Learn more"
+			btnLink="https://in.superteam.fun/instagrants/superteam-education-fund"
 		/>
 		<Accordion
 			image={grants}
 			heading="Meetups"
 			subheading="seed hyperlocal communities in every city"
-			content="Enable contributors around the world to engage with their local universities and other contributors. Create an ecosystem of robust mico-communities."
-			btnText="Let's talk"
-			btnLink="https://twitter.com/messages/compose?recipient_id=824384532312842240&text=Hello%2C%20I%20wanted%20to%20help%20seed%20local%20contributor%20communities%20for%20my%20project.%20Let's%20talk%3F"
+			content="Organize events to bring contributors in your city and local universities to meet each other and earn together!"
+			btnText="Learn more"
+			btnLink="https://app.getriver.io/superteam"
 		/>
 		<Accordion
 			image={market}

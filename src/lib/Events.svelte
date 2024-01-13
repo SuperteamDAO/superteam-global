@@ -3,6 +3,8 @@
 	import Event from "./Event.svelte";
 	import { tweened } from "../utils/pauseableTween";
 	import { onMount, setContext } from "svelte";
+  import PrimaryButton from './common/PrimaryButton.svelte';
+
     export let events;
 
     const eventsLength = events.length;
@@ -59,8 +61,13 @@
                 {/each}
             </div>
         </div>
+        <div class="w-full flex align-middle justify-center mt-16">
+          <PrimaryButton class="bg-white" href="https://lu.ma/superteam">See upcoming events</PrimaryButton>
+        </div>
+
     </div>
-</div>
+
+  </div>
 
 <style>
     .respect-container {

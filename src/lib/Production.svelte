@@ -189,10 +189,10 @@
 			/>
       <IllustrationCard
 				class="md:col-start-2 md:row-start-1 md:row-end-3 lg:col-start-1 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
-				text="Event Calendar"
+				text="Ecosystem Call"
 				imageUrl={ecosystem_calls}
 				on:click={() => {
-					window.open('https://lu.ma/superteam', '_blank');
+					window.open('https://lu.ma/ecosystem-call', '_blank');
 				}}
 			/>
 			<IllustrationCard

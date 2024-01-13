@@ -47,6 +47,8 @@
 				<a href="https://mx.superteam.fun/" target="_blank" class="footer-text">SuperteamMX</a>
         <a href="https://uk.superteam.fun/" target="_blank" class="footer-text">SuperteamUK</a>
         <a href="https://uae.superteam.fun/" target="_blank" class="footer-text">SuperteamUAE</a>
+        <a href="https://ng.superteam.fun/" target="_blank" class="footer-text">SuperteamNG</a>
+        <a href="https://br.superteam.fun/" target="_blank" class="footer-text">SuperteamBR</a>
 			</div>
 		</div>
 	</div>
