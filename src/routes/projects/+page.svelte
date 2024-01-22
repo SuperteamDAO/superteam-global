@@ -7,6 +7,13 @@
 	import ImageLoader from '$lib/ImageLoader.svelte';
 	import stars_bg from '../../assets/images/stars-bg.webp';
 	export let data;
+
+	// For potential project count based UI rendering
+	let projectCount = 0;
+	function handleUpdate(event) {
+		projectCount = event.detail.length;
+	}
+
 </script>
 
 <svelte:head>
@@ -32,6 +39,7 @@
 	loading="eager"
 	alt=""
 	class="absolute top-0 left-0 w-full object-cover -mt-[72px]"
+	style="height: 100%"
 />
 
 <section class="relative col-span-5 flex flex-col items-center pb-[300px]">
@@ -43,7 +51,7 @@
 		line4="powered by solana."
 		buttonVisible={false}
 	/>
-	<ProjectsGrid projects={data.projects} />
+	<ProjectsGrid projects={data.projects} on:update={handleUpdate} />
 </section>
 
 <style>

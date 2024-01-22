@@ -2,6 +2,8 @@
 	import ProjectCard from './ProjectCard.svelte';
 	import { writable, derived } from 'svelte/store';
 	import Dropdown from './Dropdown.svelte';
+	import { createEventDispatcher } from 'svelte';
+
 	export let projects = [];
 
 	if (Array.isArray(projects)) {
@@ -34,16 +36,32 @@
 
 	let selectedCountry = writable('');
 
-	const filteredProjects = derived(selectedCountry, ($selectedCountry) =>
-		projects.filter(
-			(project) => $selectedCountry === '' || project.fields['Country'] === $selectedCountry
-		)
-	);
+    const filteredProjects = derived(selectedCountry, ($selectedCountry) =>
+        projects.filter(
+            (project) => $selectedCountry === '' || project.fields['Country'] === $selectedCountry
+        )
+    );
+
+	const dispatch = createEventDispatcher();
+
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		const unsubscribe = filteredProjects.subscribe(($filteredProjects) => {
+			dispatch('update', { length: $filteredProjects.length });
+		});
+
+		return () => {
+			unsubscribe();
+		};
+	});
+
 </script>
+
 
 <div class="mt-12 z-50">
 	<p class="text-white font-primary font-medium text-center">Filter by Country</p>
-	
+
 	<Dropdown {countries} {selectedCountry} />
 </div>
 
