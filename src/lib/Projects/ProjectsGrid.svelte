@@ -1,15 +1,13 @@
 <script>
 	import ProjectCard from './ProjectCard.svelte';
 	import { writable, derived } from 'svelte/store';
-
+	import Dropdown from './Dropdown.svelte';
 	export let projects = [];
 
-	// Sorting projects if it's an array
 	if (Array.isArray(projects)) {
 		projects.sort((a, b) => a.fields['Rank'] - b.fields['Rank']);
 	}
 
-	// Handling offsetArray logic
 	let offsetArray = new Array(projects.length).fill(false);
 	offsetArray[1] = true;
 	for (let i = 2; i < projects.length; i++) {
@@ -29,7 +27,6 @@
 		return 'mt-0';
 	}
 
-	// Creating countries array
 	let countries = [];
 	if (Array.isArray(projects)) {
 		countries = Array.from(new Set(projects.map((project) => project.fields['Country'])));
@@ -37,27 +34,22 @@
 
 	let selectedCountry = writable('');
 
-	// Derived store for filtered projects
-	// const filteredProjects = derived(selectedCountry, ($selectedCountry) =>
-	// 	projects.filter(
-	// 		(project) => $selectedCountry === '' || project.fields['Country'] === $selectedCountry
-	// 	)
-	// );
+	const filteredProjects = derived(selectedCountry, ($selectedCountry) =>
+		projects.filter(
+			(project) => $selectedCountry === '' || project.fields['Country'] === $selectedCountry
+		)
+	);
 </script>
 
 <div class="mt-12 z-50">
-	<p class="text-white font-primary font-medium text-center">Filter Country</p>
-	<select class="mt-4" bind:value={$selectedCountry}>
-		<option value="">All Countries 🌐</option>
-		{#each countries as country}
-			<option>{country}</option>
-		{/each}
-	</select>
+	<p class="text-white font-primary font-medium text-center">Filter by Country</p>
+	
+	<Dropdown {countries} {selectedCountry} />
 </div>
 
 <div class="flex justify-center items-center mt-[42px] z-20">
 	<div class="flex flex-col gap-8 md:grid md:gap-0 cards-container">
-		{#each projects as { fields }, index}
+		{#each $filteredProjects as { fields }, index}
 			<ProjectCard
 				name={fields.Name}
 				tagline={fields.Tagline}
