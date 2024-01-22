@@ -8,6 +8,7 @@
 	export let projectLink;
 	export let twitterLink;
 	export let imgUrl;
+  export let country;
 </script>
 
 <div
@@ -32,14 +33,17 @@
 			{tagline}
 		</p>
 	</div>
-	<div class="flex gap-4">
-		<a href={projectLink} target="_blank">
-			<Globe size={24} color="white" />
-		</a>
-		<a href={twitterLink} target="_blank">
-			<TwitterLogo size={24} color="white" />
-		</a>
-	</div>
+  <div class="flex justify-between">
+    <div class="flex gap-4">
+      <a href={projectLink} target="_blank">
+        <Globe size={24} color="white" />
+      </a>
+      <a href={twitterLink} target="_blank">
+        <TwitterLogo size={24} color="white" />
+      </a>
+    </div>
+    <p class="text-white font-primary font-medium">{country}</p>
+  </div>
 </div>
 
 <style>
