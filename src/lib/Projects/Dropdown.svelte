@@ -1,6 +1,6 @@
 <script>
 	import { writable } from 'svelte/store';
-
+	import { onMount } from 'svelte';
 	export let countries = [];
 	export let selectedCountry = writable('');
 
@@ -14,28 +14,70 @@
 		selectedCountry.set(country);
 		isOpen = false;
 	}
+
+	function handleOutsideClick(event) {
+		const dropdown = document.querySelector('.selected-option');
+		if (!dropdown.contains(event.target) && isOpen) {
+			isOpen = false;
+		}
+	}
+
+	onMount(() => {
+		document.addEventListener('click', handleOutsideClick);
+
+		return () => {
+			document.removeEventListener('click', handleOutsideClick);
+		};
+	});
 </script>
 
 <div class="dropdown">
-	<div class="selected-option" on:click={toggleDropdown} on:keydown={() => {}} on:keypress={() => {}}>
+	<div
+		class="selected-option"
+		on:click={toggleDropdown}
+		on:keydown={() => {}}
+		on:keypress={() => {}}
+	>
 		{$selectedCountry || 'Select Country'}
 		{#if isOpen}
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+				class="arrow-icon"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 			</svg>
 		{:else}
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+				class="arrow-icon"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
 			</svg>
 		{/if}
 	</div>
 	{#if isOpen}
 		<div class="options">
-			<div class="option" on:click={() => selectCountry('')} on:keydown={() => {}} on:keypress={() => {}}>
+			<div
+				class="option"
+				on:click={() => selectCountry('')}
+				on:keydown={() => {}}
+				on:keypress={() => {}}
+			>
 				All
 			</div>
 			{#each countries as country (country)}
-				<div class="option" on:click={() => selectCountry(country)}  on:keydown={() => {}} on:keypress={() => {}}>
+				<div
+					class="option"
+					on:click={() => selectCountry(country)}
+					on:keydown={() => {}}
+					on:keypress={() => {}}
+				>
 					{country}
 				</div>
 			{/each}
@@ -54,7 +96,7 @@
 		padding: 10px;
 		border: 1px solid #414068;
 		border-radius: 5px;
-        margin-top: 0.5rem;
+		margin-top: 0.5rem;
 		cursor: pointer;
 		display: flex;
 		justify-content: space-between;
@@ -83,7 +125,7 @@
 		cursor: pointer;
 		transition: background-color 0.3s;
 		background-color: #1f1c33;
-		color: #fff; 
+		color: #fff;
 	}
 
 	.option:hover {
