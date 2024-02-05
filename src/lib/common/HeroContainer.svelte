@@ -53,7 +53,7 @@
 <div class="flex flex-col justify-start items-center hero-content w-full">
 	<AnimatedLogo />
 	<h1
-		class="heading w-[320px] text-[calc(24px+0.5vw)] md:w-[500px] flex flex-col md:text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center"
+		class="heading w-[320px] text-[calc(24px+0.5vw)] md:w-[600px] flex flex-col md:text-[48px] leading-[1.005] tracking-[-4%] font-semibold font-secondary text-white mt-12 text-center"
 	>
 		<span class="line block h-9 md:h-12 w-full">
 			<span class="heading-text"> {line1} </span>
