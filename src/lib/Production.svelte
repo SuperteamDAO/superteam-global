@@ -192,7 +192,7 @@
 				text="Ecosystem Call"
 				imageUrl={ecosystem_calls}
 				on:click={() => {
-					window.open('https://lu.ma/ecosystem-call', '_blank');
+					window.open('https://ecosystemcall.com', '_blank');
 				}}
 			/>
 			<IllustrationCard
