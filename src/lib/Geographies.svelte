@@ -100,7 +100,7 @@ import philippines from '../assets/chapters/philippines.webp';
 			key: 'balkan',
 			name: 'Balkan',
 			path: balkan,
-			countryGradient: 'linear-gradient(161.18deg, #5252ee -3.45%, #106b7d 47.74%, #4468F1 96.31%)',
+			countryGradient: 'linear-gradient(161.18deg, #3d3dba -3.45%, #0b4c59 47.74%, #334db4 96.31%)',
 			invert: true,
 			href: 'https://blkn.superteam.fun/'
 		},
@@ -111,6 +111,14 @@ import philippines from '../assets/chapters/philippines.webp';
 			countryGradient: 'linear-gradient(161.18deg, #5252ee -3.45%, #106b7d 47.74%, #4468F1 96.31%)',
 			invert: true,
 			href: 'https://my.superteam.fun/'
+		},
+{
+			key: 'philippines',
+			name: 'Philippines',
+			path: philippines,
+			countryGradient: 'linear-gradient(161.18deg, #5252ee -3.45%, #106b7d 47.74%, #4468F1 96.31%)',
+			invert: true,
+			href: 'https://phl.superteam.fun/'
 		},
 	];
 </script>
