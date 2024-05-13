@@ -67,7 +67,6 @@
 
 <Media />
 
-<Events events={data.events} />
 <!-- <SuperteamIrl /> -->
 
 <LoveRespect />
