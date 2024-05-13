@@ -116,7 +116,7 @@ import philippines from '../assets/chapters/philippines.webp';
 			key: 'philippines',
 			name: 'Philippines',
 			path: philippines,
-			countryGradient: 'linear-gradient(161.18deg, #0038a8 -3.45%, #fcd116 47.74%, #ce1126 96.31%)',
+			countryGradient: 'linear-gradient(161.18deg, #3455eb -3.45%, #f5a3aa 47.74%, #ad2d3e 96.31%)',
 			invert: true,
 			href: 'https://phl.superteam.fun/'
 		},
