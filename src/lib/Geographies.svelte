@@ -100,7 +100,7 @@ import philippines from '../assets/chapters/philippines.webp';
 			key: 'balkan',
 			name: 'Balkan',
 			path: balkan,
-			countryGradient: 'linear-gradient(161.18deg, #009b3a -3.45%, #fedf00 47.74%, #002776 96.31%)',
+			countryGradient: 'linear-gradient(161.18deg, #5252ee -3.45%, #106b7d 47.74%, #4468F1 96.31%)',
 			invert: true,
 			href: 'https://blkn.superteam.fun/'
 		},
