@@ -104,22 +104,6 @@ import philippines from '../assets/chapters/philippines.webp';
 			invert: true,
 			href: 'https://blkn.superteam.fun/'
 		},
- {
-			key: 'malaysia',
-			name: 'Malaysia',
-			path: malaysia,
-			countryGradient: 'linear-gradient(161.18deg, #009b3a -3.45%, #fedf00 47.74%, #002776 96.31%)',
-			invert: true,
-			href: 'https://my.superteam.fun/'
-		},
- {
-			key: 'philippines',
-			name: 'Philippines',
-			path: philipppines,
-			countryGradient: 'linear-gradient(161.18deg, #009b3a -3.45%, #fedf00 47.74%, #002776 96.31%)',
-			invert: true,
-			href: 'https://phl.superteam.fun/'
-		},
 	];
 </script>
 
