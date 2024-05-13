@@ -9,6 +9,8 @@
   import uae from '../assets/chapters/uae.webp';
   import nigeria from '../assets/chapters/nigeria.webp';
   import brazil from '../assets/chapters/brazil.webp';
+  import balkan from '../assets/chapters/balkan.webp';
+
 
 
 
@@ -91,6 +93,14 @@
 			countryGradient: 'linear-gradient(161.18deg, #009b3a -3.45%, #fedf00 47.74%, #002776 96.31%)',
 			invert: true,
 			href: 'https://br.superteam.fun/'
+		},
+ {
+			key: 'balkan',
+			name: 'Balkan',
+			path: balkan,
+			countryGradient: 'linear-gradient(161.18deg, #009b3a -3.45%, #fedf00 47.74%, #002776 96.31%)',
+			invert: true,
+			href: 'https://blkn.superteam.fun/'
 		},
 	];
 </script>
