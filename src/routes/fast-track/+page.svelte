@@ -23,10 +23,10 @@
 <div class="col-span-5 h-fit">
 	<section class="hero relative col-span-5 h-[calc(100vh-40px-32px)] flex flex-col items-centerr">
 		<FastTrackContainer
-			line1="collaborate with the"
-			line2="forefront of web3"
-			line3="superteam is the forefront community for web3,"
-			line4="powered by solana."
+			line1="Fast track your idea"
+			line2="out of the sandbox"
+			line3="Global Superteam Members can receive perks & personalized support"
+			line4="when applying to the following acceleration & incubation programs."
 		/>
 		<div class="hero-bg absolute top-0 left-0 w-full h-[calc(100vh)] overflow-hidden">
 			<div class="w-full h-full relative">
