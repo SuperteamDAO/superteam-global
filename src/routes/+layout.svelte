@@ -10,7 +10,7 @@
 
 	import { disableScrollHandling } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import og_pic from '../assets/images/og_pic.png'
+	import og_pic from '../assets/images/og_pic.png';
 
 	onMount(async () => {
 		disableScrollHandling();
@@ -49,10 +49,22 @@
 	<meta name="twitter:site" content="@SuperteamDAO" />
 
 	<meta name="twitter:title" content="Welcome to Superteam" />
-	<meta name="twitter:image" content="https://res.cloudinary.com/dgvnuwspr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1689167718/Global%20Dashboard/3EB05A88C23EF39E104FDE_7C0_uicwxz.jpg?_s=public-apps" />
-	<meta name="og:image:secure_url" content="https://res.cloudinary.com/dgvnuwspr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1689167718/Global%20Dashboard/3EB05A88C23EF39E104FDE_7C0_uicwxz.jpg?_s=public-apps" />
-	<meta property="og:image" content="https://res.cloudinary.com/dgvnuwspr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1689167718/Global%20Dashboard/3EB05A88C23EF39E104FDE_7C0_uicwxz.jpg?_s=public-apps" />
-	<meta name="og:image" content="https://res.cloudinary.com/dgvnuwspr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1689167718/Global%20Dashboard/3EB05A88C23EF39E104FDE_7C0_uicwxz.jpg?_s=public-apps" />
+	<meta
+		name="twitter:image"
+		content="https://res.cloudinary.com/dgvnuwspr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1689167718/Global%20Dashboard/3EB05A88C23EF39E104FDE_7C0_uicwxz.jpg?_s=public-apps"
+	/>
+	<meta
+		name="og:image:secure_url"
+		content="https://res.cloudinary.com/dgvnuwspr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1689167718/Global%20Dashboard/3EB05A88C23EF39E104FDE_7C0_uicwxz.jpg?_s=public-apps"
+	/>
+	<meta
+		property="og:image"
+		content="https://res.cloudinary.com/dgvnuwspr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1689167718/Global%20Dashboard/3EB05A88C23EF39E104FDE_7C0_uicwxz.jpg?_s=public-apps"
+	/>
+	<meta
+		name="og:image"
+		content="https://res.cloudinary.com/dgvnuwspr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1689167718/Global%20Dashboard/3EB05A88C23EF39E104FDE_7C0_uicwxz.jpg?_s=public-apps"
+	/>
 	<meta name="og:site_name" content="Superteam" />
 	<meta name="og:title" content="Welcome to Superteam" />
 	<meta name="og:type" content="community" />
@@ -79,6 +91,7 @@
 	</div>
 {:else} -->
 <Header class="mx-auto px-10 md:px-[72px]" />
+
 <div class="relative h-full grid grid-cols-5 gap-5 px-10 md:px-[72px] mx-auto">
 	<slot />
 	<Footer />

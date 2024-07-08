@@ -18,7 +18,7 @@
 	export let data;
 
 	onMount(() => {
-		const tl = gsap.timeline()
+		const tl = gsap.timeline();
 
 		tl.fromTo(
 			'.twitter-button',
@@ -27,10 +27,9 @@
 				opacity: 1,
 				duration: 1.8,
 				ease: 'power4.out'
-			},
+			}
 		);
-	})
-
+	});
 </script>
 
 <svelte:head>
@@ -53,7 +52,12 @@
 	buttonVisible={false}
 >
 	<div class="mt-8 twitter-button opacity-0">
-		<PrimaryButton target="_blank" rel="noopener noreferrer" class="text-center text-white bg-[#1DA1F2]" href="https://twitter.com/SuperteamDAO">
+		<PrimaryButton
+			target="_blank"
+			rel="noopener noreferrer"
+			class="text-center text-white bg-[#1DA1F2]"
+			href="https://twitter.com/SuperteamDAO"
+		>
 			Twitter
 		</PrimaryButton>
 	</div>
