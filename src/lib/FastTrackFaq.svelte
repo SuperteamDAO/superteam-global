@@ -52,8 +52,8 @@
 	<div class="container w-full flex flex-col md:justify-center items-center h-[800px] md:h-full">
 		<p class="header-text">Your questions, answered</p>
 		<p class="description-text">
-			If you have any further questions, reach out to Neil Shroff <a
-				href="https://x.com/neilshroff"
+			If you have any further questions, reach out to Noe <a
+				href="https://x.com/rieker_noe"
 				target="_blank">here</a
 			>
 		</p>
