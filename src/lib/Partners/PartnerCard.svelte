@@ -2,6 +2,8 @@
 <script>
 	import ImageLoader from "$lib/ImageLoader.svelte";
 
+  import button from "../src/assets/fast-tracks/button.svg";
+
 	export let imageUrl;
 	export let name;
 	export let description;
@@ -22,7 +24,7 @@
       <ImageLoader src={iconUrl} alt="Icon" loading="lazy" />
     </div>
 		<a href={url} target="_blank">
-			<img src="../src/assets/fast-tracks/button.svg" alt="" />
+      <ImageLoader src={button} alt="Icon" loading="lazy" />
 		</a>
 	</div>
 </div>
