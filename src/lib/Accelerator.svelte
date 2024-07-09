@@ -1,50 +1,59 @@
 <script>
 	import PartnerCard from '../lib/Partners/PartnerCard.svelte';
+  import virtalIcon from '../assets/fast-tracks/virtualicon.svg';
+  import hybridIcon from '../assets/fast-tracks/hybridicon.svg';
+
+  import OrangeDao from '../assets/fast-tracks/orangedao.svg';
+  import AllianceDao from '../assets/fast-tracks/alliance.svg';
+  import OutlierVentures from '../assets/fast-tracks/outlier.svg';
+  import Colosseum from '../assets/fast-tracks/colosseum.svg';
+  import SpringX from '../assets/fast-tracks/springx.svg';
+  import SolanaIncubator from '../assets/fast-tracks/solanaincubator.svg';
+
 
 	const partners = [
 		{
-			imageUrl: 'src/assets/fast-tracks/orangedao.svg',
+			imageUrl: OrangeDao,
 			name: 'OrangeDAO',
 			description: 'Special Sign up sheet + expedited reviews for Orange DAO Fellowships',
-			iconUrl: 'src/assets/fast-tracks/virtualicon.svg',
+			iconUrl: virtalIcon,
 			url: 'https://www.orangedao.xyz/'
 		},
 		{
-			imageUrl: 'src/assets/fast-tracks/alliance.svg',
+			imageUrl: AllianceDao,
 			name: 'Alliance DAO',
-			description:
-				'Personalized support from the team + feedback on application drafts, strategic advice for startup narrative, guidance on application strategy & interview preparation.',
-			iconUrl: 'src/assets/fast-tracks/hybridicon.svg',
-			url: 'https://www.alliance.xyz/'
+			description: 'Personalized support from the team + feedback on application drafts, strategic advice for startup narrative, guidance on application strategy & interview preparation.',
+      iconUrl: hybridIcon,
+      url: 'https://www.alliance.xyz/'
 		},
 		{
-			imageUrl: 'src/assets/fast-tracks/outlier.svg',
+			imageUrl: OutlierVentures,
 			name: 'Outlier Ventures Base camp',
 			description: 'Comment "Superteam" in the referral section of the application to get direct exposure to the Outlier investment team & receive an expedient review on your submission.',
-			iconUrl: 'src/assets/fast-tracks/virtualicon.svg',
+			iconUrl: virtalIcon,
 			url: 'https://www.outlierventures.io/base-camp/'
 		},
 		{
-			imageUrl: 'src/assets/fast-tracks/colosseum.svg',
+			imageUrl: Colosseum,
 			name: 'Colosseum',
 			description:
 				'Get invited to a special Zoom call, get competition strategies & project submission tips. Chance to get fast tracked into Colosseum if recommended by a Superteam Lead!',
-			iconUrl: 'src/assets/fast-tracks/hybridicon.svg',
+			iconUrl: hybridIcon,
 			url: 'https://www.colosseum.org/'
 		},
 		{
-			imageUrl: 'src/assets/fast-tracks/springx.svg',
+			imageUrl: SpringX,
 			name: 'SpringX',
 			description:
 				'Get recommended to the SpringX Accelerator Program at the Solana APAC Summit in Malaysia in June 2024.',
-			iconUrl: 'src/assets/fast-tracks/virtualicon.svg',
+			iconUrl: virtalIcon,
 			url: 'https://www.springx.net/'
 		},
 		{
-			imageUrl: 'src/assets/fast-tracks/solanaincubator.svg',
+			imageUrl: SolanaIncubator,
 			name: 'Solana Incubator',
 			description: 'Get invited to a special Zoom call + a chance to get fast tracked into the Solana incubator programm if recommended by a Superteam Lead!',
-			iconUrl: 'src/assets/fast-tracks/hybridicon.svg',
+			iconUrl: hybridIcon,
 			url: 'https://incubator.solanalabs.com/'
 		}
 	];
