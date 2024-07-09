@@ -51,7 +51,7 @@
 	];
 </script>
 
-<section class="text-center text-white flex flex-col justify-center items-center mb-24">
+<section class="text-center text-white flex flex-col justify-center items-center">
 	<div class="bg-image">
     <div class="partners-content">
       <p class="header-text">Accelerator Partners</p>
@@ -77,9 +77,9 @@
 <style>
 	.bg-image {
 		background-image: url('../assets/fast-tracks/BgGradient.png');
-		background-size: cover;
+		background-size: contain;
 		background-position: center;
-		z-index: 2;
+		z-index: 1;
 		margin-bottom: 8rem;
 	}
   @media only screen and (max-width: 1048px) {
@@ -93,7 +93,7 @@
     }
   }
   .partners-content {
-    padding: 0rem 1rem;
+    padding: 0rem 16rem;
   }
 	.header-text {
 		color: #fff;
@@ -104,7 +104,7 @@
 		line-height: 110%; /* 2.6125rem */
 		letter-spacing: -0.1425rem;
 		margin-bottom: 0.75rem;
-		margin-top: 3.75rem;
+		margin-top: 9.75rem;
 		font-family: 'DM-Sans-H';
 	}
 	.description-text {

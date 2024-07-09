@@ -28,8 +28,8 @@
 			line3="Global Superteam Members can receive perks & personalized support"
 			line4="when applying to the following acceleration & incubation programs."
 		/>
-		<div class="hero-bg absolute top-0 left-0 w-full h-[calc(100vh)] overflow-hidden">
-			<div class="w-full h-full relative">
+		<div class="hero-bg absolute top-0 left-0 w-full h-[calc(100vh)]">
+			<div class="w-full h-full relative hero-bg-image">
 				<ImageLoader
 					src={hero}
 					srcset={`${hero} 640w, ${hero} 1440w, ${hero} 2560w`}
