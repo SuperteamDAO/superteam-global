@@ -2,7 +2,7 @@
 <script>
 	import ImageLoader from "$lib/ImageLoader.svelte";
 
-  import button from "../src/assets/fast-tracks/button.svg";
+  import button from "../../assets/fast-tracks/button.svg";
 
 	export let imageUrl;
 	export let name;
