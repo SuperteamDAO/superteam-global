@@ -58,7 +58,7 @@
 	.card-description {
 		font-family: 'DM Sans';
 		color: #fff;
-		font-size: 1.125rem;
+		font-size: 1rem;
 		line-height: 1.8rem;
 		letter-spacing: -0.0225rem;
 		text-align: left;
