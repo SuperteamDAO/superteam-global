@@ -1,5 +1,7 @@
 <!-- PartnerCard.svelte -->
 <script>
+	import ImageLoader from "$lib/ImageLoader.svelte";
+
 	export let imageUrl;
 	export let name;
 	export let description;
@@ -9,19 +11,23 @@
 
 <div class="card">
 	<div class="image-container">
-		<img src={imageUrl} alt={name} class="partner-image" />
+    <div class="partner-image">
+      <ImageLoader src={imageUrl} alt={name} loading="lazy" />
+    </div>
 	</div>
 	<h3 class="card-title">{name}</h3>
 	<p class="card-description">{description}</p>
 	<div class="card-footer">
-		<img src={iconUrl} alt="Icon" class="status-icon" />
+    <div class="status-icon">
+      <ImageLoader src={iconUrl} alt="Icon" loading="lazy" />
+    </div>
 		<a href={url} target="_blank">
 			<img src="../src/assets/fast-tracks/button.svg" alt="" />
 		</a>
 	</div>
 </div>
 
-<style>
+<style lang="scss">
 	.card {
 		display: flex;
 		flex-direction: column;
@@ -41,8 +47,10 @@
 		align-items: center;
 	}
 	.partner-image {
-		width: 100%;
-		object-fit: cover;
+    & img {
+      width: 100%;
+      object-fit: cover;
+    }
 	}
 	.card-title {
 		color: #fff;
@@ -75,6 +83,8 @@
 		padding: 0 1.25rem;
 	}
 	.status-icon {
-		width: 5rem;
+    & img {
+      width: 5rem;
+    }
 	}
 </style>
