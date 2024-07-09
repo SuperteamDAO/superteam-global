@@ -20,8 +20,7 @@
 		{
 			imageUrl: 'src/assets/fast-tracks/outlier.svg',
 			name: 'Outlier Ventures Base camp',
-			description:
-				'Let your project lead know so we can directly put you in contact with the Outlier Ventures team.',
+			description: 'Comment "Superteam" in the referral section of the application to get direct exposure to the Outlier investment team & receive an expedient review on your submission.',
 			iconUrl: 'src/assets/fast-tracks/virtualicon.svg',
 			url: 'https://www.outlierventures.io/base-camp/'
 		},
@@ -44,7 +43,7 @@
 		{
 			imageUrl: 'src/assets/fast-tracks/solanaincubator.svg',
 			name: 'Solana Incubator',
-			description: 'Special perk when application is open, but call and shortlist?',
+			description: 'Get invited to a special Zoom call + a chance to get fast tracked into the Solana incubator programm if recommended by a Superteam Lead!',
 			iconUrl: 'src/assets/fast-tracks/hybridicon.svg',
 			url: 'https://incubator.solanalabs.com/'
 		}
