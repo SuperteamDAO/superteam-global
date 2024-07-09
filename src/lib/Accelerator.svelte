@@ -7,7 +7,7 @@
   import AllianceDao from '../assets/fast-tracks/alliance.svg';
   import OutlierVentures from '../assets/fast-tracks/outlier.svg';
   import Colosseum from '../assets/fast-tracks/colosseum.svg';
-  import springx from '../assets/fast-tracks/springx.svg';
+  import SpringX from '../assets/fast-tracks/spring.svg';
   import SolanaIncubator from '../assets/fast-tracks/solanaincubator.svg';
 
 
@@ -42,7 +42,7 @@
 			url: 'https://www.colosseum.org/'
 		},
 		{
-			imageUrl: springx,
+			imageUrl: SpringX,
 			name: 'SpringX',
 			description:
 				'Get recommended to the SpringX Accelerator Program at the Solana APAC Summit in Malaysia in June 2024.',
