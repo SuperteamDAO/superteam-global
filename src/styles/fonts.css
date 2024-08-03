@@ -68,3 +68,10 @@
 	font-weight: 400;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Satoshi-R';
+	src: url('../fonts/Satoshi-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
