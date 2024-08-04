@@ -31,7 +31,7 @@
 		<div class="title-apply">
 			<h3 class="card-title">{name}</h3>
 			<a href={url} target="_blank">
-				<img src={button} alt="Icon" loading="lazy" />
+				<ImageLoader src={button} alt="Icon" loading="lazy" />
 			</a>
 		</div>
 		<p class="card-description main-description">{description}</p>
@@ -82,6 +82,10 @@
 		width: 61rem;
 		// height: 22.625rem;
 		// position: relative;
+		@media (max-width: 1000px) {
+			flex-direction: column;
+			width: 28rem;
+		}
 	}
 	.card-p1 {
 		width: 24rem;
@@ -89,6 +93,9 @@
 		// display: flex;
 		// flex-direction: column;
 		// justify-content: space-evenly;
+		@media (max-width: 1000px) {
+			width: 100%;
+		}
 	}
 	.title-apply {
 		display: flex;
@@ -115,14 +122,16 @@
 		line-height: 1.8rem;
 		letter-spacing: -0.045rem;
 		text-align: left;
+		opacity: 0.8;
 	}
-  .main-description {
-    margin: 1.25rem 0rem;
-  }
+	.main-description {
+		margin: 1.25rem 0rem;
+		opacity: 0.8;
+	}
 
-  .partner-image {
-    border-radius: 20px;
-  }
+	.partner-image {
+		border-radius: 20px;
+	}
 
 	.card-p2 {
 		display: flex;
@@ -130,21 +139,26 @@
 		justify-content: space-around;
 		width: 37rem;
 		padding: 1.25rem;
+		@media (max-width: 1000px) {
+			width: 100%;
+			gap: 2rem;
+			height: fit-content;
+		}
 	}
 	.perksSection {
 		display: flex;
 		flex-direction: column;
 		text-align: left;
 	}
-  .icon-img {
-    height: 2rem;
-    width: max-content;
-  }
+	.icon-img {
+		height: 2rem;
+		width: max-content;
+	}
 	.time-period {
 		display: flex;
 		justify-content: space-between;
 		text-align: left;
-    gap: 2rem;
+		gap: 2rem;
 	}
 	.durationSection {
 		display: flex;
@@ -161,9 +175,12 @@
 		flex-direction: column;
 		width: 33%;
 	}
-  .border-dotted {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+	.border-dotted {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: 1000px) {
+			display: none;
+		}
+	}
 </style>

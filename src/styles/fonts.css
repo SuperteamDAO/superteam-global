@@ -75,3 +75,10 @@
 	font-weight: 400;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Satoshi-B';
+	src: url('../fonts/Satoshi-Bold.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
