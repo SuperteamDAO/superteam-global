@@ -7,10 +7,10 @@
 	import AllianceDao from '../assets/fast-tracks/alliance.svg';
 	import OutlierVentures from '../assets/fast-tracks/outlier.svg';
 	import Colosseum from '../assets/fast-tracks/colosseum.svg';
-	import SpringX from '../assets/fast-tracks/spring.svg';
 	import SolanaIncubator from '../assets/fast-tracks/solanaincubator.svg';
+	import SpringX from '../assets/fast-tracks/spring.svg';
 
-	const partners = [
+	const partners1 = [
 		{
 			imageUrl: OrangeDao,
 			name: 'OrangeDAO',
@@ -46,7 +46,9 @@
 			duration: '12 weeks',
 			funding: 'upto $200k',
 			type: 'Virtual'
-		},
+		}
+	];
+	const partners2 = [
 		{
 			imageUrl: Colosseum,
 			name: 'Colosseum',
@@ -87,6 +89,13 @@
 			type: 'Virtual'
 		}
 	];
+
+	import { writable } from 'svelte/store';
+	const showAllPartners = writable(false);
+	function loadMorePrograms() {
+		showAllPartners.set(true);
+	}
+	$: displayedPartners = $showAllPartners ? [...partners1, ...partners2] : partners1;
 </script>
 
 <section class="text-center text-white flex flex-col justify-center items-center">
@@ -99,7 +108,7 @@
 				/>Superteam to individually support you in getting into an acceleration program.
 			</p>
 			<div class="partners-grid">
-				{#each partners as partner}
+				{#each displayedPartners as partner}
 					<PartnerCard
 						imageUrl={partner.imageUrl}
 						name={partner.name}
@@ -112,6 +121,13 @@
 					/>
 				{/each}
 			</div>
+			{#if !$showAllPartners}
+				<div class="btn">
+					<button class="load-more" type="button" on:click={loadMorePrograms}
+						>Load more programs</button
+					>
+				</div>
+			{/if}
 		</div>
 	</div>
 </section>
@@ -174,5 +190,27 @@
 		@media screen and (max-width: 700px) {
 			grid-template-columns: repeat(1, 1fr);
 		} */
+	}
+	.btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2rem;
+	}
+	.load-more {
+		display: flex;
+		padding: 0.75rem 1rem;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
+		border-radius: 0.5rem;
+		background: #fff;
+		color: #000;
+		font-family: Satoshi-B;
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 160%; /* 1.6rem */
+		letter-spacing: -0.04rem;
 	}
 </style>
