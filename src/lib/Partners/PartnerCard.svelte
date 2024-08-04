@@ -31,7 +31,7 @@
 		<div class="title-apply">
 			<h3 class="card-title">{name}</h3>
 			<a href={url} target="_blank">
-				<ImageLoader src={button} alt="Icon" loading="lazy" />
+				<ImageLoader src={button} alt="Icon" loading="lazy" class="apply-button" />
 			</a>
 		</div>
 		<p class="card-description main-description">{description}</p>
@@ -84,7 +84,19 @@
 		// position: relative;
 		@media (max-width: 1000px) {
 			flex-direction: column;
-			width: 28rem;
+			width: 30rem;
+		}
+		@media (max-width: 500px) {
+			flex-direction: column;
+			width: 22.5rem;
+		}
+		@media (max-width: 400px) {
+			flex-direction: column;
+			width: 20rem;
+		}
+		@media (max-width: 350px) {
+			flex-direction: column;
+			width: 19rem;
 		}
 	}
 	.card-p1 {
@@ -102,7 +114,9 @@
 		margin-top: 1.5rem;
 		justify-content: space-between;
 		align-items: center;
+    gap: 1rem;
 	}
+
 	.card-title {
 		color: #fff;
 		font-size: 1.5rem;
@@ -153,6 +167,10 @@
 	.icon-img {
 		height: 2rem;
 		width: max-content;
+		@media (max-width: 350px) {
+			height: 1.8rem;
+			width: max-content;
+		}
 	}
 	.time-period {
 		display: flex;
@@ -164,16 +182,34 @@
 		display: flex;
 		flex-direction: column;
 		width: 33%;
+		@media (max-width: 400px) {
+			width: 35%;
+		}
+		@media (max-width: 350px) {
+			width: 28%;
+		}
 	}
 	.fundingSection {
 		display: flex;
 		flex-direction: column;
 		width: 34%;
+		@media (max-width: 400px) {
+			width: 37%;
+		}
+		@media (max-width: 350px) {
+			width: 42%;
+		}
 	}
 	.typeSection {
 		display: flex;
 		flex-direction: column;
 		width: 33%;
+		@media (max-width: 400px) {
+			width: 28%;
+		}
+		@media (max-width: 350px) {
+			width: 30%;
+		}
 	}
 	.border-dotted {
 		display: flex;
