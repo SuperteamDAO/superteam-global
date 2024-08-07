@@ -17,7 +17,7 @@
 			description: 'Orange DAO is building the digital nation of founders helping each other.',
 			iconUrl: virtalIcon,
 			url: 'https://www.orangedao.xyz/',
-			perks: 'Special Sign up sheet + expedited reviews for Orange DAO Fellowships',
+			perks: 'Special Sign up sheet + expedited reviews for Orange DAO Fellowships.',
 			duration: '12 weeks',
 			funding: '$100k',
 			type: 'Virtual'
@@ -70,7 +70,7 @@
 			iconUrl: hybridIcon,
 			url: 'https://incubator.solanalabs.com/',
 			perks:
-				'Get invited to a special Zoom call, get competition strategies & project submission tips. Chance to get fast tracked into Colosseum if recommended by a Superteam Lead!',
+				'Get invited to a special Zoom call to learn more about the application process and ways to maximize your chances of acceptance. Also, chance to get referred in by a Superteam lead!',
 			duration: '3 months',
 			funding: '-',
 			type: 'Hybrid'
