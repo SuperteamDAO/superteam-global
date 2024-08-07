@@ -7,8 +7,8 @@
 	import durationImg from '../../assets/fast-tracks/duration.svg';
 	import fundingImg from '../../assets/fast-tracks/funding.svg';
 	import typeImg from '../../assets/fast-tracks/type.svg';
-	import line1 from '../../assets/fast-tracks/line1.svg';
-	import line2 from '../../assets/fast-tracks/line2.svg';
+	// import line1 from '../../assets/fast-tracks/line1.svg';
+	// import line2 from '../../assets/fast-tracks/line2.svg';
 
 	export let imageUrl;
 	export let name;
@@ -38,7 +38,7 @@
 
 	<div class="border-dotted">
 		<div>
-			<ImageLoader src={line1} alt={line1} loading="lazy" class="line-img" />
+			<!-- <ImageLoader src={line1} alt={line1} loading="lazy" class="line-img" /> -->
 		</div>
 	</div>
 
@@ -51,7 +51,7 @@
 			<p class="card-description">{perks}</p>
 		</div>
 		<div>
-			<ImageLoader src={line2} alt={line2} loading="lazy" class="line-img" />
+			<!-- <ImageLoader src={line2} alt={line2} loading="lazy" class="line-img" /> -->
 		</div>
 
 		<div class="time-period">
