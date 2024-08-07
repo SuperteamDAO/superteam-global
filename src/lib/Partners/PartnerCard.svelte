@@ -9,7 +9,6 @@
 	import typeImg from '../../assets/fast-tracks/type.svg';
 	import line1 from '../../assets/fast-tracks/line1.svg';
 	import line2 from '../../assets/fast-tracks/line2.svg';
-	import Image from '$lib/Image.svelte';
 
 	export let imageUrl;
 	export let name;
@@ -38,32 +37,41 @@
 	</div>
 
 	<div class="border-dotted">
-		<img src={line1} alt={line1} loading="lazy" />
+		<div>
+			<ImageLoader src={line1} alt={line1} loading="lazy" class="line-img" />
+		</div>
 	</div>
 
 	<div class="card-p2">
 		<div class="perksSection">
 			<!-- <h1>perks</h1> -->
-			<img src={perksImg} alt="Perks" loading="lazy" class="icon-img" />
+			<div class="icon-wrapper">
+				<ImageLoader src={perksImg} alt="Perks" loading="lazy" class="icon-img" />
+			</div>
 			<p class="card-description">{perks}</p>
 		</div>
-
-		<img src={line2} alt={line2} loading="lazy" />
+		<div>
+			<ImageLoader src={line2} alt={line2} loading="lazy" class="line-img" />
+		</div>
 
 		<div class="time-period">
 			<div class="durationSection">
-				<!-- <h1>duration</h1> -->
-				<img src={durationImg} alt="Duration" loading="lazy" class="icon-img" />
+				<div class="icon-wrapper">
+					<ImageLoader src={durationImg} alt="Duration" loading="lazy" class="icon-img" />
+				</div>
 				<p class="card-description">{duration}</p>
 			</div>
 			<div class="fundingSection">
-				<!-- <h1>funding</h1> -->
-				<img src={fundingImg} alt="Funding" loading="lazy" class="icon-img" />
+				<div class="icon-wrapper">
+					<ImageLoader src={fundingImg} alt="Funding" loading="lazy" class="icon-img" />
+				</div>
+
 				<p class="card-description">{funding}</p>
 			</div>
 			<div class="typeSection">
-				<!-- <h1>type</h1> -->
-				<img src={typeImg} alt="Type" loading="lazy" class="icon-img" />
+				<div class="icon-wrapper">
+					<ImageLoader src={typeImg} alt="Type" loading="lazy" class="icon-img" />
+				</div>
 				<p class="card-description">{type}</p>
 			</div>
 		</div>
@@ -102,9 +110,6 @@
 	.card-p1 {
 		width: 24rem;
 		padding: 1.25rem;
-		// display: flex;
-		// flex-direction: column;
-		// justify-content: space-evenly;
 		@media (max-width: 1000px) {
 			width: 100%;
 		}
@@ -114,7 +119,7 @@
 		margin-top: 1.5rem;
 		justify-content: space-between;
 		align-items: center;
-    gap: 1rem;
+		gap: 1rem;
 	}
 
 	.card-title {
@@ -156,7 +161,6 @@
 		@media (max-width: 1000px) {
 			width: 100%;
 			gap: 2rem;
-			height: fit-content;
 		}
 	}
 	.perksSection {
@@ -164,52 +168,38 @@
 		flex-direction: column;
 		text-align: left;
 	}
-	.icon-img {
-		height: 2rem;
+
+	.icon-wrapper {
 		width: max-content;
+		height: 2rem;
+		@media (max-width: 400px) {
+			max-width: 90%;
+		}
 		@media (max-width: 350px) {
-			height: 1.8rem;
-			width: max-content;
+			max-width: 85%;
 		}
 	}
+
 	.time-period {
 		display: flex;
 		justify-content: space-between;
 		text-align: left;
-		gap: 2rem;
+		gap: 1rem;
 	}
 	.durationSection {
 		display: flex;
 		flex-direction: column;
 		width: 33%;
-		@media (max-width: 400px) {
-			width: 35%;
-		}
-		@media (max-width: 350px) {
-			width: 28%;
-		}
 	}
 	.fundingSection {
 		display: flex;
 		flex-direction: column;
 		width: 34%;
-		@media (max-width: 400px) {
-			width: 37%;
-		}
-		@media (max-width: 350px) {
-			width: 42%;
-		}
 	}
 	.typeSection {
 		display: flex;
 		flex-direction: column;
 		width: 33%;
-		@media (max-width: 400px) {
-			width: 28%;
-		}
-		@media (max-width: 350px) {
-			width: 30%;
-		}
 	}
 	.border-dotted {
 		display: flex;
