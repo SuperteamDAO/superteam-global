@@ -56,7 +56,7 @@
 			target="_blank"
 			rel="noopener noreferrer"
 			class="text-center text-white bg-[#1DA1F2]"
-			href="https://twitter.com/SuperteamDAO"
+			href="https://twitter.com/superteam"
 		>
 			Twitter
 		</PrimaryButton>
