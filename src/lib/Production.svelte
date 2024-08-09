@@ -197,7 +197,7 @@
 			/>
 			<IllustrationCard
         class="md:col-start-2 md:row-start-7 md:row-end-[6] lg:col-start-3 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
-				text="Superteam Fast Track"
+				text="Fast Track"
 				imageUrl={alphasquad}
 				on:click={() =>{
 					window.open('https://superteam.fun/fast-track/', '_blank');
