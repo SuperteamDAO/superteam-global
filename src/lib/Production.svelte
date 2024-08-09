@@ -196,7 +196,7 @@
 				}}
 			/>
 			<IllustrationCard
-        class="md:col-start-2 md:row-start-7 md:row-end-[6] lg:col-start-3 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
+        			class="md:col-start-2 md:row-start-1 md:row-end-3 lg:col-start-1 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
 				text="Fast Track"
 				imageUrl={alphasquad}
 				on:click={() =>{
