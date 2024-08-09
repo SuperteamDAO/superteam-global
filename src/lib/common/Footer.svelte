@@ -37,14 +37,17 @@
 				<p class="footer-text mt-4">Alpha Squad</p>
 				<p class="footer-text mt-4">Founder's League</p> -->
 			</div>
-			<div class="text-col-1 flex flex-col items-start md:items-end gap-4">
-				<a href="https://in.superteam.fun/" target="_blank" class="footer-text">SuperteamIN</a>
+			<div
+				class="text-col-2 md:ml-[164px] lg:ml-[123px] md:mt-0 mt-[64px] lg:mb-0 mb-[72px] flex flex-col items-start md:items-end gap-4"
+			>
+				
+
+   				<a href="https://in.superteam.fun/" target="_blank" class="footer-text">SuperteamIN</a>
 				<a href="https://de.superteam.fun/" target="_blank" class="footer-text">SuperteamDE</a>
 				<a href="https://tr.superteam.fun/" target="_blank" class="footer-text">SuperteamTR</a>
 				<a href="https://vn.superteam.fun/" target="_blank" class="footer-text">SuperteamVN</a>
         			<a href="https://uk.superteam.fun/" target="_blank" class="footer-text">SuperteamUK</a>
         			<a href="https://uae.superteam.fun/" target="_blank" class="footer-text">SuperteamUAE</a>
-
 			</div>
 			
 			<div
