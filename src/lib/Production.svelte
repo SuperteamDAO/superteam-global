@@ -197,17 +197,11 @@
 			/>
 			<IllustrationCard
         class="md:col-start-2 md:row-start-7 md:row-end-[6] lg:col-start-3 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
-				text="Alpha Squad"
+				text="Fast Track"
 				imageUrl={alphasquad}
-				on:click={() =>
-					openModal(
-						'helping connect Solana founders to new users for beta testing, product feedback, and community building.',
-						'Alpha Squad',
-						alphasquad,
-						['Users get early access & bounties', 'Projects get detailed feedback reports', 'Zero fees'],
-						'Start here!',
-            'https://www.alphasquad.fun/',
-						thunder
+				on:click={() =>{
+					window.open('https://superteam.fun/fast-track/', '_blank');
+				}}
 					)}
 			/>
 		</div>
