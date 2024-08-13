@@ -60,7 +60,7 @@
 				'Get invited to a special Zoom call, get competition strategies & project submission tips. Chance to get fast tracked into Colosseum if recommended by a Superteam Lead!',
 			duration: '6 week hackathon + 6 week accelerator',
 			funding: '$250k',
-			type: 'Hybrid'
+			type: 'Virtual'
 		},
 		{
 			imageUrl: SolanaIncubator,
@@ -73,7 +73,7 @@
 				'Get invited to a special Zoom call to learn more about the application process and ways to maximize your chances of acceptance. Also, chance to get referred in by a Superteam lead!',
 			duration: '3 months',
 			funding: '-',
-			type: 'Hybrid'
+			type: 'In-Person'
 		},
 		{
 			imageUrl: SpringX,
