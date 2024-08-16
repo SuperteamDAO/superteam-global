@@ -24,7 +24,7 @@
 			class="footer-texts mt-[64px] lg:mt-0 lg:ml-0 ml-[40px] lg:mr-[72px] text-white lg:text-right flex md:flex-row flex-col"
 		>
 			<div class="text-col-1 flex flex-col items-start md:items-end gap-4">
-				<a href="https://twitter.com/SuperteamDAO" target="_blank" class="footer-text">Twitter</a>
+				<a href="https://twitter.com/superteam" target="_blank" class="footer-text">Twitter</a>
 				<a href="mailto:hello@superteam.fun" target="_blank" class="footer-text">Email</a>
 				<a href="https://superteam.substack.com/" target="_blank" class="footer-text">Blog</a>
 				<a
