@@ -93,7 +93,7 @@
 			imageUrl: Bfg,
 			name: 'Blockchain Founders Group',
 			description:
-				'Fast track your application for our highly exclusive 8-week Startup Accelerator. Get 1-1 weekly mentoring, access to seed investor network across Europe and tap into an ecosystem of subject matter experts and advisors on niche topics like tokenomics and legal.',
+				'Get 1-1 weekly mentoring, access to seed investor network across Europe and tap into an ecosystem of subject matter experts and advisors on niche topics like tokenomics and legal.',
 			iconUrl: virtalIcon,
 			url: 'https://blockchain-founders.io/startup-accelerator-bfg-adrenaline',
 			perks:
