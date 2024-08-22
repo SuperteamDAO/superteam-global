@@ -9,6 +9,7 @@
 	import Colosseum from '../assets/fast-tracks/colosseum.svg';
 	import SolanaIncubator from '../assets/fast-tracks/solanaincubator.svg';
 	import SpringX from '../assets/fast-tracks/spring.svg';
+	import Bfg from '../assets/fast-tracks/bfg.svg';
 
 	const partners1 = [
 		{
@@ -86,6 +87,19 @@
 				'Best teams get recommended to the SpringX Accelerator Program at the Solana APAC Summit in Malaysia in June 2024.',
 			duration: '3 weeks offline + 6 month online follow up',
 			funding: 'Conduct IRL workshops, mentoring sessions & investor meetups',
+			type: 'Virtual'
+		},
+		{
+			imageUrl: Bfg,
+			name: 'Blockchain Founders Group',
+			description:
+				'Fast track your application for our highly exclusive 8-week Startup Accelerator. Get 1-1 weekly mentoring, access to seed investor network across Europe and tap into an ecosystem of subject matter experts and advisors on niche topics like tokenomics and legal.',
+			iconUrl: virtalIcon,
+			url: 'https://blockchain-founders.io/startup-accelerator-bfg-adrenaline',
+			perks:
+				'Fast track evaluation, and tailored feedback to every project that applies regardless of outcome.',
+			duration: '8 weeks, remote',
+			funding: '100k in USD/EUR (Depending on which currency you raise with)',
 			type: 'Virtual'
 		}
 	];
