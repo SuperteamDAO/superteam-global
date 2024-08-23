@@ -62,7 +62,7 @@
 			subheading="unlock new markets with our communities"
 			content="Work with contributors to create larger programs with a combination of all of the above to open whole new markets and create a new ecosystem from scratch."
 			btnText="Let's talk"
-			btnLink="https://twitter.com/messages/compose?recipient_id=1571226984&text=Hey%20Kash%2C%20we%20wanted%20to%20work%20with%20the%20Superteam%20community%2C%20and%20enable%20members%20to%20get%20involved%20more%20with%20my%20Solana%20project.%20Can%20we%20talk%20sometime%3F"
+			btnLink="https://twitter.com/messages/compose?recipient_id=1581960194904530944&text=Hey%20Noe%2C%20we%20wanted%20to%20work%20with%20the%20Superteam%20community%2C%20and%20enable%20members%20to%20get%20involved%20more%20with%20my%20Solana%20project.%20Can%20we%20talk%20sometime%3F"
 		/>
 	</div>
 </div>
