@@ -10,6 +10,7 @@
 	import SolanaIncubator from '../assets/fast-tracks/solanaincubator.svg';
 	import SpringX from '../assets/fast-tracks/spring.svg';
 	import Bfg from '../assets/fast-tracks/bfg.svg';
+	import Kompass from '../assets/fast-tracks/kompass.svg';
 
 	const partners1 = [
 		{
@@ -100,6 +101,19 @@
 				'Fast track evaluation, and tailored feedback to every project that applies regardless of outcome.',
 			duration: '8 weeks, remote',
 			funding: '100k in USD/EUR (Depending on which currency you raise with)',
+			type: 'Virtual'
+		},
+		{
+			imageUrl: Kompass,
+			name: 'Kompass',
+			description:
+				'A bespoke Web3 accelerator where builders back builders.',
+			iconUrl: virtalIcon,
+			url: 'https://kompass.vc/',
+			perks:
+				'Prioritized application process (please put 'Superteam' as the referrer) and expedient review of your submission.',
+			duration: '6 months, remote',
+			funding: '$125k',
 			type: 'Virtual'
 		}
 	];
