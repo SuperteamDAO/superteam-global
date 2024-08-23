@@ -109,7 +109,7 @@
 			description:
 				'A bespoke Web3 accelerator where builders back builders.',
 			iconUrl: virtalIcon,
-			url: 'https://kompass.vc/',
+			url: 'https://kompass.vc',
 			perks:
 				'Prioritized application process (please put 'Superteam' as the referrer) and expedient review of your submission.',
 			duration: '6 months, remote',
