@@ -111,7 +111,7 @@
 			iconUrl: virtalIcon,
 			url: 'https://kompass.vc/',
 			perks:
-				'Prioritized application process and expdited review of your submission. Please mention \'Superteam\' as the referrer',
+				'Prioritized application process and expdited review of your submission. Please mention \'Superteam\' as the referrer.',
 			duration: '6 months, remote',
 			funding: '$125k',
 			type: 'Virtual'
