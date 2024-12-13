@@ -14,7 +14,7 @@
 	import toplight from '../assets/images/top-light.svg';
 	import top_right_light from '../assets/images/top-right-light.svg';
 	import bottomlight from '../assets/images/bottom-light.svg';
-	import midlight from '../assets/images/mid-light.svg';
+	import midlight from '../assets/images/mid-light.png';
 
 	let modalOpen = false;
 	let top_content;
