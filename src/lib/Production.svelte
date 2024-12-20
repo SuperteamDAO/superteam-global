@@ -189,10 +189,10 @@
 			/>
       <IllustrationCard
 				class="md:col-start-2 md:row-start-1 md:row-end-3 lg:col-start-1 lg:row-start-4 lg:row-end-7 min-h-[300px] min-w-[240px]"
-				text="Ecosystem Call"
+				text="Members' Lounge"
 				imageUrl={ecosystem_calls}
 				on:click={() => {
-					window.open('https://ecosystemcall.com', '_blank');
+					window.open('https://x.com/superteam/status/1852284030537900442', '_blank');
 				}}
 			/>
 			<IllustrationCard

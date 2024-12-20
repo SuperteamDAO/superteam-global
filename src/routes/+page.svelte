@@ -45,8 +45,8 @@
 </svelte:head>
 
 <Hero
-	line1="Get Access To"
-	line2="The Best Talent On Solana"
+	line1="Join The Talent Layer"
+	line2="of Solana"
 	line3="superteam is a community of the best talent learning,"
 	line4="earning and building in crypto"
 	buttonVisible={false}
@@ -60,7 +60,7 @@
 
 <Production />
 
-<Media />
+<!-- <Media /> -->
 
 <!-- <SuperteamIrl /> -->
 

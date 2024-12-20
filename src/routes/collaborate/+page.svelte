@@ -28,8 +28,8 @@
 <div class="col-span-5 h-fit">
 	<section class="hero relative col-span-5 h-[calc(100vh-40px-32px)] flex flex-col items-centerr">
 		<HeroContainer
-			line1="collaborate with the"
-			line2="forefront of web3"
+			line1="get access to"
+			line2="the best talent on Solana"
 			line3="superteam is the forefront community for web3,"
 			line4="powered by solana."
 			buttonVisible={false}

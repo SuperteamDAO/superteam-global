@@ -24,47 +24,14 @@
 			class="footer-texts mt-[64px] lg:mt-0 lg:ml-0 ml-[40px] lg:mr-[72px] text-white lg:text-right flex md:flex-row flex-col"
 		>
 			<div class="text-col-1 flex flex-col items-start md:items-end gap-4">
-				<a href="https://twitter.com/superteam" target="_blank" class="footer-text">Twitter</a>
-				<a href="mailto:hello@superteam.fun" target="_blank" class="footer-text">Email</a>
+				<a href="https://earn.superteam.fun" target="_blank" class="footer-text">Superteam Earn</a>
+				<a href="https://build.superteam.fun" target="_blank" class="footer-text">Superteam Build</a>
 				<a href="https://superteam.substack.com/" target="_blank" class="footer-text">Blog</a>
-				<a
-					href="https://www.youtube.com/channel/UCi-pkXLbm7sqXFhV1NBLUfQ"
-					target="_blank"
-					class="footer-text">Podcast</a
-				>
 				<!-- <p class="footer-text mt-4">Earn</p>
 				<p class="footer-text mt-4">Ecosystem Calls</p>
 				<p class="footer-text mt-4">Alpha Squad</p>
 				<p class="footer-text mt-4">Founder's League</p> -->
 			</div>
-			<div
-				class="text-col-2 md:ml-[164px] lg:ml-[123px] md:mt-0 mt-[64px] lg:mb-0 mb-[72px] flex flex-col items-start md:items-end gap-4"
-			>
-				
-
-   				<a href="https://in.superteam.fun/" target="_blank" class="footer-text">SuperteamIN</a>
-				<a href="https://de.superteam.fun/" target="_blank" class="footer-text">SuperteamDE</a>
-				<a href="https://tr.superteam.fun/" target="_blank" class="footer-text">SuperteamTR</a>
-				<a href="https://vn.superteam.fun/" target="_blank" class="footer-text">SuperteamVN</a>
-        			<a href="https://uk.superteam.fun/" target="_blank" class="footer-text">SuperteamUK</a>
-        			<a href="https://uae.superteam.fun/" target="_blank" class="footer-text">SuperteamUAE</a>
-			</div>
-			
-			<div
-				class="text-col-2 md:ml-[164px] lg:ml-[123px] md:mt-0 mt-[64px] lg:mb-0 mb-[72px] flex flex-col items-start md:items-end gap-4"
-			>
-				
-
-        <a href="https://ng.superteam.fun/" target="_blank" class="footer-text">SuperteamNG</a>
-        <a href="https://br.superteam.fun/" target="_blank" class="footer-text">SuperteamBR</a>
-	<a href="https://blkn.superteam.fun/" target="_blank" class="footer-text">SuperteamBLKN</a>
-	<a href="https://my.superteam.fun/" target="_blank" class="footer-text">SuperteamMY</a>
-	<a href="https://phl.superteam.fun/" target="_blank" class="footer-text">SuperteamPHL</a>
-	<a href="https://jp.superteam.fun/" target="_blank" class="footer-text">SuperteamJapan</a>
-	<a href="https://fr.superteam.fun/" target="_blank" class="footer-text">SuperteamFrance</a>
-			</div>
-		</div>
-	</div>
 </div>
 
 <style>
