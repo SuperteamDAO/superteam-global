@@ -24,7 +24,7 @@
 		</a>
 
 		<a href="https://www.circle.com/" target="_blank">
-			<img class="logo backpack h-8 w-auto" src={circle} alt="Circle" loading="lazy" />
+			<img class="logo circle h-8 w-auto" src={circle} alt="Circle" loading="lazy" />
 		</a>
 
 	</div>
