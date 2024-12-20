@@ -13,12 +13,13 @@
 		Grant Partners
 	</h2>
 	<div class="logos-container flex flex-wrap justify-center items-center mt-6 gap-11 w-full">
+		<a href="https://solana.org/" target="_blank">
+			<img class="logo foundation h-6 w-auto" src={foundation} alt="Foundation" loading="lazy" />
+
 		<a href="https://wormhole.com/" target="_blank">
 			<img class="logo wormhole h-8 w-auto" src={wormhole} alt="Wormhole" loading="lazy" />
 		</a>
-		<a href="https://solana.org/" target="_blank">
-			<img class="logo foundation h-6 w-auto" src={foundation} alt="Foundation" loading="lazy" />
-		</a>
+
 		<a href="https://www.jup.ag/" target="_blank">
 			<img class="logo jupiter h-8 w-auto" src={jupiter} alt="Jupiter" loading="lazy" />
 		</a>
