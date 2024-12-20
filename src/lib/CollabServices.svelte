@@ -32,7 +32,7 @@
 			btnText="Learn more"
 			btnLink="https://earn.superteam.fun/grants/"
 		/>
-		<Accordion
+<!-- 	<Accordion
 			image={bootcamps}
 			heading="Bootcamps"
 			subheading="micro events and hackathons to get started"
@@ -47,7 +47,7 @@
 			content="Work with the community to train highest-intent devs to become experts. 6-8 weeks of learning, building and earning with your team."
 			btnText="Learn more"
 			btnLink="https://in.superteam.fun/instagrants/superteam-education-fund"
-		/>
+		/> -->
 		<Accordion
 			image={grants}
 			heading="Meetups"
@@ -61,8 +61,8 @@
 			heading="Go To Market"
 			subheading="unlock new markets with our communities"
 			content="Work with contributors to create larger programs with a combination of all of the above to open whole new markets and create a new ecosystem from scratch."
-			btnText="Let's talk"
-			btnLink="https://twitter.com/messages/compose?recipient_id=1581960194904530944&text=Hey%20Noe%2C%20we%20wanted%20to%20work%20with%20the%20Superteam%20community%2C%20and%20enable%20members%20to%20get%20involved%20more%20with%20my%20Solana%20project.%20Can%20we%20talk%20sometime%3F"
+			btnText="Reach out"
+			btnLink="https://x.com/superteam/affiliates"
 		/>
 	</div>
 </div>

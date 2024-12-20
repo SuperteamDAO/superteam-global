@@ -52,7 +52,6 @@
 	</section>
 
 	<!-- <div class="pb-[200px]"></div> -->
-	<Partners />
 
 	<CollabServices />
 
