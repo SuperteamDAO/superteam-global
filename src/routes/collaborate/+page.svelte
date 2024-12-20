@@ -26,7 +26,7 @@
 </svelte:head>
 
 <div class="col-span-5 h-fit">
-	<section class="hero relative col-span-5 h-[calc(100vh-40px-32px)] flex flex-col items-centerr">
+	<section class="hero relative col-span-5 h-[calc(100vh-40px-32px)] flex flex-col items-center">
 		<HeroContainer
 			line1="get access to"
 			line2="the best talent on Solana"
@@ -45,7 +45,7 @@
 					sizes="(max-width: 640px) 100vw, (max-width: 1440px) 100vw, 2560px"
 					loading="eager"
 					alt=""
-					class="object-cover w-full h-full z-10"
+					class="object-cover absolute inset-0 w-full h-full z-10"
 				/>
 			</div>
 		</div>
