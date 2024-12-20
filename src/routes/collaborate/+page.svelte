@@ -56,7 +56,6 @@
 	<CollabServices />
 
 	<LoveRespect collab={true} />
-	<Collab />
 </div>
 
 <style lang="scss">
