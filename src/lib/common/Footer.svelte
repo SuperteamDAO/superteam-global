@@ -32,6 +32,8 @@
 				<p class="footer-text mt-4">Alpha Squad</p>
 				<p class="footer-text mt-4">Founder's League</p> -->
 			</div>
+		</div>
+	</div>
 </div>
 
 <style>
