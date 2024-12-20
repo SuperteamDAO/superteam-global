@@ -18,12 +18,14 @@
 		<a href="https://solana.org/" target="_blank">
 			<img class="logo foundation h-6 w-auto" src={foundation} alt="Foundation" loading="lazy" />
 		</a>
-		<a href="https://www.backpack.app/" target="_blank">
-			<img class="logo backpack h-8 w-auto" src={backpack} alt="Backpack" loading="lazy" />
+		<a href="https://www.jup.ag/" target="_blank">
+			<img class="logo jupiter h-8 w-auto" src={jupiter} alt="Jupiter" loading="lazy" />
 		</a>
+
 		<a href="https://www.circle.com/" target="_blank">
-			<img class="logo backpack h-8 w-auto" src={circle} alt="Backpack" loading="lazy" />
+			<img class="logo backpack h-8 w-auto" src={circle} alt="Circle" loading="lazy" />
 		</a>
+
 	</div>
 </div>
 
