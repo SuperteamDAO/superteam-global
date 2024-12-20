@@ -3,6 +3,7 @@
 	import foundation from '../assets/logos/foundation.svg';
 	import backpack from '../assets/logos/backpack.svg';
 	import circle from '../assets/logos/circle.svg';
+	import jupiter from '../assets/logos/jupiter.svg'
 </script>
 
 <div class="partners-container col-span-5 w-full flex flex-col items-center mt-[224px]">
