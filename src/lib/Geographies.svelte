@@ -44,7 +44,7 @@
 		{#each displayedCountries as country}
 		  <a href={country.href} target="_blank" class="group relative aspect-[4/3] overflow-hidden rounded-lg bg-black max-w-[500px] mx-auto">
 			<img src={country.path} alt={country.name} class="w-full h-full object-cover opacity-80 transition-all duration-300 group-hover:opacity-60 group-hover:scale-105" />
-			<h3 class="absolute bottom-6 left-6 text-white text-2xl font-bold">{country.name}</h3>
+			<h3 class="absolute bottom-6 left-6 text-white text-2xl font-bold font-secondary">{country.name}</h3>
 		  </a>
 		{/each}
 	  </div>
