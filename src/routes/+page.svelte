@@ -60,22 +60,11 @@
 
 <Production />
 
-<!-- <Media /> -->
 
-<!-- <SuperteamIrl /> -->
 
 <LoveRespect />
 
 <Collab />
-
-<!-- <CountryCard>
-    <div class="shine"></div>
-    <div class="glare"></div>
-    <div class="card-content">
-        Card
-    </div>
-  </CountryCard> -->
-<!-- <Testimonials /> -->
 
 <style lang="postcss">
 </style>

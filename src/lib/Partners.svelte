@@ -8,12 +8,12 @@
 
 <div class="partners-container col-span-5 w-full flex flex-col items-center mt-[224px]">
 	<h2
-		class="partners-text section-heading font-secondary text-center font-bold text-white mb-4 mr-[71px] ml-[71px] text-[24px] md:text-[32px] lg:leading-[26px] leading-[22px]"
+		class="partners-text section-heading font-secondary text-center font-bold text-white mb-10 mr-[71px] ml-[71px] text-[24px] md:text-[32px] lg:leading-[26px] leading-[22px]"
 	>
 		Grant Partners
 	</h2>
 	<div class="flex flex-col items-center w-full">
-		<h2 class="text-3xl mb-12">Grant Partners</h2>
+
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-16 w-full max-w-4xl mx-auto px-8">
 		  <a href="https://solana.org/" class="flex justify-center">
 			<img class="h-8" src={foundation} alt="Foundation" loading="lazy" />

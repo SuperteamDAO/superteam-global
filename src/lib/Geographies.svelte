@@ -1,164 +1,67 @@
 <script>
-	import CountryCard from './CountryCard.svelte';
+	import { writable } from 'svelte/store';
+	
 	import india from '../assets/chapters/india.webp';
 	import germany from '../assets/chapters/germany.webp';
-	import turkey from '../assets/chapters/turkey.webp';
 	import vietnam from '../assets/chapters/vietnam.webp';
-	import mexico from '../assets/chapters/mexico.webp';
-  import uk from '../assets/chapters/uk.webp';
-  import uae from '../assets/chapters/uae.webp';
-  import nigeria from '../assets/chapters/nigeria.webp';
-  import brazil from '../assets/chapters/brazil.webp';
-  import balkan from '../assets/chapters/balkan.webp';
-import malaysia from '../assets/chapters/malaysia.webp';
-import philippines from '../assets/chapters/philippines.webp';
-
-
-
-
-	/**
-	 * @type {HTMLElement}
-	 */
-	let carousel;
-
-	// india, germany, turkey, vietnam and mexico
+	import uk from '../assets/chapters/uk.webp';
+	import uae from '../assets/chapters/uae.webp';
+	import nigeria from '../assets/chapters/nigeria.webp';
+	import balkan from '../assets/chapters/balkan.webp';
+	import canada from '../assets/chapters/canada.webp';
+	import singapore from '../assets/chapters/singapore.webp';
+	
 	const countries = [
-		{
-			key: 'india',
-			name: 'India',
-			path: india,
-			countryGradient:
-				'linear-gradient(135deg, #FF9A37 0%, rgba(255, 255, 255, 0.8) 48.96%, #369A2C 100%)',
-			invert: false,
-			href: 'https://in.superteam.fun/'
-		},
-		{
-			key: 'germany',
-			name: 'Germany',
-			path: germany,
-			countryGradient: 'linear-gradient(151.47deg, #D70000 0%, #FFFFFF 50.7%, #FFB701 98.53%)',
-			invert: true,
-			href: 'https://de.superteam.fun/'
-		},
-		{
-			key: 'turkey',
-			name: 'Turkey',
-			path: turkey,
-			countryGradient: 'linear-gradient(151.47deg, #DA1212 0%, #FFFFFF 50.7%, #D70000 98.53%)',
-			invert: false,
-			href: 'https://tr.superteam.fun/'
-		},
-		{
-			key: 'vietnam',
-			name: 'Vietnam',
-			path: vietnam,
-			countryGradient: 'linear-gradient(151.47deg, #FFB701 0%, #FFFFFF 50.7%, #D70000 98.53%)',
-			invert: true,
-			href: 'https://vn.superteam.fun/'
-		},
-		{
-			key: 'mexico',
-			name: 'Mexico',
-			path: mexico,
-			countryGradient: 'linear-gradient(161.18deg, #00B17B -3.45%, #FFFFFF 47.74%, #FF4D60 96.31%)',
-			invert: true,
-			href: 'https://mx.superteam.fun/'
-		},
-    {
-			key: 'uk',
-			name: 'United Kingdom',
-			path: uk,
-			countryGradient: 'linear-gradient(161.18deg, #c8102e -3.45%, #FFFFFF 47.74%, #012169 96.31%)',
-			invert: true,
-			href: 'https://uk.superteam.fun/'
-		},
-    {
-			key: 'uae',
-			name: 'United Arab Emirates',
-			path: uae,
-			countryGradient: 'linear-gradient(161.18deg, #FF0000 -3.45%, #FFFFFF 47.74%, #00732F 96.31%)',
-			invert: true,
-			href: 'https://uae.superteam.fun/'
-		},
-    {
-			key: 'nigeria',
-			name: 'Nigeria',
-			path: nigeria,
-			countryGradient: 'linear-gradient(161.18deg, #1B7339 -3.45%, #FFFFFF 47.74%, #1B7339 96.31%)',
-			invert: true,
-			href: 'https://ng.superteam.fun/'
-		},
-    {
-			key: 'brazil',
-			name: 'Brazil',
-			path: brazil,
-			countryGradient: 'linear-gradient(161.18deg, #009b3a -3.45%, #fedf00 47.74%, #002776 96.31%)',
-			invert: true,
-			href: 'https://br.superteam.fun/'
-		},
- {
-			key: 'balkan',
-			name: 'Balkan',
-			path: balkan,
-			countryGradient: 'linear-gradient(161.18deg, #5252ee -3.45%, #106b7d 47.74%, #4468f1 96.31%)',
-			invert: true,
-			href: 'https://blkn.superteam.fun/'
-		},
-{
-			key: 'malaysia',
-			name: 'Malaysia',
-			path: malaysia,
-			countryGradient: 'linear-gradient(161.18deg, #010066 -3.45%, #f0f0f0 47.74%, #ff474d 96.31%)',
-			invert: true,
-			href: 'https://my.superteam.fun/'
-		},
-{
-			key: 'philippines',
-			name: 'Philippines',
-			path: philippines,
-			countryGradient: 'linear-gradient(161.18deg, #3455eb -3.45%, #f5a3aa 47.74%, #ad2d3e 96.31%)',
-			invert: true,
-			href: 'https://phl.superteam.fun/'
-		},
+	  { key: 'india', name: 'India', path: india, href: 'https://in.superteam.fun/' },
+	  { key: 'vietnam', name: 'Vietnam', path: vietnam, href: 'https://vn.superteam.fun/' },
+	  { key: 'germany', name: 'Germany', path: germany, href: 'https://de.superteam.fun/' },
+	  { key: 'uk', name: 'United Kingdom', path: uk, href: 'https://uk.superteam.fun/' },
+	  { key: 'uae', name: 'United Arab Emirates', path: uae, href: 'https://uae.superteam.fun/' },
+	  { key: 'nigeria', name: 'Nigeria', path: nigeria, href: 'https://ng.superteam.fun/' },
+	  { key: 'balkan', name: 'Balkan', path: balkan, href: 'https://blkn.superteam.fun/' },
+	  { key: 'singapore', name: 'Singapore', path: singapore, href: 'https://sg.superteam.fun/' },
+	  { key: 'canada', name: 'Canada', path: canada, href: 'https://ca.superteam.fun/' }
 	];
-</script>
-
-<svelte:window />
-
-<div
-	class="carousel-main relative left-1/2 right-1/2 -translate-x-1/2 w-screen overflow-x-visible flex flex-col col-span-5 -mt-[130px]"
->
-	<div
-		bind:this={carousel}
-		class="carousel-wrapper h-fit w-full pl-[40px] md:pl-[72px] flex items-center px-6 py-8 gap-6 overflow-x-scroll overflow-y-visible scrollbar-hidden"
-	>
-		<!-- <div class="left-offset" /> -->
-		{#each countries as country}
-			<a href={country.href} target="_blank">
-				<CountryCard
-					imgPath={country.path}
-					name={country.name}
-					countryGradient={country.countryGradient}
-					invert={true}
-				/>
-			</a>
+  
+	const showAllPartners = writable(false);
+	const firstPart = 12;
+	
+	function loadMorePrograms() {
+	  showAllPartners.set(true);
+	}
+	
+	$: displayedCountries = $showAllPartners ? countries : countries.slice(0, firstPart);
+	$: remainingCountries = countries.slice(firstPart);
+  </script>
+  
+  <div class="col-span-5">
+	<h2 class="partners-text section-heading font-secondary text-center font-bold text-white mb-10 text-[24px] md:text-[32px] lg:leading-[26px] leading-[22px]">
+	  Find Your Nearest Superteam
+	</h2>
+	
+	<div class="col-span-5 mt-10]">
+	  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 px-4 sm:px-8 md:px-16">
+		{#each displayedCountries as country}
+		  <a href={country.href} target="_blank" class="group relative aspect-[4/3] overflow-hidden rounded-lg bg-black max-w-[500px] mx-auto">
+			<img src={country.path} alt={country.name} class="w-full h-full object-cover opacity-80 transition-all duration-300 group-hover:opacity-60 group-hover:scale-105" />
+			<h3 class="absolute bottom-6 left-6 text-white text-2xl font-bold">{country.name}</h3>
+		  </a>
 		{/each}
+	  </div>
+	  
+	  {#if remainingCountries.length > 0 && !$showAllPartners}
+		<div class="flex justify-center mt-8">
+		  <button class="bg-white text-black px-6 py-3 rounded-md hover:bg-gray-200" on:click={loadMorePrograms}>
+			Load More
+		  </button>
+		</div>
+	  {/if}
 	</div>
-	<!-- <button class="text-white">Right</button> -->
-</div>
-
-<style lang="postcss">
-	.left-offset {
-		@apply min-w-[calc((100vw-1176px)/2)];
+  </div>
+  
+  <style>
+	img {
+	  width: 100%;
+	  height: 100%;
 	}
-
-	@media (min-width: 1800px) {
-		.left-offset {
-			@apply min-w-0;
-		}
-
-		.carousel-wrapper {
-			@apply justify-center;
-		}
-	}
-</style>
+  </style>

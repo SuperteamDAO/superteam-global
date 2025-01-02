@@ -75,21 +75,12 @@
 		name="og:description"
 		content="Superteam is a community of the best talent learning, earning and building in crypto."
 	/>
-	<!-- <meta
-		name="twitter:image"
-		content="https://pbs.twimg.com/profile_images/1505359960942657539/sMjuxRcg_400x400.jpg"
-	/> -->
+	
 </svelte:head>
 
 <Analytics />
 
-<!-- <Scene size={{ width: width, height: height }} /> -->
 
-<!-- {#if $loading.status === 'LOADING' || $loading.status === 'NAVIGATING'}
-	<div>
-		Loading...
-	</div>
-{:else} -->
 <Header class="mx-auto px-10 md:px-[72px]" />
 
 <div class="relative h-full grid grid-cols-5 gap-5 px-10 md:px-[72px] mx-auto">
