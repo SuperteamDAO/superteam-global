@@ -26,10 +26,7 @@
 			<div class="text-col-1 flex flex-col items-start md:items-end gap-4">
 				<a href="https://earn.superteam.fun" target="_blank" class="footer-text">Superteam Earn</a>
 				<a href="https://docs.google.com/presentation/d/1m78Nu7YKdkckN5bu-pNsw3gdczEdMU_R/edit#slide=id.p1" target="_blank" class="footer-text">Brand Guidelines</a>
-				<!-- <p class="footer-text mt-4">Earn</p>
-				<p class="footer-text mt-4">Ecosystem Calls</p>
-				<p class="footer-text mt-4">Alpha Squad</p>
-				<p class="footer-text mt-4">Founder's League</p> -->
+				<a href="mailto:support@superteam.fun" target="_blank" class="footer-text">Get in Touch</a>
 			</div>
 		</div>
 	</div>

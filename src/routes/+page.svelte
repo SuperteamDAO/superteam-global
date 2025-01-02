@@ -54,17 +54,14 @@
 	
 </Hero>
 
-<Geographies />
-
 <Partners />
 
 <Production />
 
-
-
 <LoveRespect />
 
 <Collab />
+
 
 <style lang="postcss">
 </style>
