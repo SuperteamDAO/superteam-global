@@ -13,6 +13,7 @@
 	import france from '../assets/chapters/france.webp';
 	import canada from '../assets/chapters/canada.webp';
 	import singapore from '../assets/chapters/singapore.webp';
+	import poland from '../assets/chapters/poland.webp';
 	
 	const countries = [
 	  { key: 'india', name: 'India', path: india, href: 'https://in.superteam.fun/' },
@@ -26,7 +27,8 @@
 	  { key: 'france', name: 'France', path: france, href: 'https://fr.superteam.fun/' },
 	  { key: 'japan', name: 'Japan', path: japan, href: 'https://jp.superteam.fun/' },
 	  { key: 'singapore', name: 'Singapore', path: singapore, href: 'https://sg.superteam.fun/' },
-	  { key: 'canada', name: 'Canada', path: canada, href: 'https://ca.superteam.fun/' }
+	  { key: 'canada', name: 'Canada', path: canada, href: 'https://ca.superteam.fun/' },
+	  { key: 'poland', name: 'Poland', path: poland, href: 'https://x.com/SuperteamPOL' }
 	];
   
 	const showAllPartners = writable(false);
