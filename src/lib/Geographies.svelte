@@ -14,6 +14,8 @@
 	import canada from '../assets/chapters/canada.webp';
 	import singapore from '../assets/chapters/singapore.webp';
 	import poland from '../assets/chapters/poland.webp';
+	import poland from '../assets/chapters/korea.webp';
+
 	
 	const countries = [
 	  { key: 'india', name: 'India', path: india, href: 'https://in.superteam.fun/' },
