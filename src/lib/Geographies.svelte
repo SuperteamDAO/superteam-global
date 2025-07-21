@@ -33,7 +33,7 @@
 	  { key: 'canada', name: 'Canada', path: canada, href: 'https://ca.superteam.fun/' },
 	  { key: 'poland', name: 'Poland', path: poland, href: 'https://pl.superteam.fun/' },
 	  { key: 'korea', name: 'Korea', path: korea, href: 'https://kr.superteam.fun/' }
-	  { key: 'indonesia', name: 'Indonesia', path: korea, href: 'https://id.superteam.fun/' }
+	  { key: 'indonesia', name: 'Indonesia', path: indonesia, href: 'https://id.superteam.fun/' }
 	];
   
 	const showAllPartners = writable(false);
